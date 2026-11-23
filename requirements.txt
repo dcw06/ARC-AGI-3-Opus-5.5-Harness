@@ -1,0 +1,5 @@
+# The versions every run in this repository used (Python 3.12).
+arc-agi==0.9.9
+arcengine==0.9.3
+numpy==2.5.2
+requests==2.34.2

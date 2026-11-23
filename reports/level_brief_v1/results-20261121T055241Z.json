@@ -1,0 +1,3729 @@
+{
+ "runs": [
+  {
+   "run": "brief-ls20-brief-1-20261121T055241Z",
+   "game": "ls20",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 60,
+   "level_at_start": 3,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    87
+   ],
+   "actions_on_the_open_level": 13,
+   "changed_nothing": 0,
+   "changed_nothing_at": [],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 0,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 0,
+   "cases_opened": 0,
+   "lessons_kept": 0,
+   "further_actions_combined": [],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [],
+   "game_over_lessons": [],
+   "checks_written": 0,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 181110,
+   "output_per_call_median": 1120,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "The player entered the target box (x14-18,y40-44) while the bottom-left indicator pattern matched the 3x3 pattern in the box, in the same colour 9. The least shown to be required: the player reaches the target box while the indicator matches it.",
+     "different": "The indicator is now colour c, and it is the target shape turned 180 degrees. The target is 9 and sits at the far right (x54-58,y50-54). E is a new multicoloured 3x3 thing (089ce) at x30-32,y46-48. B (the 0/1 cross) is at x50-52,y11-13. There are two refill rings. The A lines of 1 at x8,y5-9 and x54-58,y4 are new.",
+     "why": "Probably E changes the indicator's colour (c to 9), and B turns the pattern, which here needs two turns. The rings are there so the long route fits in the budget. The A lines are unclear: they may mark entrances, or be decoration.",
+     "first": "Go up column x9-13 to row y5 and right to x29-33. Then go down past the ring to E to see what it does to the indicator, and after that visit B."
+    },
+    {
+     "at_action": 88,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "Level 3 ended when the player moved down into the target box at x54-58,y50-54 while the indicator read 101/100/111 in colour 9, the same pattern and colour as the box. At minimum, the player has to enter the target box while the indicator matches the box's pattern and colour.",
+     "different": "The indicator now shows 010/110/011 in colour e, but the target is 111/001/101 in colour 9: a different colour, a different shape and a different cell count. AZ is new: a 0-only 4-cell shape, with no 1s, unlike the earlier rotator. There are AY walls with 1 edges, plus more slider lines. There are two refill rings and one E. The target is at the top left; the player starts at the top right.",
+     "why": "Only a colour changer and a shape changer can make the indicator match. E most likely provides the colour. AZ is the only new item, so it most likely changes the shape, perhaps by replacing or rotating it. The sliders decide which routes can reach E, AZ and the target.",
+     "first": "Reach AZ (player cell x24-28,y30-34, entered from below) and watch the indicator. The route starts left along the top corridor, then goes through the sliders."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "Actions 1/2/3/4 move the 5x5 player block 5 cells up/down/left/right through colour-3 floor. Colour-4 cells are walls.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "Each move costs 2 columns of the b budget bar at the bottom. Stepping on a b-bordered ring refills the bar and uses up the ring.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level completes when the player enters the target box while the bottom-left indicator pattern matches the box's 3x3 pattern.",
+     "replaces": 0
+    },
+    {
+     "at_action": 20,
+     "rule": "Covering a multicoloured 3x3 thing (E, colours 089ce) changes the indicator's colour; here it went from c to 9. The thing is used up.",
+     "replaces": 0
+    },
+    {
+     "at_action": 25,
+     "rule": "Stepping onto a b-bordered refill ring fully refills the b budget bar.",
+     "replaces": 0
+    },
+    {
+     "at_action": 37,
+     "rule": "Entering the 0/1 cross tile (B) turns the bottom-left indicator pattern 90 degrees clockwise. Each entry seems to give one turn.",
+     "replaces": 0
+    },
+    {
+     "at_action": 39,
+     "rule": "Each time the player enters the 0/1 cross tile (B), the bottom-left indicator turns 90 degrees clockwise. This was seen on two separate entries.",
+     "replaces": 6
+    },
+    {
+     "at_action": 47,
+     "rule": "A full budget bar allows a fixed number of moves (here 21). The move after the bar is empty costs a life and resets the level: player, indicator, rings and items all go back to their start.",
+     "replaces": 0
+    },
+    {
+     "at_action": 83,
+     "rule": "Entering B turns the indicator 90 degrees clockwise. Seen at t142: 111/001/101 became 101/001/111.",
+     "replaces": 6
+    },
+    {
+     "at_action": 88,
+     "rule": "A line of 1s along the edge of a wall or corridor works as a slider. When the player enters the floor cell next to it, the player keeps moving away from the line until a wall or the target box stops it, all in one action.",
+     "replaces": 0
+    }
+   ]
+  },
+  {
+   "run": "brief-tr87-brief-1-20261121T055241Z",
+   "game": "tr87",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 61,
+   "level_at_start": 2,
+   "new_actions": 56,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 56,
+   "changed_nothing": 0,
+   "changed_nothing_at": [],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 0,
+   "game_overs": 0,
+   "turns": 56,
+   "turns_announcing_a_test": 0,
+   "cases_opened": 0,
+   "lessons_kept": 0,
+   "further_actions_combined": [],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [],
+   "game_over_lessons": [],
+   "checks_written": 0,
+   "model_calls": 56,
+   "replies_sent_back": 2,
+   "output_tokens": 262925,
+   "output_per_call_median": 2812,
+   "stop_reason": "TransportFailure",
+   "problems": [
+    "tr87-cd924810: TransportFailure"
+   ],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "problem",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 2,
+     "asked_for": true,
+     "won_by": "Cycling each answer slot with ACTION1 until the answer row showed, for each query shape, the output paired with that same input in the top examples. The level completed on the last needed ACTION1 press.",
+     "different": "The input frames are now colour 7 and the outputs colour b (before: a to 7). One input can map to several outputs (1-3), so 4 queries need 7 answer slots. Three of the queries match an example input only after a mirror or rotation (Q1, Q3, Q4); only Q2 matches exactly.",
+     "why": "The variable output length means answers fill several slots in a row. The rotated or mirrored queries mean matching works up to rotation or mirroring, and the outputs might have to be transformed the same way. That is the part I can't produce yet.",
+     "first": "Press ACTION1 on slot 1 and look at the cycle options. If A's output appears both plain and mirrored, I'll know whether a transformation is needed."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "ACTION1 changes the pattern shown in the answer slot under the 0-coloured selector markers by cycling it through a fixed set of shapes.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION3 and ACTION4 move the selector markers one answer slot left or right.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level completes once the answer row shows the output shapes paired, in the examples, with the query shapes above it, in query order.",
+     "replaces": 0
+    },
+    {
+     "at_action": 6,
+     "rule": "The ACTION1 cycle options for an answer slot include the output shapes shown in the example pairs at the top.",
+     "replaces": 0
+    },
+    {
+     "at_action": 9,
+     "rule": "When a query is a rotated or mirrored copy of an example input, its answer is that example's output with the same transformation; the cycle options include such transformed outputs.",
+     "replaces": 0
+    },
+    {
+     "at_action": 12,
+     "rule": "Query matching is up to rotation or mirroring. A query that is an example input rotated 90\u00b0 CCW needs that example's outputs rotated 90\u00b0 CCW too (seen for Q1 with A).",
+     "replaces": 0
+    },
+    {
+     "at_action": 21,
+     "rule": "Each answer slot's ACTION1 cycle is a fixed loop of a few shapes (7 seen) and may contain an example output only in a transformed orientation.",
+     "replaces": 0
+    },
+    {
+     "at_action": 34,
+     "rule": "When the matched example input is symmetric, several transformations fit the query. Pick the one whose transformed outputs actually appear in the slot cycles, and use it for all of that query's outputs.",
+     "replaces": 0
+    },
+    {
+     "at_action": 44,
+     "rule": "An answer slot's ACTION1 loop can hold a needed output only in a transformed form (mirrored or rotated). If the plain output is missing, the transformed copy found in the loop shows which symmetry of the matched example applies.",
+     "replaces": 7
+    }
+   ]
+  },
+  {
+   "run": "brief-cd82-brief-1-20261121T055241Z",
+   "game": "cd82",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 35,
+   "level_at_start": 3,
+   "new_actions": 72,
+   "levels_completed_in_new_actions": 4,
+   "actions_per_completed_level": [
+    27,
+    16,
+    13,
+    16
+   ],
+   "actions_on_the_open_level": 0,
+   "changed_nothing": 2,
+   "changed_nothing_at": [
+    37,
+    48
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 10,
+   "game_overs": 0,
+   "turns": 72,
+   "turns_announcing_a_test": 1,
+   "cases_opened": 2,
+   "lessons_kept": 2,
+   "further_actions_combined": [
+    2,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 40,
+     "explains": "t37",
+     "also_covers": [],
+     "further_actions_combined": 2,
+     "rule": "A pour (ACTION5, or clicking the nozzle cup J) writes the selected colour onto its region of the block. If that region already has that colour, the animation plays but the board ends unchanged.",
+     "applies_when": "The selected colour, shown inside the bucket or cup, is the same as every cell of the block region the pour would cover.",
+     "replaces": 0
+    },
+    {
+     "at_action": 50,
+     "explains": "t48",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Actions 1-4 move the bucket one step in a fixed direction (1=up, 3=left) across a 3x3 ring of positions around the block. If the bucket is already in the outermost row or column in that direction (for example top or a top diagonal, for up), the action does nothing.",
+     "applies_when": "The bucket is already on the side or diagonal at the edge of the ring in the direction of the move.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 67,
+   "model_calls": 75,
+   "replies_sent_back": 3,
+   "output_tokens": 120853,
+   "output_per_call_median": 1312,
+   "stop_reason": "win",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "Level 2 completed on the ACTION5 at t35: pouring the selected red from the lower-right diagonal turned the block's triangle where xo+yo>=9 red. After that the block matched the top-left target panel cell for cell. At minimum, making the block equal to the target panel completes the level.",
+     "different": "The block now starts all 0. The target has f as the base, a 4-wide by 3-tall c rectangle at the top middle (xo3-6, yo0-2), and a lower-right triangle where xo+yo>=10, one cell smaller than in level 2. That triangle is split into e (xo>=5) and 8 (xo<=4). The palette now has 0, f, c, b, e, 8 and 9. New object J sits above bucket K: a small cup at x29-34,y18-22 with a 4-wide f interior and a 0 neck.",
+     "why": "J's interior is 4 wide and lines up with x30-33, which are exactly the columns of the c rectangle. J is probably a narrow nozzle that pours a strip. The split triangle and its smaller size need pours that are partial or overlap. The extra colours e and 8 are needed for the triangle halves.",
+     "first": "Pour once (ACTION5) with f selected and the bucket on top. Top rows of f are in the target anyway, and this shows how J and K pour this level."
+    },
+    {
+     "at_action": 28,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "With c selected and the bucket on top, clicking cup J poured c into xo3-6,yo0-2. The block (x27-36,y34-43) then equalled the target panel (x3-12,y3-12) and the level completed. The least that is shown is that the block matches the target.",
+     "different": "The target uses new colours 9 and b. It has a b rectangle (3 wide, 4 tall) at xo0-2,yo3-6 in the left half, and a c triangle in the right half whose edge is one step short of the main anti-diagonal. The block starts all 0. The bucket, cup and palette are as before.",
+     "why": "The 3x4 b rectangle probably needs the cup poured from the left side (the top cup region rotated). The off-by-one c triangle probably needs two diagonal pours: c from the upper-left (sum<=9), then f from the lower-right (likely sum>=9).",
+     "first": "Select c and pour from the upper-left. Then pour f from the lower-right to test H22 (sum>=9) before the 9 and b steps."
+    },
+    {
+     "at_action": 44,
+     "level": 5,
+     "asked_for": true,
+     "won_by": "Clicking the cup from the left position with b selected poured b into xo0-2, yo3-6. After that the block equalled the top-left target exactly, and the level completed. This confirms rule 1: the block's cells must match the target.",
+     "different": "There is a new target pattern: four regions (c, e, 9 and 8), including a left triangle of e (xo<=yo) and a top triangle of 9. Producing these needs a lower-left or upper-right diagonal pour, which I have never tested. The block is 0 again, the bucket is at the top and f is selected. Otherwise the palette and layout are the same as before.",
+     "why": "The new triangles depend on the untested diagonal pours, which presumably fill xo<=yo or xo>=yo. Ordering the pours so that later ones overwrite earlier ones yields the target.",
+     "first": "Select 9 and pour from the top. Then use the cup with 8 while still at the top. The real test is the lower-left pour with e, which shows its triangle."
+    },
+    {
+     "at_action": 57,
+     "level": 6,
+     "asked_for": true,
+     "won_by": "The lower-right diagonal pour of c (xo+yo>=9) made the 10x10 block cell-for-cell equal to the top-left target panel, and the level completed on that action.",
+     "different": "There is a new target. It is 8 overall, has e in the right half where xo+yo>=10, f in a top cup patch (xo3-6, yo0-2), b in a left cup patch (xo0-2, yo3-6), and a 0 triangle at the lower left that no pour covers. The pieces are the same as before: the bucket and cup at the top, f selected.",
+     "why": "The unpainted 0 cells show that you have to pick pour regions so their overlaps leave the original colour. Pour order matters because later pours overwrite earlier ones.",
+     "first": "Nothing new. Select e, move the bucket to the right side and pour, then select 8 and pour from the upper-left. Then do the b cup from the left and the f cup from the top."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "A level completes when the block's cells equal the top-left target panel. ACTION5 pours the selected colour into the part of the block that faces the bucket. Later pours overwrite earlier ones.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION6 on a palette icon in the top bar selects that colour, which is shown inside the bucket. Actions 1-4 move the bucket around a ring of 8 positions (sides and diagonals) around the block.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "The bottom row of 4s loses one cell on most actions (step budget).",
+     "replaces": 0
+    },
+    {
+     "at_action": 15,
+     "rule": "Actions 1-4 move the bucket in fixed directions (ACTION1 up, ACTION3 left, probably 2 down and 4 right) between the 8 positions around the block. A move past the edge of the ring does nothing.",
+     "replaces": 2
+    },
+    {
+     "at_action": 17,
+     "rule": "A diagonal-position pour fills the block triangle facing that corner. From the upper-left it fills cells with xo+yo<=9, and later pours overwrite earlier ones.",
+     "replaces": 0
+    },
+    {
+     "at_action": 20,
+     "rule": "ACTION5 pours from the wide bucket. From a side position (e.g. top), it fills the whole half of the block that faces the bucket (top: rows yo0-4 of a 10x10 block) with the selected colour.",
+     "replaces": 0
+    },
+    {
+     "at_action": 28,
+     "rule": "Clicking the cup J pours the selected colour into a small region of the block (from the top: xo3-6, yo0-2), overwriting what was there. This is how small sub-regions of the target are made.",
+     "replaces": 0
+    },
+    {
+     "at_action": 28,
+     "rule": "Clicking a palette icon in the top bar selects its colour. A 0 marker appears under the icon, and the bucket and cup interiors take that colour.",
+     "replaces": 0
+    },
+    {
+     "at_action": 31,
+     "rule": "An upper-left diagonal pour fills block cells with xo+yo<=9 in a 10x10 block (seen again at t65 with c).",
+     "replaces": 0
+    },
+    {
+     "at_action": 33,
+     "rule": "ACTION2 moves the bucket one step down around the ring (for example from upper-left to the left side), and ACTION1 moves it up.",
+     "replaces": 2
+    },
+    {
+     "at_action": 35,
+     "rule": "ACTION4 moves the bucket (and its cup) one step right around the ring of positions about the block, for example from the lower-left to the bottom. ACTION3 moves it left.",
+     "replaces": 0
+    },
+    {
+     "at_action": 37,
+     "rule": "A lower-right diagonal pour fills the block cells with xo+yo>=9 in a 10x10 block, overwriting what was there. It mirrors the upper-left pour (xo+yo<=9).",
+     "replaces": 0
+    },
+    {
+     "at_action": 42,
+     "rule": "A pour from the left side position fills the left half of the block (columns xo0-4 of a 10x10 block) with the selected colour.",
+     "replaces": 0
+    },
+    {
+     "at_action": 44,
+     "rule": "The cup's small pour region turns with the bucket's position. From the top it covers xo3-6, yo0-2; from the left side it covers xo0-2, yo3-6 (seen at t78).",
+     "replaces": 6
+    },
+    {
+     "at_action": 46,
+     "rule": "A pour from the top side fills rows yo0-4 of the 10x10 block with the selected colour (seen again at t80 with 9).",
+     "replaces": 0
+    },
+    {
+     "at_action": 48,
+     "rule": "Clicking the cup pours the selected colour into a small 4x3 region: from the top it covers xo3-6, yo0-2 (seen at t82 with 8); from the left it covers xo0-2, yo3-6.",
+     "replaces": 6
+    },
+    {
+     "at_action": 53,
+     "rule": "A lower-left diagonal pour fills the block cells with xo<=yo (diagonal included) in a 10x10 block, overwriting what was there.",
+     "replaces": 8
+    },
+    {
+     "at_action": 54,
+     "rule": "ACTION4 moves the bucket one step right around the ring of positions about the block: lower-left to bottom (seen at t88), then bottom to lower-right. ACTION3 moves it left.",
+     "replaces": 9
+    },
+    {
+     "at_action": 57,
+     "rule": "A level completes once the block's cells equal the target panel. Level 5 completed on the pour that made the block match exactly. Cells no pour covers keep the block's starting colour (0), and that can be part of the target.",
+     "replaces": 1
+    }
+   ]
+  },
+  {
+   "run": "brief-ar25-brief-1-20261121T055241Z",
+   "game": "ar25",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 72,
+   "level_at_start": 4,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 2,
+   "actions_per_completed_level": [
+    23,
+    29
+   ],
+   "actions_on_the_open_level": 48,
+   "changed_nothing": 0,
+   "changed_nothing_at": [],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 0,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 0,
+   "cases_opened": 0,
+   "lessons_kept": 0,
+   "further_actions_combined": [],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [],
+   "game_over_lessons": [],
+   "checks_written": 0,
+   "model_calls": 107,
+   "replies_sent_back": 7,
+   "output_tokens": 211569,
+   "output_per_call_median": 1404,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "One more ACTION3 moved the 5 shape left by 3 so that it exactly covered the b template at rows 42-47. At the same time its 4 mirror covered the top template at rows 9-14, and the level completed. The least this shows is that the selected shape overlaying the b template completes the level.",
+     "different": "The a band is now at rows 9-11 and has 0 dots instead of 9 dots. There are two separate 5 shapes, a U (C) and a vertical bar (D), with 9 centres. Their 4 mirror shows only as two 3x3 blocks at rows 0-2. The b template is larger: two vertical bars at cols 39-41, a U at rows 18-23 and an inverted U at rows 33-38. The budget has refilled.",
+     "why": "Two shapes probably mean two pieces that must each be placed on their matching parts of the template. The U matches the b U at cols 33-47, 21 columns to the right. The bar matches the b bar at rows 30-47, also 21 columns to the right. The band's new position and dots may change how the mirror acts.",
+     "first": "Click the U shape to select it, then press a movement action (probably ACTION4 for right). That shows whether it moves right by 3 and what the mirror does."
+    },
+    {
+     "at_action": 24,
+     "level": 5,
+     "asked_for": true,
+     "won_by": "Level 4 completed once the 5 shape and its mirror images (drawn in 4) together covered every b template cell. Some 4 image cells landed where there was no b, which shows that extra coverage is allowed. The least that is shown is that all b cells must be covered by 5 or 4 cells.",
+     "different": "There are now two a bands: a vertical one at cols 9-11 with 9 centres, and the horizontal one at rows 15-17 with 0 centres. The single 5 shape is bigger, its centres are 9, and none of its 4 mirror images are visible. Some b template cells lie inside the band (y=15-17) and on its far side, including a lone b block AK at (12-14, 39-41).",
+     "why": "The second band probably adds a horizontal reflection, so one image is a 180\u00b0 rotation of the shape. That would match the template's second half. Both bands can probably be moved, so I need to place both of them and the shape. The 9 centres may mean the shape is not selected.",
+     "first": "Click the 5 shape (ACTION6) to see whether that selects it and shows its mirror images across both bands."
+    },
+    {
+     "at_action": 53,
+     "level": 6,
+     "asked_for": true,
+     "won_by": "Level 5 completed once the horizontal band's centre reached row 28. At that point the 5 shapes and their 4 images covered every b template cell, and images could also lie on non-b cells. This fits rule 1, and nothing looser is shown.",
+     "different": "The shapes now have 9 centres instead of b, and there are two 5 shapes (one with 72 cells, one with 45). The horizontal band starts at the top (rows 0-2) and already shows 0 centres. The vertical band is at cols 21-23, and the template lies over it at some rows. The template is symmetric about col 19 and row 34, which are not where the bands are now.",
+     "why": "The template's symmetry shows where the two bands must go. The 9 centres probably just mean the shapes are not selected, the way b centres did before. Each shape's orientation shows which quadrant it must sit in.",
+     "first": "Press ACTION2. That checks that the band is already selected and moves down by 3, and it starts the 11 moves the band needs anyway."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "A level completes when the movable 5 shape(s) exactly cover the b template cells (the 4 mirror moves along at the same time).",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION6 on a shape selects it; ACTION3 then moves the selected shape (and its mirror image across the a band) left by 3 cells per action.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "Column 63 is a move budget: each action turns one cell from b to c. It refills on a new level.",
+     "replaces": 0
+    },
+    {
+     "at_action": 3,
+     "rule": "ACTION4 moves the selected shape (and its mirror image across the a band) right by 3 cells per action.",
+     "replaces": 0
+    },
+    {
+     "at_action": 10,
+     "rule": "When there are several movable 5 shapes, ACTION6 on one selects it: its centre cells turn 0 and the others' turn b. Only the selected shape moves.",
+     "replaces": 0
+    },
+    {
+     "at_action": 11,
+     "rule": "Once a shape is selected with ACTION6, movement actions move only that shape. Shapes that are not selected stay where they are.",
+     "replaces": 0
+    },
+    {
+     "at_action": 17,
+     "rule": "Covering the visible b template parts with the 5 shapes alone does not always complete a level. Leftover b template parts can be where the mirror images (across the a band) need to land.",
+     "replaces": 0
+    },
+    {
+     "at_action": 18,
+     "rule": "ACTION6 on the a mirror band selects it: its dots turn 0 and the shapes' centres turn b. Movement actions then probably move the band instead of a shape.",
+     "replaces": 0
+    },
+    {
+     "at_action": 19,
+     "rule": "Once the a mirror band is selected, ACTION2 moves it down by 3 rows. The mirror images are redrawn across the band's new centre row.",
+     "replaces": 8
+    },
+    {
+     "at_action": 21,
+     "rule": "Mirror images are reflected across the a band's centre row: a shape at row r shows its mirror at row 2c-r. Moving the band by 3 rows moves the mirrors by 6 rows.",
+     "replaces": 8
+    },
+    {
+     "at_action": 24,
+     "rule": "A level completes when every b template cell is covered by the movable 5 shape(s) or their 4 mirror images. Mirror images may also cover non-b cells.",
+     "replaces": 1
+    },
+    {
+     "at_action": 24,
+     "rule": "An a band can itself be selected and moved 3 cells per action, with ACTION2 moving it down. Its mirror images are then redrawn across its new centre line.",
+     "replaces": 0
+    },
+    {
+     "at_action": 33,
+     "rule": "A vertical a band reflects the shape left-right across its centre column c: a shape cell at column x shows a 4 image at column 2c-x, when that column is on the board.",
+     "replaces": 0
+    },
+    {
+     "at_action": 36,
+     "rule": "ACTION1 moves the selected shape up by 3 cells per action (ACTION2 down, ACTION3 left, ACTION4 right).",
+     "replaces": 0
+    },
+    {
+     "at_action": 38,
+     "rule": "With a vertical and a horizontal a band, the selected shape shows 4 images across each band and also across both (a 180\u00b0 turn about the point where the band centres cross).",
+     "replaces": 0
+    },
+    {
+     "at_action": 44,
+     "rule": "A selected a band moves 3 cells per action in the direction of the movement action (ACTION4 right, ACTION2 down). Its 4 images are redrawn across its new centre line.",
+     "replaces": 9
+    },
+    {
+     "at_action": 65,
+     "rule": "ACTION6 on a 5 shape or an a band selects it: its centre cells turn 0 and the others' turn to the unselected colour (b or 9). Movement actions then move only the selected item; the others stay put.",
+     "replaces": 6
+    }
+   ]
+  },
+  {
+   "run": "brief-ar25-brief-2-20261121T055241Z",
+   "game": "ar25",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 72,
+   "level_at_start": 4,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 2,
+   "actions_per_completed_level": [
+    23,
+    29
+   ],
+   "actions_on_the_open_level": 48,
+   "changed_nothing": 0,
+   "changed_nothing_at": [],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 0,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 0,
+   "cases_opened": 0,
+   "lessons_kept": 0,
+   "further_actions_combined": [],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [],
+   "game_over_lessons": [],
+   "checks_written": 1,
+   "model_calls": 109,
+   "replies_sent_back": 9,
+   "output_tokens": 257318,
+   "output_per_call_median": 1860,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "One more ACTION3 slid the 5 shape exactly onto the lower b template, and at the same moment its 4 mirror landed on the upper b template. The least this shows is that covering the b template cells with the shape(s) completes the level.",
+     "different": "There are now two separate 5 shapes, a U (7 segments) and a vertical line (6 segments), and neither is selected. There are two b templates, each a U or \u2229 plus a long stem (12 segments), one above and one below row 28. The a band has moved up to rows 9-11, so the 4 mirror is mostly off-screen, with only the U's arms visible at rows 0-2. One template stem passes through the band.",
+     "why": "The two snakes probably have to be combined, or bent by steering, to fill templates whose shapes differ from either snake on its own. The snake trail lets shapes bend. The band position sets where the mirror falls and may be needed to cover the top template's stem or the inverted shape.",
+     "first": "Click the 5 U to select it, then make one move to see where the head is and how the trail and mirror respond."
+    },
+    {
+     "at_action": 24,
+     "level": 5,
+     "asked_for": true,
+     "won_by": "I moved the a band down to axis row 28. Its 4 mirror of the 5 line and the 5 U then lay exactly on both b templates, and the level completed on that move. The least this shows is that every b template cell has to be covered by a 5 shape or its 4 mirror.",
+     "different": "There is now a vertical a band at x=9-11 as well as the horizontal one, so a second axis may mirror left/right. The 5 shape is a single bent path. The b template is large and branching, and part of it sits inside the horizontal band (x=12-23 and x=36-38) with a separate block at x=12-14, y=39-41. No 4 mirror is visible right now because the mirrors fall off the board.",
+     "why": "I can probably select and move the vertical band, so it is most likely needed. Some template parts can likely only be covered by mirrors across the vertical axis, or across both axes, and the template cells inside the band suggest the bands have to move off them.",
+     "first": "Click the vertical band with ACTION6, which is free, to see whether it can be selected and whether a mirror appears."
+    },
+    {
+     "at_action": 53,
+     "level": 6,
+     "asked_for": true,
+     "won_by": "Level 5 completed on the move where every b template cell became covered by a 5 shape or by one of its 4 mirrors across the horizontal and vertical a bands. The final board shows b only at dot positions inside 4 and 5 shapes. Covering the template is the least that was shown to be required.",
+     "different": "There are two 5 shapes: an 8-segment ring-like one and a 5-segment T-bar. Both a bands start far from the template's symmetry axes: the horizontal band is at the top (rows 0-2) and the vertical one at x21-23. The template has four quadrants, each needing a 13-segment piece split between the two shapes. The 5 shapes show 9 holes because they are unselected.",
+     "why": "The template's axes (sx6, sy11) tell where the bands must go. The two shapes together fill one quadrant pattern, and the mirrors fill the other three. Shape B's bump position means B must sit in the lower-left quadrant and A in the lower-right, so each needs its own path.",
+     "first": "ACTION2 on the selected horizontal band, to confirm it moves 3 rows and to see how the mirrors recompute."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "ACTION6 on a coloured shape selects it. Movement actions then move the selected shape by one 3-cell segment per action (ACTION3 = left). Its segments follow the head's path like a snake.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "Colour-4 shapes on the far side of the a-coloured band are a mirror of the 5 shapes across the band's centre row, and they move as mirrors.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level completes when the moved shapes cover the b template cells (seen when the 5 shape landed exactly on the b template).",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "The right column (x=63) is an action counter: each action turns one cell from b to c, and it refills on a new level.",
+     "replaces": 0
+    },
+    {
+     "at_action": 2,
+     "rule": "ACTION6 on a 5 shape selects it, marking its segments with 0 dots and removing the 0 dots from whatever was selected before (the a band showed 0 dots before).",
+     "replaces": 0
+    },
+    {
+     "at_action": 3,
+     "rule": "Each movement action shifts the selected shape by 3 cells in that direction (ACTION3 = left, ACTION4 = right). Shapes have been seen translating rigidly.",
+     "replaces": 1
+    },
+    {
+     "at_action": 4,
+     "rule": "Movement actions translate the selected shape rigidly by 3 cells (one segment). ACTION3 moves it left and ACTION4 moves it right. Its mirror across the a band moves the same way.",
+     "replaces": 1
+    },
+    {
+     "at_action": 11,
+     "rule": "Selecting a shape with ACTION6 costs no counter cell. Each movement action uses one counter cell.",
+     "replaces": 0
+    },
+    {
+     "at_action": 18,
+     "rule": "ACTION6 on the a-coloured band selects it, showing 0 dots in the band and clearing the dots from the previously selected 5 shape.",
+     "replaces": 0
+    },
+    {
+     "at_action": 19,
+     "rule": "When the a band is selected, ACTION2 moves it down 3 rows. The colour-4 mirror shapes are redrawn about the band's new centre row.",
+     "replaces": 0
+    },
+    {
+     "at_action": 20,
+     "rule": "Repeated ACTION2 with the a band selected keeps moving it down 3 rows each time, and the mirror image is recomputed about the band's centre row.",
+     "replaces": 8
+    },
+    {
+     "at_action": 21,
+     "rule": "The a band can move onto or through rows that hold 5 shapes; those shape cells stay visible inside the band.",
+     "replaces": 0
+    },
+    {
+     "at_action": 24,
+     "rule": "A level completes when every b template cell is covered by a 5 shape or by a 4 mirror image of one across a band. Covered template cells show 4 or 5, and b marks stay where the dots are.",
+     "replaces": 3
+    },
+    {
+     "at_action": 24,
+     "rule": "An unselected a band shows 9 holes where its dots go. The selected band shows 0 dots there.",
+     "replaces": 0
+    },
+    {
+     "at_action": 25,
+     "rule": "ACTION6 on a vertical a band selects it: 0 dots appear along its centre column, and the previously selected item's dots turn back into 9 holes.",
+     "replaces": 0
+    },
+    {
+     "at_action": 26,
+     "rule": "With a vertical a band selected, ACTION4 moves it right 3 columns, and the template cells under it stay visible as b.",
+     "replaces": 0
+    },
+    {
+     "at_action": 27,
+     "rule": "With a vertical a band selected, ACTION3/ACTION4 move it left/right 3 columns per action, and each move uses one counter cell.",
+     "replaces": 12
+    },
+    {
+     "at_action": 53,
+     "rule": "Movement actions shift the selected item rigidly by 3 cells (one segment): ACTION1 up, ACTION2 down, ACTION3 left, ACTION4 right. Each move uses one counter cell and the mirrors are recomputed.",
+     "replaces": 1
+    },
+    {
+     "at_action": 53,
+     "rule": "Each 5 shape gets 4-coloured mirror images across every a band's centre line (horizontal and vertical), and across both together. Mirrors that fall off the board are not shown.",
+     "replaces": 2
+    }
+   ]
+  },
+  {
+   "run": "brief-ar25-ledger-1-20261121T055241Z",
+   "game": "ar25",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 72,
+   "level_at_start": 4,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 2,
+   "actions_per_completed_level": [
+    53,
+    31
+   ],
+   "actions_on_the_open_level": 16,
+   "changed_nothing": 3,
+   "changed_nothing_at": [
+    89,
+    157,
+    158
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 3,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 5,
+   "cases_opened": 2,
+   "lessons_kept": 2,
+   "further_actions_combined": [
+    2,
+    2
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 92,
+     "explains": "t89",
+     "also_covers": [],
+     "further_actions_combined": 2,
+     "rule": "Clicking with ACTION6 on a 5 piece that is not selected neither selects it nor changes the board. Here the selection is not changed by clicking, and ACTION5 did not change it either (the arrows still moved the bar afterwards).",
+     "applies_when": "Before you click an unselected piece with ACTION6, or press ACTION5, expecting it to switch control: the arrow actions will keep moving the piece that was moving before.",
+     "replaces": 0
+    },
+    {
+     "at_action": 160,
+     "explains": "t157",
+     "also_covers": [
+      "t158"
+     ],
+     "further_actions_combined": 2,
+     "rule": "Only one axis bar is active at a time (it shows 0 dots instead of 9 dots). The arrow actions move only the active bar, and only along its free direction. A horizontal bar cannot move left or right, so ACTION3 and ACTION4 do nothing while it is active. ACTION5 switches which bar is active.",
+     "applies_when": "Before pressing a left/right (or up/down) action, check which bar has the 0 dots. If that bar is horizontal, left/right will not change the board (and up/down will not if it is vertical). Press ACTION5 first to switch to the other bar.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 80,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 221299,
+   "output_per_call_median": 1761,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-ar25-ledger-2-20261121T055241Z",
+   "game": "ar25",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 72,
+   "level_at_start": 4,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 2,
+   "actions_per_completed_level": [
+    56,
+    38
+   ],
+   "actions_on_the_open_level": 6,
+   "changed_nothing": 5,
+   "changed_nothing_at": [
+    73,
+    90,
+    91,
+    111,
+    112
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 5,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 1,
+   "cases_opened": 3,
+   "lessons_kept": 3,
+   "further_actions_combined": [
+    1,
+    2,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 75,
+     "explains": "t73",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Only one shape is selected at a time, and the selected shape shows its inner dots as 0 instead of 9. Clicking the shape that is already selected changes nothing. Clicking a different shape moves the selection to it, so its dots turn 0 and the old shape's dots turn 9.",
+     "applies_when": "You are about to click a shape whose inner dots are already 0 (colour 0), which means it is already selected.",
+     "replaces": 0
+    },
+    {
+     "at_action": 93,
+     "explains": "t90",
+     "also_covers": [
+      "t91"
+     ],
+     "further_actions_combined": 2,
+     "rule": "Only one shape is active at a time, and the movement actions only move that shape. Clicking the shape that is already active changes nothing, whatever colour its dots show (0 or b). Placing a piece correctly can pass the active role to the remaining piece without any click.",
+     "applies_when": "You are about to click a shape that is already active: it is the one the last movement action moved, or the only piece that has not been placed yet.",
+     "replaces": 1
+    },
+    {
+     "at_action": 113,
+     "explains": "t111",
+     "also_covers": [
+      "t112"
+     ],
+     "further_actions_combined": 1,
+     "rule": "A move only happens if the active piece has room in that direction. A piece that already touches both board edges along an axis, such as a bar spanning x 0-63, cannot move along that axis. Moves in that direction change nothing, and no step is spent.",
+     "applies_when": "The active piece (the one with 0 dots) already reaches the board edge or spans the full board in the direction of the intended move.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 97,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 216430,
+   "output_per_call_median": 1806,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-ka59-brief-1-20261121T055241Z",
+   "game": "ka59",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 30,
+   "level_at_start": 2,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 2,
+   "actions_per_completed_level": [
+    61,
+    38
+   ],
+   "actions_on_the_open_level": 1,
+   "changed_nothing": 2,
+   "changed_nothing_at": [
+    52,
+    92
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 2,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 9,
+   "cases_opened": 2,
+   "lessons_kept": 2,
+   "further_actions_combined": [
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 1,
+   "lessons": [
+    {
+     "at_action": 54,
+     "explains": "t52",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "A selected block's own move is cancelled if any cell it would cover is f (the dark crossing strip). The board stays the same. Blocks cross f only when another selected block pushes them, and then they slide to the first non-f spot past the strip.",
+     "applies_when": "The selected block's leading edge is right beside an f region in the direction of the move.",
+     "replaces": 0
+    },
+    {
+     "at_action": 94,
+     "explains": "t92",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking a block with ACTION6 only selects it if it is a selectable kind (like G, with an e border). Clicking a large b plus block (BI) does not select it. The current selection stays, and only the step counter changes.",
+     "applies_when": "An ACTION6 targets a cell of a b-coloured BI block, or any non-selectable cell. Nothing will change apart from the counter.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 76,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 129595,
+   "output_per_call_median": 1127,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 2,
+     "asked_for": true,
+     "won_by": "Level 1 was completed by ACTION2 at t30. That move put the second 3x3 e block inside the left yellow frame, so both frames held a block. The least this shows: the level completes once every yellow frame's interior holds a block.",
+     "different": "Blocks now come in different sizes: 3x3, 6x3, 3x6 and 6x6. Frames come in the matching interior sizes. Unselected blocks have centres of 5, not 4. There are also large f regions, and one frame (3x6) is in a separate upper-left room.",
+     "why": "The sizes are probably there so that each block has to be matched to the frame of its size. The separate room tests the routes: whether blocks can cross the f areas or the 2 walls.",
+     "first": "Move the selected 3x3 G block up toward its matching 3x3 frame F. This also checks how movement works on this board."
+    },
+    {
+     "at_action": 62,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "ACTION2 moved the selected G from y48-50 to y51-53, filling the last empty frame interior (x51-53 y51-53). G was still selected (0 centre) when the level completed. So all that was required was that every frame interior be covered by a block.",
+     "different": "Two new kinds of thing appear. There are large b plus-shaped blocks (BI, 9x9 with arms 3 wide), and there are plus-shaped 4-outlined frames (BH) whose interiors are the same plus shape. There is no f strip. G and the small frame F work as before.",
+     "why": "The BH frames are probably targets that only BI blocks fit, with each shape matched to its frame. The BI blocks are probably selectable and move like G. Moving them is likely what my rules cannot yet confirm.",
+     "first": "Click a BI block to see whether it gets selected, then move it with an arrow action."
+    },
+    {
+     "at_action": 100,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "Moving the selected e block into the small frame's interior finished level 3. BI already sat in the BH plus frame, so every frame interior then held a block. The block was still selected. This matches rules 3 and 6, and no looser rule is needed.",
+     "different": "BN is new: an e-bordered 3x3 with a 5 centre. The F frame (x37-41 y52-56), the BI plus and the BH plus frame are in different places. One small frame and BI sit below the f strip, and BH is far up and to the right of BI.",
+     "why": "BN is probably the second 3x3 block for the second small frame. Its 5 centre may mean it is unselectable or acts differently. Because BI and the lower F frame are below the f strip, blocks have to be pushed across f.",
+     "first": "Click BN to see whether it becomes selected."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "ACTION1/2/3/4 move the selected block up/down/left/right by 3 cells. The selected block has a 0 centre.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION6 on a block selects it.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level completes when every yellow 4-outlined frame has a block in its interior.",
+     "replaces": 0
+    },
+    {
+     "at_action": 8,
+     "rule": "ACTION6 on another block selects it and deselects the previous one. A placed block shows a 4 centre when deselected inside its frame.",
+     "replaces": 2
+    },
+    {
+     "at_action": 23,
+     "rule": "A selected block cannot move onto f cells by itself; the move is cancelled. A block pushed by the selected block slides across f and stops just past it, and the pusher does not move.",
+     "replaces": 0
+    },
+    {
+     "at_action": 37,
+     "rule": "A selected block's move is cancelled if it would cover f cells. If it pushes an adjacent block toward f, that block slides across the f strip to the first non-f spot past it, and the pusher stays put.",
+     "replaces": 4
+    },
+    {
+     "at_action": 55,
+     "rule": "ACTION6 on a block selects it (centre becomes 0) and deselects the previously selected block. A deselected block that sits inside its matching frame shows a 4 centre.",
+     "replaces": 2
+    },
+    {
+     "at_action": 61,
+     "rule": "A selected block can move onto the 4 outline of a frame. Only f cells block its own movement.",
+     "replaces": 0
+    },
+    {
+     "at_action": 62,
+     "rule": "A level completes once every frame's interior holds a block, even if the last block placed is still selected (0 centre). The block does not need to be deselected.",
+     "replaces": 0
+    },
+    {
+     "at_action": 68,
+     "rule": "When a selected block moves into a non-selectable big block (BI), that block slides several cells in the push direction (15 seen) and the pusher stays put.",
+     "replaces": 0
+    },
+    {
+     "at_action": 76,
+     "rule": "When a selected block pushes a non-selectable plus block (BI), the BI slides in the push direction until it sits in a plus frame (BH) interior lined up on that axis. 15 cells were seen both times. The pusher stays put.",
+     "replaces": 7
+    },
+    {
+     "at_action": 91,
+     "rule": "When a selected block pushes a non-selectable plus block (BI), the BI slides in the push direction until it sits in a lined-up plus frame (BH) interior, which can be up or left. The pusher stays put.",
+     "replaces": 7
+    }
+   ]
+  },
+  {
+   "run": "brief-ka59-brief-2-20261121T055241Z",
+   "game": "ka59",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 30,
+   "level_at_start": 2,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 2,
+   "actions_per_completed_level": [
+    60,
+    40
+   ],
+   "actions_on_the_open_level": 0,
+   "changed_nothing": 4,
+   "changed_nothing_at": [
+    52,
+    53,
+    54,
+    91
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 4,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 7,
+   "cases_opened": 3,
+   "lessons_kept": 3,
+   "further_actions_combined": [
+    1,
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 1,
+   "lessons": [
+    {
+     "at_action": 54,
+     "explains": "t52",
+     "also_covers": [
+      "t53"
+     ],
+     "further_actions_combined": 1,
+     "rule": "A selected block's move is refused, and the board stays the same, if the block's new position would overlap any f wall cell. Blocks move a whole 3 cells at a time, so they can never partly enter a wall.",
+     "applies_when": "The selected e block sits right next to an f region in the direction of the move, i.e. the next 3 cells that way include f cells.",
+     "replaces": 0
+    },
+    {
+     "at_action": 56,
+     "explains": "t54",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking with ACTION6 on a cell that is not part of an e block (floor, a yellow frame's border, a wall) changes nothing on the board except the step counter. Only clicking an e block changes which block is selected.",
+     "applies_when": "The ACTION6 target cell is not an e block cell, e.g. a 1 floor cell, a 4 frame cell, or an f or 2 cell.",
+     "replaces": 0
+    },
+    {
+     "at_action": 93,
+     "explains": "t91",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION6 only changes the selection when it clicks a cell of an e block. Clicking anything else changes nothing on the board except the step counter: floor, frame borders, walls, and also b plus pieces. b pieces cannot be selected.",
+     "applies_when": "The ACTION6 target cell is not an e block cell, e.g. a 1 floor cell, a 4 frame cell, an f or 2 cell, or a b plus cell.",
+     "replaces": 2
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 76,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 149482,
+   "output_per_call_median": 1196,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 2,
+     "asked_for": true,
+     "won_by": "Level 1 completed on the move that put the second 3x3 e block inside the 3x3 interior of a yellow frame. At that point both blocks sat in frame interiors. The least this shows: every movable e block has to sit inside a yellow frame interior.",
+     "different": "This level has four blocks instead of two, in three sizes: a 3x3 (G, selected), a 6x6 (E) and two 3x6 blocks (C), one horizontal and one vertical. The C and E blocks have 5 in the centre instead of 4. There are four frames, each matching one of these block sizes and orientations. The vertical B frame sits in an upper-left region cut off by f and 2 cells.",
+     "why": "Each frame size matches one block, so the goal is probably to match every block to its frame. The 5 centres may mark a different kind of block (not selectable, or only pushable). The isolated upper-left frame may need a route that crosses the f cells.",
+     "first": "Click a 5-centred block (C at 41,34) to see whether it can be selected."
+    },
+    {
+     "at_action": 61,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "The last move right put the horizontal 3x6 e block over the 3x6 interior of frame B, and the level completed on that same move. At that point every e block covered the interior of a frame of matching shape. That is the least shown to be required: each block covers a matching frame interior.",
+     "different": "New: two 9x9 plus shapes in colour b (BL), plus two 11x11 plus-shaped yellow frames (BK) whose interiors match the b pluses. There is one e square G, already selected, and one square frame F that matches it. Earlier levels had only e blocks.",
+     "why": "The b pluses most likely have to go into the plus frames. That needs a way to move them: either select them directly, or push them with the e block. My rules cannot yet say how b pieces move.",
+     "first": "Click a b plus with ACTION6 to see whether it becomes selected. If that does nothing, try pushing a plus with G."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "ACTION1/2/3/4 move the selected e block up/down/left/right by 3 cells.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION6 on an e block selects it; the selected block shows 0 at its centre.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level completes once every e block sits inside a yellow frame interior of matching size; frames are drawn under blocks and can be passed over.",
+     "replaces": 0
+    },
+    {
+     "at_action": 2,
+     "rule": "ACTION6 selects any e block, whatever its centre colour (4 or 5). The selected block's centre shows 0, and the block selected before returns to its original centre colour.",
+     "replaces": 2
+    },
+    {
+     "at_action": 26,
+     "rule": "If the selected block moves into another e block, the selected block stays put and the other block slides in that direction until it is stopped by a wall (seen stopping at 2).",
+     "replaces": 0
+    },
+    {
+     "at_action": 34,
+     "rule": "A pushed e block can pass through f walls, which a selected block cannot. When pushed left across an f band, it stopped at the first free floor position past the f (t63).",
+     "replaces": 4
+    },
+    {
+     "at_action": 46,
+     "rule": "A selected block that moves into another e block pushes that block 3 cells the same way. A block pushed into f passes through it and stops at the first floor position on the far side.",
+     "replaces": 4
+    },
+    {
+     "at_action": 51,
+     "rule": "When a selected block pushes another block through f, the pushed block jumps across, and the pusher may stay where it was.",
+     "replaces": 0
+    },
+    {
+     "at_action": 61,
+     "rule": "The level completes on the very move that leaves every movable block covering the interior of a frame of the same shape. No extra confirming action is needed.",
+     "replaces": 3
+    },
+    {
+     "at_action": 67,
+     "rule": "b plus pieces cannot be selected. Pushing one with the selected e block makes it slide several cells in the push direction, while the pusher stays where it was.",
+     "replaces": 0
+    },
+    {
+     "at_action": 75,
+     "rule": "A b plus pushed by the selected e block slides in the push direction and stops where it fills the hole of a plus-shaped frame in its path. The pusher does not move.",
+     "replaces": 6
+    },
+    {
+     "at_action": 92,
+     "rule": "A b plus pushed by the selected e block slides the whole way to a matching plus-frame hole in its path and fills it; the pusher stays where it is (seen for both pluses, vertically and horizontally).",
+     "replaces": 6
+    }
+   ]
+  },
+  {
+   "run": "brief-ka59-ledger-1-20261121T055241Z",
+   "game": "ka59",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 30,
+   "level_at_start": 2,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    79
+   ],
+   "actions_on_the_open_level": 21,
+   "changed_nothing": 7,
+   "changed_nothing_at": [
+    51,
+    52,
+    53,
+    60,
+    61,
+    65,
+    118
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 11,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 17,
+   "cases_opened": 4,
+   "lessons_kept": 4,
+   "further_actions_combined": [
+    2,
+    1,
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 54,
+     "explains": "t51",
+     "also_covers": [
+      "t52",
+      "t53"
+     ],
+     "further_actions_combined": 2,
+     "rule": "A selected e block moves 3 cells per arrow action. If the destination would overlap any f (wall) cell, the move is cancelled and the block stays put. The step counter on row 63 still goes down.",
+     "applies_when": "The selected block's edge in the direction of the move is within 3 cells of an f cell, e.g. a block at x30 moving left when f fills x21-29.",
+     "replaces": 0
+    },
+    {
+     "at_action": 62,
+     "explains": "t60",
+     "also_covers": [
+      "t61"
+     ],
+     "further_actions_combined": 1,
+     "rule": "A selected block moves 3 cells per arrow action. The move is cancelled, and the block stays put, if its destination would overlap any wall cell: f cells or the 2 band and edges. The step counter on row 63 can still go down.",
+     "applies_when": "The selected block's edge in the direction of the move is within 3 cells of an f or 2 cell. For example, O at y30 moving up into the 2 band at rows 27-29, or a block at x30 moving left into f at x21-29.",
+     "replaces": 1
+    },
+    {
+     "at_action": 67,
+     "explains": "t65",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "A selected block moves 3 cells per arrow action. The move is cancelled, and the block stays put, if its destination would overlap any wall cell: f cells or the 2 band and edges. The step counter on row 63 can still go down. In t65, O at x30-32 could not move left into the f column at x21-29. Selecting another block (t66) works as usual.",
+     "applies_when": "The selected block's edge in the direction of the move is within 3 cells of an f or 2 cell. For example, a block at x30 moving left into f at x21-29, or a block at y30 moving up into the 2 band at rows 27-29.",
+     "replaces": 1
+    },
+    {
+     "at_action": 120,
+     "explains": "t118",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking a b-coloured block (such as a b plus) does not select it, and nothing else changes. The block that was selected before stays selected, and the next arrow moves that block. Only the step counter goes down.",
+     "applies_when": "An ACTION6 click lands on a b-coloured block, or on any block type that has never been seen to become selected, while another block is already selected.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 76,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 137852,
+   "output_per_call_median": 1184,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-ka59-ledger-2-20261121T055241Z",
+   "game": "ka59",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 30,
+   "level_at_start": 2,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    69
+   ],
+   "actions_on_the_open_level": 31,
+   "changed_nothing": 5,
+   "changed_nothing_at": [
+    53,
+    54,
+    57,
+    58,
+    108
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 13,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 15,
+   "cases_opened": 3,
+   "lessons_kept": 3,
+   "further_actions_combined": [
+    1,
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 55,
+     "explains": "t53",
+     "also_covers": [
+      "t54"
+     ],
+     "further_actions_combined": 1,
+     "rule": "A selected block can't move into f (void) cells: the move is cancelled, though the step counter may still tick. ACTION6 on empty ground, including the empty inside of a frame, does nothing; it only acts when you click a block.",
+     "applies_when": "The selected block's next 3-cell step in that direction would overlap any f cell, or the ACTION6 target is a ground or frame-interior cell and not a block.",
+     "replaces": 0
+    },
+    {
+     "at_action": 59,
+     "explains": "t57",
+     "also_covers": [
+      "t58"
+     ],
+     "further_actions_combined": 1,
+     "rule": "A selected block can't move into f or 2 cells: the move is cancelled, though the step counter may still tick. ACTION6 does nothing on ground, on a frame's border or on a frame's empty inside. Clicks only seem to act on blocks.",
+     "applies_when": "The selected block's next 3-cell step would overlap any f or 2 cell, or the ACTION6 target is a ground, frame-border or frame-interior cell and not a block.",
+     "replaces": 1
+    },
+    {
+     "at_action": 110,
+     "explains": "t108",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION6 on a b plus doesn't select it. Arrow keys still move the e block afterwards, so clicks don't change control to the b pluses. The b pluses seem not to be directly controllable.",
+     "applies_when": "An ACTION6 targets a b plus, or ground, a frame border or a frame's inside. It will change nothing apart from maybe ticking the step counter.",
+     "replaces": 1
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 75,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 137770,
+   "output_per_call_median": 1148,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-lf52-brief-1-20261121T055241Z",
+   "game": "lf52",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 8,
+   "level_at_start": 2,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 2,
+   "actions_per_completed_level": [
+    36,
+    46
+   ],
+   "actions_on_the_open_level": 18,
+   "changed_nothing": 0,
+   "changed_nothing_at": [],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 0,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 3,
+   "cases_opened": 0,
+   "lessons_kept": 0,
+   "further_actions_combined": [],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [],
+   "game_over_lessons": [],
+   "checks_written": 0,
+   "model_calls": 101,
+   "replies_sent_back": 1,
+   "output_tokens": 178963,
+   "output_per_call_median": 1153,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 2,
+     "asked_for": true,
+     "won_by": "Jumping the last possible peg in level 1 (t8) left a single peg, and the level then advanced. The least this shows is that a level ends once one peg is left, or once no jumps remain.",
+     "different": "There are now two separate peg boards: a 7x3 board with 4 pegs and a 2x2 board with 1 peg. A colour-5 pipe joins the right side of row 1 on the big board to the left side of row 1 on the small board. Midway it passes through a new box F (b border, 4x4 colour-c inside). Pegs on the big board alone cannot be cut to one, and the small board's peg is cut off.",
+     "why": "The pipe and F probably let pegs pass or jump between the boards. Removing the pegs across both boards needs this, so the pipe and F are probably what this level is about.",
+     "first": "Select the peg nearest the pipe (column 6 of the big board) and look for landing marks across the pipe or at F."
+    },
+    {
+     "at_action": 37,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "The peg on the cart jumped over the last other board peg onto an empty board cell, which left exactly one peg. The level then completed. The least that is required is one remaining peg.",
+     "different": "There are two carts instead of one. There are three boards: a big board top-left, a lower board, and a partial board cut off at the right edge (x59-63, y11-16). Pipes run between them, and one pipe leaves the screen at x63, y49-50. Neither cart is directly next to a board cell; each is one cell away.",
+     "why": "Pegs sit on separate boards that no jump can cross. The carts are there to carry pegs between boards so that the total can drop to one. With two carts, I need to know which cart the arrows move.",
+     "first": "Press ACTION3 once and see which cart moves left. Both carts would end up next to a board peg."
+    },
+    {
+     "at_action": 83,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "The peg on the cart at x18-21 jumped left over the board peg at x12-15 and landed on x6-9. That removed the jumped peg and left exactly one peg, and the level completed straight away. This fits rule 2: the level completes when one peg remains.",
+     "different": "There is a new object CO: an f-bordered block with a 7 interior and a 5 base, at two cells (x18-21 and x30-33) in the middle row of a 7x3 board. There is a second, smaller board below (y58+) with one peg. A pipe runs from the board's right edge through the cart and on offscreen, plus a vertical pipe at x55-56 going down. There are 3 pegs in total.",
+     "why": "CO probably changes which jumps are possible: it may block jumps, act as a jumpable piece, or be something else. The lower board's peg means the cart has to move pegs between the boards, as on level 3.",
+     "first": "Select the peg at x12-15 and see whether a landing mark appears at x24-27, past the CO."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "Clicking a peg (colour e) selects it and marks its legal landings in colour 2. A legal landing is an empty cell two steps away in a straight line with a peg between. Clicking a mark moves the peg there and removes the peg it jumped over.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level was completed when only one peg was left on the board (level 1, t8).",
+     "replaces": 0
+    },
+    {
+     "at_action": 8,
+     "rule": "Arrow actions slide the b/c cart (F) along the colour-5 pipe in steps of one cell pitch (6 px). ACTION4 moved it right.",
+     "replaces": 0
+    },
+    {
+     "at_action": 12,
+     "rule": "Arrow actions slide the b/c cart along the colour-5 pipe 6 px per press, and it follows the pipe around corners. ACTION4 moved it right and ACTION1 moved it up.",
+     "replaces": 3
+    },
+    {
+     "at_action": 15,
+     "rule": "Arrow actions slide the b/c cart along the colour-5 pipe 6 px per press, and it follows the pipe around corners. ACTION4 moved it right, ACTION1 moved it up and ACTION3 moved it left.",
+     "replaces": 3
+    },
+    {
+     "at_action": 17,
+     "rule": "A peg can jump onto a cart that is parked next to a board cell, and that removes the peg it jumped over. The peg then stays on the cart.",
+     "replaces": 0
+    },
+    {
+     "at_action": 19,
+     "rule": "ACTION2 slides the cart down along a vertical pipe section by 6 px per press.",
+     "replaces": 0
+    },
+    {
+     "at_action": 22,
+     "rule": "ACTION3 slides the cart left along a horizontal pipe section by 6 px per press, and ACTION2 slides it down along a vertical section. The cart follows the pipe around corners.",
+     "replaces": 5
+    },
+    {
+     "at_action": 36,
+     "rule": "A peg sitting on a cart can be selected by clicking it, which turns the cart's border colour 3. It can then jump from the cart onto an empty board cell, over an adjacent peg, and the landing is marked in colour 2.",
+     "replaces": 0
+    },
+    {
+     "at_action": 37,
+     "rule": "A level completes as soon as only one peg remains in total, wherever it is: on a board or after jumping off a cart. Seen on levels 1 and 2.",
+     "replaces": 2
+    },
+    {
+     "at_action": 38,
+     "rule": "When a level has several carts, one arrow press can slide all of them together, each along its own pipe, by 6 px.",
+     "replaces": 0
+    },
+    {
+     "at_action": 46,
+     "rule": "A selected peg can jump from a board cell over an adjacent board peg onto an empty cart parked beside that peg. The jumped peg is removed and the moving peg then rides on the cart.",
+     "replaces": 0
+    },
+    {
+     "at_action": 70,
+     "rule": "Selecting a board peg marks an adjacent empty parked cart as a landing in colour 2. Clicking the mark moves the peg onto the cart and removes the peg it jumped over.",
+     "replaces": 8
+    },
+    {
+     "at_action": 71,
+     "rule": "When the cart moves, the view can scroll to follow it. Screen coordinates of everything then shift, so compare positions against fixed pipes or boards, not raw x values.",
+     "replaces": 0
+    },
+    {
+     "at_action": 81,
+     "rule": "A peg that jumps off a cart onto a board cell also removes the board peg it jumped over, the same as a normal jump. The cart is left empty.",
+     "replaces": 0
+    },
+    {
+     "at_action": 85,
+     "rule": "An f/7 block (CO) in a board cell can be jumped over like a peg, but it is not removed. The jump just moves the peg 2 cells and the peg count stays the same.",
+     "replaces": 0
+    },
+    {
+     "at_action": 87,
+     "rule": "Jumping over an f/7 CO block works the same way when the peg has already moved (t94: peg x24 jumped over CO x30 to x36). The CO stays put and nothing is removed.",
+     "replaces": 0
+    }
+   ]
+  },
+  {
+   "run": "brief-lf52-brief-2-20261121T055241Z",
+   "game": "lf52",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 8,
+   "level_at_start": 2,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 2,
+   "actions_per_completed_level": [
+    38,
+    46
+   ],
+   "actions_on_the_open_level": 16,
+   "changed_nothing": 4,
+   "changed_nothing_at": [
+    9,
+    10,
+    11,
+    16
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 4,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 1,
+   "cases_opened": 2,
+   "lessons_kept": 2,
+   "further_actions_combined": [
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 13,
+     "explains": "t11",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking a non-peg object such as the bc box on a pipe does nothing. Clicks only matter on pegs that have a legal jump, or on cells marked with colour 2 while a peg is selected.",
+     "applies_when": "The click target is not a colour-e peg with a legal jump and is not a colour-2 landing marker, for example the bc box, a pipe, a wall or an empty cell.",
+     "replaces": 0
+    },
+    {
+     "at_action": 18,
+     "explains": "t16",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking a peg that has no legal jump (no adjacent peg with an empty board cell beyond it) leaves the board as it was. The peg only wiggles in the intermediate frames and is not selected. The step counter still goes up.",
+     "applies_when": "The clicked colour-e peg has no neighbouring peg with an empty cell past it in any direction, for example a peg whose only neighbour leads off the board edge or into a pipe without a cell.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 95,
+   "model_calls": 102,
+   "replies_sent_back": 2,
+   "output_tokens": 174581,
+   "output_per_call_median": 1364,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 2,
+     "asked_for": true,
+     "won_by": "Jumping (5,3) over (5,4) to (5,5) left one peg on the board, and the level was completed. The least this shows is that ending with a single peg wins.",
+     "different": "There are now two separate boards: a 7x3 main board with pegs at row 1 cols 1, 2, 4, 6, and a 2x2 board with one peg. They are joined by a colour-5 pipe that runs through a new bc box (F). In level 1 the boards were joined directly. My rules can bring the main board down to one peg, but they cannot merge it with the separate board's peg.",
+     "why": "The pipe and box F are most likely how pegs get between the boards, so reaching one peg in total depends on them.",
+     "first": "Click the second-board peg to see whether a landing appears across the pipe on the main board. If not, click F or try actions 1-4."
+    },
+    {
+     "at_action": 39,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "The peg in box F jumped over the last board peg onto an empty board cell, leaving one peg, and the level advanced. The least this shows is that the level is done when one peg remains.",
+     "different": "There are now two separate boards: an irregular upper one and a small lower one. Each has its own bc box on a pipe. The upper box's pipe runs to a partial board at the right edge that holds a peg. The lower box's pipe leaves the screen at the right edge. There are 8 pegs in total, and the step counter in row 0 has been reset.",
+     "why": "The boxes and pipes are needed to bring pegs from the separate boards together so that one peg can be left. The right-edge partial board and the pipe that leaves the screen suggest the board areas are connected beyond what is visible, and that pegs have to be carried between them.",
+     "first": "Reduce the upper board with ordinary jumps first, since those moves are forced. Then slide the upper box to column 5 to load a peg, carry it right, and watch what happens at the right edge."
+    },
+    {
+     "at_action": 85,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "The last jump (box peg at x12 over x18 onto x24, row 48) left exactly one peg in total, and the box was empty. That completed the level right away. The least this requires is one peg left anywhere, which is rule 2.",
+     "different": "New look CO: an f frame with 0/7 inside and a colour-5 base, sitting in two board cells (x18 and x30, row 24). A second board (CQ) is partly visible at the bottom (y58+) with a peg, plus a pipe structure (CP) at the bottom right. The bc box sits on a right-side pipe that joins the board at rows 25-26, with an empty pipe cell between the board edge (x47) and the box.",
+     "why": "CO sits in the line between the two upper pegs (x12 and x42), so it is probably jumpable or must be removed or moved for the pegs to meet. The lower board and its pipe probably have to be linked through the box so the pegs on separate boards can be brought together.",
+     "first": "Click the peg at x12-15,y24-27 and see whether a colour-2 landing appears beyond CO at x24-27."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "Peg solitaire: clicking a peg (colour e) selects it and marks its legal landings in colour 2. Clicking a marked cell moves the peg there and removes the peg it jumped over. Each action adds one pixel to the counter in row 0.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level is completed when only one peg is left on the board.",
+     "replaces": 0
+    },
+    {
+     "at_action": 10,
+     "rule": "Action 4 moves the bc box (F) 6px right along the colour-5 pipe it sits on, one board-cell pitch per action.",
+     "replaces": 0
+    },
+    {
+     "at_action": 14,
+     "rule": "Action 1 moves the bc box (F) 6px up along a vertical colour-5 pipe, and action 4 moves it 6px right along a pipe.",
+     "replaces": 3
+    },
+    {
+     "at_action": 15,
+     "rule": "Action 1 moves the bc box (F) 6px up along a vertical colour-5 pipe, and action 4 moves it 6px right along a pipe. Repeated presses keep moving it while the pipe continues.",
+     "replaces": 3
+    },
+    {
+     "at_action": 16,
+     "rule": "Action 1 moves the bc box (F) 6px up and action 4 moves it 6px right along colour-5 pipes. Repeated presses keep moving it while the pipe continues.",
+     "replaces": 3
+    },
+    {
+     "at_action": 17,
+     "rule": "Actions 1/2/3/4 slide the bc box (F) 6px up/down/left/right along colour-5 pipes. Repeated presses keep moving it while the pipe continues.",
+     "replaces": 3
+    },
+    {
+     "at_action": 18,
+     "rule": "A movable box (bc) on a pipe acts as a board cell when its inner area lines up with a board row or column: pegs can jump into it, and its landing shows as colour 2 inside it.",
+     "replaces": 0
+    },
+    {
+     "at_action": 19,
+     "rule": "A peg can jump into a movable box (F) when the box lines up with a board row. The peg then sits inside the box, and the jumped-over peg is removed.",
+     "replaces": 0
+    },
+    {
+     "at_action": 20,
+     "rule": "A movable box keeps the peg inside it when it slides along a pipe.",
+     "replaces": 0
+    },
+    {
+     "at_action": 27,
+     "rule": "A movable box slides along a pipe in 6px steps with each press of a direction action, as long as the pipe continues in that direction. A box that is holding a peg still slides.",
+     "replaces": 0
+    },
+    {
+     "at_action": 38,
+     "rule": "Clicking a peg inside a movable box selects it the same way as a board peg: the box border turns colour 3 and its legal landings on a lined-up board appear in colour 2.",
+     "replaces": 0
+    },
+    {
+     "at_action": 39,
+     "rule": "A peg inside a movable box can jump out over an adjacent board peg onto an empty board cell that lines up with it. The jumped-over peg is removed as usual.",
+     "replaces": 0
+    },
+    {
+     "at_action": 49,
+     "rule": "When a box moves toward the edge of the screen, the view can scroll so that more of the board comes into sight. The level is wider than the 64-cell screen.",
+     "replaces": 0
+    },
+    {
+     "at_action": 53,
+     "rule": "A peg that jumps out of a movable box onto the board leaves the box empty (c interior), and the box keeps its place on the pipe.",
+     "replaces": 0
+    },
+    {
+     "at_action": 55,
+     "rule": "A peg can jump over an adjacent peg onto an empty cell in any orthogonal direction: horizontally, or vertically along the columns.",
+     "replaces": 0
+    },
+    {
+     "at_action": 76,
+     "rule": "The view scrolls when the box nears the screen edge. Board content shifts in steps such as 8px, so recompute coordinates from each new frame and do not reuse old ones.",
+     "replaces": 10
+    },
+    {
+     "at_action": 87,
+     "rule": "An f-framed block (CO) on a board cell can be jumped over like a peg, but it stays in place after the jump and is not counted as a peg.",
+     "replaces": 12
+    },
+    {
+     "at_action": 100,
+     "rule": "Jumping over an f-framed CO block moves the selected peg two cells, and CO stays where it is. Several CO blocks can be used one after another as stepping stones.",
+     "replaces": 12
+    }
+   ]
+  },
+  {
+   "run": "brief-lf52-ledger-1-20261121T055241Z",
+   "game": "lf52",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 8,
+   "level_at_start": 2,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    82
+   ],
+   "actions_on_the_open_level": 18,
+   "changed_nothing": 11,
+   "changed_nothing_at": [
+    33,
+    34,
+    37,
+    38,
+    39,
+    45,
+    49,
+    50,
+    51,
+    52,
+    59
+   ],
+   "repeats_of_a_known_no_effect_action": 2,
+   "in_a_loop": 27,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 10,
+   "cases_opened": 9,
+   "lessons_kept": 9,
+   "further_actions_combined": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 1,
+   "lessons": [
+    {
+     "at_action": 20,
+     "explains": "t17",
+     "also_covers": [
+      "t18"
+     ],
+     "further_actions_combined": 2,
+     "rule": "Non-click actions (ACTION1/ACTION2) do not move anything on the peg boards. Only the row-0 step counter advances. Pieces react only to ACTION6 clicks on pegs, landing spots or the V piece.",
+     "applies_when": "Any time you think about using ACTION1-4 while no peg is selected (no colour-3 outline on the board). Expect only the row-0 counter to change.",
+     "replaces": 0
+    },
+    {
+     "at_action": 22,
+     "explains": "t20",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "A peg only does anything when it has a legal orthogonal jump: an adjacent peg with an empty hole (full-1 block) directly beyond it, on the same board. Without one, clicking it plays only a short shake animation (the e diamond shifts and comes back), and no selection or landing marker shows up.",
+     "applies_when": "Before clicking a peg, check its four neighbouring cells on its board. If no neighbour holds a peg with an empty hole right behind it, the click will only shake the peg and leave the board unchanged apart from the row-0 counter.",
+     "replaces": 0
+    },
+    {
+     "at_action": 35,
+     "explains": "t33",
+     "also_covers": [
+      "t34"
+     ],
+     "further_actions_combined": 1,
+     "rule": "A peg that is clicked tries to jump, but if every possible jump would land on an occupied cell (on its board, or through a pipe link to the other board), it only shakes toward that direction and the board stays the same. Clicking non-peg pieces such as the bc pipe block F does nothing apart from the counter.",
+     "applies_when": "Before clicking a peg, check each direction, counting pipe-connected cells as neighbours. If no adjacent peg has an empty hole beyond it, the click will only shake. Clicking an F block with nothing selected also changes nothing.",
+     "replaces": 2
+    },
+    {
+     "at_action": 39,
+     "explains": "t37",
+     "also_covers": [
+      "t38"
+     ],
+     "further_actions_combined": 1,
+     "rule": "Clicking a peg only shakes it, toward one side, and leaves the board as it was when no jump is possible. A jump needs an adjacent peg with an empty hole beyond it. A lone peg, shown in colour 2, never has one. Clicking non-peg pieces such as F with nothing selected changes only the counter.",
+     "applies_when": "Before clicking a peg, check each direction, counting pipe-linked cells too, for a neighbouring peg with an empty full-1 hole beyond it. If none exists, as with any lone colour-2 peg on its board, the click will only shake. Clicking F with nothing selected also does nothing.",
+     "replaces": 2
+    },
+    {
+     "at_action": 41,
+     "explains": "t39",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION7 does not undo or change any pieces. Like ACTION1-4, it only advances the row-0 counter. Pieces react only to ACTION6 clicks on pegs, landing spots or the reset V piece.",
+     "applies_when": "Any time you consider ACTION1, 2, 3, 4 or 7: expect only the row-0 counter to change, whatever the board state.",
+     "replaces": 1
+    },
+    {
+     "at_action": 47,
+     "explains": "t45",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking a peg with no legal jump only shakes it and leaves the board as it was. A jump needs an adjacent peg plus an empty full-1 hole right beyond it on the same board. A board edge, a pipe exit or a non-hole block such as F beyond the neighbour does not count. Clicking non-peg pieces with nothing selected changes only the counter.",
+     "applies_when": "Before clicking a peg, check each direction for a neighbouring peg with an empty 1-hole directly beyond it inside the board. If the neighbour sits at the board edge or pipe exit, or there is no neighbour (for example a lone peg), the click will only shake.",
+     "replaces": 2
+    },
+    {
+     "at_action": 51,
+     "explains": "t49",
+     "also_covers": [
+      "t50"
+     ],
+     "further_actions_combined": 1,
+     "rule": "A peg only has a legal jump inside its own board. Pegs on two boards joined by a pipe are not neighbours through the pipe, so a peg at a pipe end with no in-board neighbour plus empty hole beyond only shakes. Clicking a non-peg piece with nothing selected changes only the counter.",
+     "applies_when": "Before clicking a peg, look inside its own board in each direction for an adjacent peg with an empty full-1 hole right beyond it. Pipes, board edges and F blocks don't count. If there is none, the click will only shake the peg.",
+     "replaces": 2
+    },
+    {
+     "at_action": 53,
+     "explains": "t51",
+     "also_covers": [
+      "t52"
+     ],
+     "further_actions_combined": 1,
+     "rule": "The F block and the colour-5 pipe cells don't respond to clicks. F can't be selected and the pipe isn't a landing spot, so clicking either one, with or without a selection, only advances the row-0 counter. Only pegs that have a legal in-board jump, colour-2 landing rings and the V reset piece react.",
+     "applies_when": "Before clicking any F (bc) block or colour-5 pipe/frame cell, expect nothing but the counter to change unless a colour-2 ring is showing on that spot.",
+     "replaces": 0
+    },
+    {
+     "at_action": 61,
+     "explains": "t59",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "A peg is only offered a jump when an adjacent peg in its own board has an empty hole right beyond it in that board. A peg whose only neighbour leads toward a pipe exit or the board edge has no legal move. Clicking it plays a shake animation in the in-between frames and leaves the board unchanged, apart from the counter.",
+     "applies_when": "Before clicking a peg, check each direction inside its board for an adjacent peg followed by an empty hole. If the cell beyond is the pipe, the board edge or a frame, and no other direction works, the click will only shake it.",
+     "replaces": 2
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 90,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 206405,
+   "output_per_call_median": 1594,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-lf52-ledger-2-20261121T055241Z",
+   "game": "lf52",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 8,
+   "level_at_start": 2,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 22,
+   "changed_nothing_at": [
+    11,
+    12,
+    13,
+    17,
+    20,
+    21,
+    30,
+    31,
+    32,
+    33,
+    36,
+    37,
+    56,
+    57,
+    58,
+    60,
+    61,
+    71,
+    74,
+    93,
+    94,
+    95
+   ],
+   "repeats_of_a_known_no_effect_action": 2,
+   "in_a_loop": 42,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 5,
+   "cases_opened": 11,
+   "lessons_kept": 11,
+   "further_actions_combined": [
+    1,
+    1,
+    2,
+    1,
+    2,
+    1,
+    2,
+    1,
+    3,
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 1,
+   "lessons": [
+    {
+     "at_action": 15,
+     "explains": "t13",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking a cell that holds no peg and no colour-2 landing marker (for example the pipe object F) changes nothing on the board. It only adds a cell to the top-row counter. The same goes for a peg that has no legal jump.",
+     "applies_when": "The target cell is not an e-coloured peg with an empty cell two steps away past a neighbouring peg, and is not a colour-2 landing ring.",
+     "replaces": 0
+    },
+    {
+     "at_action": 19,
+     "explains": "t17",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "A click changes the board only if it lands on a peg that has a legal jump (a neighbouring peg with an empty cell just past it), or on a colour-2 landing marker. Clicking empty cells, pipe or other decorations like F, or a peg with no legal jump leaves the board unchanged. A peg with no jump only wiggles toward its neighbour in the in-between frames. The click still adds one cell to the top-row counter.",
+     "applies_when": "The target is not a colour-2 marker, and it is either not a peg or a peg where every neighbouring peg has no empty board cell directly behind it in the same line.",
+     "replaces": 1
+    },
+    {
+     "at_action": 23,
+     "explains": "t20",
+     "also_covers": [
+      "t21"
+     ],
+     "further_actions_combined": 2,
+     "rule": "Actions 1-4 slide the movable block F (colours b/c) 6 cells along the 5-coloured pipe it sits in. An arrow whose direction has no pipe continuing from F's current position leaves the board unchanged, apart from the counter.",
+     "applies_when": "F's current position has no pipe running in the arrow's direction. For example, F sits on a horizontal pipe stretch with no vertical branch there, and the arrow points up or down.",
+     "replaces": 0
+    },
+    {
+     "at_action": 32,
+     "explains": "t30",
+     "also_covers": [
+      "t31"
+     ],
+     "further_actions_combined": 1,
+     "rule": "Actions 1-4 slide the movable block F (colours b/c) 6 cells along the 5-coloured pipe. If the pipe does not continue from F's current position in the arrow's direction, nothing on the board changes except the counter. This includes F sitting docked in a gap in a board's frame at the end of the pipe, with the board cells beyond it.",
+     "applies_when": "Before an arrow, trace the 5-coloured pipe from F's edges. If no 2-wide pipe stretch leaves F on that side, the arrow is a no-op. For example, F is in a frame gap with only the board on that side, or F is on a straight stretch with no branch in that direction.",
+     "replaces": 2
+    },
+    {
+     "at_action": 35,
+     "explains": "t32",
+     "also_covers": [
+      "t33"
+     ],
+     "further_actions_combined": 2,
+     "rule": "ACTION7 seems to undo the most recent action. If that action itself changed nothing on the board (an arrow or click that had no effect), undoing it also changes nothing except the top-row counter.",
+     "applies_when": "The action just before ACTION7 left the board unchanged (only the counter moved), or there is no earlier board-changing action left to undo.",
+     "replaces": 0
+    },
+    {
+     "at_action": 38,
+     "explains": "t36",
+     "also_covers": [
+      "t37"
+     ],
+     "further_actions_combined": 1,
+     "rule": "ACTION7 undoes only the single most recent board-changing action (one level deep). If the last action changed nothing, or the one available undo has already been used, ACTION7 changes nothing except the top-row counter.",
+     "applies_when": "ACTION7 was just used to undo a change and nothing has changed the board since then, or the most recent action changed nothing on the board.",
+     "replaces": 3
+    },
+    {
+     "at_action": 59,
+     "explains": "t56",
+     "also_covers": [
+      "t57",
+      "t58"
+     ],
+     "further_actions_combined": 2,
+     "rule": "A docked F does not act as an empty hole for pegs on the board. Pegs cannot jump into F's c-slot, and clicking the slot does nothing. Docking F next to a board peg does not by itself create a legal jump. Clicking pegs or X that have no empty in-board landing cell only makes them wiggle.",
+     "applies_when": "F sits in a board's frame gap and the only 'empty' cell past a jumped peg is F's c-slot, or the click target is F's slot itself. Expect no change on the board, only the counter going up.",
+     "replaces": 0
+    },
+    {
+     "at_action": 62,
+     "explains": "t60",
+     "also_covers": [
+      "t61"
+     ],
+     "further_actions_combined": 1,
+     "rule": "A peg can jump only if the board cell right behind its neighbour is empty. When every board cell in that line is full (X and F's c-slot count as full), clicking any peg, including X, only makes it wiggle toward a neighbour. The board stays the same and only the counter goes up.",
+     "applies_when": "Before clicking a peg or X, check all four directions for a neighbouring peg with an empty board cell (zeros only, no 1/2/c peg) right behind it. If there is none, for example on a board with no holes left, the click is a no-op.",
+     "replaces": 1
+    },
+    {
+     "at_action": 75,
+     "explains": "t71",
+     "also_covers": [
+      "t74"
+     ],
+     "further_actions_combined": 3,
+     "rule": "A docked F's c-slot is not a landing hole. A D peg next to F whose only jump would land in F or off the board just wiggles toward it, and the board stays the same. Clicking plain 1-colour C pegs does nothing at all, not even a wiggle, so they are probably not selectable pieces.",
+     "applies_when": "You are about to click a peg when no board cell inside the frame is empty (no all-zero peg position) on the far side of a neighbouring peg, or the click target is a plain 1-colour peg. Expect only the counter to go up.",
+     "replaces": 4
+    },
+    {
+     "at_action": 95,
+     "explains": "t93",
+     "also_covers": [
+      "t94"
+     ],
+     "further_actions_combined": 1,
+     "rule": "Only e-coloured D pegs respond to clicks. Plain 1-colour C pegs and the cart F (its b frame or c-slot) do nothing when clicked, even when F is docked next to a board or a D. A D with no legal jump into an empty board cell only wiggles. F's c-slot counts as full, not as a landing hole.",
+     "applies_when": "The click target is a 1-colour peg or any cell of the b/c cart F. Or it is a D with no all-zero board cell behind a neighbouring peg in any direction. Expect only the counter to go up.",
+     "replaces": 4
+    },
+    {
+     "at_action": 97,
+     "explains": "t95",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "A clicked e-colour D peg moves only if, in some direction, its neighbour cell holds a peg and the next peg cell after that is still inside the same board's frame. That landing cell can hold a plain 1-colour C peg. If every direction runs into the frame, the edge of the board or F, the D only wiggles and the board stays the same. Clicking 1-colour C pegs or the cart F does nothing.",
+     "applies_when": "Before clicking a D, check its four directions. Is there a neighbouring peg with another peg position inside the frame beyond it? If not, for example the D sits next to F or against the frame on every side, or the click is on a C or F, expect only the counter to go up.",
+     "replaces": 4
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 93,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 237347,
+   "output_per_call_median": 1526,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-sc25-brief-1-20261121T055241Z",
+   "game": "sc25",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 64,
+   "level_at_start": 4,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 1,
+   "changed_nothing_at": [
+    105
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 1,
+   "game_overs": 2,
+   "turns": 98,
+   "turns_announcing_a_test": 9,
+   "cases_opened": 1,
+   "lessons_kept": 1,
+   "further_actions_combined": [
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 107,
+     "explains": "t105",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "An ACTION6 click only does something when it lands on one of the 3x3 click-grid cells. A click anywhere else (background, panels, the piece's area) changes nothing, apart from a brief 8 flash of the grid cells, and it uses no move budget.",
+     "applies_when": "The ACTION6 coordinates fall outside every 3x3 click-grid cell, for example on background colour 5 or between the grid cells.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [
+    {
+     "at_action": 110,
+     "rule": "Every move (blocked or not) and every click on a grid cell uses up 2 rows of the e budget bar on the right edge. When the bar is empty the game ends. Detours such as shrinking the piece (shorter steps) or entering unneeded patterns waste budget.",
+     "applies_when": "Before acting, count the e cells left in the right-edge bar (2 per action). Compare that with the moves plus grid clicks still needed to reach the socket at the piece's current step size. If the bar is smaller than that, the plan will end in GAME_OVER."
+    },
+    {
+     "at_action": 153,
+     "rule": "The e budget bar on the right edge loses 2 rows for every move (blocked or not) and every click on a grid cell. When it is empty the attempt ends in GAME_OVER. Detours such as shrinking the piece (half-size steps), entering unneeded patterns or blocked moves drain it before the piece reaches the socket.",
+     "applies_when": "Before each action, count the e cells left in the right-edge bar divided by 2. Compare that with the clicks plus moves still needed at the piece's current step size. If the remaining budget is equal to or less than what is needed, and no e pickup is reachable on the way, the plan will end in GAME_OVER."
+    }
+   ],
+   "checks_written": 55,
+   "model_calls": 101,
+   "replies_sent_back": 3,
+   "output_tokens": 153454,
+   "output_per_call_median": 1283,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "ACTION3 moved the piece from x27-30, y38-41 left into the 9-framed socket at x23-26, y38-41. The level ended once the piece reached the socket; no particular orientation was shown to be needed.",
+     "different": "The socket is now on the right at x51-55, y34-39, behind a d blocker at x47-49. There are two pattern panels: A with f in a plus shape without its centre, and B with 6 in the middle column. The D object (6 frame, d centre) sits at the left end of a corridor at y29-30, and there is a new 2x2 e block E at x44-45, y28-29. The piece starts at x35-38, y19-22 with its 9 side facing down.",
+     "why": "The d blocker probably has to be opened by entering a panel's pattern in the 3x3 grid. With two panels, there may be two locks: the socket blocker and the D object. E could be a pickup or a budget refill.",
+     "first": "Click one grid cell to see how ACTION6 fills the grid, then check what changes."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "Moving the 4x4 9/a piece fully into a 4x4 slot framed by 9 (the socket) completes the level.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION1-4 move the piece one 4-cell step. ACTION3 goes left and ACTION2 goes down, and the piece's 9 side faces the direction of travel.",
+     "replaces": 0
+    },
+    {
+     "at_action": 5,
+     "rule": "Filling the 3x3 click-grid to match a pattern panel applies a transformation to the piece and clears the grid. Panel A's pattern (plus shape without its centre) shrinks the piece from 4x4 to 2x2.",
+     "replaces": 0
+    },
+    {
+     "at_action": 6,
+     "rule": "The piece's step size equals its current size: 4 cells when it is 4x4, 2 cells when it is 2x2.",
+     "replaces": 0
+    },
+    {
+     "at_action": 14,
+     "rule": "Moving the piece onto a 2x2 e pickup refills the e move-budget bar completely, and the pickup disappears.",
+     "replaces": 0
+    },
+    {
+     "at_action": 31,
+     "rule": "A move that is blocked by an obstacle still uses up move budget, even though the piece does not move.",
+     "replaces": 0
+    },
+    {
+     "at_action": 34,
+     "rule": "Filling the 3x3 click-grid with panel B's pattern (6 in the middle column) removes 6-framed/d obstacles, turning them into floor (2), and then clears the grid.",
+     "replaces": 0
+    },
+    {
+     "at_action": 37,
+     "rule": "Every ACTION6 click on a click-grid cell uses up one action's worth of the e budget bar, the same as a move.",
+     "replaces": 0
+    },
+    {
+     "at_action": 38,
+     "rule": "Entering panel A's pattern while the piece is already shrunk clears the grid but does not change the piece's size back.",
+     "replaces": 0
+    },
+    {
+     "at_action": 39,
+     "rule": "ACTION4 moves the piece right by one step equal to its size, and its 9 side turns to face the direction of travel.",
+     "replaces": 0
+    },
+    {
+     "at_action": 42,
+     "rule": "An ACTION6 click on background, outside the click-grid, uses no move budget and leaves the board unchanged. The grid cells only flash 8 for a moment.",
+     "replaces": 0
+    },
+    {
+     "at_action": 46,
+     "rule": "When the e budget bar (right edge, 2 rows per action) runs out, the game ends and the level restarts.",
+     "replaces": 0
+    },
+    {
+     "at_action": 82,
+     "rule": "Filling the 3x3 click-grid with panel B's pattern (middle column) turns every 6/d obstacle, including 6-framed d blocks and plain d blockers, into floor 2 and clears the grid. It does not change the piece.",
+     "replaces": 7
+    },
+    {
+     "at_action": 85,
+     "rule": "A move that is blocked (by an obstacle or because it would leave the floor) does not move the piece, but the piece still turns its 9 side to face the attempted direction, and the move still uses budget.",
+     "replaces": 6
+    }
+   ]
+  },
+  {
+   "run": "brief-sc25-brief-2-20261121T055241Z",
+   "game": "sc25",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 64,
+   "level_at_start": 4,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 1,
+   "changed_nothing_at": [
+    95
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 1,
+   "game_overs": 3,
+   "turns": 97,
+   "turns_announcing_a_test": 16,
+   "cases_opened": 1,
+   "lessons_kept": 1,
+   "further_actions_combined": [
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 97,
+     "explains": "t95",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION6 only acts on empty (colour 2) cells of the 3x3 click grid. A click anywhere else, including on decorative marks like the 2x2 e mark, changes nothing and uses no budget. The grid just flashes 8 for a moment.",
+     "applies_when": "The ACTION6 coordinates fall outside the nine 3x3 sub-cells of the bottom 3-framed click grid, or on a sub-cell that is already filled.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [
+    {
+     "at_action": 100,
+     "rule": "Every movement action and every grid click uses up one step of the e budget bar on the right edge, including moves that are blocked. When the bar is empty, the next action ends the attempt with GAME_OVER and the level restarts. Side trips, such as exploring corridors or shrinking the piece when it isn't needed, waste budget.",
+     "applies_when": "Before acting, count the e rows left in the right-edge bar (2 rows per action) and compare that with the moves and clicks the planned route still needs. If the bar is nearly empty and the piece isn't one move from the socket, the attempt will fail."
+    },
+    {
+     "at_action": 131,
+     "rule": "GAME_OVER happens when the e budget bar on the right edge runs out. Every action that changes the board uses 2 rows, including clicks, blocked moves and repeated pattern matches. Trial-and-error pattern matching and detours drain it, so the attempt ends before the piece reaches the socket.",
+     "applies_when": "Count the remaining e rows in the right-edge bar and divide by 2. If that is not more than the clicks and moves the plan still needs, the action that empties the bar will end the attempt. Plan the shortest sequence right after a reset."
+    },
+    {
+     "at_action": 163,
+     "rule": "An attempt ends with GAME_OVER when an action is taken after the right-edge e budget bar has emptied. Each board-changing action (move, blocked move, grid click) uses 2 rows of the bar, so trial-and-error matches and detours make the attempt fail before the piece reaches the socket.",
+     "applies_when": "Before acting, check the right-edge bar. If it is all 0, any board-changing action ends the attempt. In general, if half the remaining e rows is fewer than the moves and clicks the plan still needs, the plan will fail. Use the short planned sequence right after a reset."
+    }
+   ],
+   "checks_written": 64,
+   "model_calls": 101,
+   "replies_sent_back": 4,
+   "output_tokens": 156761,
+   "output_per_call_median": 1336,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "Moving the 9a piece left (ACTION3) into the socket with a 9 frame next to it. Level 3's last board shows the piece gone from the path and the socket filled. At minimum, the piece has to enter the socket.",
+     "different": "There are two reference panels: A, with a diamond of f, and B, with a middle column of 6. Level 3 had one 6-pattern panel. There is a new 6-framed dd block (D) at the end of a corridor on the left, a new 2x2 e mark (E) inside the region, and the socket is on the right behind a d blocker. The piece starts with its 9 side facing down.",
+     "why": "The second panel probably goes with a second gate or a second step: one grid pattern opens the d blocker and the other opens something else, maybe D or E. The socket's d blocker has to open before the piece can get in.",
+     "first": "Click one grid cell (top middle, which both panels share) to see how the grid responds."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "Moving the 9a piece into the socket with a 9 frame (and 'a' inside) completes the level.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "Movement actions shift the 4x4 piece 4 cells in their direction (1 up?, 2 down, 3 left, 4 right?). The piece's 9 half faces the direction it moves.",
+     "replaces": 0
+    },
+    {
+     "at_action": 2,
+     "rule": "ACTION6 on an empty 3x3 grid cell (colour 2) fills that cell with e.",
+     "replaces": 0
+    },
+    {
+     "at_action": 4,
+     "rule": "When the 3x3 grid's e-filled cells exactly match a reference panel's pattern, the grid clears back to 2 (after an animation).",
+     "replaces": 0
+    },
+    {
+     "at_action": 8,
+     "rule": "Matching the f-diamond reference panel on the 3x3 grid shrinks the 4x4 player piece to 2x2.",
+     "replaces": 0
+    },
+    {
+     "at_action": 9,
+     "rule": "A shrunken 2x2 player piece moves 2 cells per movement action (a 4x4 piece moves 4).",
+     "replaces": 0
+    },
+    {
+     "at_action": 26,
+     "rule": "A movement action that is blocked (for example by a 6 frame) does not move the piece but still uses up budget.",
+     "replaces": 0
+    },
+    {
+     "at_action": 29,
+     "rule": "When the 3x3 grid matches the middle-column 6 reference panel, the 6-framed and d-coloured blocker objects are cleared to background 2.",
+     "replaces": 0
+    },
+    {
+     "at_action": 44,
+     "rule": "ACTION4 moves the player piece right by its own width (4 cells for a 4x4 piece), and its 9 half then faces right.",
+     "replaces": 0
+    },
+    {
+     "at_action": 48,
+     "rule": "Matching the middle-column reference panel B with a full-size 4x4 piece clears the grid but does not visibly remove the d blocker or the 6-framed block.",
+     "replaces": 0
+    },
+    {
+     "at_action": 49,
+     "rule": "A movement action into a d blocker does not move the piece but still uses budget.",
+     "replaces": 0
+    },
+    {
+     "at_action": 53,
+     "rule": "Matching the f-diamond panel shrinks the 4x4 piece to 2x2 in place. It keeps the cells nearest the direction it faces, and its 9 half still faces that way.",
+     "replaces": 0
+    },
+    {
+     "at_action": 56,
+     "rule": "On this attempt, completing the B (middle-column) pattern did not visibly remove the Q d blocker or D, whether the piece was 4x4 or 2x2. Clearing blockers needs some further condition.",
+     "replaces": 10
+    },
+    {
+     "at_action": 70,
+     "rule": "Completing the B (middle-column) pattern right after a reset, with the piece at its start position, did not remove the Q d blocker or D. Clearing them depends on something else, maybe where the piece is.",
+     "replaces": 10
+    },
+    {
+     "at_action": 79,
+     "rule": "Matching the B middle-column pattern with the 4x4 piece right next to Q and facing it (t142) did not clear Q or D either. Being next to the blocker or facing it is not what triggers the clearing.",
+     "replaces": 10
+    },
+    {
+     "at_action": 83,
+     "rule": "After a diamond (A) match, a 4x4 piece that faces right shrinks to a 2x2 piece on its left half (in this case x43-44), with its 9 side still facing right.",
+     "replaces": 12
+    },
+    {
+     "at_action": 90,
+     "rule": "Matching the vertical middle-column pattern while the piece faces right (whether 4x4 or 2x2, right next to Q) clears the grid but does not remove the d blocker Q.",
+     "replaces": 10
+    }
+   ]
+  },
+  {
+   "run": "brief-sc25-ledger-1-20261121T055241Z",
+   "game": "sc25",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 64,
+   "level_at_start": 4,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 1,
+   "changed_nothing_at": [
+    96
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 2,
+   "game_overs": 2,
+   "turns": 98,
+   "turns_announcing_a_test": 1,
+   "cases_opened": 1,
+   "lessons_kept": 1,
+   "further_actions_combined": [
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 98,
+     "explains": "t96",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking the small e marker (E) beside the path only plays a short animation: the bottom grid's cells flash 8 and then go back. The board, the player and the e budget column all stay the same, so nothing in the state changes.",
+     "applies_when": "An ACTION6 click on the small 2x2 e block inside the play field, as opposed to the budget column or a 3x3 cell of the bottom grid. Expect no lasting change from it.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [
+    {
+     "at_action": 101,
+     "rule": "The e column on the far right is a move budget, and each move uses 2 rows. When it is completely 0, the next action of any kind (even an ACTION6 click on the bottom grid) ends the game. Spending moves on trial and error before reaching the goal uses the budget up.",
+     "applies_when": "Before acting, count the e rows left in the right-edge budget column. If none are left, any action will cause GAME_OVER. Plan routes so the goal is reached in fewer than (rows left / 2) moves."
+    },
+    {
+     "at_action": 143,
+     "rule": "Every action, including bottom-grid clicks and blocked moves that only rotate the player, uses 2 rows of the right-edge e budget column. Once the column is all 0, the next action of any kind causes GAME_OVER. Exploring a side branch such as the D slot wasted the budget before the goal was reached.",
+     "applies_when": "Before each action, count the e cells left in the rightmost column (x62-63). If none are left, any action ends the game. Only commit to routes that reach the goal within (e rows left)/2 actions, and avoid detours into dead-end slots."
+    }
+   ],
+   "checks_written": 66,
+   "model_calls": 98,
+   "replies_sent_back": 0,
+   "output_tokens": 129763,
+   "output_per_call_median": 1020,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-sc25-ledger-2-20261121T055241Z",
+   "game": "sc25",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 64,
+   "level_at_start": 4,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 2,
+   "changed_nothing_at": [
+    99,
+    138
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 2,
+   "game_overs": 2,
+   "turns": 98,
+   "turns_announcing_a_test": 17,
+   "cases_opened": 2,
+   "lessons_kept": 2,
+   "further_actions_combined": [
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 1,
+   "lessons": [
+    {
+     "at_action": 101,
+     "explains": "t99",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking a cell that is not one of grid G's 3x3 cells is invalid. G's cells flash 8 and return to their old colours, nothing on the board changes, and no budget is used.",
+     "applies_when": "An ACTION6 click lands outside every 3x3 cell of the click grid G, for example on walls, pieces, background or G's 3-coloured lines.",
+     "replaces": 0
+    },
+    {
+     "at_action": 140,
+     "explains": "t138",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "K moves 2 cells per step and cannot enter d-coloured blocks (or 6 walls). A move into such a block leaves the board unchanged and uses no budget.",
+     "applies_when": "The 2 cells next to K in the move direction contain d or 6 wall cells.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [
+    {
+     "at_action": 109,
+     "rule": "Every action, whether a click or a move, uses part of the e budget bar at the right edge. When the bar is completely 0, the next action ends the game. Spending actions on detours or on patterns that are not needed makes the budget run out before the goal is reached.",
+     "applies_when": "Count the remaining e rows in the bar at x62-63 before acting. If that is fewer than the actions the planned route still needs, the attempt will fail. When the bar is all 0, any action ends the game."
+    },
+    {
+     "at_action": 150,
+     "rule": "Every action that changes the board, including G clicks and K moves, uses 2 rows of the e budget bar. When the bar runs out, the next action ends the game. Spending clicks on patterns that only toggle K's size, then reverting them, wastes the budget before K can reach its target.",
+     "applies_when": "Before each action, count the e rows left at x62-63 and compare that with the clicks and moves the remaining plan needs. If the plan needs more actions than are left, collect an e pickup first or cut the plan down."
+    }
+   ],
+   "checks_written": 61,
+   "model_calls": 98,
+   "replies_sent_back": 0,
+   "output_tokens": 171992,
+   "output_per_call_median": 1256,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-sk48-brief-1-20261121T055241Z",
+   "game": "sk48",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 65,
+   "level_at_start": 3,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    41
+   ],
+   "actions_on_the_open_level": 59,
+   "changed_nothing": 2,
+   "changed_nothing_at": [
+    66,
+    81
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 10,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 3,
+   "cases_opened": 2,
+   "lessons_kept": 2,
+   "further_actions_combined": [
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 68,
+     "explains": "t66",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking (ACTION6) on a fixed object outside the playfield, such as the b block above the vertical chain, changes nothing. In this game the rope moves only through ACTION1-4 (and ACTION7 undoes), so clicks do not select or move objects.",
+     "applies_when": "Any ACTION6 aimed at a non-rope object, especially a static block outside the coloured field: expect no change and use the movement actions instead.",
+     "replaces": 0
+    },
+    {
+     "at_action": 83,
+     "explains": "t81",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION1/ACTION2 shift the whole rope (anchor, rope cells, threaded blocks) up or down 6px. If any rope cell would land on a block that isn't threaded (a loose block or a chain block), the move is refused and nothing changes.",
+     "applies_when": "Before ACTION1/ACTION2, look at the rows 6px above or below the rope. If any un-threaded block sits in the rope's column span (from the anchor to the tip) in those rows, expect no change. Retract with ACTION3 first, or move the block out of the way.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 97,
+   "model_calls": 109,
+   "replies_sent_back": 9,
+   "output_tokens": 297653,
+   "output_per_call_median": 1922,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "ACTION4 pushed the chain (8,c,9 threaded, e ahead) until e was against the right wall, then threaded e, so the rope held 8,c,9,e in strip order. At least this is required: the rope threads every strip colour in strip order.",
+     "different": "There are no loose blocks. The four blocks hang in a vertical chain B at x30-33 (top to bottom e,9,8,c) with 3/2 connectors, which looks like a second rope. A new b block A sits above it at y2-3, outside the field. The player anchor starts at the bottom of the rail (y42-47).",
+     "why": "The blocks are tied into another rope in the wrong order, so I probably need to free them or get at them one by one. A may be that rope's anchor or a control for it. Getting the order 8,c,9,e out of e,9,8,c depends on how B can be moved.",
+     "first": "Click A (ACTION6 at 31,2) to see if it selects or moves the vertical chain. If nothing happens, move the rope up 3 times to the c row and extend it into the chain."
+    },
+    {
+     "at_action": 42,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "ACTION4 threaded e. The rope then held 8,c,9,e in strip order. On the win frame every threaded block and every strip icon turned hollow (0). The least this shows: the level completes when the threaded sequence matches the strip's colour sequence.",
+     "different": "The rope starts already threaded with 9,e,8,c, and the anchor sits at the bottom of the rail (y42-47). Instead of one strip, the bottom has two target boxes. Box b holds 8,c and box a holds 9,e. The anchor blocks a (x25-26) and b (x37-38) at the top each have an empty vertical chain under them.",
+     "why": "The two boxes most likely ask me to split the rope's blocks: 9,e go onto the chain under a, and 8,c onto the chain under b. That would be rule 10/7 in reverse (a threaded block put into a chain column joins that chain). My rules cannot yet do that, so the empty chains are what I need to learn about.",
+     "first": "Move the rope up toward the chains with ACTION1 and see whether chain cells block the move. Then try placing a threaded block in a chain column (x24-27 or x36-39) and retracting."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "A level completes when the rope from the anchor threads blocks in the same colour order as the bottom strip, starting at the anchor. Threaded strip blocks turn hollow.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION4 extends the rope 6px right and pushes any loose block ahead. If the block can't move (it is against a wall), the tip passes through it and threads it.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION3 retracts the rope 6px, and threaded blocks come back with it. ACTION1/ACTION2 move the anchor and rope 6px up/down along the rail.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION7 undoes the last action.",
+     "replaces": 0
+    },
+    {
+     "at_action": 9,
+     "rule": "Extending the rope into a block that is fixed in a vertical chain threads that block (the tip passes through it), and that block's icon in the bottom strip turns hollow.",
+     "replaces": 0
+    },
+    {
+     "at_action": 10,
+     "rule": "ACTION3 retracting after threading a block fixed in a vertical chain only un-threads it: the block stays in the chain and its strip icon turns solid again.",
+     "replaces": 0
+    },
+    {
+     "at_action": 12,
+     "rule": "ACTION1/ACTION2 with a chain-fixed block threaded drags that block, and the chain blocks beyond it in the direction of motion, along with the rope. The chain link behind it stretches.",
+     "replaces": 0
+    },
+    {
+     "at_action": 13,
+     "rule": "ACTION4 with a chain-fixed block already threaded just makes the rope longer past that block. The block stays in its chain.",
+     "replaces": 0
+    },
+    {
+     "at_action": 14,
+     "rule": "Repeating ACTION1/ACTION2 with a chain block threaded keeps dragging it and the blocks beyond it, 6px per step. The link behind it keeps stretching.",
+     "replaces": 0
+    },
+    {
+     "at_action": 16,
+     "rule": "ACTION3 retracting after a chain block has been dragged off its chain (link stretched, then broken) pulls that block back along with the rope. It stays threaded and its strip icon stays hollow.",
+     "replaces": 0
+    },
+    {
+     "at_action": 20,
+     "rule": "ACTION4 extending into a loose block pushes it ahead of the rope tip, 6px per press, with a 1px gap between the tip and the block.",
+     "replaces": 0
+    },
+    {
+     "at_action": 23,
+     "rule": "When ACTION4 pushes a loose block that is already against a wall, the tip threads it instead, and its strip icon turns hollow. Threaded loose blocks then ride along with the tip.",
+     "replaces": 0
+    },
+    {
+     "at_action": 42,
+     "rule": "A level completes when the rope's threaded blocks match the colour sequence shown in the bottom strip. The matched blocks and icons then turn hollow.",
+     "replaces": 1
+    },
+    {
+     "at_action": 66,
+     "rule": "A threaded block parked in an empty chain's column and then left behind by ACTION3 joins that chain: it stays in place while the rope and its other threaded blocks retract.",
+     "replaces": 6
+    }
+   ]
+  },
+  {
+   "run": "brief-sk48-brief-2-20261121T055241Z-again",
+   "game": "sk48",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 65,
+   "level_at_start": 3,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 2,
+   "actions_per_completed_level": [
+    49,
+    50
+   ],
+   "actions_on_the_open_level": 1,
+   "changed_nothing": 1,
+   "changed_nothing_at": [
+    66
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 13,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 1,
+   "cases_opened": 1,
+   "lessons_kept": 1,
+   "further_actions_combined": [
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 68,
+     "explains": "t66",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking with ACTION6 does nothing in this game, at least on static markers like the b square. The rope is driven only by ACTION1-4, and ACTION7 undoes.",
+     "applies_when": "Any ACTION6 click on a non-interactive marker or decoration, especially when no earlier click on this game has ever changed the board.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 97,
+   "model_calls": 101,
+   "replies_sent_back": 1,
+   "output_tokens": 230823,
+   "output_per_call_median": 1569,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "Level 2 completed on the ACTION4 that threaded e against the wall. The rope then held 8, c, 9, e from anchor to tip, matching the strip, and the strip blocks all turned 0. The least this shows is that every strip block threaded in strip order completes the level.",
+     "different": "The blocks no longer sit loose on the field. They hang on a vertical chain at x30-33 (look B), threaded in the order e, 9, 8, c from top to bottom, and the chain has a b marker above it (look A, x31-32, y2-3). The horizontal rope starts lower, at y44-45. The strip still asks for 8, c, 9, e.",
+     "why": "The vertical chain holds the blocks in an order that doesn't match the strip, so it probably can be controlled, perhaps through marker A, to drop or reorder blocks before or while the horizontal rope threads them. Marker A is the likely switch for it.",
+     "first": "Click A at (31,2) and see whether it selects the vertical rope or changes anything. ACTION7 can undo it."
+    },
+    {
+     "at_action": 50,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "ACTION4 pushed the rope tip through e. With 8, c, 9 and e all threaded on the rope in strip order, the level completed, and every block icon on the board and in the strip turned hollow (0). At minimum, every block shown in the strip had to be threaded on its line in the order shown. Rule 3 already says this.",
+     "different": "There are now two top markers: a (x25-26) and b (x37-38). Each has its own vertical chain at y5-23, and neither chain holds any blocks. The rope starts with 9, e, 8, c already threaded. The strip shows two groups instead of one: the b box followed by 8, c, and the a box followed by 9, e. The strip no longer shows the rope's own 6/0 anchor box. None of my rules yet moves a block from the rope onto a chain.",
+     "why": "The strip boxes seem to name the line each group of blocks must end up on. Having two chains means splitting the rope's blocks: 9 and e go to chain a, 8 and c go to chain b. Completing the level probably needs the reverse of rule 5, handing blocks from the rope onto a chain.",
+     "first": "Move the rope up with ACTION1 until it is level with the chains, then watch whether a block that sits in a chain column (8 at x24-27 lines up with chain a) gets caught by the chain when I retract or move the rope."
+    },
+    {
+     "at_action": 100,
+     "level": 5,
+     "asked_for": true,
+     "won_by": "ACTION1 lifted the rope, with e on it, up to chain a's height. All the strip icons then went hollow and the level completed. At the least, this shows the level completes once every strip block is threaded on, or held at, the rope line in the right left-to-right order.",
+     "different": "There are no vertical chains. The rope starts already threaded through three 9 blocks. A small wall (colour 5) stands at x29-34 right at the rope tip. Three free 8 blocks sit to the right of it, beyond the tip. The strip asks for 8, 9, 8, so it needs one 9 where the rope holds three.",
+     "why": "The extra 9s have to come off somehow, and the 8s have to go on either side of a 9. The wall may be the surface to push 8s against so they get threaded. Pulling or pushing against the anchor may be how a 9 comes off.",
+     "first": "Try ACTION3 (retract) while the leftmost 9 touches the anchor, to see whether a 9 comes off or the move is blocked. Undo with ACTION7 if it doesn't help."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "ACTION4 extends the horizontal rope 6px right. ACTION3 retracts it 6px. ACTION1 and ACTION2 move the rope and its anchor up or down 6px. Threaded blocks move with the rope.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "When the rope tip reaches a block, it pushes the block ahead. If the block is against a wall, the tip passes through and threads it instead. Its icon in the bottom strip then turns hollow.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level is complete when the rope has threaded every block shown in the bottom strip, in strip order (left to right = anchor to tip).",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION7 undoes the last action.",
+     "replaces": 0
+    },
+    {
+     "at_action": 12,
+     "rule": "If the rope tip is threaded through a block that hangs on the vertical chain, moving the rope down (ACTION2) pulls that block off the chain's bottom end and onto the horizontal rope.",
+     "replaces": 0
+    },
+    {
+     "at_action": 13,
+     "rule": "ACTION3 retracts the rope 6px, and blocks threaded on it move left with it, keeping their offset from the tip.",
+     "replaces": 0
+    },
+    {
+     "at_action": 31,
+     "rule": "ACTION4 also moves the blocks already threaded on the horizontal rope right by 6px, so they keep their offset from the tip.",
+     "replaces": 0
+    },
+    {
+     "at_action": 38,
+     "rule": "ACTION1 moves the horizontal rope, its anchor and any blocks threaded on it up 6px together.",
+     "replaces": 0
+    },
+    {
+     "at_action": 44,
+     "rule": "ACTION2 moves the rope down 6px. A threaded block on the chain column comes off once the rope passes below the chain's bottom end.",
+     "replaces": 0
+    },
+    {
+     "at_action": 61,
+     "rule": "If the rope is lowered back below the chains, blocks the chains had caught ride down on the rope and come off the chains. Their strip icons go solid again.",
+     "replaces": 0
+    },
+    {
+     "at_action": 82,
+     "rule": "Blocks threaded on the horizontal rope move left with it on ACTION3, even after being pushed to the wall and threaded there.",
+     "replaces": 0
+    },
+    {
+     "at_action": 85,
+     "rule": "When ACTION3 pulls the rope tip out of a threaded block that sits on a vertical chain's column, the block stays on the chain and does not move left with the rope. Its strip icon stays hollow.",
+     "replaces": 0
+    },
+    {
+     "at_action": 100,
+     "rule": "Shown so far: a level completes once the blocks threaded on the rope match the bottom strip's icons in colour and in order from anchor to tip. Completing level 4 also showed that blocks the chains caught count as threaded.",
+     "replaces": 3
+    }
+   ]
+  },
+  {
+   "run": "brief-sk48-ledger-1-20261121T055241Z",
+   "game": "sk48",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 65,
+   "level_at_start": 3,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 4,
+   "changed_nothing_at": [
+    87,
+    89,
+    123,
+    130
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 8,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 11,
+   "cases_opened": 4,
+   "lessons_kept": 4,
+   "further_actions_combined": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 89,
+     "explains": "t87",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "Clicking with ACTION6 does nothing in this game, including on the b anchor block. All movement comes from ACTIONs 1-4, which act only on the horizontal rope controlled by the 6-framed anchor.",
+     "applies_when": "Any ACTION6 click, especially one on a static anchor block such as the b block at the top of the column.",
+     "replaces": 0
+    },
+    {
+     "at_action": 91,
+     "explains": "t89",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "When the horizontal rope carries a block where it crosses the vertical column, moving the rope up or down is blocked if the crossing block would land on column rows already holding another column block. The rope, anchor and all blocks then stay where they are.",
+     "applies_when": "A vertical move (ACTION1/ACTION2) would put the crossing block into the 4-row slot of another block in the same column, for example 8 moving up from y19 into 9 at y13-16.",
+     "replaces": 0
+    },
+    {
+     "at_action": 125,
+     "explains": "t123",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "A vertical move of the horizontal rope pushes any free block lying in its path in the same direction. If that block is already at the edge of the play area (the 4 region), it cannot move, so the rope and everything on it stay where they are.",
+     "applies_when": "Before ACTION1 or ACTION2, check whether the rope, between anchor and tip, crosses the columns of a free block that is next to the play area's edge in the direction of the move (for example, the 8 at y43-46 when moving down).",
+     "replaces": 0
+    },
+    {
+     "at_action": 132,
+     "explains": "t130",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "A vertical rope move pushes every free block it meets in the column it crosses, in a chain: a pushed block pushes the next block in its path. If any block in that chain would leave the play area (the 4 region) or hit the edge, the rope, its anchor and every block stay where they are.",
+     "applies_when": "Before ACTION1/ACTION2, check whether the rope's span between anchor and tip crosses a block column (such as x30-33). If so, follow the chain of blocks in the direction of the move. If the last block in the chain sits within 6 rows of the play-area edge (e.g. the e at y7-10 when moving up, or the 8 at y43-46 when moving down), the move will do nothing.",
+     "replaces": 3
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 76,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 398262,
+   "output_per_call_median": 3524,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-sk48-ledger-2-20261121T055241Z-again",
+   "game": "sk48",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 65,
+   "level_at_start": 3,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    57
+   ],
+   "actions_on_the_open_level": 43,
+   "changed_nothing": 4,
+   "changed_nothing_at": [
+    78,
+    107,
+    119,
+    147
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 22,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 8,
+   "cases_opened": 4,
+   "lessons_kept": 4,
+   "further_actions_combined": [
+    1,
+    1,
+    2,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 80,
+     "explains": "t78",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "The b block at the top of the vertical rope is a fixed anchor marker. Clicking it does nothing, and ACTION6 does not select a rope. After the click, ACTION4 still extended the horizontal rope from the left anchor.",
+     "applies_when": "An ACTION6 click lands on a static anchor or marker block, such as the b block at the end of a rope, while the arrow actions already control another rope. Expect no change.",
+     "replaces": 0
+    },
+    {
+     "at_action": 109,
+     "explains": "t107",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION6 clicks don't select or move anything on this level. Clicking blocks or anchors on the vertical rope (the b anchor, the e block) changes nothing, and the arrow actions keep moving the horizontal rope afterwards (t108 extended it as usual).",
+     "applies_when": "Any ACTION6 click on a block, anchor or rope cell while the arrow actions already control the horizontal rope. Expect no change.",
+     "replaces": 1
+    },
+    {
+     "at_action": 122,
+     "explains": "t119",
+     "also_covers": [],
+     "further_actions_combined": 2,
+     "rule": "The horizontal rope assembly can't move up or down to a spot where its rope or blocks would overlap a block that sits on another rope, like e on the vertical rope. Such a move is refused and the board stays the same. Retracting the rope away from the block first lets the move through.",
+     "applies_when": "Before ACTION1 or ACTION2, shift the horizontal assembly 6 rows. If any of its cells would then land on a non-rope block, such as a coloured block on the vertical rope, expect no change.",
+     "replaces": 0
+    },
+    {
+     "at_action": 149,
+     "explains": "t147",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION6 clicks have no effect on this level. Clicking blocks, rope cells or either vertical-rope anchor (aa or bb) selects and moves nothing. Only the arrow actions and ACTION7 change the board.",
+     "applies_when": "Any ACTION6 click on this level, on any anchor, block, rope or background cell. Expect no change.",
+     "replaces": 1
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 85,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 261655,
+   "output_per_call_median": 2190,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-sp80-brief-1-20261121T055241Z",
+   "game": "sp80",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 69,
+   "level_at_start": 5,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    86
+   ],
+   "actions_on_the_open_level": 14,
+   "changed_nothing": 0,
+   "changed_nothing_at": [],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 0,
+   "game_overs": 1,
+   "turns": 99,
+   "turns_announcing_a_test": 1,
+   "cases_opened": 0,
+   "lessons_kept": 0,
+   "further_actions_combined": [],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [],
+   "game_over_lessons": [
+    {
+     "at_action": 116,
+     "rule": "Releasing water (ACTION5) with a layout where some cup's opening gets no water, or a stream misses its intended path, ends the attempt. This includes a spout going straight into the L-piece's leg instead of rising under its roof.",
+     "applies_when": "Before ACTION5, trace each 3-wide stream: straight up until it hits a piece, then up again from the 3 columns just beyond each end of that piece. If any cup opening, including the sideways cup reached only through the L's roof, gets no traced stream, don't press ACTION5."
+    }
+   ],
+   "checks_written": 53,
+   "model_calls": 99,
+   "replies_sent_back": 0,
+   "output_tokens": 214227,
+   "output_per_call_median": 1639,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 5,
+     "asked_for": true,
+     "won_by": "ACTION5 with a bar layout that sent water into the openings of all four cups. In the final board every cup was filled (turned d) and water ran down through each opening. The least shown to be required: every cup opening receives water.",
+     "different": "The board is flipped vertically: spouts (6 above 4) are at the bottom, cups at the top open downward, so flow is presumably upward. There are now two spouts (x20-22 and x44-46) instead of one. There is a sideways cup on the left whose opening faces right. A new f-coloured L-shaped piece is at x32-37, rows 41-46. Bar C is a shorter 8 bar.",
+     "why": "The flip and the second spout change where water starts, and bars can be moved to redirect it. The sideways cup can't be reached by flow that only goes up, so something has to send water sideways. The new f L-piece is the likely candidate (a deflector or rotatable piece), so the win probably depends on what it does.",
+     "first": "Click the f L-piece with ACTION6 to see whether it gets selected. If it does, test ACTION1, ACTION2, ACTION3 and ACTION4 on it."
+    },
+    {
+     "at_action": 87,
+     "level": 6,
+     "asked_for": true,
+     "won_by": "ACTION5 with the pieces arranged so water reached the opening of all four cups. Every cup turned d with 6 in its opening, which matches rule 3. The lowest requirement shown is that every cup opening gets water in a single release.",
+     "different": "The spout now points down (4 at top, 6 below), so water should fall instead of rising. B is a vertical 8 bar. AO is a horizontal bar with a 4 segment in the middle, right under the spout's column. Two L-pieces (9 I, which is selected, and f E) have stems pointing up. The cups are at the left (two, opening right), on the right (opening left), and at the bottom (opening up, under x29-31).",
+     "why": "Flipped gravity means the L-pieces have to catch falling water on their arms and send it sideways into the side cups. The vertical bar probably blocks or redirects sideways streams. The 4 segment in AO may be a fixed part or a pass-through that lets the stream reach the bottom cup straight below the spout.",
+     "first": "Click AO's 8 part to see whether it selects, turning 9, and whether the 4 part changes. That shows if AO can be moved."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "ACTION6 on a movable bar selects it (it turns 9, and the previous selection reverts). ACTION3 and ACTION4 shift the selected bar left and right by 3 cells.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION5 releases water from the spout's 6 end, away from its 4 end. Water 3 cells wide travels until it hits a bar, spreads along it, and continues past both ends, offset 3 cells.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level completes after ACTION5 when water reaches the opening of every cup. Filled cups turn d with water (6) in the opening.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "The top-row counter (e/0) changes as moves are made. It probably works as a move budget.",
+     "replaces": 0
+    },
+    {
+     "at_action": 3,
+     "rule": "ACTION1 moves the selected piece up by 3 cells (seen on the L-piece). ACTION2 probably moves it down.",
+     "replaces": 0
+    },
+    {
+     "at_action": 13,
+     "rule": "ACTION1 moves the selected piece (a bar or the L-piece) up by 3 cells.",
+     "replaces": 5
+    },
+    {
+     "at_action": 41,
+     "rule": "ACTION3 moves the selected piece (a bar or the L-piece) left by 3 cells, and ACTION4 moves it right by 3.",
+     "replaces": 0
+    },
+    {
+     "at_action": 44,
+     "rule": "ACTION2 moves the selected piece down by 3 cells.",
+     "replaces": 0
+    },
+    {
+     "at_action": 88,
+     "rule": "ACTION6 on any movable piece selects it (it turns 9 and the previously selected piece goes back to its own colour). A 4 segment inside a bar stays 4 when the bar is selected.",
+     "replaces": 1
+    }
+   ]
+  },
+  {
+   "run": "brief-sp80-brief-2-20261121T055241Z",
+   "game": "sp80",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 69,
+   "level_at_start": 5,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 3,
+   "changed_nothing_at": [
+    107,
+    113,
+    152
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 4,
+   "game_overs": 2,
+   "turns": 98,
+   "turns_announcing_a_test": 1,
+   "cases_opened": 3,
+   "lessons_kept": 3,
+   "further_actions_combined": [
+    1,
+    1,
+    2
+   ],
+   "lessons_offered_too_early_and_dropped": 2,
+   "lessons": [
+    {
+     "at_action": 109,
+     "explains": "t107",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION5 always plays the water animation. If the water does not reach every closed cup, the board then goes back exactly to how it was before the release (only the step counter changes). A stream that is not caught by a bar, a deflector or a cup escapes off the board.",
+     "applies_when": "Before pressing ACTION5, trace every stream: up or down from each spout, along each bar, and past both of its ends. If any closed cup gets no stream, the release will leave the board unchanged.",
+     "replaces": 0
+    },
+    {
+     "at_action": 115,
+     "explains": "t113",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION6 on a piece that is already selected (coloured 9) does nothing: it neither rotates nor deselects the piece. Only clicking a different selectable bar or piece changes the selection.",
+     "applies_when": "The click target is a cell of the piece that is currently coloured 9 (selected).",
+     "replaces": 0
+    },
+    {
+     "at_action": 155,
+     "explains": "t152",
+     "also_covers": [],
+     "further_actions_combined": 2,
+     "rule": "Pieces that can be moved have a fixed left limit at x14 on this board. They cannot go into the side-cup area at x5-13. A move that would push a piece's left edge past that limit is refused and the piece stays where it is. Overlapping another piece does not block a move.",
+     "applies_when": "The selected piece's leftmost cell is already at x14, or a 3-cell move left would put it below x14, and you are about to press ACTION3.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [
+    {
+     "at_action": 126,
+     "rule": "Probably: the level ends in GAME_OVER when the row-63 step counter (e cells turning 0) runs out. A water release (ACTION5) seems to use many counter steps, so pressing it with too little counter left ends the attempt instead of restoring the board.",
+     "applies_when": "Before ACTION5, check how much of row 63 is still e. If a large part of it is already 0 (for example more than half), set up the layout with as few moves as possible and release early. Do not spend moves on tests."
+    }
+   ],
+   "checks_written": 58,
+   "model_calls": 98,
+   "replies_sent_back": 0,
+   "output_tokens": 311991,
+   "output_per_call_median": 2141,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 5,
+     "asked_for": true,
+     "won_by": "ACTION5 with the bars placed so that the water from the spout, spreading along the bars and falling past their ends, landed in all four closed cups (x11-13, x29-31, x41-43, x53-55). Those cups turned d, and the cup with the gap at x35-37 stayed dry. The board does not show whether a dry gap is required.",
+     "different": "The board is turned upside down. There are two spouts at the bottom (x20-22 and x44-46) facing up, the counter row is at the bottom, and the three cups at the top open downward. There is a new sideways cup on the left wall (x5-10, rows 35-43) that opens to the right. There is a new f-coloured L-shaped piece E at x32-37, rows 41-46, and bar C is a 9-wide 8 bar.",
+     "why": "Water now rises, so the bars have to be placed under the top cup openings. The left cup can only be reached by water moving sideways, and that probably depends on the new f L-piece, perhaps by deflecting the water or by moving in a new way.",
+     "first": "Click the f L-piece with ACTION6 to see whether it gets selected or changes, then try moving it."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "ACTION6 on a bar selects it, which recolours it 9 and deselects the previous bar. ACTION3 and ACTION4 shift the selected bar 3 cells left or right, and any 4 cells inside it move with it.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "ACTION5 releases water from the spout (4 behind 6) in the direction the 6 faces. The water spreads along any bar it hits and carries on past both ends as 3-wide streams. A 4 segment in a bar lets water through.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "The level completes after ACTION5 if the water reaches every closed cup, and the filled cups turn from b to d.",
+     "replaces": 0
+    },
+    {
+     "at_action": 3,
+     "rule": "ACTION1 moves the selected piece up by 3 cells (seen on the L-piece).",
+     "replaces": 0
+    },
+    {
+     "at_action": 4,
+     "rule": "ACTION1 moves the selected L-piece up 3 cells, and ACTION3/ACTION4 shift it 3 cells left/right like bars.",
+     "replaces": 4
+    },
+    {
+     "at_action": 12,
+     "rule": "ACTION1 moves the selected bar or piece up 3 cells. Bars can sit at different heights, so water that leaves one bar's end can hit a higher bar and split again.",
+     "replaces": 4
+    },
+    {
+     "at_action": 35,
+     "rule": "ACTION2 moves the selected bar or piece down 3 cells, the opposite of ACTION1.",
+     "replaces": 0
+    },
+    {
+     "at_action": 42,
+     "rule": "The f L-piece is selected with ACTION6 (it turns 9) and moves 3 cells per move with ACTION1-4, the same way bars do.",
+     "replaces": 0
+    },
+    {
+     "at_action": 87,
+     "rule": "After an ACTION5 release that fails, the board returns to its earlier layout, but the selection switches to a default bar (here B), so the piece you were moving has to be clicked again.",
+     "replaces": 0
+    },
+    {
+     "at_action": 91,
+     "rule": "The release fails (and the board is restored) when the L-piece's stem end sits right over a spout, so a stem end facing the spout does not carry water out through the arm.",
+     "replaces": 0
+    }
+   ]
+  },
+  {
+   "run": "brief-sp80-ledger-1-20261121T055241Z",
+   "game": "sp80",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 69,
+   "level_at_start": 5,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 5,
+   "changed_nothing_at": [
+    98,
+    100,
+    126,
+    157,
+    159
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 10,
+   "game_overs": 1,
+   "turns": 99,
+   "turns_announcing_a_test": 22,
+   "cases_opened": 2,
+   "lessons_kept": 2,
+   "further_actions_combined": [
+    1,
+    2
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 128,
+     "explains": "t126",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION5 plays the flow simulation as an animation over many intermediate frames. If the streams do not fill every cup, the level is not completed and the board goes back to its layout from before the run. So the final frame is unchanged, apart from the step counter perhaps.",
+     "applies_when": "Whenever ACTION5 is pressed and the current bar layout does not send a stream into every cup opening, for example when some cup opening has no stream path under it.",
+     "replaces": 0
+    },
+    {
+     "at_action": 160,
+     "explains": "t157",
+     "also_covers": [
+      "t159"
+     ],
+     "further_actions_combined": 2,
+     "rule": "A selected bar has a left limit and stops moving there. Y (12 wide) stopped at x14 on both y44-46 and y41-43, so the limit is not tied to one row. The likely cause is a fixed movement bound, or a ban on touching other objects such as the cup walls at x5-10. A blocked move changes only the step counter.",
+     "applies_when": "A selected bar's left edge is already at x14, or a 3-cell move would put it right next to another object or past the play area. Then ACTION3 (or a move the same way) leaves the board as it is.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [
+    {
+     "at_action": 163,
+     "rule": "Running the flow (ACTION5) can end the game when some stream branch is not caught. Most likely a branch that leaves a bar's end with nothing above it rises to the top edge of the play area and spills, instead of entering a cup opening or hitting another bar.",
+     "applies_when": "Before pressing ACTION5, trace each source upward. At each bar, a stream splits to the 3 columns just past both ends of the bar. If any branch's column leads upward to open ground (not into a downward cup opening or onto another bar), expect GAME_OVER. That includes a branch just beside a sideways-facing cup."
+    }
+   ],
+   "checks_written": 44,
+   "model_calls": 99,
+   "replies_sent_back": 0,
+   "output_tokens": 205578,
+   "output_per_call_median": 1149,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-sp80-ledger-2-20261121T055241Z-again",
+   "game": "sp80",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 69,
+   "level_at_start": 5,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 6,
+   "changed_nothing_at": [
+    89,
+    102,
+    109,
+    113,
+    165,
+    167
+   ],
+   "repeats_of_a_known_no_effect_action": 1,
+   "in_a_loop": 13,
+   "game_overs": 1,
+   "turns": 99,
+   "turns_announcing_a_test": 1,
+   "cases_opened": 3,
+   "lessons_kept": 3,
+   "further_actions_combined": [
+    4,
+    1,
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 114,
+     "explains": "t109",
+     "also_covers": [
+      "t113"
+     ],
+     "further_actions_combined": 4,
+     "rule": "A selected bar's vertical move does nothing when its new position would touch another bar. At t109 it would have touched diagonally at a corner, and at t113 it would have touched side by side. Sideways moves that end beside a bar were allowed.",
+     "applies_when": "Before a move up or down, check the selected bar's spot 3 rows away. If any cell there is beside another bar, or touches one at a corner, expect no change.",
+     "replaces": 0
+    },
+    {
+     "at_action": 167,
+     "explains": "t165",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "ACTION5 runs the water simulation (about 32 animation frames) and then puts the pieces back. If no stream spills but the win condition is not met, the final board matches the board before, apart from the counter and possibly which piece is selected. The current layout fails some condition other than a spill, possibly the gap between the elbow and the sideways cup.",
+     "applies_when": "Pressing ACTION5 again on a layout already submitted without a win, and without moving any piece, will end on the same board. Only submit after changing the layout.",
+     "replaces": 0
+    },
+    {
+     "at_action": 169,
+     "explains": "t167",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "A move by the selected piece does nothing if its new spot would touch another piece or a cup wall, side by side or at a corner. Vertical moves were rejected for touching bars (t109, t113). The elbow's sideways move at t167 was rejected because it would have touched the sideways cup's lip at a corner. Some sideways moves that end beside a bar were allowed earlier.",
+     "applies_when": "Before moving, look at the piece's spot 3 cells away. If any cell there is beside or at a corner of a cup wall (b) or, for vertical moves, another bar, expect no change.",
+     "replaces": 1
+    }
+   ],
+   "game_over_lessons": [
+    {
+     "at_action": 124,
+     "rule": "Submitting with ACTION5 ends the game if the layout leaves any water stream uncaught. After a stream is split at a bar's end, it rises straight up from beside that end. If no cup opening, bar or elbow lies above it, it spills and the game is over. Every split output has to end in a cup.",
+     "applies_when": "Before pressing ACTION5, trace each source upward. At every bar, split the stream to the 3 columns just past each end, and follow each new stream up. If any stream reaches the top border without entering a cup opening, or no stream reaches some cup (including the sideways cup), do not submit."
+    }
+   ],
+   "checks_written": 56,
+   "model_calls": 99,
+   "replies_sent_back": 1,
+   "output_tokens": 232543,
+   "output_per_call_median": 1381,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-wa30-brief-1-20261121T055241Z",
+   "game": "wa30",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 95,
+   "level_at_start": 3,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 0,
+   "actions_per_completed_level": [],
+   "actions_on_the_open_level": 100,
+   "changed_nothing": 0,
+   "changed_nothing_at": [],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 0,
+   "game_overs": 1,
+   "turns": 100,
+   "turns_announcing_a_test": 7,
+   "cases_opened": 0,
+   "lessons_kept": 0,
+   "further_actions_combined": [],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [],
+   "game_over_lessons": [],
+   "checks_written": 0,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 171122,
+   "output_per_call_median": 1566,
+   "stop_reason": "game_over",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "Releasing (action 5) the grabbed block onto the target-region cells at x16-19,y36-39. The other four blocks were already inside the region, and one 9222 slot was still uncovered. So at least it took all blocks placed and released in the target region, not every slot filled.",
+     "different": "There is a tall 2/1-patterned wall at x32-35 down the full height, with two blocks set into it at y12 and y32. The target region D is 8x16 (8 slots) at x52-59,y24-39, on the far side of the wall from the player. There are 5 blocks, 3 of them on the player's side. The c agent sits at x48,y12, near the target. The step budget is refilled.",
+     "why": "The wall cuts the player off from the target. The blocks set into it look like removable plugs: grabbing one and pushing it out should open a passage and also deliver it. The c agent may compete for the target or for blocks.",
+     "first": "Move up to y32, then right to x28 facing the wall block, grab it and push it right. This tests whether wall blocks can be moved and the wall passed."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "Actions 1-4 move the player block 4 cells up/down/left/right and turn its 0-coloured facing edge that way. If the way is blocked, it only turns.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "Action 5 grabs the block the player faces (border turns 0) or releases it. A grabbed block moves with the player.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "A level completed when a grabbed block was released onto the 9/2 target region with the other blocks already inside it. Not all target cells had to be covered.",
+     "replaces": 0
+    },
+    {
+     "at_action": 8,
+     "rule": "The player cannot move onto the 2/1 patterned wall strip. Pushing a grabbed block into or across it fails, and the player stays put.",
+     "replaces": 0
+    },
+    {
+     "at_action": 15,
+     "rule": "While a block is grabbed, moving the player perpendicular to the grab direction moves the grabbed block too, so the two keep their relative offset.",
+     "replaces": 0
+    },
+    {
+     "at_action": 23,
+     "rule": "The c agent moves by itself each turn. It can take a block next to it (the block's border turns 5) and drag it along as it moves toward the 9/2 target.",
+     "replaces": 0
+    },
+    {
+     "at_action": 29,
+     "rule": "When the player faces a block, the block's border turns 3. Pressing action 5 then grabs it, and the border turns 0.",
+     "replaces": 0
+    },
+    {
+     "at_action": 30,
+     "rule": "When the player moves directly away from a grabbed block, the block is pulled along and stays next to the player on the trailing side.",
+     "replaces": 0
+    },
+    {
+     "at_action": 35,
+     "rule": "The 2/1 patterned wall is solid all along its length, including where blocks used to sit in it. Once those blocks are removed, the player still cannot cross there.",
+     "replaces": 0
+    },
+    {
+     "at_action": 48,
+     "rule": "A grabbed block can be pushed into an empty plug slot in the 2/1 wall, though the player itself cannot enter the wall.",
+     "replaces": 0
+    },
+    {
+     "at_action": 58,
+     "rule": "Pushing a grabbed block toward the 2/1 wall moves it into an empty plug slot in the wall (seen twice). The player stays outside the wall.",
+     "replaces": 10
+    },
+    {
+     "at_action": 59,
+     "rule": "The c agent grabs a block that sits in a wall slot next to it on its side (the block's border turns 5) once the player has released that block.",
+     "replaces": 0
+    },
+    {
+     "at_action": 97,
+     "rule": "The c agent grabs a block next to it (the block's border turns 5) and then drags it toward the 9/2 target region on later turns.",
+     "replaces": 11
+    },
+    {
+     "at_action": 98,
+     "rule": "The c agent can pull a block out of a slot in the 2/1 wall. The wall cells behind it become solid 2/1 wall again at once.",
+     "replaces": 0
+    }
+   ]
+  },
+  {
+   "run": "brief-wa30-brief-2-20261121T055241Z-again",
+   "game": "wa30",
+   "set_up": "memory layers, object ledger and level brief",
+   "started_after_action": 95,
+   "level_at_start": 3,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    80
+   ],
+   "actions_on_the_open_level": 20,
+   "changed_nothing": 0,
+   "changed_nothing_at": [],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 0,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 1,
+   "cases_opened": 0,
+   "lessons_kept": 0,
+   "further_actions_combined": [],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [],
+   "game_over_lessons": [],
+   "checks_written": 0,
+   "model_calls": 103,
+   "replies_sent_back": 3,
+   "output_tokens": 152763,
+   "output_per_call_median": 1360,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "brief",
+   "state": "clean",
+   "briefs": [
+    {
+     "at_action": 1,
+     "level": 3,
+     "asked_for": true,
+     "won_by": "Releasing the grabbed block (action 5) after all 5 blocks were inside the 9-bordered zone completed the level, even though one 4x4 part of the zone (x12-15,y32-35) was still uncovered. The least that is shown to be required: every block is in the zone and none is grabbed.",
+     "different": "There is a patterned 2/1 wall column at x32-35 running the full height, with 4-blocks set into it at y12-15 and y32-35. The zone is larger (8x16, x52-59,y24-39) and lies on the far side of the wall from the player. Three free blocks are on the player's side. The c agent sits on the right side at x48-51,y12-15. The budget has been reset to 64.",
+     "why": "The wall separates the player from the zone. The blocks set into it are probably doors that must be pulled out, and they may also be blocks that have to go into the zone. The c agent on the zone side may move or carry blocks for me.",
+     "first": "Walk to x28-31,y32-35 facing right (up, then right x3), grab the wall block and pull it left. This tests whether the wall can be opened."
+    },
+    {
+     "at_action": 81,
+     "level": 4,
+     "asked_for": true,
+     "won_by": "Level 3 completed on the step where the c agent let go of the last block (its border went 5 to 4) inside the 9 zone. Least shown requirement: every 4-block lies on 9-bordered target cells and none is held. The zone did not have to be fully covered.",
+     "different": "There are three c agents instead of one. Targets are spread out: zones at the left (x4-7,y24-31; x8-11,y36-39), right (x56-59,y20-23; x52-55,y28-31) and bottom (x36-43,y56-59). The wall is now a closed ring around the player and 6 blocks, and 1 block is outside at the top. New solid 5 objects appear: a vertical column at the top and staggered 4x4 pieces at the bottom.",
+     "why": "The ring means the player cannot carry blocks to the zones, so blocks must go into the wall for the agents to pull out. Having several agents probably means each serves the zones near it. The 5 shapes probably limit agent paths and cannot be changed. The outside block next to the 5 column may need an agent to fetch it.",
+     "first": "Move the player up toward the top-left corner block (24,24) and watch how the three agents move each step. Then test pushing a grabbed block into the wall."
+    }
+   ],
+   "rule_notes": [
+    {
+     "at_action": 1,
+     "rule": "A level completes when every 4x4 4-block lies inside the 9-bordered target zone and none is grabbed. The zone does not need to be fully covered.",
+     "replaces": 0
+    },
+    {
+     "at_action": 1,
+     "rule": "Actions 1-4 move the player 4 cells up/down/left/right, or only turn it when the way is blocked. Action 5 grabs or releases the block it faces, and a grabbed block moves with the player.",
+     "replaces": 0
+    },
+    {
+     "at_action": 7,
+     "rule": "The player cannot move into the patterned 2/1 wall column, even while pushing a grabbed block that is in it. The move does nothing except spend a step.",
+     "replaces": 0
+    },
+    {
+     "at_action": 23,
+     "rule": "The c agent grabs a block that sits in the wall column (its border turns 5) and pulls it out to the zone side. The wall pattern comes back where the block was.",
+     "replaces": 0
+    },
+    {
+     "at_action": 28,
+     "rule": "After the c agent pulls a block out of the wall into the zone, it releases it there on its own (the block's border goes from 5 back to 4) and is free to fetch another.",
+     "replaces": 0
+    },
+    {
+     "at_action": 33,
+     "rule": "A block the player faces but has not grabbed shows a 3 border. Moving toward it does nothing except spend a step, and action 5 is needed to grab it.",
+     "replaces": 0
+    },
+    {
+     "at_action": 34,
+     "rule": "After action 5 grabs a block the player faces, the block's border turns from 3 to 0. A 0 border marks the block as grabbed.",
+     "replaces": 0
+    },
+    {
+     "at_action": 35,
+     "rule": "When the player moves away from the side it faces, a grabbed block (0 border) next to it moves along with it in the same direction.",
+     "replaces": 0
+    },
+    {
+     "at_action": 61,
+     "rule": "Releasing a grabbed block with action 5 while still facing it changes its border from 0 to 3, not 4.",
+     "replaces": 0
+    },
+    {
+     "at_action": 62,
+     "rule": "When the player turns or moves so it no longer faces a released block, that block's border goes back from 3 to 4, and the block stays where it is.",
+     "replaces": 0
+    },
+    {
+     "at_action": 74,
+     "rule": "When the c agent pulls a block out of the wall, the block moves away from the wall one step for each player action, and the c agent leads it on the far side.",
+     "replaces": 0
+    },
+    {
+     "at_action": 81,
+     "rule": "A level completes as soon as every 4-bordered block sits on 9-bordered target cells and no block is held (border 5 or 0). Unused target cells are allowed.",
+     "replaces": 1
+    },
+    {
+     "at_action": 85,
+     "rule": "Action 5 grabs a block the player faces only when its border shows 3 (faced, not held). Its border then turns 0.",
+     "replaces": 0
+    },
+    {
+     "at_action": 90,
+     "rule": "A grabbed block (0 border) moves with the player in any direction the player moves, including sideways relative to the way it faces.",
+     "replaces": 8
+    }
+   ]
+  },
+  {
+   "run": "brief-wa30-ledger-1-20261121T055241Z",
+   "game": "wa30",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 95,
+   "level_at_start": 3,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    97
+   ],
+   "actions_on_the_open_level": 3,
+   "changed_nothing": 0,
+   "changed_nothing_at": [],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 0,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 2,
+   "cases_opened": 0,
+   "lessons_kept": 0,
+   "further_actions_combined": [],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [],
+   "game_over_lessons": [],
+   "checks_written": 1,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 147029,
+   "output_per_call_median": 1374,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  },
+  {
+   "run": "brief-wa30-ledger-2-20261121T055241Z",
+   "game": "wa30",
+   "set_up": "memory layers and object ledger",
+   "started_after_action": 95,
+   "level_at_start": 3,
+   "new_actions": 100,
+   "levels_completed_in_new_actions": 1,
+   "actions_per_completed_level": [
+    84
+   ],
+   "actions_on_the_open_level": 16,
+   "changed_nothing": 1,
+   "changed_nothing_at": [
+    161
+   ],
+   "repeats_of_a_known_no_effect_action": 0,
+   "in_a_loop": 1,
+   "game_overs": 0,
+   "turns": 100,
+   "turns_announcing_a_test": 4,
+   "cases_opened": 1,
+   "lessons_kept": 1,
+   "further_actions_combined": [
+    1
+   ],
+   "lessons_offered_too_early_and_dropped": 0,
+   "lessons": [
+    {
+     "at_action": 163,
+     "explains": "t161",
+     "also_covers": [],
+     "further_actions_combined": 1,
+     "rule": "The player (e block) can never enter the patterned 2-stripe column. A move that would put the player on a stripe cell is refused completely: the player and any block it is carrying stay where they are, and no step is used. Blocks themselves can be placed on the stripe.",
+     "applies_when": "The 4x4 cell the player would move into, in the chosen direction, is part of the 2/1 stripe column. This holds whether or not the player is carrying a block, even if the carried block is already on the stripe.",
+     "replaces": 0
+    }
+   ],
+   "game_over_lessons": [],
+   "checks_written": 34,
+   "model_calls": 100,
+   "replies_sent_back": 0,
+   "output_tokens": 150378,
+   "output_per_call_median": 1378,
+   "stop_reason": "action_cap",
+   "problems": [],
+   "audit": "passes",
+   "arm": "ledger",
+   "state": "clean",
+   "briefs": [],
+   "rule_notes": []
+  }
+ ],
+ "runs_repeated_after_a_problem": [
+  "brief-sk48-brief-2-20261121T055241Z",
+  "brief-sk48-ledger-2-20261121T055241Z",
+  "brief-sp80-ledger-2-20261121T055241Z",
+  "brief-wa30-brief-2-20261121T055241Z"
+ ],
+ "held_out_runs_that_cannot_be_counted": [],
+ "designed_on_runs_not_finished": [
+  "brief-tr87-brief-1-20261121T055241Z: problem"
+ ],
+ "rule": "Decided on the seven held-out games only. Measure: levels completed in the 100 new actions, summed over the two runs of an arm. \"helps\": the brief arm completes more levels in total than the ledger arm, is ahead in at least two games and behind in none. \"hurts\": it completes fewer in total. Anything else: \"no detectable difference\". The runs on the three designed-on games decide nothing. No run is repeated because of its result; a run that ends with a problem (backend error, failed audit) is reported and repeated once, before its result is looked at. Reported beside the verdict, not part of it: actions on the first level completed, game overs, actions that changed nothing, replies sent back, output tokens, and every brief and rule written.",
+ "held_out": {
+  "verdict": "no detectable difference",
+  "levels_completed": {
+   "ledger": 10,
+   "brief": 17
+  },
+  "games_ahead": 4,
+  "games_behind": 1,
+  "by_game": {
+   "ar25-0c556536": {
+    "ledger": 4,
+    "brief": 4
+   },
+   "ka59-38d34dbb": {
+    "ledger": 2,
+    "brief": 4
+   },
+   "lf52-271a04aa": {
+    "ledger": 1,
+    "brief": 4
+   },
+   "sc25-635fd71a": {
+    "ledger": 0,
+    "brief": 0
+   },
+   "sk48-d8078629": {
+    "ledger": 1,
+    "brief": 3
+   },
+   "sp80-589a99af": {
+    "ledger": 0,
+    "brief": 1
+   },
+   "wa30-ee6fef47": {
+    "ledger": 2,
+    "brief": 1
+   }
+  }
+ }
+}
