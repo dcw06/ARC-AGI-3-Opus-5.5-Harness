@@ -601,7 +601,7 @@
   },
   {
    "game": "wa30",
-   "state": "running",
+   "state": "done",
    "base": {
     "replies": 1840,
     "in": 25070588,
@@ -611,12 +611,12 @@
     "actions": 1850
    },
    "mine": {
-    "replies": 831,
-    "in": 14623328,
-    "out": 1373342,
-    "think": 814636,
-    "cost": 85.96015200000002,
-    "actions": 814
+    "replies": 1881,
+    "in": 35087439,
+    "out": 4120695,
+    "think": 2839326,
+    "cost": 222.7636559999999,
+    "actions": 1850
    },
    "base_actions": 1850,
    "chain": [
@@ -651,54 +651,29 @@
     "tn36",
     "tr87",
     "tu93",
-    "vc33"
-   ],
-   "baseline": {
-    "replies": 14593,
-    "in": 194236631,
-    "out": 33856865,
-    "think": 23867537,
-    "cost": 1454.0838239999998,
-    "actions": 14710
-   },
-   "layers": {
-    "replies": 9230,
-    "in": 165942346,
-    "out": 23195766,
-    "think": 16864016,
-    "cost": 1127.6847040000005,
-    "actions": 8836
-   },
-   "fewer_tokens_with_the_layers_percent": {
-    "input": 14.6,
-    "output": 31.5,
-    "input_and_output": 17.1
-   }
-  },
-  "still playing, so far": {
-   "games": [
+    "vc33",
     "wa30"
    ],
    "baseline": {
-    "replies": 1840,
-    "in": 25070588,
-    "out": 3337236,
-    "think": 1989656,
-    "cost": 167.02707200000006,
-    "actions": 1850
+    "replies": 16433,
+    "in": 219307219,
+    "out": 37194101,
+    "think": 25857193,
+    "cost": 1621.110896,
+    "actions": 16560
    },
    "layers": {
-    "replies": 831,
-    "in": 14623328,
-    "out": 1373342,
-    "think": 814636,
-    "cost": 85.96015200000002,
-    "actions": 814
+    "replies": 11111,
+    "in": 201029785,
+    "out": 27316461,
+    "think": 19703342,
+    "cost": 1350.4483600000003,
+    "actions": 10686
    },
    "fewer_tokens_with_the_layers_percent": {
-    "input": 41.7,
-    "output": 58.8,
-    "input_and_output": 43.7
+    "input": 8.3,
+    "output": 26.6,
+    "input_and_output": 11.0
    }
   }
  }

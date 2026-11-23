@@ -378,37 +378,37 @@ def folder_of(prefix, game, arm, n, stamp):
 
 
 def whole_games(stamp, frames, index, only=None):
-    """(games, opening line) for a whole-game test: every game that is no longer playing (ended, or halted on
-    calls that ran past the time limit), the baseline run beside it. only: the games to show, the others are
-    named in the opening line (all the games of a test do not fit in one page)."""
+    """(games, opening line) for the whole-game runs made under one stamp: every game that is no longer playing
+    (ended, or halted on calls that ran past the time limit), the baseline run beside it. only: the games to show,
+    the others are named in the opening line (all the games of a set do not fit in one page)."""
     from research.level_brief_v1 import whole_games as W
-    if only and not set(only) <= {game.split('-')[0] for game in W.GAMES}:
-        from research.level_brief_v1 import whole_games_rest  # noqa: F401  (the second set of games)
     reference = json.loads(W.BASELINE.read_text())['expected']
-    source = {row['game']: row for row in reference}
-    games, open_games = [], []
-    for group in W.GROUPS.values():
-        for game in group:
-            parts = W.parts(game, stamp)
-            state = W.state_of(parts[-1]) if parts else 'not started'
-            if state not in ('done', 'stopped') or (only and game.split('-')[0] not in only):
-                open_games.append(game.split('-')[0] + ('' if state in ('done', 'stopped') else ' (%s)' % state))
-                continue
-            base, mine = source[game], one_run(parts[-1], frames, index, whole=True)
-            theirs = one_run(ROOT / base['source'], frames, index, whole=True, game=game)
-            levels, count = mine['stats']['levels_completed_in_new_actions'], len(mine['steps'])
-            where = '%s, %d of %d levels in %d actions; the baseline: %d of %d in %d' % (
-                'won' if levels == base['levels'] else 'ended at its cap' if state == 'done' else 'halted on slow calls',
-                levels, base['levels'], count,
-                base['levels_completed'], base['levels'], base['actions'])
-            games.append({'g': game.split('-')[0], 'where': where,
-                          'runs': [{'n': 1, **theirs, 'layer': False}, {'n': 1, **mine, 'layer': True}]})
+    games, open_games, played = [], [], 0
+    for base in sorted(reference, key=lambda row: row['game']):
+        game = base['game']
+        parts = W.parts(game, stamp)
+        if not parts:
+            continue                        # not a game of this stamp
+        played += 1
+        state = W.state_of(parts[-1])
+        if state not in ('done', 'stopped') or (only and game.split('-')[0] not in only):
+            open_games.append(game.split('-')[0] + ('' if state in ('done', 'stopped') else ' (%s)' % state))
+            continue
+        mine = one_run(parts[-1], frames, index, whole=True)
+        theirs = one_run(ROOT / base['source'], frames, index, whole=True, game=game)
+        levels, count = mine['stats']['levels_completed_in_new_actions'], len(mine['steps'])
+        where = '%s, %d of %d levels in %d actions; the baseline: %d of %d in %d' % (
+            'won' if levels == base['levels'] else 'ended at its cap' if state == 'done' else 'halted on slow calls',
+            levels, base['levels'], count, base['levels_completed'], base['levels'], base['actions'])
+        games.append({'g': game.split('-')[0], 'where': where,
+                      'runs': [{'n': 1, **theirs, 'layer': False}, {'n': 1, **mine, 'layer': True}]})
     mine = sum(g['runs'][1]['stats']['levels_completed_in_new_actions'] for g in games)
     theirs = sum(g['runs'][0]['stats']['levels_completed_in_new_actions'] for g in games)
-    lede = ('%d of the %d games of this whole-game test. With every layer on, the agent completed %d levels in %d '
-            'actions in these games; the baseline completed %d in %d. A game marked as halted stopped before its cap '
-            'because the model\'s reply to one turn kept running past the time limit; it is shown up to there.%s' % (
-                len(games), len(W.GAMES), mine, sum(len(g['runs'][1]['steps']) for g in games), theirs,
+    lede = ('%d of the %d games played in this set of whole-game runs. With every layer on, the agent completed %d '
+            'levels in %d actions in these games; the baseline completed %d in %d. A game marked as halted stopped '
+            'before its cap because the model\'s reply to one turn kept running past the time limit; it is shown up '
+            'to there.%s' % (
+                len(games), played, mine, sum(len(g['runs'][1]['steps']) for g in games), theirs,
                 sum(len(g['runs'][0]['steps']) for g in games),
                 ' Not on this page: %s.' % ', '.join(open_games) if open_games else ''))
     return games, lede

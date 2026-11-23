@@ -7,6 +7,9 @@ do, and is marked "halted" with the reason. Nothing else differs from the summar
 
     whole_results.py <out.json> <stamp>            the first eleven games (whole_games.py)
     whole_results.py <out.json> <stamp> rest       the second eleven (whole_games_rest.py)
+    whole_results.py <out.json> <stamp> last       dc22 and re86 (whole_games_last.py; wa30 was started again
+                                                   under its own stamp and is left out here)
+    whole_results.py <out.json> <stamp> official   wa30 (whole_games_official.py)
 
 Usage (project environment), from the repository root. No model call.
 """
@@ -20,17 +23,40 @@ sys.path.insert(0, str(ROOT / 'research'))
 from research.level_brief_v1 import whole_games as W  # noqa: E402
 
 
-def results(stamp):
+def compare(group):
+    """whole_games.py's comparison of a group of games with the baseline, for a group of any size."""
+    if not group:
+        return None
+    mine, theirs = sum(r['levels_completed'] for r in group), sum(r['baseline']['levels_completed'] for r in group)
+    my_score = sum(r['score'] for r in group) / len(group)
+    their_score = sum(r['baseline']['score'] for r in group) / len(group)
+    word = 'better' if mine > theirs and my_score > their_score else 'worse' if mine < theirs and my_score < their_score else 'mixed'
+    return {'games': len(group), 'levels_completed': {'layers': mine, 'baseline': theirs},
+            'mean_game_score': {'layers': round(my_score, 2), 'baseline': round(their_score, 2)}, 'reading': word,
+            'actions': {'layers': sum(r['actions'] for r in group), 'baseline': sum(r['baseline']['actions'] for r in group)}}
+
+
+def results(stamp, small=False):
+    """small: a set too small for whole_games.py's own overall comparison, which divides by the size of the
+    'used in design' group (none of the last three games is in it). The comparison is then made here."""
     real = W.state_of
     last = {game: W.parts(game, stamp)[-1] for game in W.GAMES if W.parts(game, stamp)}
     states = {game: real(folder) for game, folder in last.items()}
     if 'running' in states.values():
         raise SystemExit('still playing: %s' % ', '.join(g for g, s in states.items() if s == 'running'))
     W.state_of = lambda folder: 'done' if real(folder) == 'stopped' else real(folder)
+    groups = W.GROUPS
+    if small:       # a game that never started keeps whole_games.py from making its own overall comparison
+        W.GROUPS = {**groups, 'none': ('none-none',)}
     try:
         value = W.summary(stamp)
     finally:
-        W.state_of = real
+        W.state_of, W.GROUPS = real, groups
+    if small:
+        value['runs'] = [row for row in value['runs'] if row['group'] != 'none']
+        value['games_not_ended'] = [row['game'] for row in value['runs'] if row['state'] != 'done']
+        if not value['games_not_ended']:
+            value['all_games_of_this_set'] = compare(value['runs'])
     for row in value['runs']:
         game = next((g for g in last if g.startswith(row['game'])), None)
         if game is None:
@@ -50,11 +76,18 @@ def results(stamp):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) not in (3, 4) or (len(sys.argv) == 4 and sys.argv[3] != 'rest'):
+    if len(sys.argv) not in (3, 4) or (len(sys.argv) == 4 and sys.argv[3] not in ('rest', 'last', 'official')):
         raise SystemExit(__doc__)
-    if len(sys.argv) == 4:
+    which = sys.argv[3] if len(sys.argv) == 4 else 'first'
+    if which == 'rest':
         from research.level_brief_v1 import whole_games_rest  # noqa: F401  (puts its games in the place of the first set's)
-    value = results(sys.argv[2])
+    elif which == 'last':
+        from research.level_brief_v1 import whole_games_last  # noqa: F401
+        W.GROUPS = {'one': W.GROUPS['one']}          # wa30's counted run is under the stamp of whole_games_official.py
+        W.GAMES = {game: W.GAMES[game] for game in W.GROUPS['one']}
+    elif which == 'official':
+        from research.level_brief_v1 import whole_games_official  # noqa: F401
+    value = results(sys.argv[2], small=which in ('last', 'official'))
     Path(sys.argv[1]).write_text(json.dumps(value, indent=1) + '\n')
     for row in value['runs']:
         base = row.get('baseline') or {}
@@ -62,7 +95,7 @@ if __name__ == '__main__':
                                                    'score', 'model_replies')}
                          | {'baseline_levels': base.get('levels_completed'), 'baseline_actions': base.get('actions'),
                             'baseline_score': round(base['score'], 2) if base else None, 'parts': len(row.get('parts') or ())}))
-    for name in ('all_eleven', 'never_used_in_design', 'used_in_design'):
+    for name in ('all_eleven', 'never_used_in_design', 'used_in_design', 'all_games_of_this_set'):
         if name in value:
             print(name, json.dumps(value[name]))
     print('halted, counted where they stand:', ', '.join(value['halted_games']) or 'none')

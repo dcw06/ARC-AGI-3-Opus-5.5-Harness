@@ -4,26 +4,25 @@ A harness that plays the 25 public [ARC-AGI-3](https://arcprize.org) games with 
 asked once per action, has no tools, and gets no hints about any game. On top of a plain baseline the harness adds
 four layers of memory and evidence that the model builds for itself while it plays.
 
-With the layers on, the official scorecard score goes from **46.20** to **84.14**, under the same action cap
+With the layers on, the official scorecard score goes from **46.20** to **85.37**, under the same action cap
 per game.
 
 ## Results
 
 | | Baseline | With the layers |
 |---|---|---|
-| Official score | 46.20 | 84.14 |
-| Levels completed | 125 of 183 | 164 of 183 |
+| Official score | 46.20 | 85.37 |
+| Levels completed | 125 of 183 | 166 of 183 |
 | Games won | 7 of 25 | 17 of 25 |
-| Actions used | 16,560 | 9,253 |
+| Actions used | 16,560 | 10,686 |
+| Tokens, input and output | 256.5M | 228.3M |
 
 - Baseline scorecard: https://arcprize.org/scorecards/0f882c2e-0451-41bd-86c5-211a54785c56
-- Layered scorecard (22 November 2026): https://arcprize.org/scorecards/eafcc4b7-afb3-4fb5-bffa-7d7a47e4f040
+- Layered scorecard: https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14
 
-The layered scorecard above was taken while the last game (wa30) was still playing, so wa30 is counted part-way.
-One game on it (ls20) is cut short: the connection failed during the replay, which the scorecard does not allow to
-be retried, so it shows ls20 one level below what the run reached. An earlier scorecard from the same day, with
-every action sent, scored 82.56: https://arcprize.org/scorecards/2eca3d2f-3e6a-4a7a-b122-ed0e2a54c12f. A final
-scorecard will replace these when wa30 has finished.
+The layered runs used 35.5% fewer actions and 11.0% fewer tokens in total. Each action costs more with the layers
+(about 42% more input), but far fewer actions are needed. Token counts leave out calls that were cut off at the
+time limit, which report no usage.
 
 Scores are ARC's own (competition mode). The games were played on local copies of the public game files, and each
 scorecard was then made by sending the recorded actions to the ARC service, with no model call; the service has to
@@ -57,9 +56,9 @@ return the recorded board after every action.
 | tr87 | 4 of 6 | 450 | 27.1 | 4 of 6 | 259 | 47.6 | halted on slow model calls |
 | tu93 | 8 of 9 | 500 | 62.2 | 9 of 9 | 200 | 100.0 | won |
 | vc33 | 7 of 7 | 446 | 72.3 | 7 of 7 | 219 | 100.0 | won |
-| wa30 | 7 of 9 | 1,850 | 41.4 | 7 of 9 | 1,826 | 52.7 | still playing |
+| wa30 | 7 of 9 | 1,850 | 41.4 | 7 of 9 | 1,850 | 52.7 | action cap |
 
-The table shows the runs as recorded locally on 22 November 2026; wa30 was still playing. Scores per game use the scorecard's rule.
+Every game score in this table equals the one on the official scorecard. Two earlier scorecards were taken on 22 November 2026 while games were still playing (82.56 and 84.14); their records are in `reports/level_brief_v1/data/`.
 
 Three games halted before their cap because the model's reply to one turn kept running past the harness's
 240-second limit (tr87, bp35, s5i5). They are counted where they stopped. s5i5 is the one game that did worse than
@@ -100,7 +99,7 @@ Limits to keep in mind:
 - The comparison is all four layers together against none. It does not show what each layer contributes. The level
   brief alone was tested separately on 16 games, from mid-game, with mixed results
   (`reports/level_brief_v1/results-*.json`).
-- About 7% of replies were sent back and asked again because the 12-rule list was full, and slow replies halted
+- About 6% of replies were sent back and asked again because the 12-rule list was full, and slow replies halted
   three games. Both are costs of the layers.
 
 ## What is in this repository

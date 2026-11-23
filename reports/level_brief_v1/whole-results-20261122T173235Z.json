@@ -1,0 +1,488 @@
+{
+ "stamp": "20261122T173235Z",
+ "rule": "The last three games, one run each with the layers on, beside the baseline run of the same game at the same cap. Per game: levels completed, and the game score by the scorecard rule (replay_scorecard.game_score with the human counts of the official scorecard). Overall \"better\": more levels completed in total and a higher mean game score than the baseline. \"worse\": fewer levels in total and a lower mean game score. Anything else: \"mixed\". One run a game on each side, played on different days: a difference in a single game may be chance. No game is played again because of its result. A game that stops early is continued from its own saved replies; one that halts because a reply keeps running past the time limit is counted where it stands.",
+ "runs": [
+  {
+   "game": "wa30",
+   "group": "official",
+   "account": "the signed-in account",
+   "state": "done",
+   "cap": 1850,
+   "parts": [
+    {
+     "run": "whole-wa30-20261122T173235Z",
+     "actions": 1169,
+     "state": "stopped",
+     "seconds_a_call": 240
+    },
+    {
+     "run": "whole-wa30-20261122T173235Z-c1",
+     "actions": 1850,
+     "state": "done",
+     "seconds_a_call": 240
+    }
+   ],
+   "used_in_design": false,
+   "baseline": {
+    "actions": 1850,
+    "levels_completed": 7,
+    "level_actions": [
+     36,
+     59,
+     187,
+     462,
+     110,
+     70,
+     244,
+     682,
+     0
+    ],
+    "score": 41.44187593054267
+   },
+   "levels_in_the_game": 9,
+   "actions": 1850,
+   "levels_completed": 7,
+   "level_actions": [
+    27,
+    57,
+    80,
+    68,
+    359,
+    48,
+    921,
+    290,
+    0
+   ],
+   "score": 52.678537475904804,
+   "model_replies": 1881,
+   "detail": {
+    "run": "whole-wa30-20261122T173235Z-c1",
+    "game": "wa30",
+    "set_up": "memory layers, object ledger and level brief",
+    "started_after_action": 0,
+    "level_at_start": 1,
+    "new_actions": 1850,
+    "levels_completed_in_new_actions": 7,
+    "actions_per_completed_level": [
+     27,
+     57,
+     80,
+     68,
+     359,
+     48,
+     921
+    ],
+    "actions_on_the_open_level": 290,
+    "changed_nothing": 11,
+    "changed_nothing_at": [
+     3,
+     643,
+     661,
+     745,
+     847,
+     899,
+     943,
+     965,
+     1068,
+     1423,
+     1517
+    ],
+    "repeats_of_a_known_no_effect_action": 0,
+    "in_a_loop": 18,
+    "game_overs": 10,
+    "turns": 1840,
+    "turns_announcing_a_test": 101,
+    "cases_opened": 9,
+    "lessons_kept": 9,
+    "further_actions_combined": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "lessons_offered_too_early_and_dropped": 0,
+    "lessons": [
+     {
+      "at_action": 5,
+      "explains": "t3",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "The player cannot move into a tile occupied by a box it has not grabbed. A move toward an adjacent box that is not grabbed is blocked and changes nothing; it only highlights the box (border 3).",
+      "applies_when": "The tile next to the player in the direction of the move holds a box (4/3-bordered 4x4 block) that the player has not grabbed with action 5 (its border is not 0).",
+      "replaces": 0
+     },
+     {
+      "at_action": 645,
+      "explains": "t643",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "The player cannot grab a box with action 5 while an f agent is right next to that box, holding or about to hold it. The grab is refused, nothing changes, and on the next action the f agent drags the box off (border 5).",
+      "applies_when": "The box the player faces (border 3) has an f-coloured agent block right beside it, usually on the side opposite the player. Grabbing will fail; grab only boxes with no f agent next to them.",
+      "replaces": 0
+     },
+     {
+      "at_action": 663,
+      "explains": "t661",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "A grab (action 5) is refused while an f agent is right next to the box I face. Nothing changes, f may also stay put for that turn, and on the next action f grabs the box itself (border 5) and drags it off toward its solid-2 block.",
+      "applies_when": "The box I face (border 3) has an f block touching it on any side (above, below or opposite me). Don't press 5 then. Go for a box with no f block next to it.",
+      "replaces": 2
+     },
+     {
+      "at_action": 747,
+      "explains": "t745",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "Action 5 (grab/release) changes nothing when the player holds nothing and the tile on its facing side (the side with its 0 edge) has no box or other grabbable object in it.",
+      "applies_when": "Find the player's 0 edge. If the 4x4 tile next to that edge is plain floor (1) and no box is held (no box has a 0 border), pressing 5 will do nothing and only use up budget.",
+      "replaces": 0
+     },
+     {
+      "at_action": 901,
+      "explains": "t899",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "A grab (action 5) is refused while an f agent touches the box I face. Nothing changes that turn. On my next action, f grabs that box itself (border 5) and starts dragging it toward its solid-2 block, one tile per action.",
+      "applies_when": "The box I face (border 3) has an f block right next to it on any side. Don't press 5 then. Go for a box that has no f block touching it, or move so f is drawn away first.",
+      "replaces": 2
+     },
+     {
+      "at_action": 967,
+      "explains": "t965",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "If an f block is touching the box I face, action 5 cannot grab that box and nothing changes that turn. f's own grab is also held off on that turn: f only grabbed the box on my next, different action (it grabbed and dragged it one tile in the same step).",
+      "applies_when": "The box I face (border 3) has an f block right next to it on any side and I am not holding anything. Pressing 5 then changes nothing apart from the budget bar.",
+      "replaces": 2
+     },
+     {
+      "at_action": 1070,
+      "explains": "t1068",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "A move toward a tile taken up by an object the player can't enter (a box that isn't held, or an agent block such as f) changes nothing when the player already faces that way. It doesn't move the player, and since nothing changed, the agents don't act either.",
+      "applies_when": "The 4x4 tile next to the player in the direction of the move holds a box that isn't grabbed, or an agent block, and the player's 0 edge already faces that way. An unheld box may already show border 3.",
+      "replaces": 1
+     },
+     {
+      "at_action": 1425,
+      "explains": "t1423",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "If an f agent is touching the box I face, action 5 can't grab it and nothing changes that turn. Because the board didn't change, f doesn't act either. On my next action that changes the board, f grabs that box (border 5) and pulls it one tile in the same step.",
+      "applies_when": "I hold nothing, I face a box with border 3, and an f block is directly next to that box on any side. Pressing 5 then does nothing, and my next move will let f take the box.",
+      "replaces": 2
+     },
+     {
+      "at_action": 1519,
+      "explains": "t1517",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "Action 5 only grabs or releases boxes, or converts an active f agent. A block already converted to the 9-border/2-interior state is inert: action 5 can't grab it, convert it back or change it, so nothing changes, and the agents don't act that turn either.",
+      "applies_when": "The player holds no box (no box has a 0 border) and the tile on the player's 0-edge side is a 9-bordered block with a 2 interior, or anything else that is not an unheld box or an active f agent. Pressing 5 then will leave the board unchanged.",
+      "replaces": 0
+     }
+    ],
+    "game_over_lessons": [
+     {
+      "at_action": 359,
+      "rule": "The bar on row 63 is an action budget. Its 7 cells turn to 4 about one every two actions, and the game is over when the last 7 is gone, whatever else is happening on the board.",
+      "applies_when": "Count the 7 cells left on the bottom row and multiply by about 2. If the moves still needed to cover every target tile come to more than that, the attempt will fail. Plan the shortest delivery route from the start and avoid wasted moves."
+     },
+     {
+      "at_action": 485,
+      "rule": "The game is over when the row-63 budget bar runs out of 7 cells, which happens after about 2 actions per cell, whatever the state of the board. Back-and-forth stalling moves (alternating up/down to let c catch up) use up the budget without moving anything forward.",
+      "applies_when": "Before any action, count the 7 cells left on row 63. If roughly twice that is fewer than the moves still needed to get boxes onto all the targets, change the plan now: carry boxes directly instead of waiting on c, and never spend actions on idle oscillation."
+     },
+     {
+      "at_action": 766,
+      "rule": "The game is over the moment the row-63 budget bar loses its last 7 cell. A cell is lost about every 2 actions, whatever the board looks like, even if the next action would have won the level. A whole attempt has about 2\u00d7 the starting number of 7 cells in actions.",
+      "applies_when": "Before acting, count the 7s left on row 63. If 2\u00d7count is not clearly more than the actions still needed to deliver and release every box, the attempt will fail. With 1 cell left, at most about 1 more action is safe. Plan the shortest delivery route from the start of each attempt."
+     },
+     {
+      "at_action": 892,
+      "rule": "The level ends in GAME_OVER when the row-63 budget bar loses its last 7 cell, one cell about every 2 actions, whatever is on the board. Long chases and repeated delivery attempts against an f agent use up the budget even when each move looks useful.",
+      "applies_when": "Before each action, count the 7 cells left on row 63 and compare 2x that count with the actions still needed to deliver and release every box. When the margin is small, change the plan at once. Do not start a long drag that cannot finish in time."
+     },
+     {
+      "at_action": 1018,
+      "rule": "The attempt ends in GAME_OVER when the last 7 cell of the row-63 budget bar is gone (one is lost about every 2 actions), whatever is on the board. Repeated chases where f takes back a released box use up the budget without winning.",
+      "applies_when": "Before acting, count the 7 cells on row 63. If 2x that count is less than the moves still needed to deliver and release every box, with f unable to grab any of them in between, the attempt is doomed. Change the plan early instead of chasing f."
+     },
+     {
+      "at_action": 1144,
+      "rule": "The attempt ends when the row-63 budget bar runs out. An f agent that follows held boxes and grabs any box released near it (or breaks my hold when it touches the held box) can turn every delivery into a chase that uses up the whole budget, even when the bar is long.",
+      "applies_when": "Before you grab or release a box, check how far f is from that box. If f can reach a tile next to the box in one or two moves, the delivery will be lost. Decide on the order and direction of approach so the player stays between f and the box, and so the last box is released on the target before f can touch the first one."
+     },
+     {
+      "at_action": 1270,
+      "rule": "The attempt ends in GAME_OVER when the row-63 budget bar runs out, whatever is on the board. Every action that doesn't move a box closer to being released on the targets, while f keeps taking boxes back, brings that end closer, even with a box right next to the target.",
+      "applies_when": "Before acting, count the 7 cells left on row 63 and compare about 2x that count with the moves still needed. If f is holding or chasing a box and the bar is under about a quarter, finishing is unlikely. Choose plans early that keep boxes away from f instead of chasing."
+     },
+     {
+      "at_action": 1396,
+      "rule": "The attempt ends when the row-63 budget bar runs out of 7 cells, about one cell every 2 actions, whatever is on the board. If f is allowed to drag a box to the 2 block, getting it back costs so many actions that the budget runs out before both boxes are delivered and released.",
+      "applies_when": "At the start of an attempt and before each action, check whether f can reach an unheld box within a move or two, and compare 2x the 7 cells left with the moves still needed. If a box is likely to be taken to the 2 block, secure that box first or change the plan right away."
+     },
+     {
+      "at_action": 1522,
+      "rule": "The attempt ends when the row-63 budget bar runs out, whatever is on the board. Converting an f agent into an inert 9/2 block makes it permanent and it fills its tile. If that tile is a target, a box can never be placed there, so the remaining budget is wasted.",
+      "applies_when": "Before pressing 5 while facing an f agent, check whether f is on a target tile or on the only path a box needs. If it is, don't convert it there. Wait until f is on harmless floor. Also compare 2x the 7 cells left with the moves still needed."
+     },
+     {
+      "at_action": 1712,
+      "rule": "GAME_OVER comes when the row-63 budget bar runs out, about 1 cell per 2 actions, so roughly 128 actions per attempt. Spreading effort over many boxes in two halves, with detours and chases, uses it all up before the last release, even if almost every box has been delivered.",
+      "applies_when": "At the start of an attempt, estimate how many moves it takes to carry every needed box to a target and release it, plus travel between halves. If that comes to more than about 2x the 7 cells left, change the plan straight away: use shorter routes, let c agents help, skip chasing f. Recheck this every 10 actions or so."
+     }
+    ],
+    "checks_written": 1835,
+    "model_calls": 1881,
+    "replies_sent_back": 43,
+    "output_tokens": 4120695,
+    "output_per_call_median": 1491,
+    "stop_reason": "action_cap",
+    "problems": [],
+    "audit": "passes",
+    "arm": "brief",
+    "state": "clean",
+    "briefs": [
+     {
+      "at_action": 28,
+      "level": 2,
+      "asked_for": true,
+      "won_by": "Level 1 completed when the last 9/2 hole tile was covered by a box and action 5 released it (border 0->3). Least shown: all hole tiles covered by boxes, with the final box released; whether release is needed or any action after covering suffices is not separated.",
+      "different": "New: a c-coloured 4x4 block at x24-27 y36-39. Target area is now one large 9-bordered 2-interior region of 2x3 tiles (x12-19 y28-39) instead of separate holes. Five A boxes scattered on the right. Player starts at top-left facing up.",
+      "why": "The target region must be filled with boxes as before. The c block is new and probably an agent or obstacle that affects how boxes get moved; the tile count (6) vs box count (5) may depend on it.",
+      "first": "Take a cheap move (down) and watch whether the c block moves or changes on its own."
+     },
+     {
+      "at_action": 85,
+      "level": 3,
+      "asked_for": true,
+      "won_by": "At t84 the player moved up. Then c let go of its box (border 5 to 4) on the x12 y28 target, and the level ended. All 5 boxes sat on target tiles, and c stood on the 6th. The least this shows is required: every box on the target area, none held by c, after any action.",
+      "different": "The background is new: a full-height hatched 2/1 column at x32-35, with two boxes (x32 y12 and x32 y32) sitting in it. The player (x16 y36) and three boxes are left of the column. The target (2x4 tiles at x52-59 y24-39) and c (x48 y12) are right of it. There are 5 boxes and 8 target tiles.",
+      "why": "The column probably splits the board, so the player may not be able to reach the target. The boxes inside it suggest boxes are handed across through it, maybe by c, which is on the target side. How it works decides whether I push boxes over myself or deliver them to c.",
+      "first": "Move right toward the column (empty path) to test whether the player can enter or cross it, and watch where c goes in the meantime."
+     },
+     {
+      "at_action": 165,
+      "level": 4,
+      "asked_for": true,
+      "won_by": "The level ended once every target tile was covered by a box. c had carried the last box onto its target and let go (border 5 back to 4) on the same step as my move. I did not have to let go of anything myself.",
+      "different": "The player now starts inside a closed hatched ring with 6 boxes. Before, the hatched area was a single column. One box is outside the ring, next to a 5 strip. There are three c agents instead of one. There are also scattered colour-5 blocks, and targets that span 1x2 or 2x1 tiles.",
+      "why": "The player cannot cross the hatched ring, so boxes probably have to be passed out through it to the c agents, who deliver them. The 5 blocks probably shape the c agents' routes. The outside box is presumably for the c agents alone.",
+      "first": "Bring a box to the inner edge of the ring and try to push it into the hatch: move down, face the box at (32,36), grab it, then push right twice toward the hatch at x40."
+     },
+     {
+      "at_action": 233,
+      "level": 5,
+      "asked_for": true,
+      "won_by": "Level 4 finished on the step when the last target tile got a box on it (c dragged it to (40,56)). On that same step c let go (border 5\u21924). The least that has been shown: once every 9/2 target tile is covered by a box, the level completes. Rule 7 already says this.",
+      "different": "There is one large 9/2 target, 8x16 cells (2x4 tiles), instead of separate 4x4 targets. 6 boxes are all on the right. The player and the boxes are cut off from the target by 5 walls (a column at x36-39 and bars at y24-27 and y36-39). The only opening is a corridor at y28-35, and c sits at its left exit, (20,28). There is no hatched 2/1 area.",
+      "why": "The big target probably has to be filled with boxes. Because of the walls, boxes have to go through the corridor, and c, waiting at the exit, is presumably meant to take them from there to the target. That would make the player's job delivering boxes into the corridor. How many target tiles must be covered (8 vs 6 boxes) is still unknown.",
+      "first": "Move up next to box (44,28), grab it, and drag it left into the corridor. Then watch whether c comes to grab it and carry it to the target."
+     },
+     {
+      "at_action": 592,
+      "level": 6,
+      "asked_for": true,
+      "won_by": "Level 5 completed when the player stepped right onto the last uncovered target tile (8,24). At that point the 6 boxes covered six targets and c stood on (12,32). So target tiles covered by the player or by c counted, not only those covered by boxes. c let go of its box on the completing step.",
+      "different": "New things: an f 4x4 block at (16,16). An 8x8 target area KK at (28,12): four tiles with a 9 border, one of them already holding a box. A solid-2 area KM at (52,24) with no 9 border, and a box at (56,28) next to it. There is no c helper. A wall of 5s, 8 wide, at x44-51, with a gap at rows 24-27. The budget bar is full (64 sevens).",
+      "why": "Without c, the player has to cover the targets with boxes and/or its own body. The f block is the unknown: maybe a box source, a switch, or a stand-in for a helper. The box behind the wall gap probably has to be carried through the gap at rows 24-27 to the KK targets. The solid-2 area may be hatch-like terrain that only boxes can enter.",
+      "first": "Move up toward the f block at (16,16), the new thing, and step next to it to see whether it can be grabbed or reacts. The route there also passes the gap at rows 24-27."
+     },
+     {
+      "at_action": 640,
+      "level": 7,
+      "asked_for": true,
+      "won_by": "Releasing (action 5) the held box at (32,12), with the other box at (32,16) also on the target area. The target tile (28,16) was still uncovered, so the least shown requirement is that every box rests unheld on the target area.",
+      "different": "The target area is a 1x2-tile region at (12,28)-(15,35) with two boxes, at (32,24) and (28,32). An f agent (KL) is at (40,32) and a solid-2 block (LR) at (48,28)-(51,35). Two 5 wall bands run across rows 16-19 and 40-43, enclosing the play area in rows 20-39. There is no hatched column.",
+      "why": "Two boxes for two target tiles means both must be delivered. KL most likely tries to steal boxes from targets and take them to LR, so delivery must be quick and both boxes should end up on the targets released.",
+      "first": "Start moving toward the box at (28,32) and watch what KL does after each of my actions."
+     },
+     {
+      "at_action": 1561,
+      "level": 8,
+      "asked_for": true,
+      "won_by": "Level 7 completed on the action-5 press that released the second box (border went from 0 to 3) on the lower target tile at (12,32), while the first box already rested unheld at (12,28). The least that was shown: every box resting unheld on target tiles completes the level, checked at the moment of release.",
+      "different": "There are two halves split by 5-walls, each with its own gap. Each half has a cluster of several boxes, a c agent and an f agent. The 9/2 target areas are large (8 and 9 tiles). Solid-2 areas are present, and the top one already holds 4 boxes. The box count (8 in the top cluster area, 5 in the bottom) doesn't obviously match the number of target tiles.",
+      "why": "The two halves with their own agents mean boxes have to be delivered in both, and each f has to be neutralised (converted) away from targets. The c helpers can drag boxes onto targets and save budget. The boxes already in the top solid-2 area may have to be pulled out and taken to the top target.",
+      "first": "Make a single move and watch how c and f in both halves react, then head to the closer half's f and convert it on harmless floor."
+     }
+    ],
+    "rule_notes": [
+     {
+      "at_action": 2,
+      "rule": "Action 1 moves the player block (0/e) up by 4 cells (one 4x4 tile).",
+      "replaces": 0
+     },
+     {
+      "at_action": 6,
+      "rule": "Action 5 grabs a box that is next to the player and being faced (border becomes 0). Moving in that direction then pushes the box ahead of the player, one tile per move.",
+      "replaces": 0
+     },
+     {
+      "at_action": 8,
+      "rule": "Pressing action 5 while holding a grabbed box lets go of it. Its border changes from 0 to 3 (3 = next to the player and being faced, but not held).",
+      "replaces": 0
+     },
+     {
+      "at_action": 9,
+      "rule": "Action 3 moves the player block left by one 4x4 tile and turns it to face left (its 0 edge is on the left side).",
+      "replaces": 0
+     },
+     {
+      "at_action": 13,
+      "rule": "Pressing a direction toward a box that has not been grabbed and is right next to the player does not move the player. It only turns the player to face the box and highlights the box's border in 3.",
+      "replaces": 0
+     },
+     {
+      "at_action": 15,
+      "rule": "A box grabbed with action 5 moves along with the player in any direction (dragged sideways or pushed ahead), keeping its position relative to the player.",
+      "replaces": 2
+     },
+     {
+      "at_action": 25,
+      "rule": "Action 2 moves the player down one 4x4 tile. A grabbed box keeps its position relative to the player, so it is pulled along behind.",
+      "replaces": 0
+     },
+     {
+      "at_action": 28,
+      "rule": "A level is completed once every 9-bordered 2-interior target tile is covered by a box and the last box is released with action 5 (release might not be strictly required).",
+      "replaces": 0
+     },
+     {
+      "at_action": 31,
+      "rule": "Action 4 moves the player block right by one 4x4 tile and turns it to face right (its 0 edge is on the right side).",
+      "replaces": 0
+     },
+     {
+      "at_action": 38,
+      "rule": "Pressing action 5 while the player faces a box next to it (border 3) grabs the box. Its border turns 0, and from then on it moves with the player.",
+      "replaces": 0
+     },
+     {
+      "at_action": 84,
+      "rule": "The c block is an agent that moves on its own after my actions. It can grab a box that is not held (the box's border turns 5) and drag it along, for example onto a target tile.",
+      "replaces": 0
+     },
+     {
+      "at_action": 85,
+      "rule": "A level completes once every box sits on the 9/2 target area and no box is held. The final action can be any move: in level 2, c let go of its box on its own and the level ended. I do not need to release a box myself.",
+      "replaces": 7
+     },
+     {
+      "at_action": 89,
+      "rule": "The hatched 2/1 column blocks the player: a move into it does nothing to the player. On the same action, c next to a column box grabbed it (border 5).",
+      "replaces": 0
+     },
+     {
+      "at_action": 90,
+      "rule": "After c grabs a box that sits in the hatched column (border 5), it drags it right along the row toward the target. c stays on the side away from the target, and the box moves with it.",
+      "replaces": 0
+     },
+     {
+      "at_action": 165,
+      "rule": "A level completes once every 9/2 target tile is covered by a box. On the completing step any helper c lets go of its box on its own, so the player does not need to do anything special.",
+      "replaces": 7
+     },
+     {
+      "at_action": 170,
+      "rule": "The hatched 2/1 area blocks the player, but the player can push a box it is holding into the hatch tile in front of it. A c next to a box that sits in the hatch can grab it (border 5).",
+      "replaces": 11
+     },
+     {
+      "at_action": 592,
+      "rule": "A level completes once every 9-bordered target tile is covered by something: a box, the player, or helper c all count (level 5 finished when the player stepped onto the last free target). On the completing step c lets go of its box.",
+      "replaces": 7
+     },
+     {
+      "at_action": 640,
+      "rule": "A level completes when every box rests, not held, on the 9-bordered target area. Level 6 completed on releasing the held box even though one target tile was uncovered, so covering every target tile is not required.",
+      "replaces": 7
+     },
+     {
+      "at_action": 794,
+      "rule": "An f agent will grab a box that rests unheld on the target if it stands right next to it (border turns 5), then drag it toward its solid-2 zone.",
+      "replaces": 12
+     },
+     {
+      "at_action": 819,
+      "rule": "An f agent grabs an unheld box on the target as soon as the player moves away from it, even right after the player released it. The box's border turns 5 and f drags it one tile per action.",
+      "replaces": 12
+     },
+     {
+      "at_action": 843,
+      "rule": "An f agent will grab an unheld box even when it is off the target: after a release, f moves next to the box and grabs it (border 5) on the following action.",
+      "replaces": 12
+     },
+     {
+      "at_action": 915,
+      "rule": "With two boxes on a level, releasing one box on the target area does not complete the level while the other box is still off the target. Every box must rest unheld on the target area.",
+      "replaces": 7
+     },
+     {
+      "at_action": 1227,
+      "rule": "An f agent standing next to an unheld box grabs it on its turn (the box's border turns 5), even if the box rests on a target and the player is nearby but not touching it.",
+      "replaces": 12
+     },
+     {
+      "at_action": 1355,
+      "rule": "Pressing action 5 while the player faces a box next to it (border 3) grabs it: the border turns 0. A move away from the box then drags it along behind.",
+      "replaces": 9
+     },
+     {
+      "at_action": 1376,
+      "rule": "Pressing action 5 while the player faces a box next to it (border 3) grabs it: the border turns 0. A move away from the box then drags it along behind.",
+      "replaces": 9
+     },
+     {
+      "at_action": 1435,
+      "rule": "Action 5 while facing an adjacent unheld box (border 3) grabs it, and its border turns 0. This works even right after the box was on the 2 block, as long as f is touching it only at a corner.",
+      "replaces": 9
+     },
+     {
+      "at_action": 1456,
+      "rule": "Action 5 while facing an adjacent unheld box grabs it (border turns 0), even if an f agent is holding a different box diagonally next to it.",
+      "replaces": 9
+     },
+     {
+      "at_action": 1561,
+      "rule": "Actions 1/2/3/4 move the player one 4x4 tile up/down/left/right and turn its 0 edge to face that way. A held box keeps its position relative to the player.",
+      "replaces": 1
+     },
+     {
+      "at_action": 1561,
+      "rule": "Action 5 while facing an active f agent turns it into a permanent inert block (9 border, 2 interior) that fills its tile and can't be grabbed or changed.",
+      "replaces": 4
+     }
+    ]
+   },
+   "halted": false
+  }
+ ],
+ "games_not_ended": [],
+ "all_games_of_this_set": {
+  "games": 1,
+  "levels_completed": {
+   "layers": 7,
+   "baseline": 7
+  },
+  "mean_game_score": {
+   "layers": 52.68,
+   "baseline": 41.44
+  },
+  "reading": "mixed",
+  "actions": {
+   "layers": 1850,
+   "baseline": 1850
+  }
+ },
+ "halted_games": []
+}

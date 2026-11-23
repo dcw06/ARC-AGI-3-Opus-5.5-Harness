@@ -1,15 +1,22 @@
 """Whole games played on the official copies of the game files.
 
-Found on 2026-11-22 while preparing the scorecard replay: local_game.py looks first in an older folder of game
-files (reports/runs/phase4-v2-assets), and for 15 of the 25 games the copy there is not the file the ARC toolkit
-downloads, though the version in its name is the same. Replayed on the official copies, the recorded actions of
-the finished whole-game runs return every recorded board in all of those games but lf52, where the boards differ
-from action 309 on. So only lf52 after action 308 was played on a different game. wa30 had just started on its
-older copy and was stopped after 17 actions.
+Why this file exists. On 2026-11-22, while the scorecard replay was being prepared, a local replay of lf52 did not
+return the recorded observation at action 309, and local_game.py turned out to look first in an older folder of
+game files (reports/runs/phase4-v2-assets) whose copies of 15 games are not byte for byte the files the ARC toolkit
+downloads. wa30 had just started on its older copy, so it was stopped after 17 actions and started again here, on
+the toolkit's copy.
 
-Here the official copies (.cache/local_games/environment_files, byte for byte the toolkit's) are looked in first.
-Nothing else differs from whole_games.py, which is used unchanged, and local_game.py is not edited, so the plans
-of the other sets still hold.
+The older copies were then checked and are NOT a different game. They differ from the toolkit's only by a licence
+comment at the top of the official file and one or two helper functions (_get_hidden_state, _get_valid_actions) in
+the older one, which the engine never calls; every recorded action of every finished run returns the recorded
+board on the toolkit's copies. The lf52 difference has another cause: one animated action on its level 6 gives
+different in-between frames from one process to the next, while the board it ends on is the same (25 of its 1,350
+actions; see replay_scorecard.py). So the restart of wa30 was a precaution that turned out not to be needed, and
+its discarded first 17 actions are reported as such.
+
+Here the toolkit's copies (.cache/local_games/environment_files) are looked in first. Nothing else differs from
+whole_games.py, which is used unchanged, and local_game.py is not edited, so the plans of the other sets still
+hold. (This note was corrected after wa30 had ended; while it played, the file was pinned by its plan.)
 
     official    wa30    the signed-in account, from the first action
 
