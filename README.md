@@ -124,6 +124,8 @@ game action by action, with what the model wrote on each turn.
 
 Useful starting points:
 
+- `reports/level_brief_v1/figures/`: one figure per layer from the runs, with what the model wrote at that
+  moment.
 - `reports/level_brief_v1/whole-results-*.json`: results of the whole-game runs.
 - `reports/level_brief_v1/whole-plan-*.json`: what was fixed before each set of runs, with code hashes.
 - `reports/level_brief_v1/data/`: what the ARC service returned for each scorecard.
