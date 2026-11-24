@@ -99,8 +99,10 @@ Limits to keep in mind:
 - The comparison is all four layers together against none. It does not show what each layer contributes. The level
   brief alone was tested separately on 16 games, from mid-game, with mixed results
   (`reports/level_brief_v1/results-*.json`).
-- About 6% of replies were sent back and asked again because the 12-rule list was full, and slow replies halted
-  three games. Both are costs of the layers.
+- About 4% of replies (461 of 11,111) were sent back and asked again because the 12-rule list was full, and slow
+  replies halted three games. Both are costs of the layers. An earlier version of this page said about 6%: that
+  count took a reply once for every part of an interrupted game that repeated it
+  (`reports/level_brief_v1/whole-log-counts.json` has the corrected counts and how they are made).
 
 ## What is in this repository
 
@@ -124,12 +126,14 @@ game action by action, with what the model wrote on each turn.
 
 Useful starting points:
 
-- `reports/level_brief_v1/figures/`: one figure per layer from the runs, with what the model wrote at that
-  moment.
+- `reports/level_brief_v1/figures/`: moments from the runs for each layer, with what the model wrote at that
+  moment; `panels/` holds each board as an image of its own.
 - `reports/level_brief_v1/whole-results-*.json`: results of the whole-game runs.
 - `reports/level_brief_v1/whole-plan-*.json`: what was fixed before each set of runs, with code hashes.
 - `reports/level_brief_v1/data/`: what the ARC service returned for each scorecard.
 - `reports/level_brief_v1/token_usage.json`: token use beside the baseline.
+- `reports/level_brief_v1/whole-log-counts.json`: replies, replies sent back and failed calls, counted from the
+  run logs.
 - `reports/baseline_continue_v1/README.md`: how the baseline was run.
 
 ## Running it

@@ -6,10 +6,15 @@ word, with the game, the action number and the log it comes from, so that it can
 
     lessons-game-over    wa30, level 5: the action that used up the level's action budget, and the board after it
     lessons-no-effect    ka59, level 1: a click that changed nothing
+    frames-between       dc22, level 5: a click after which the board changes and changes back, so that the final
+                         board is the one before it
     object-ledger        wa30, first turn of level 5: the things the harness listed, outlined and named
     level-brief          wa30, level 5 to level 6: the board shown as completion feedback, and the new level
 
-    paper_figures.py            writes reports/level_brief_v1/figures/*.png and README.md
+    paper_figures.py            writes reports/level_brief_v1/figures/*.png, panels/*.png and README.md
+
+Each board of a figure is also written alone, with no title, as figures/panels/<figure>-<a, b, ...>.png, so that
+a paper can set the boards and their titles itself.
 
 Usage (project environment), from the repository root. Needs the local run logs. No model call.
 """
@@ -98,8 +103,10 @@ def figure(name, panels):
         draw.text((left, PAD), title, font=font, fill=INK)
         sheet.paste(image, (left, PAD + TITLE))
         draw.rectangle([left - 1, PAD + TITLE - 1, left + size, PAD + TITLE + size], outline=(125, 136, 145), width=1)
-    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / 'panels').mkdir(parents=True, exist_ok=True)
     sheet.save(OUT / (name + '.png'), optimize=True)
+    for n, (_, image) in enumerate(panels):
+        image.save(OUT / 'panels' / ('%s-%s.png' % (name, 'abcdef'[n])), optimize=True)
     return sheet.size
 
 
@@ -176,12 +183,61 @@ def build():
                       '' if len(case['actions_since']) == 1 else 's', lesson_at + 1)
                   + '\n\n> Rule: %s\n>\n> Applies when: %s' % (lesson['rule'], lesson['applies_when']) + source(folder)))
 
-    order = ('lessons-game-over.png', 'lessons-no-effect.png', 'object-ledger.png', 'level-brief.png')
-    text = ['# Figures: one moment per layer', '',
+    # dc22: a click after which the board changes and changes back. The first action for which the harness opened
+    # a no-effect case although more than 1,000 cells differ from the board before in some frame in between.
+    folder, steps, replies, bodies = load('dc22-fdcac232')
+    opened = sorted({int(body['evidence']['no_effect_case']['transition_id'][1:]) - 1 for body in bodies.values()
+                     if body['evidence'].get('no_effect_case')})
+
+    def differing(frame, start):
+        return int((np.asarray(frame) != np.asarray(start)).sum())
+
+    at = next(i for i in opened if max((differing(f, steps[i]['before']['frames'][-1])
+                                        for f in steps[i]['after']['frames'][:-1]), default=0) > 1000)
+    start, frames, click = steps[at]['before']['frames'][-1], steps[at]['after']['frames'], steps[at]['action']['action_data']
+    counts = [differing(f, start) for f in frames]
+    early, late = 4, 9                          # the 5th frame (the change has played) and the 10th (the board is going dark)
+    lesson_at = next(i for i in sorted(replies) if i > at and replies[i].get('no_effect_lesson')
+                     and bodies[i]['evidence'].get('no_effect_case', {}).get('transition_id') == 't%d' % (at + 1))
+    lesson = replies[lesson_at]['no_effect_lesson']
+    shown = bodies[lesson_at]['evidence']['no_effect_case']['in_between']['t%d' % (at + 1)]
+    before = board(start)
+    ring(before, click['x'], click['y'])
+    size = figure('frames-between', [
+        ('dc22, level %d, action %d: a click at (%d, %d)' % (steps[at]['before']['levels_completed'] + 1, at + 1, click['x'], click['y']), before),
+        ('frame %d of %d: the change plays' % (early + 1, len(frames)), board(frames[early])),
+        ('frame %d of %d: the board goes dark' % (late + 1, len(frames)), board(frames[late])),
+        ('last frame: the board as it was', board(frames[-1]))])
+    notes.append(('frames-between.png', 'A board that ends as it began, with changes in between', size,
+                  'dc22, level %d. Action %d clicked the ringed cell. The game returned %d frames for it. Counted against '
+                  'the board before the action, they differ in %s cells, in order. The change the click starts is in '
+                  'place by frame %d (%d cells), the board then goes dark from the top left (%d cells in frame %d, at '
+                  'most %d), and the last frame is the board before the action except for %d cell%s of the step counter '
+                  'on the bottom row, which the harness sets aside. So the harness counted the action as one that '
+                  'changed nothing and opened a case, and after %d further action%s of its own the model explained it '
+                  '(action %d):' % (
+                      steps[at]['before']['levels_completed'] + 1, at + 1, len(frames), ', '.join(str(c) for c in counts),
+                      early + 1, counts[early], counts[late], late + 1, max(counts), counts[-1],
+                      '' if counts[-1] == 1 else 's',
+                      len(bodies[lesson_at]['evidence']['no_effect_case']['actions_since']),
+                      '' if len(bodies[lesson_at]['evidence']['no_effect_case']['actions_since']) == 1 else 's', lesson_at + 1)
+                  + '\n\n> Rule: %s\n>\n> Applies when: %s' % (lesson['rule'], lesson['applies_when'])
+                  + '\n\nThe model is sent only the last frame of an action. A no-effect case adds a summary of '
+                    'the one frame in between that differed most from the board before: here frame %d, the dark '
+                    'board, reported as %d frames returned and %s cells differing (step counter aside)%s. What the '
+                    'model wrote about the frames in between is its reading of that summary.' % (
+                        counts.index(max(counts)) + 1, shown['frames_returned'], format(shown['cells_that_differed'], ','),
+                        '' if shown['changes_in_that_frame'].get('listed', True) else ', too many to list one by one')
+                  + source(folder)))
+
+    order = ('lessons-game-over.png', 'lessons-no-effect.png', 'frames-between.png', 'object-ledger.png', 'level-brief.png')
+    text = ['# Figures: moments from the runs, one or two per layer', '',
             'Boards are drawn exactly as the game returned them: 64 by 64 cells in ARC\'s 16 colours, %d pixels a cell. '
-            'All four moments are from the whole-game runs with every layer on, the runs behind the final scorecard '
+            'All five moments are from the whole-game runs with every layer on, the runs behind the final scorecard '
             '(https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14). The text quoted below is what '
             'the model wrote, word for word; none of it is drawn into the images, so it can go in a caption.' % CELL, '',
+            'Each board is also saved alone, with no title, in `panels/` (`<figure>-a.png`, `<figure>-b.png`, ...), '
+            'left to right.', '',
             'Made by `research/level_brief_v1/paper_figures.py` from the run logs.', '']
     for name in order:
         _, title, size, note = next(n for n in notes if n[0] == name)

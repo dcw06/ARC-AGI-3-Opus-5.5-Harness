@@ -1,6 +1,8 @@
-# Figures: one moment per layer
+# Figures: moments from the runs, one or two per layer
 
-Boards are drawn exactly as the game returned them: 64 by 64 cells in ARC's 16 colours, 12 pixels a cell. All four moments are from the whole-game runs with every layer on, the runs behind the final scorecard (https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14). The text quoted below is what the model wrote, word for word; none of it is drawn into the images, so it can go in a caption.
+Boards are drawn exactly as the game returned them: 64 by 64 cells in ARC's 16 colours, 12 pixels a cell. All five moments are from the whole-game runs with every layer on, the runs behind the final scorecard (https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14). The text quoted below is what the model wrote, word for word; none of it is drawn into the images, so it can go in a caption.
+
+Each board is also saved alone, with no title, in `panels/` (`<figure>-a.png`, `<figure>-b.png`, ...), left to right.
 
 Made by `research/level_brief_v1/paper_figures.py` from the run logs.
 
@@ -31,6 +33,22 @@ ka59, level 1. Action 11 clicked the ringed cell and the board came back the sam
 > Applies when: The ACTION6 target is not part of an e-coloured 3x3 box, or a move action would put any of the selected box's cells on a 2 or f cell.
 
 Source log: `whole-ka59-20261121T235533Z-c2` (local; not in the repository).
+
+## A board that ends as it began, with changes in between
+
+![A board that ends as it began, with changes in between](frames-between.png)
+
+`frames-between.png`, 3228 by 860 pixels.
+
+dc22, level 5. Action 343 clicked the ringed cell. The game returned 15 frames for it. Counted against the board before the action, they differ in 34, 35, 35, 36, 38, 150, 436, 772, 1123, 1575, 1997, 2388, 2734, 2830, 2 cells, in order. The change the click starts is in place by frame 5 (38 cells), the board then goes dark from the top left (1575 cells in frame 10, at most 2830), and the last frame is the board before the action except for 2 cells of the step counter on the bottom row, which the harness sets aside. So the harness counted the action as one that changed nothing and opened a case, and after 1 further action of its own the model explained it (action 345):
+
+> Rule: A control that toggles same-colour bridges between solid and checkered will not run while the e marker stands on a bridge that would become checkered. The toggle plays out in the intermediate frames and then reverts, so the final board is unchanged.
+>
+> Applies when: e's 2x2 cell block is part of a solid bridge whose colour matches the clicked toggle control, and that toggle would make the bridge checkered. Move e off the bridge onto 2 or another colour first.
+
+The model is sent only the last frame of an action. A no-effect case adds a summary of the one frame in between that differed most from the board before: here frame 14, the dark board, reported as 15 frames returned and 2,766 cells differing (step counter aside), too many to list one by one. What the model wrote about the frames in between is its reading of that summary.
+
+Source log: `whole-dc22-20261122T172802Z` (local; not in the repository).
 
 ## Object ledger
 
