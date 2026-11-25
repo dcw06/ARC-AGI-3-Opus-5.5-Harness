@@ -134,6 +134,12 @@ Useful starting points:
 - `reports/level_brief_v1/token_usage.json`: token use beside the baseline.
 - `reports/level_brief_v1/whole-log-counts.json`: replies, replies sent back and failed calls, counted from the
   run logs.
+- `reports/level_brief_v1/game_over_counts.json`: game overs per game in the baseline runs and in the layered
+  runs, with how each count is made.
+- `reports/level_brief_v1/figures/worked_example_wa30.json`: one game over in the layered wa30 run, the lesson
+  the model wrote from it, and the next request with the model's check, word for word.
+- `reports/memory_fix_v1/bp35_rule_trace.json`: what the baseline's notes said about the fatal tiles of bp35
+  level 2, reply by reply, between its first two game overs.
 - `reports/baseline_continue_v1/README.md`: how the baseline was run.
 
 ## Running it

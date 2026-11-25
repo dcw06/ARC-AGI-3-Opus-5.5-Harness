@@ -1,0 +1,251 @@
+{
+ "what": "Game overs in the 25 baseline runs and the 25 layered runs, per game, as counted from the public records.",
+ "baseline": {
+  "source": "reports/baseline_continue_v1/data/recorded_actions_3.json",
+  "source_commit": "0628d3e5f3f0d03927b0b1107cb9d73ce49a7551",
+  "source_sha256": "90f6b34a61960fd5e742beeef3421433ce9a0bd4aedb4bc0592cf55dcc65bc07",
+  "how": "Number of level resets (action id 0) in the recorded actions. The controller sent one after each game over, the model could not reset, and no baseline run ended on a game over (final states: 18 NOT_FINISHED, 7 WIN), so this equals the number of game overs.",
+  "games": {
+   "ar25": {
+    "actions": 393,
+    "level_resets": 0
+   },
+   "bp35": {
+    "actions": 700,
+    "level_resets": 22
+   },
+   "cd82": {
+    "actions": 200,
+    "level_resets": 1
+   },
+   "cn04": {
+    "actions": 800,
+    "level_resets": 4
+   },
+   "dc22": {
+    "actions": 1250,
+    "level_resets": 4
+   },
+   "ft09": {
+    "actions": 75,
+    "level_resets": 0
+   },
+   "g50t": {
+    "actions": 900,
+    "level_resets": 6
+   },
+   "ka59": {
+    "actions": 750,
+    "level_resets": 4
+   },
+   "lf52": {
+    "actions": 1350,
+    "level_resets": 3
+   },
+   "lp85": {
+    "actions": 124,
+    "level_resets": 0
+   },
+   "ls20": {
+    "actions": 800,
+    "level_resets": 6
+   },
+   "m0r0": {
+    "actions": 1150,
+    "level_resets": 7
+   },
+   "r11l": {
+    "actions": 159,
+    "level_resets": 1
+   },
+   "re86": {
+    "actions": 1300,
+    "level_resets": 3
+   },
+   "s5i5": {
+    "actions": 486,
+    "level_resets": 0
+   },
+   "sb26": {
+    "actions": 127,
+    "level_resets": 0
+   },
+   "sc25": {
+    "actions": 350,
+    "level_resets": 6
+   },
+   "sk48": {
+    "actions": 1100,
+    "level_resets": 3
+   },
+   "sp80": {
+    "actions": 550,
+    "level_resets": 11
+   },
+   "su15": {
+    "actions": 400,
+    "level_resets": 7
+   },
+   "tn36": {
+    "actions": 350,
+    "level_resets": 2
+   },
+   "tr87": {
+    "actions": 450,
+    "level_resets": 1
+   },
+   "tu93": {
+    "actions": 500,
+    "level_resets": 24
+   },
+   "vc33": {
+    "actions": 446,
+    "level_resets": 2
+   },
+   "wa30": {
+    "actions": 1850,
+    "level_resets": 10
+   }
+  },
+  "total_actions": 16560,
+  "total_game_overs": 127
+ },
+ "layered": {
+  "source": "reports/level_brief_v1/whole-results-*.json, field detail.game_overs (the paper's data folder holds copies named layered_whole_results_*.json)",
+  "source_commit": "0628d3e5f3f0d03927b0b1107cb9d73ce49a7551",
+  "how": "Number of actions after which the game state was GAME_OVER.",
+  "games": {
+   "ar25": {
+    "actions": 263,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "bp35": {
+    "actions": 397,
+    "game_overs": 5,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "cd82": {
+    "actions": 112,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "cn04": {
+    "actions": 303,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "dc22": {
+    "actions": 619,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T172802Z.json"
+   },
+   "ft09": {
+    "actions": 75,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "g50t": {
+    "actions": 359,
+    "game_overs": 1,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "ka59": {
+    "actions": 508,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "lf52": {
+    "actions": 1350,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "lp85": {
+    "actions": 107,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "ls20": {
+    "actions": 800,
+    "game_overs": 1,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "m0r0": {
+    "actions": 260,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "r11l": {
+    "actions": 92,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "re86": {
+    "actions": 655,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T172802Z.json"
+   },
+   "s5i5": {
+    "actions": 201,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "sb26": {
+    "actions": 125,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "sc25": {
+    "actions": 350,
+    "game_overs": 7,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "sk48": {
+    "actions": 494,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "sp80": {
+    "actions": 447,
+    "game_overs": 5,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "su15": {
+    "actions": 291,
+    "game_overs": 4,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "tn36": {
+    "actions": 350,
+    "game_overs": 1,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "tr87": {
+    "actions": 259,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261121T235533Z.json"
+   },
+   "tu93": {
+    "actions": 200,
+    "game_overs": 2,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "vc33": {
+    "actions": 219,
+    "game_overs": 0,
+    "from": "layered_whole_results_20261122T071626Z.json"
+   },
+   "wa30": {
+    "actions": 1850,
+    "game_overs": 10,
+    "from": "layered_whole_results_20261122T173235Z.json"
+   }
+  },
+  "total_actions": 10686,
+  "total_game_overs": 36
+ },
+ "per_100_actions": {
+  "baseline": 0.77,
+  "layered": 0.34
+ }
+}

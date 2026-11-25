@@ -1,6 +1,6 @@
 # Figures: moments from the runs, one or two per layer
 
-Boards are drawn exactly as the game returned them: 64 by 64 cells in ARC's 16 colours, 12 pixels a cell. All five moments are from the whole-game runs with every layer on, the runs behind the final scorecard (https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14). The text quoted below is what the model wrote, word for word; none of it is drawn into the images, so it can go in a caption.
+Boards are drawn exactly as the game returned them: 64 by 64 cells in ARC's 16 colours, 12 pixels a cell. The first five moments are from the whole-game runs with every layer on, the runs behind the final scorecard (https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14); the last is from the baseline run with no layers. The text quoted below is what the model wrote, word for word; none of it is drawn into the images, so it can go in a caption.
 
 Each board is also saved alone, with no title, in `panels/` (`<figure>-a.png`, `<figure>-b.png`, ...), left to right.
 
@@ -87,3 +87,32 @@ wa30. Action 591 completed level 5. Left: the frame the harness kept as completi
 Rule recorded on the same turn: "A level completes once every 9-bordered target tile is covered by something: a box, the player, or helper c all count (level 5 finished when the player stepped onto the last free target). On the completing step c lets go of its box."
 
 Source log: `whole-wa30-20261122T173235Z-c1` (local; not in the repository).
+
+## Baseline run: the same loss twice, with the rule lost in between
+
+![Baseline run: the same loss twice, with the rule lost in between](baseline-forgetting.png)
+
+`baseline-forgetting.png`, 3228 by 860 pixels.
+
+bp35, level 2, in the baseline run with no layers (the saved run of 6 November, the first 100 actions of the baseline trajectory). The piece is the small blue and yellow marker; the fatal tiles are purple with a yellow-white-yellow underside (colours f and b0b in the text board). Action 23 clicked the ringed green tile above the piece, which removed it; the piece rose to the purple tiles (frame 15 of the 28 returned) and the game was over. Action 48 (ACTION3) moved the piece one step left; it rose again, came to rest under a purple tile (frame 17 of 32) and the game was over. The model is sent only the last frame of an action, as text, so it did not see these frames in between.
+
+Between the two, the model wrote the rule and lost it: supported from the reply that chose action 25, tentative from action 33, absent from actions 36 to 41, and from action 42 to 48 "hazards or goals", role unknown. The fatal action left the eight transitions sent with a request at action 32. Every note, word for word, is in `reports/memory_fix_v1/bp35_rule_trace.json`; the test that put the boards of the first game over back into the request before action 48 is in `reports/memory_fix_v1/README.md` (fatal replies 8 of 8 without them, 4 of 8 with them).
+
+Source log: `opus55-competition-20261106T054112Z` (local; not in the repository).
+
+## Step counters
+
+![A step counter on the bottom row](panels/step-counter-a.png)
+
+Six single images, `panels/step-counter-a.png` to `-f.png`; there is no combined sheet.
+
+Some games draw a bar along an edge of the board that changes as actions are used. The harness finds such a bar by a heuristic (`CounterMask` in `research/claude_arc_v1/recovery.py`) and leaves its cells out when it compares the board before an action with the board after it. The line outside each board marks the cells it was leaving out at that moment; the line is drawn for the figure. The masks are found here by feeding the run's actions to the same heuristic in the same order.
+
+- `panels/step-counter-a.png`: ka59, level 2, the board after action 53. Cells ignored: 64 (row 63).
+- `panels/step-counter-b.png`: vc33, level 5, the board after action 100. Cells ignored: 64 (row 0).
+- `panels/step-counter-c.png`: m0r0, level 5, the board after action 180. Cells ignored: 128 (row 0, row 63).
+- `panels/step-counter-d.png`: ka59, level 2, rows 60 to 63 after action 30, at twice the size. The bar on row 63 has 63 cells of its first colour left.
+- `panels/step-counter-e.png`: ka59, level 2, rows 60 to 63 after action 53, at twice the size. The bar on row 63 has 51 cells of its first colour left.
+- `panels/step-counter-f.png`: ka59, level 2, rows 60 to 63 after action 77, at twice the size. The bar on row 63 has 39 cells of its first colour left.
+
+Source logs: the counted whole-game runs of ka59, vc33 and m0r0 (local; not in the repository).

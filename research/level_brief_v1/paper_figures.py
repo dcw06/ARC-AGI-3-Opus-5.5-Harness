@@ -10,6 +10,10 @@ word, with the game, the action number and the log it comes from, so that it can
                          board is the one before it
     object-ledger        wa30, first turn of level 5: the things the harness listed, outlined and named
     level-brief          wa30, level 5 to level 6: the board shown as completion feedback, and the new level
+    baseline-forgetting  bp35, level 2, in the baseline run (no layers): the two game overs between which the
+                         model's rule about the fatal tiles was lost
+    step-counter         ka59, vc33 and m0r0: the bar along an edge of the board that changes as actions are used,
+                         with the cells the harness was ignoring marked, and one bar enlarged at three moments
 
     paper_figures.py            writes reports/level_brief_v1/figures/*.png, panels/*.png and README.md
 
@@ -32,6 +36,7 @@ sys.path.insert(0, str(ROOT / 'research'))
 from research.level_brief_v1 import whole_verify as V  # noqa: E402
 
 OUT = ROOT / 'reports/level_brief_v1/figures'
+BASELINE = ROOT / '.cache/claude_arc_runs/opus55-competition-20261106T054112Z/events.jsonl'    # the saved run of 6 November
 PALETTE = ['#FFFFFF', '#CCCCCC', '#999999', '#666666', '#333333', '#000000', '#E53AA3', '#FF7BCC', '#F93C31', '#1E93FF',
            '#88D8F1', '#FFDC00', '#FF851B', '#921231', '#4FCC30', '#A356D6']        # as the replay pages draw them
 RGB = np.array([[int(h[i:i + 2], 16) for i in (1, 3, 5)] for h in PALETTE], dtype=np.uint8)
@@ -56,6 +61,47 @@ def load(game):
             elif '"kind":"model_returned"' in line:
                 replies[at] = json.loads(json.loads(line)['content'])
     return parts[-1], transitions, replies, bodies
+
+
+def baseline(game):
+    """Transitions of a game in the baseline's saved run of 6 November: the first 100 actions of its trajectory."""
+    return [json.loads(line) for line in BASELINE.open()
+            if '"kind":"transition"' in line and '"game_id":"%s"' % game in line]
+
+
+def counter_masks(game):
+    """(transitions, the cells the harness ignored as a step counter after each action) of a game's counted run,
+    found as the harness finds them: its own CounterMask, fed the same actions in the same order."""
+    from research.claude_arc_v1.recovery import CounterMask
+    _, parts = V.counted(game)
+    steps = [json.loads(line) for line in (parts[-1] / 'events.jsonl').open() if '"kind":"transition"' in line]
+    counter, masks = CounterMask(), []
+    for step in steps:
+        before, after = step['before'], step['after']
+        if step['action']['action_id'] == 0 or after['levels_completed'] > before['levels_completed']:
+            counter.restart()
+        elif before['state'] == 'NOT_FINISHED' and after['state'] == 'NOT_FINISHED':
+            counter.update(before['frames'][-1], after['frames'][-1])
+        masks.append(np.zeros((64, 64), dtype=bool) if counter.mask is None else counter.mask.copy())
+    return steps, masks
+
+
+def marked(frame, mask, margin=18):
+    """The board on a white margin, with a dark line just outside it along the cells the harness ignores."""
+    sheet = Image.new('RGB', (64 * CELL + 2 * margin, 64 * CELL + 2 * margin), PAPER)
+    sheet.paste(board(frame), (margin, margin))
+    draw = ImageDraw.Draw(sheet)
+    for row in np.where(mask.any(axis=1))[0]:
+        span = np.where(mask[row])[0]
+        if len(span) >= 3:
+            y = margin + 64 * CELL + 7 if row > 31 else margin - 8
+            draw.rectangle([margin + span[0] * CELL, y - 2, margin + (span[-1] + 1) * CELL - 1, y + 2], fill=INK)
+    for column in np.where(mask.any(axis=0))[0]:
+        span = np.where(mask[:, column])[0]
+        if len(span) >= 3:
+            x = margin + 64 * CELL + 7 if column > 31 else margin - 8
+            draw.rectangle([x - 2, margin + span[0] * CELL, x + 2, margin + (span[-1] + 1) * CELL - 1], fill=INK)
+    return sheet
 
 
 def board(frame):
@@ -230,11 +276,78 @@ def build():
                         '' if shown['changes_in_that_frame'].get('listed', True) else ', too many to list one by one')
                   + source(folder)))
 
-    order = ('lessons-game-over.png', 'lessons-no-effect.png', 'frames-between.png', 'object-ledger.png', 'level-brief.png')
+    # bp35 in the baseline run: the game overs at actions 23 and 48 of level 2. In both, the piece rises to a purple
+    # tile with a yellow-white-yellow underside and is lost. Between them the model's rule about those tiles faded
+    # (reports/memory_fix_v1/bp35_rule_trace.json).
+    steps = baseline('bp35-0a0ad940')
+    overs = [n for n, t in enumerate(steps) if t['after']['state'] == 'GAME_OVER']
+    first, second = overs[0], overs[1]
+    assert (first + 1, second + 1) == (23, 48) and steps[first]['before']['levels_completed'] == 1
+    rising, under = 14, 16                      # the 15th frame of action 23 and the 17th of action 48: the piece at the tiles
+    frames_first, frames_second = steps[first]['after']['frames'], steps[second]['after']['frames']
+    assert (len(frames_first), len(frames_second)) == (28, 32)
+    click = steps[first]['action']['action_data']
+    before = board(steps[first]['before']['frames'][-1])
+    ring(before, click['x'], click['y'])
+    size = figure('baseline-forgetting', [
+        ('bp35 baseline, before action %d: a click at (%d, %d)' % (first + 1, click['x'], click['y']), before),
+        ('action %d, frame %d of %d: the piece at the tiles' % (first + 1, rising + 1, len(frames_first)), board(frames_first[rising])),
+        ('before action %d' % (second + 1), board(steps[second]['before']['frames'][-1])),
+        ('action %d, frame %d of %d: the piece under a tile' % (second + 1, under + 1, len(frames_second)), board(frames_second[under]))])
+    notes.append(('baseline-forgetting.png', 'Baseline run: the same loss twice, with the rule lost in between', size,
+                  'bp35, level 2, in the baseline run with no layers (the saved run of 6 November, the first 100 actions of '
+                  'the baseline trajectory). The piece is the small blue and yellow marker; the fatal tiles are purple with '
+                  'a yellow-white-yellow underside (colours f and b0b in the text board). Action %d clicked the ringed green '
+                  'tile above the piece, which removed it; the piece rose to the purple tiles (frame %d of the %d returned) '
+                  'and the game was over. Action %d (ACTION%d) moved the piece one step left; it rose again, came to rest '
+                  'under a purple tile (frame %d of %d) and the game was over. The model is sent only the last frame of an '
+                  'action, as text, so it did not see these frames in between.\n\nBetween the two, the model wrote the rule '
+                  'and lost it: supported from the reply that chose action 25, tentative from action 33, absent from actions '
+                  '36 to 41, and from action 42 to 48 "hazards or goals", role unknown. The fatal action left the eight '
+                  'transitions sent with a request at action 32. Every note, word for word, is in '
+                  '`reports/memory_fix_v1/bp35_rule_trace.json`; the test that put the boards of the first game over back '
+                  'into the request before action 48 is in `reports/memory_fix_v1/README.md` (fatal replies 8 of 8 without '
+                  'them, 4 of 8 with them).' % (
+                      first + 1, rising + 1, len(frames_first), second + 1, steps[second]['action']['action_id'],
+                      under + 1, len(frames_second))
+                  + '\n\nSource log: `%s` (local; not in the repository).' % BASELINE.parent.name))
+
+    # Step counters: three games in which the harness found one, with the ignored cells marked, and ka59's bar
+    # enlarged at three moments of one level. Written as single images only (they are not all one size).
+    (OUT / 'panels').mkdir(parents=True, exist_ok=True)
+    shown = []
+    for letter, game, action in (('a', 'ka59-38d34dbb', 53), ('b', 'vc33-5430563c', 100), ('c', 'm0r0-492f87ba', 180)):
+        steps, masks = counter_masks(game)
+        step, mask = steps[action - 1], masks[action - 1]
+        assert mask.any()
+        marked(step['after']['frames'][-1], mask).save(OUT / 'panels' / ('step-counter-%s.png' % letter), optimize=True)
+        lines = ['row %d' % r for r in np.where(mask.all(axis=1))[0]] + ['column %d' % c for c in np.where(mask.all(axis=0))[0]]
+        shown.append('- `panels/step-counter-%s.png`: %s, level %d, the board after action %d. Cells ignored: %d (%s).' % (
+            letter, game.split('-')[0], step['after']['levels_completed'] + 1, action, int(mask.sum()), ', '.join(lines)))
+    steps, masks = counter_masks('ka59-38d34dbb')
+    first = next(n for n, step in enumerate(steps) if step['before']['levels_completed'] == 1) + 1
+    for letter, action in zip('def', (30, 53, 77)):
+        assert steps[action - 1]['after']['levels_completed'] == 1 and action >= first
+        rows = np.asarray(steps[action - 1]['after']['frames'][-1], dtype=np.uint8)[60:64, :]
+        Image.fromarray(np.kron(RGB[rows], np.ones((2 * CELL, 2 * CELL, 1), dtype=np.uint8))).save(
+            OUT / 'panels' / ('step-counter-%s.png' % letter), optimize=True)
+        dark = int((rows[3] == rows[3][0]).sum())
+        shown.append('- `panels/step-counter-%s.png`: ka59, level 2, rows 60 to 63 after action %d, at twice the size. '
+                     'The bar on row 63 has %d cells of its first colour left.' % (letter, action, dark))
+    counter_note = ('Some games draw a bar along an edge of the board that changes as actions are used. The harness finds such '
+                    'a bar by a heuristic (`CounterMask` in `research/claude_arc_v1/recovery.py`) and leaves its cells out when '
+                    'it compares the board before an action with the board after it. The line outside each board marks the '
+                    'cells it was leaving out at that moment; the line is drawn for the figure. The masks are found here by '
+                    'feeding the run\'s actions to the same heuristic in the same order.\n\n' + '\n'.join(shown)
+                    + '\n\nSource logs: the counted whole-game runs of ka59, vc33 and m0r0 (local; not in the repository).')
+
+    order = ('lessons-game-over.png', 'lessons-no-effect.png', 'frames-between.png', 'object-ledger.png', 'level-brief.png',
+             'baseline-forgetting.png')
     text = ['# Figures: moments from the runs, one or two per layer', '',
             'Boards are drawn exactly as the game returned them: 64 by 64 cells in ARC\'s 16 colours, %d pixels a cell. '
-            'All five moments are from the whole-game runs with every layer on, the runs behind the final scorecard '
-            '(https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14). The text quoted below is what '
+            'The first five moments are from the whole-game runs with every layer on, the runs behind the final scorecard '
+            '(https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14); the last is from the baseline run '
+            'with no layers. The text quoted below is what '
             'the model wrote, word for word; none of it is drawn into the images, so it can go in a caption.' % CELL, '',
             'Each board is also saved alone, with no title, in `panels/` (`<figure>-a.png`, `<figure>-b.png`, ...), '
             'left to right.', '',
@@ -242,6 +355,8 @@ def build():
     for name in order:
         _, title, size, note = next(n for n in notes if n[0] == name)
         text += ['## %s' % title, '', '![%s](%s)' % (title, name), '', '`%s`, %d by %d pixels.' % (name, size[0], size[1]), '', note, '']
+    text += ['## Step counters', '', '![A step counter on the bottom row](panels/step-counter-a.png)', '',
+             'Six single images, `panels/step-counter-a.png` to `-f.png`; there is no combined sheet.', '', counter_note, '']
     (OUT / 'README.md').write_text('\n'.join(text))
     for name, title, size, _ in notes:
         print(name, size, title)

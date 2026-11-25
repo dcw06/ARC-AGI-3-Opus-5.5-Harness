@@ -1,0 +1,43 @@
+{
+ "what": "The worked example of Section 3.3.1: one game over in the layered run of wa30, the lesson the model wrote, and the next request.",
+ "source": "Local run log of the evaluated layered wa30 run (first part), events.jsonl. The log itself is not in the evidence repository; this file holds the quoted text with the log's event numbers and hashes. The lesson text is also in reports/level_brief_v1/figures/README.md.",
+ "action_numbers": "Counted from 1, as in the paper; the log counts from 0.",
+ "game_over": {
+  "action": 357,
+  "log_event_sequence": 1455,
+  "log_event_sha256": "2c0f68309411d688813865ec5bef4e5839eb279fbe22a415e8809c6f79461f7d",
+  "action_id": 3,
+  "state_after": "GAME_OVER",
+  "bottom_row_before": {
+   "4": 63,
+   "7": 1
+  },
+  "bottom_row_after": {
+   "4": 64
+  }
+ },
+ "reset": {
+  "action": 358,
+  "action_id": 0
+ },
+ "lesson_written": {
+  "in_reply_choosing_action": 359,
+  "log_event_sequence": 1459,
+  "log_event_sha256": "c9ab6353caab98017a9573db041dc7abacbbec14697104f212fb4a33218bc5e1",
+  "rule": "The bar on row 63 is an action budget. Its 7 cells turn to 4 about one every two actions, and the game is over when the last 7 is gone, whatever else is happening on the board.",
+  "applies_when": "Count the 7 cells left on the bottom row and multiply by about 2. If the moves still needed to cover every target tile come to more than that, the attempt will fail. Plan the shortest delivery route from the start and avoid wasted moves."
+ },
+ "next_request": {
+  "for_action": 360,
+  "log_event_sequence": 1462,
+  "log_event_sha256": "ad66e81a882b724b993c1e1eda62e94197d5102c5f5f81d4998b14829cc6c31f",
+  "game_over_lessons_field": "\"game_over_lessons\":[{\"after\":\"t357\",\"level\":5,\"rule\":\"The bar on row 63 is an action budget. Its 7 cells turn to 4 about one every two actions, and the game is over when the last 7 is gone, whatever else is happening on the board.\",\"applies_when\":\"Count the 7 cells left on the bottom row and multiply by about 2. If the moves still needed to cover every target tile come to more than that, the attempt will fail. Plan the shortest delivery route from the start and avoid wasted moves.\"}]"
+ },
+ "check_in_next_reply": {
+  "in_reply_choosing_action": 360,
+  "log_event_sequence": 1463,
+  "log_event_sha256": "fde040444cde0c31bd54d8a6916792a94d156485bc9a57cc336b8ed18a847eb9",
+  "lesson_check": "Game-over lesson (budget): 63 of the 64 bottom cells are still 7, so this action will not end the game, and grabbing is needed for the shortest delivery. No-effect lesson 1 does not apply: the box's border is 3, so it is next to the player and being faced, and action 5 grabs it.",
+  "action_id_chosen": 5
+ }
+}

@@ -269,3 +269,10 @@ All calls were answered by Opus 5.5 at effort high on the subscription path.
   action, the notes' status, the check, the lesson, and whether a game over was one action away),
   `replay.html` (all four runs action by action, built by `research/memory_fix_v1/replay_page.py`). The
   full run logs are in `.cache/claude_arc_runs/bp35-l2-*-20261115T014800Z/`, which is not in git.
+
+## Note trace of the baseline run
+
+`bp35_rule_trace.json` lists, for every reply from the first game over on level 2 to just after the second, what
+the baseline's notes said about the fatal tiles and with what status, and when the fatal action left the eight
+actions the model is sent. `research/memory_fix_v1/rule_trace.py` writes it from the saved run log (local; not in
+the repository). The boards of the two game overs are in `reports/level_brief_v1/figures/baseline-forgetting.png`.

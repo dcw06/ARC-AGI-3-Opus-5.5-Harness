@@ -1,0 +1,434 @@
+{
+ "what": "The notes of the baseline (no layers) about the fatal tiles of bp35 level 2, from the saved run of 6 November 2026, which is the first 100 actions of the baseline trajectory.",
+ "made_by": "research/memory_fix_v1/rule_trace.py",
+ "game": "bp35-0a0ad940",
+ "level": 2,
+ "game_overs_at_actions": [
+  23,
+  48,
+  78
+ ],
+ "fatal_actions": {
+  "23": {
+   "action_id": 6,
+   "action_data": {
+    "x": 39,
+    "y": 33
+   }
+  },
+  "48": {
+   "action_id": 3,
+   "action_data": {}
+  }
+ },
+ "transitions_sent_with_a_request": 8,
+ "first_request_without_the_fatal_action": {
+  "reply_choosing_action": 32,
+  "transitions_sent": [
+   "t24",
+   "t25",
+   "t26",
+   "t27",
+   "t28",
+   "t29",
+   "t30",
+   "t31"
+  ],
+  "sent_with_the_request_before": [
+   "t23",
+   "t24",
+   "t25",
+   "t26",
+   "t27",
+   "t28",
+   "t29",
+   "t30"
+  ]
+ },
+ "a_note_is_about_the_tiles_if_it_matches": "b0b|hazard|spike",
+ "replies": [
+  {
+   "reply_choosing_action": 23,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H11",
+     "status": "tentative",
+     "statement": "In o22 the piece (x37-41, y37-41) is again blocked by the e tile at x37-41, y31-35. Clicking (39,33) should let it rise into the a-region at y19-29, where it may stop under the f/b0 objects at y13-17. Those objects could be the exit or a hazard.",
+     "evidence_ids": [
+      "o22"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 25,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "supported_locally",
+     "statement": "The f objects with b0b at the bottom are hazards: rising into them causes GAME_OVER. In t23 the piece at x37-41 rose into a hazard and died.",
+     "evidence_ids": [
+      "o22",
+      "t23"
+     ]
+    },
+    {
+     "id": "H13",
+     "status": "tentative",
+     "statement": "Taking o24 as y=0, the safe route is: go right to x37-41, then clear the e tiles at y31 and y25 so the piece rises to y=-11. Then clear e tiles leftward and move to x13-17. Clear the e above, rise to y=-35, then move right to x31-35. Finally, clear the e column above to rise past the hazards.",
+     "evidence_ids": [
+      "o22",
+      "o23"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 26,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "supported_locally",
+     "statement": "The f objects with b0b at the bottom are hazards: rising into them causes GAME_OVER.",
+     "evidence_ids": [
+      "o22",
+      "t23"
+     ]
+    },
+    {
+     "id": "H13",
+     "status": "tentative",
+     "statement": "Safe route: move right to x37-41 and clear the e tiles at y31 and y25 so the piece rises. Then, instead of clearing straight up into the hazard, clear e tiles leftward and steer to a column with no hazard above it before clearing upward.",
+     "evidence_ids": [
+      "o22",
+      "o23"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 27,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "supported_locally",
+     "statement": "The f objects with b0b at the bottom are hazards: rising into them causes GAME_OVER.",
+     "evidence_ids": [
+      "t23"
+     ]
+    },
+    {
+     "id": "H14",
+     "status": "tentative",
+     "statement": "Column x37-41 leads straight up into a hazard after two e layers are cleared. Column x31-35 has a 5-wall above the e rows at y13-23, so clearing (33,33) should be safe and the piece should stop under the e tile at y25.",
+     "evidence_ids": [
+      "t23",
+      "o26"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 28,
+   "notes_in_reply": 8,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "supported_locally",
+     "statement": "The f objects with b0b at the bottom are hazards: rising into them causes GAME_OVER.",
+     "evidence_ids": [
+      "t23"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 29,
+   "notes_in_reply": 8,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "supported_locally",
+     "statement": "The f objects with b0b at the bottom are hazards: rising into them causes GAME_OVER.",
+     "evidence_ids": [
+      "t23"
+     ]
+    },
+    {
+     "id": "H16",
+     "status": "tentative",
+     "statement": "The left corridor x13-29 leads up into the f hazards, so it is a dead end. The right corridor x37-53 is the likely route upward toward the goal.",
+     "evidence_ids": [
+      "o28"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 30,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "supported_locally",
+     "statement": "The f objects with b0b at the bottom are hazards: rising into them causes GAME_OVER.",
+     "evidence_ids": [
+      "t23"
+     ]
+    },
+    {
+     "id": "H16",
+     "status": "tentative",
+     "statement": "The left corridor x13-29 leads up into the f hazards, so it is a dead end. The right corridor x37-53 is the likely route upward toward the goal.",
+     "evidence_ids": [
+      "o28",
+      "o29"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 31,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "supported_locally",
+     "statement": "The f objects with b0b at the bottom are hazards. Rising into them, or stopping right under them, causes GAME_OVER. Opening the e tile at (39,33) in this configuration probably repeats the t23 death.",
+     "evidence_ids": [
+      "t23",
+      "o30"
+     ]
+    },
+    {
+     "id": "H19",
+     "status": "tentative",
+     "statement": "Clicking an a tile may turn it into a blocker (e). If so, a blocker at x37-41 y19-23 would stop the piece at y25-29, away from the hazard, so it could move left into the hazard-free column x31-35.",
+     "evidence_ids": [
+      "o30"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 32,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "supported_locally",
+     "statement": "The f objects with b0b at the bottom are hazards. Rising into them, or stopping right under them, causes GAME_OVER. Every column from x37 to x53 has a hazard above it in the y13-17 band, so the safe route upward is the x31-35 column, which has e tiles at y1-5 and y7-11.",
+     "evidence_ids": [
+      "t23",
+      "o30",
+      "o31"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 33,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "tentative",
+     "statement": "The f/b0b objects are hazards, and they sit above every column from x37 to x53. Planned safe route: clear the e tiles leftward along y37-41 until the piece reaches x13-17. Then clear the e tile at x13-17 y31-35 so the piece rises to y13-17, which has a non-hazard 5 gap above it. Move right to x31-35, then clear the e tiles above at y7-11 and y1-5.",
+     "evidence_ids": [
+      "o32",
+      "t23"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 34,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "tentative",
+     "statement": "The f/b0b objects are hazards above columns x37-53. Planned safe route: clear the e tiles leftward along y37-41 until the piece reaches x13-17. Then clear the e tile at x13-17 y31-35 so the piece rises to y13-17. Move right to x31-35, then clear the e tiles at y7-11 and y1-5.",
+     "evidence_ids": [
+      "o32",
+      "t23",
+      "o33"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 35,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H12",
+     "status": "tentative",
+     "statement": "The f/b0b objects are hazards above columns x37-53. Planned safe route: clear the e tiles leftward along y37-41 until the piece reaches x13-17. Then clear the e tile at x13-17 y31-35 so the piece rises to y13-17. Move right to x31-35, then clear the e tiles at y7-11 and y1-5.",
+     "evidence_ids": [
+      "o32",
+      "t23",
+      "o33",
+      "o34"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 36,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": []
+  },
+  {
+   "reply_choosing_action": 37,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": []
+  },
+  {
+   "reply_choosing_action": 38,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": []
+  },
+  {
+   "reply_choosing_action": 39,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": []
+  },
+  {
+   "reply_choosing_action": 40,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": []
+  },
+  {
+   "reply_choosing_action": 41,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": []
+  },
+  {
+   "reply_choosing_action": 42,
+   "notes_in_reply": 7,
+   "notes_about_the_tiles": [
+    {
+     "id": "H14",
+     "status": "tentative",
+     "statement": "The f tiles with b0b bottoms are hazards or goals. Their role is unknown, so avoid them for now.",
+     "evidence_ids": [
+      "o41"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 43,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": [
+    {
+     "id": "H14",
+     "status": "tentative",
+     "statement": "The f tiles with b0b bottoms (at x37-53 y37-41 and x49-53 y13-17) are hazards or goals, role unknown, so avoid them for now.",
+     "evidence_ids": [
+      "o42"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 44,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": [
+    {
+     "id": "H14",
+     "status": "tentative",
+     "statement": "The f tiles with b0b bottoms (at x37-53 y37-41 and x49-53 y13-17) are hazards or goals, role unknown, so avoid them for now.",
+     "evidence_ids": [
+      "o43"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 45,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": [
+    {
+     "id": "H14",
+     "status": "tentative",
+     "statement": "The f tiles with b0b bottoms (at x37-53 y37-41 and x49-53 y13-17) are hazards or goals, role unknown, so avoid them for now.",
+     "evidence_ids": [
+      "o43"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 46,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": [
+    {
+     "id": "H14",
+     "status": "tentative",
+     "statement": "The f tiles with b0b bottoms (at x37-53 y37-41 and x49-53 y13-17) are hazards or goals, role unknown, so avoid them for now.",
+     "evidence_ids": [
+      "o45"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 47,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": [
+    {
+     "id": "H14",
+     "status": "tentative",
+     "statement": "The f tiles with b0b bottoms are hazards or goals; their role is unknown.",
+     "evidence_ids": [
+      "o45",
+      "o46"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 48,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": [
+    {
+     "id": "H14",
+     "status": "tentative",
+     "statement": "The f tiles with b0b bottoms are hazards or goals; their role is unknown.",
+     "evidence_ids": [
+      "o46"
+     ]
+    }
+   ]
+  },
+  {
+   "reply_choosing_action": 50,
+   "notes_in_reply": 6,
+   "notes_about_the_tiles": [
+    {
+     "id": "H14",
+     "status": "supported_locally",
+     "statement": "The f tiles with b0b bottoms are downward spikes. If the piece rises to directly beneath one, it dies and the game ends. In t48 the piece rose under the f tile at x26-28 and disappeared, and the state became GAME_OVER.",
+     "evidence_ids": [
+      "t48",
+      "o48"
+     ]
+    },
+    {
+     "id": "H16",
+     "status": "tentative",
+     "statement": "In o49 the columns x37-53 are open a-space from y23 up to y0 and beyond, with no spikes. If I clear the e tiles at x37-41 (y25-35) and then move the piece right 3 times, it should rise far upward safely, presumably toward the goal.",
+     "evidence_ids": [
+      "o49"
+     ]
+    }
+   ]
+  }
+ ]
+}
