@@ -1,0 +1,304 @@
+{
+  "checked_date": "2026-11-23",
+  "timezone": "America/Los_Angeles",
+  "scope": "Current reader access, not a guarantee of future availability",
+  "authentication": "HTTP checks used no credentials or cookies; no sign-in required to render either scorecard",
+  "baseline": {
+    "url": "https://arcprize.org/scorecards/0f882c2e-0451-41bd-86c5-211a54785c56",
+    "http_status": 200,
+    "displayed_score": 46.2,
+    "levels": "125/183",
+    "games_won": "7/25",
+    "actions": 16560,
+    "watch_replay_links": 25,
+    "recording_download_links": 25
+  },
+  "layered": {
+    "url": "https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14",
+    "http_status": 200,
+    "displayed_score": 85.37,
+    "levels": "166/183",
+    "games_won": "17/25",
+    "actions": 10686,
+    "watch_replay_links": 25,
+    "recording_download_links": 25
+  },
+  "pinned_code": {
+    "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/tree/17d00cfdef7944dda9fd9388efa49fccce4877aa",
+    "http_status": 200,
+    "commit": "17d00cfdef7944dda9fd9388efa49fccce4877aa",
+    "repository_visibility": "public",
+    "latest_commit_at_check": "17d00cfdef7944dda9fd9388efa49fccce4877aa",
+    "checked_date": "2026-11-24",
+    "previous_commit_checked_2026-11-23": "0628d3e5f3f0d03927b0b1107cb9d73ce49a7551"
+  },
+  "limits": [
+    "Individual playback and recording download were not exhaustively tested",
+    "No new model run or ARC-service action replay was performed during this manuscript revision"
+  ],
+  "link_check": {
+    "checked_date": "2026-11-24",
+    "timezone": "America/Los_Angeles",
+    "what": "Every URL in a cited reference or printed as a link in the paper, requested without credentials or cookies, redirects followed; a request that failed was repeated with pauses",
+    "urls": 35,
+    "http_status_200": 35,
+    "results": [
+      {
+        "url": "https://arcprize.org/media/ARC_AGI_3_Technical_Report.pdf",
+        "http_status": 200,
+        "used_as": [
+          "reference arc2026technical"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/policy",
+        "http_status": 200,
+        "used_as": [
+          "reference arc2026policy"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/replay/a8d9ab0a-653c-4e47-8f29-d932551cdd4d",
+        "http_status": 200,
+        "used_as": [
+          "link in sections/appendix_analysis.tex",
+          "reference scorecard2026bp35checkpoint"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/replay/b642c1f4-99b6-491f-8e84-813ca4634314",
+        "http_status": 200,
+        "used_as": [
+          "link in sections/appendix_analysis.tex",
+          "reference scorecard2026bp35win"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/results/openai-gpt-6-astra",
+        "http_status": 200,
+        "used_as": [
+          "reference arc2026astra"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/scorecards/09cc9d25-ec26-4f26-98f8-9cbd60ec69d7",
+        "http_status": 200,
+        "used_as": [
+          "link in sections/appendix_analysis.tex",
+          "reference scorecard2026reported"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/scorecards/0f882c2e-0451-41bd-86c5-211a54785c56",
+        "http_status": 200,
+        "used_as": [
+          "link in main.tex",
+          "link in sections/06_discussion.tex",
+          "reference scorecard2026baselinefinal"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/scorecards/2eca3d2f-3e6a-4a7a-b122-ed0e2a54c12f",
+        "http_status": 200,
+        "used_as": [
+          "reference scorecard2026layers"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14",
+        "http_status": 200,
+        "used_as": [
+          "link in main.tex",
+          "link in sections/06_discussion.tex",
+          "reference scorecard2026finalreplay"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/scorecards/ac6e3999-e5e4-4488-b981-9d6d80eff73f",
+        "http_status": 200,
+        "used_as": [
+          "link in sections/appendix_analysis.tex",
+          "reference scorecard2026tychocard"
+        ]
+      },
+      {
+        "url": "https://arcprize.org/scorecards/eafcc4b7-afb3-4fb5-bffa-7d7a47e4f040",
+        "http_status": 200,
+        "used_as": [
+          "reference scorecard2026layerssecond"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/1911.01547",
+        "http_status": 200,
+        "used_as": [
+          "reference chollet2019measure"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2210.03629",
+        "http_status": 200,
+        "used_as": [
+          "reference yao2023react"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2605.05138v2",
+        "http_status": 200,
+        "used_as": [
+          "reference rodionov2026worldmodels"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2607.15439v2",
+        "http_status": 200,
+        "used_as": [
+          "reference rodionov2026components"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2607.28287",
+        "http_status": 200,
+        "used_as": [
+          "reference lehmann2026tycho"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.00834",
+        "http_status": 200,
+        "used_as": [
+          "reference wu2026kepler"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2610.30499",
+        "http_status": 200,
+        "used_as": [
+          "reference lehmann2026harness"
+        ]
+      },
+      {
+        "url": "https://docs.arcprize.org/methodology",
+        "http_status": 200,
+        "used_as": [
+          "reference arc2026scoring"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/blob/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports/baseline_continue_v1/data/recorded_actions_3.json",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026baselineactions"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/blob/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports/baseline_continue_v1/data/scorecard_replay_manifest_3.json",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026baselinefinalcard"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/blob/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports/level_brief_v1/data/scorecard_replay_manifest.json",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026finalmanifest"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/blob/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports/level_brief_v1/token_usage.json",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026tokens"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/blob/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports/level_brief_v1/whole-log-counts.json",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026logcounts"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/blob/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports/memory_fix_v1/README.md",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026memoryfix"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/blob/17d00cfdef7944dda9fd9388efa49fccce4877aa/research/level_brief_v1/whole_games_official.py",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026replaycorrection"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/blob/17d00cfdef7944dda9fd9388efa49fccce4877aa/research/level_brief_v1/whole_verify.py",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026wholeverify"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/tree/17d00cfdef7944dda9fd9388efa49fccce4877aa",
+        "http_status": 200,
+        "used_as": [
+          "link in main.tex",
+          "link in sections/06_discussion.tex",
+          "reference dai2026harnessexport"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/tree/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026negatives"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/tree/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports/level_brief_v1",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026brieftests",
+          "reference dai2026layered"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/tree/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports/level_brief_v1/figures",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026runfigures"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/tree/17d00cfdef7944dda9fd9388efa49fccce4877aa/reports/memory_fix_v1/death_test",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026positiontest"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3/tree/38f41e9d2e9937fd5bcbfbb6fe2c6e126f597039",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026code"
+        ]
+      },
+      {
+        "url": "https://github.com/dcw06/ARC-AGI-3/tree/756d8851e0826d74803e314306a6609f06fc0530/reports/baseline_continue_v1",
+        "http_status": 200,
+        "used_as": [
+          "reference dai2026continuationfinal"
+        ]
+      },
+      {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html",
+        "http_status": 200,
+        "used_as": [
+          "reference shinn2023reflexion"
+        ]
+      }
+    ]
+  }
+}

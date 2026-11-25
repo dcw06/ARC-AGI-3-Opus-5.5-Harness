@@ -1,0 +1,15 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[node distance=8mm and 16mm,box/.style={draw=accent!60,fill=wash,rounded corners=2pt,align=center,text width=6.2cm,minimum height=15mm,font=\small},arr/.style={-{Stealth[length=2mm]},draw=accent,thick}]
+\node[box] (evidence) {\textbf{Prepare the model input}\\Current board and recent action records\\Hypotheses, saved lessons and rules,\\object ledger, and level brief};
+\node[box,right=of evidence] (model) {\textbf{Choose the next action}\\Claude Opus 5.5, high effort, tools disabled\\Return one action and the required notes};
+\node[box,below=of model] (check) {\textbf{Check the reply}\\Validate its structure, action, coordinates,\\and evidence references};
+\node[box,below=of evidence] (update) {\textbf{Execute an accepted action}\\Record the result and update observations\\and memory for the next decision};
+\draw[arr] (evidence)--(model);
+\draw[arr] (model)--(check);
+\draw[arr] (check)--node[above,font=\scriptsize]{Accepted}(update);
+\draw[arr] (update)--(evidence);
+\draw[arr] (check.east) to[bend right=35] node[right,font=\scriptsize,align=left]{If rejected,\\correction\\requested} (model.east);
+\end{tikzpicture}
+\caption{\textbf{The controller prepared evidence, checked the model's reply, and executed the selected action.} The layered harness included all four memory layers in this loop. The baseline used the same execution process with those layers disabled. The controller returned rejected replies for correction before it executed an action. The controller derived records from observed boards and actions, while the model wrote the rules and lessons. Those statements could be wrong. The harness cleared all memory before the next game.}\label{fig:harness}
+\end{figure}

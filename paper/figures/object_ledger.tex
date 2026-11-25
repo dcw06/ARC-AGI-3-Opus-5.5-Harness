@@ -1,0 +1,22 @@
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[c]{0.36\linewidth}
+\centering
+\begin{markedboard}[\linewidth]{object-ledger-a.png}
+\node[note,anchor=west] (aim) at (0.80,0.535) {target on\\this turn};
+\draw[pointer] (aim.west) -- (0.762,0.535);
+\end{markedboard}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.60\linewidth}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}lrY@{}}\toprule
+\shortstack[l]{Appearance\\group} & \shortstack[r]{Detected\\regions} & Model-written note about the group\\\midrule
+A & 6 & ``A box. When the player is next to it and facing it, its border turns 3. Action 5 grabs it (border 0). After that, moving toward it pushes it one tile per move. The player can't walk into a box it hasn't grabbed.''\\
+AB & 1 & ``An autonomous c block. It moves one tile per player action toward a box, and when it is next to the box it grabs it (the box border turns 4 to 5).''\\
+C & 1 & No note yet\\
+CY & 1 & No note yet\\
+D & 1 & No note yet\\\bottomrule
+\end{tabularx}
+\end{minipage}
+\caption{\textbf{The object ledger grouped regions that looked alike and kept the model's notes about each group across levels.} This example shows \texttt{wa30} at the first decision in level 5, before action 233. Outlines and letters mark the detected regions, and regions with the same letter belong to one appearance group. The table lists the five groups, how many regions each contains, and the notes the model wrote during earlier levels. The arrow marks the region the model chose as its target on this turn: ``I'm aiming at box A at (44,28), the nearest box and right beside the corridor.'' This figure adds the outlines, letters, and arrow; the model received the ledger as text. In the notes, numbers and the letter c are color codes \citep{dai2026runfigures}.}\label{fig:object-ledger}
+\end{figure}

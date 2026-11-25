@@ -1,0 +1,706 @@
+{
+ "games": [
+  {
+   "game": "ar25",
+   "state": "done",
+   "base": {
+    "replies": 393,
+    "in": 5433370,
+    "out": 1062752,
+    "think": 797628,
+    "cost": 42.98852,
+    "actions": 393
+   },
+   "mine": {
+    "replies": 279,
+    "in": 4920454,
+    "out": 559567,
+    "think": 377335,
+    "cost": 30.873156,
+    "actions": 263
+   },
+   "base_actions": 393,
+   "chain": [
+    "baseline-continue-ar25-20261119T080027Z",
+    "merged-from-baseline-continue-ar25-20261115T073726Z.jsonl (first 300 actions, 300 replies)"
+   ]
+  },
+  {
+   "game": "bp35",
+   "state": "stopped",
+   "base": {
+    "replies": 678,
+    "in": 10143129,
+    "out": 1558868,
+    "think": 1107032,
+    "cost": 71.74987599999999,
+    "actions": 700
+   },
+   "mine": {
+    "replies": 413,
+    "in": 8178424,
+    "out": 1438963,
+    "think": 1133308,
+    "cost": 61.492955999999964,
+    "actions": 397
+   },
+   "base_actions": 700,
+   "chain": [
+    "baseline-continue-bp35-20261119T080027Z",
+    "merged-from-baseline-continue-bp35-20261116T063519Z.jsonl (first 500 actions, 483 replies)"
+   ]
+  },
+  {
+   "game": "cd82",
+   "state": "done",
+   "base": {
+    "replies": 199,
+    "in": 2424944,
+    "out": 492305,
+    "think": 350922,
+    "cost": 19.545876,
+    "actions": 200
+   },
+   "mine": {
+    "replies": 131,
+    "in": 2237802,
+    "out": 238239,
+    "think": 146951,
+    "cost": 13.715988000000008,
+    "actions": 112
+   },
+   "base_actions": 200,
+   "chain": [
+    "baseline-continue-cd82-20261119T080027Z",
+    "events.jsonl (first 100 actions, 100 replies)"
+   ]
+  },
+  {
+   "game": "cn04",
+   "state": "done",
+   "base": {
+    "replies": 796,
+    "in": 12268563,
+    "out": 1913128,
+    "think": 1374700,
+    "cost": 87.33681200000004,
+    "actions": 800
+   },
+   "mine": {
+    "replies": 323,
+    "in": 6164939,
+    "out": 922280,
+    "think": 708328,
+    "cost": 43.105356,
+    "actions": 303
+   },
+   "base_actions": 800,
+   "chain": [
+    "baseline-continue-cn04-20261119T080027Z",
+    "merged-from-baseline-continue-cn04-20261115T073726Z.jsonl (first 250 actions, 249 replies)"
+   ]
+  },
+  {
+   "game": "dc22",
+   "state": "done",
+   "base": {
+    "replies": 1246,
+    "in": 15511615,
+    "out": 2901441,
+    "think": 1916317,
+    "cost": 120.07527999999994,
+    "actions": 1250
+   },
+   "mine": {
+    "replies": 642,
+    "in": 11037716,
+    "out": 1042905,
+    "think": 623337,
+    "cost": 65.00896400000006,
+    "actions": 619
+   },
+   "base_actions": 1250,
+   "chain": [
+    "baseline-continue-dc22-20261119T080027Z",
+    "merged-from-baseline-continue-dc22-20261115T073726Z.jsonl (first 550 actions, 549 replies)"
+   ]
+  },
+  {
+   "game": "ft09",
+   "state": "done",
+   "base": {
+    "replies": 75,
+    "in": 902477,
+    "out": 135520,
+    "think": 90562,
+    "cost": 6.320308,
+    "actions": 75
+   },
+   "mine": {
+    "replies": 75,
+    "in": 1145104,
+    "out": 152611,
+    "think": 106856,
+    "cost": 7.632636,
+    "actions": 75
+   },
+   "base_actions": 75,
+   "chain": [
+    "opus55-competition-20261106T054112Z"
+   ]
+  },
+  {
+   "game": "g50t",
+   "state": "done",
+   "base": {
+    "replies": 894,
+    "in": 11412543,
+    "out": 1663932,
+    "think": 1045547,
+    "cost": 78.928812,
+    "actions": 900
+   },
+   "mine": {
+    "replies": 373,
+    "in": 6454946,
+    "out": 688381,
+    "think": 421365,
+    "cost": 39.58740400000001,
+    "actions": 359
+   },
+   "base_actions": 900,
+   "chain": [
+    "baseline-continue-g50t-20261119T195939Z",
+    "merged-from-baseline-continue-g50t-20261115T073726Z.jsonl (first 500 actions, 497 replies)"
+   ]
+  },
+  {
+   "game": "ka59",
+   "state": "done",
+   "base": {
+    "replies": 746,
+    "in": 9106161,
+    "out": 1054696,
+    "think": 595884,
+    "cost": 57.518563999999984,
+    "actions": 750
+   },
+   "mine": {
+    "replies": 537,
+    "in": 8866435,
+    "out": 1414452,
+    "think": 1039775,
+    "cost": 63.75478000000003,
+    "actions": 508
+   },
+   "base_actions": 750,
+   "chain": [
+    "baseline-continue-ka59-20261119T195939Z",
+    "merged-from-baseline-continue-ka59-20261115T173937Z.jsonl (first 350 actions, 349 replies)"
+   ]
+  },
+  {
+   "game": "lf52",
+   "state": "done",
+   "base": {
+    "replies": 1347,
+    "in": 22554798,
+    "out": 2192952,
+    "think": 1418426,
+    "cost": 134.07823199999996,
+    "actions": 1350
+   },
+   "mine": {
+    "replies": 1414,
+    "in": 31337195,
+    "out": 2607146,
+    "think": 1711508,
+    "cost": 177.49170000000026,
+    "actions": 1350
+   },
+   "base_actions": 1350,
+   "chain": [
+    "baseline-continue-lf52-20261119T195939Z",
+    "merged-from-baseline-continue-lf52-20261115T184915Z.jsonl (first 800 actions, 798 replies)"
+   ]
+  },
+  {
+   "game": "lp85",
+   "state": "done",
+   "base": {
+    "replies": 124,
+    "in": 1674721,
+    "out": 262071,
+    "think": 175188,
+    "cost": 11.940303999999998,
+    "actions": 124
+   },
+   "mine": {
+    "replies": 112,
+    "in": 2001637,
+    "out": 256229,
+    "think": 176283,
+    "cost": 13.131127999999997,
+    "actions": 107
+   },
+   "base_actions": 124,
+   "chain": [
+    "baseline-continue-lp85-20261119T195939Z",
+    "events.jsonl (first 100 actions, 100 replies)"
+   ]
+  },
+  {
+   "game": "ls20",
+   "state": "done",
+   "base": {
+    "replies": 794,
+    "in": 9809589,
+    "out": 1106322,
+    "think": 559232,
+    "cost": 61.364796,
+    "actions": 800
+   },
+   "mine": {
+    "replies": 822,
+    "in": 13828627,
+    "out": 1947762,
+    "think": 1394163,
+    "cost": 94.26974800000009,
+    "actions": 800
+   },
+   "base_actions": 800,
+   "chain": [
+    "baseline-continue-ls20-20261120T041553Z",
+    "merged-from-baseline-continue-ls20-20261119T195939Z.jsonl (first 649 actions, 644 replies)"
+   ]
+  },
+  {
+   "game": "m0r0",
+   "state": "done",
+   "base": {
+    "replies": 1143,
+    "in": 14559184,
+    "out": 2160932,
+    "think": 1384035,
+    "cost": 101.45537600000002,
+    "actions": 1150
+   },
+   "mine": {
+    "replies": 269,
+    "in": 4430603,
+    "out": 585455,
+    "think": 405323,
+    "cost": 29.431512,
+    "actions": 260
+   },
+   "base_actions": 1150,
+   "chain": [
+    "baseline-continue-m0r0-20261120T053929Z",
+    "merged-from-baseline-continue-m0r0-20261119T233503Z.jsonl (first 950 actions, 945 replies)"
+   ]
+  },
+  {
+   "game": "r11l",
+   "state": "done",
+   "base": {
+    "replies": 158,
+    "in": 2053600,
+    "out": 433173,
+    "think": 322983,
+    "cost": 16.87786,
+    "actions": 159
+   },
+   "mine": {
+    "replies": 102,
+    "in": 1722544,
+    "out": 290820,
+    "think": 216184,
+    "cost": 12.706576000000004,
+    "actions": 92
+   },
+   "base_actions": 159,
+   "chain": [
+    "baseline-continue-r11l-20261120T053929Z",
+    "events.jsonl (first 100 actions, 100 replies)"
+   ]
+  },
+  {
+   "game": "re86",
+   "state": "done",
+   "base": {
+    "replies": 1297,
+    "in": 17036472,
+    "out": 2740109,
+    "think": 1791688,
+    "cost": 122.948068,
+    "actions": 1300
+   },
+   "mine": {
+    "replies": 670,
+    "in": 11164466,
+    "out": 1099180,
+    "think": 696630,
+    "cost": 66.64146399999997,
+    "actions": 655
+   },
+   "base_actions": 1300,
+   "chain": [
+    "baseline-continue-re86-20261120T053929Z",
+    "merged-from-baseline-continue-re86-20261116T063519Z.jsonl (first 650 actions, 650 replies)"
+   ]
+  },
+  {
+   "game": "s5i5",
+   "state": "stopped",
+   "base": {
+    "replies": 486,
+    "in": 6223735,
+    "out": 1550535,
+    "think": 1221308,
+    "cost": 55.90564000000002,
+    "actions": 486
+   },
+   "mine": {
+    "replies": 204,
+    "in": 3442599,
+    "out": 600204,
+    "think": 465773,
+    "cost": 25.774476000000018,
+    "actions": 201
+   },
+   "base_actions": 486,
+   "chain": [
+    "baseline-continue-s5i5-20261120T053933Z",
+    "merged-from-baseline-continue-s5i5-20261116T063519Z.jsonl (first 300 actions, 300 replies)"
+   ]
+  },
+  {
+   "game": "sb26",
+   "state": "done",
+   "base": {
+    "replies": 127,
+    "in": 1623485,
+    "out": 132530,
+    "think": 61271,
+    "cost": 9.144539999999997,
+    "actions": 127
+   },
+   "mine": {
+    "replies": 125,
+    "in": 2078343,
+    "out": 119689,
+    "think": 43818,
+    "cost": 10.707151999999997,
+    "actions": 125
+   },
+   "base_actions": 127,
+   "chain": [
+    "baseline-continue-sb26-20261116T063519Z",
+    "events.jsonl (first 100 actions, 100 replies)"
+   ]
+  },
+  {
+   "game": "sc25",
+   "state": "done",
+   "base": {
+    "replies": 344,
+    "in": 4105767,
+    "out": 510466,
+    "think": 305247,
+    "cost": 26.632388000000006,
+    "actions": 350
+   },
+   "mine": {
+    "replies": 372,
+    "in": 6258648,
+    "out": 697236,
+    "think": 436538,
+    "cost": 38.979311999999986,
+    "actions": 350
+   },
+   "base_actions": 350,
+   "chain": [
+    "baseline-continue-sc25-20261120T053929Z",
+    "merged-from-baseline-continue-sc25-20261116T063519Z.jsonl (first 200 actions, 198 replies)"
+   ]
+  },
+  {
+   "game": "sk48",
+   "state": "done",
+   "base": {
+    "replies": 1097,
+    "in": 13105636,
+    "out": 3226742,
+    "think": 2493606,
+    "cost": 116.957384,
+    "actions": 1100
+   },
+   "mine": {
+    "replies": 531,
+    "in": 8819418,
+    "out": 1964980,
+    "think": 1578181,
+    "cost": 74.577272,
+    "actions": 494
+   },
+   "base_actions": 1100,
+   "chain": [
+    "baseline-continue-sk48-20261120T053933Z",
+    "merged-from-baseline-continue-sk48-20261116T200041Z.jsonl (first 500 actions, 499 replies)"
+   ]
+  },
+  {
+   "game": "sp80",
+   "state": "done",
+   "base": {
+    "replies": 539,
+    "in": 7275819,
+    "out": 1170561,
+    "think": 786080,
+    "cost": 52.514495999999994,
+    "actions": 550
+   },
+   "mine": {
+    "replies": 444,
+    "in": 7986504,
+    "out": 1265632,
+    "think": 933124,
+    "cost": 57.25865600000003,
+    "actions": 447
+   },
+   "base_actions": 550,
+   "chain": [
+    "baseline-continue-sp80-20261120T053929Z",
+    "merged-from-baseline-continue-sp80-20261116T200041Z.jsonl (first 250 actions, 247 replies)"
+   ]
+  },
+  {
+   "game": "su15",
+   "state": "done",
+   "base": {
+    "replies": 393,
+    "in": 5060016,
+    "out": 853141,
+    "think": 589575,
+    "cost": 37.30288400000002,
+    "actions": 400
+   },
+   "mine": {
+    "replies": 321,
+    "in": 5855687,
+    "out": 1347113,
+    "think": 1088087,
+    "cost": 50.36500799999998,
+    "actions": 291
+   },
+   "base_actions": 400,
+   "chain": [
+    "baseline-continue-su15-20261120T053929Z",
+    "merged-from-baseline-continue-su15-20261116T200041Z.jsonl (first 150 actions, 148 replies)"
+   ]
+  },
+  {
+   "game": "tn36",
+   "state": "done",
+   "base": {
+    "replies": 348,
+    "in": 3958824,
+    "out": 829487,
+    "think": 589651,
+    "cost": 32.425035999999984,
+    "actions": 350
+   },
+   "mine": {
+    "replies": 362,
+    "in": 5956057,
+    "out": 1054929,
+    "think": 766950,
+    "cost": 44.92280800000002,
+    "actions": 350
+   },
+   "base_actions": 350,
+   "chain": [
+    "baseline-continue-tn36-20261116T200041Z",
+    "events.jsonl (first 100 actions, 99 replies)"
+   ]
+  },
+  {
+   "game": "tr87",
+   "state": "stopped",
+   "base": {
+    "replies": 449,
+    "in": 5951207,
+    "out": 3474486,
+    "think": 3116973,
+    "cost": 93.29454799999999,
+    "actions": 450
+   },
+   "mine": {
+    "replies": 262,
+    "in": 4458656,
+    "out": 1785241,
+    "think": 1602495,
+    "cost": 53.539444000000024,
+    "actions": 259
+   },
+   "base_actions": 450,
+   "chain": [
+    "baseline-continue-tr87-20261120T151023Z",
+    "merged-from-baseline-continue-tr87-20261120T053933Z.jsonl (first 319 actions, 318 replies)"
+   ]
+  },
+  {
+   "game": "tu93",
+   "state": "done",
+   "base": {
+    "replies": 476,
+    "in": 6484903,
+    "out": 1313987,
+    "think": 946966,
+    "cost": 52.21935199999998,
+    "actions": 500
+   },
+   "mine": {
+    "replies": 211,
+    "in": 3488522,
+    "out": 537496,
+    "think": 377569,
+    "cost": 24.704008,
+    "actions": 200
+   },
+   "base_actions": 500,
+   "chain": [
+    "baseline-continue-tu93-20261120T151023Z",
+    "merged-from-baseline-continue-tu93-20261117T071722Z.jsonl (first 250 actions, 236 replies)"
+   ]
+  },
+  {
+   "game": "vc33",
+   "state": "done",
+   "base": {
+    "replies": 444,
+    "in": 5556073,
+    "out": 1116729,
+    "think": 826716,
+    "cost": 44.55887200000001,
+    "actions": 446
+   },
+   "mine": {
+    "replies": 236,
+    "in": 4107020,
+    "out": 579256,
+    "think": 414135,
+    "cost": 28.01319999999999,
+    "actions": 219
+   },
+   "base_actions": 446,
+   "chain": [
+    "baseline-continue-vc33-20261120T151023Z",
+    "merged-from-baseline-continue-vc33-20261117T033356Z.jsonl (first 200 actions, 199 replies)"
+   ]
+  },
+  {
+   "game": "wa30",
+   "state": "running",
+   "base": {
+    "replies": 1840,
+    "in": 25070588,
+    "out": 3337236,
+    "think": 1989656,
+    "cost": 167.02707200000006,
+    "actions": 1850
+   },
+   "mine": {
+    "replies": 831,
+    "in": 14623328,
+    "out": 1373342,
+    "think": 814636,
+    "cost": 85.96015200000002,
+    "actions": 814
+   },
+   "base_actions": 1850,
+   "chain": [
+    "baseline-continue-wa30-20261121T010328Z",
+    "merged-from-baseline-continue-wa30-20261120T231341Z.jsonl (first 1300 actions, 1294 replies)"
+   ]
+  }
+ ],
+ "totals": {
+  "finished games": {
+   "games": [
+    "ar25",
+    "bp35",
+    "cd82",
+    "cn04",
+    "dc22",
+    "ft09",
+    "g50t",
+    "ka59",
+    "lf52",
+    "lp85",
+    "ls20",
+    "m0r0",
+    "r11l",
+    "re86",
+    "s5i5",
+    "sb26",
+    "sc25",
+    "sk48",
+    "sp80",
+    "su15",
+    "tn36",
+    "tr87",
+    "tu93",
+    "vc33"
+   ],
+   "baseline": {
+    "replies": 14593,
+    "in": 194236631,
+    "out": 33856865,
+    "think": 23867537,
+    "cost": 1454.0838239999998,
+    "actions": 14710
+   },
+   "layers": {
+    "replies": 9230,
+    "in": 165942346,
+    "out": 23195766,
+    "think": 16864016,
+    "cost": 1127.6847040000005,
+    "actions": 8836
+   },
+   "fewer_tokens_with_the_layers_percent": {
+    "input": 14.6,
+    "output": 31.5,
+    "input_and_output": 17.1
+   }
+  },
+  "still playing, so far": {
+   "games": [
+    "wa30"
+   ],
+   "baseline": {
+    "replies": 1840,
+    "in": 25070588,
+    "out": 3337236,
+    "think": 1989656,
+    "cost": 167.02707200000006,
+    "actions": 1850
+   },
+   "layers": {
+    "replies": 831,
+    "in": 14623328,
+    "out": 1373342,
+    "think": 814636,
+    "cost": 85.96015200000002,
+    "actions": 814
+   },
+   "fewer_tokens_with_the_layers_percent": {
+    "input": 41.7,
+    "output": 58.8,
+    "input_and_output": 43.7
+   }
+  }
+ }
+}
+

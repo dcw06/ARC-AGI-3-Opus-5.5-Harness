@@ -1,0 +1,264 @@
+{
+  "games": [
+    {
+      "game": "ar25-0c556536",
+      "score": 16.666666666666664,
+      "weighted_completion": 16.666666666666664,
+      "human_total": 748,
+      "human_100_score": 8.333333333333334,
+      "levels": 8,
+      "done": 3,
+      "cap_levels": 3
+    },
+    {
+      "game": "bp35-0a0ad940",
+      "score": 2.2222222222222223,
+      "weighted_completion": 2.2222222222222223,
+      "human_total": 651,
+      "human_100_score": 6.666666666666667,
+      "levels": 9,
+      "done": 1,
+      "cap_levels": 1
+    },
+    {
+      "game": "cd82-fb555c5d",
+      "score": 14.285714285714285,
+      "weighted_completion": 14.285714285714285,
+      "human_total": 171,
+      "human_100_score": 14.285714285714286,
+      "levels": 6,
+      "done": 2,
+      "cap_levels": 2
+    },
+    {
+      "game": "cn04-2fe56bfb",
+      "score": 14.285714285714285,
+      "weighted_completion": 14.285714285714285,
+      "human_total": 789,
+      "human_100_score": 14.285714285714286,
+      "levels": 6,
+      "done": 2,
+      "cap_levels": 2
+    },
+    {
+      "game": "dc22-fdcac232",
+      "score": 4.761904761904762,
+      "weighted_completion": 4.761904761904762,
+      "human_total": 1228,
+      "human_100_score": 4.761904761904762,
+      "levels": 6,
+      "done": 1,
+      "cap_levels": 1
+    },
+    {
+      "game": "ft09-0d8bbf25",
+      "score": 100.0,
+      "weighted_completion": 100.0,
+      "human_total": 208,
+      "human_100_score": 28.571428571428573,
+      "levels": 6,
+      "done": 6,
+      "cap_levels": 6
+    },
+    {
+      "game": "g50t-5849a774",
+      "score": 3.571428571428571,
+      "weighted_completion": 3.571428571428571,
+      "human_total": 879,
+      "human_100_score": 3.5714285714285716,
+      "levels": 7,
+      "done": 1,
+      "cap_levels": 1
+    },
+    {
+      "game": "ka59-38d34dbb",
+      "score": 3.111111111111111,
+      "weighted_completion": 3.571428571428571,
+      "human_total": 730,
+      "human_100_score": 3.5714285714285716,
+      "levels": 7,
+      "done": 1,
+      "cap_levels": 0
+    },
+    {
+      "game": "lf52-271a04aa",
+      "score": 1.8181818181818181,
+      "weighted_completion": 1.8181818181818181,
+      "human_total": 1339,
+      "human_100_score": 1.8181818181818181,
+      "levels": 10,
+      "done": 1,
+      "cap_levels": 1
+    },
+    {
+      "game": "lp85-305b61c3",
+      "score": 77.77777777777779,
+      "weighted_completion": 77.77777777777779,
+      "human_total": 388,
+      "human_100_score": 16.666666666666668,
+      "levels": 8,
+      "done": 7,
+      "cap_levels": 6
+    },
+    {
+      "game": "ls20-9607627b",
+      "score": 10.714285714285714,
+      "weighted_completion": 10.714285714285714,
+      "human_total": 776,
+      "human_100_score": 3.5714285714285716,
+      "levels": 7,
+      "done": 2,
+      "cap_levels": 2
+    },
+    {
+      "game": "m0r0-492f87ba",
+      "score": 14.285714285714285,
+      "weighted_completion": 14.285714285714285,
+      "human_total": 1107,
+      "human_100_score": 4.761904761904762,
+      "levels": 6,
+      "done": 2,
+      "cap_levels": 2
+    },
+    {
+      "game": "r11l-495a7899",
+      "score": 71.42857142857143,
+      "weighted_completion": 71.42857142857143,
+      "human_total": 233,
+      "human_100_score": 14.285714285714286,
+      "levels": 6,
+      "done": 5,
+      "cap_levels": 5
+    },
+    {
+      "game": "re86-8af5384d",
+      "score": 8.333333333333332,
+      "weighted_completion": 8.333333333333332,
+      "human_total": 1255,
+      "human_100_score": 8.333333333333334,
+      "levels": 8,
+      "done": 2,
+      "cap_levels": 2
+    },
+    {
+      "game": "s5i5-18d95033",
+      "score": 8.333333333333332,
+      "weighted_completion": 8.333333333333332,
+      "human_total": 638,
+      "human_100_score": 2.7777777777777777,
+      "levels": 8,
+      "done": 2,
+      "cap_levels": 2
+    },
+    {
+      "game": "sb26-7fbdac44",
+      "score": 58.333333333333336,
+      "weighted_completion": 58.333333333333336,
+      "human_total": 213,
+      "human_100_score": 27.77777777777778,
+      "levels": 8,
+      "done": 6,
+      "cap_levels": 6
+    },
+    {
+      "game": "sc25-635fd71a",
+      "score": 27.11416049253887,
+      "weighted_completion": 28.57142857142857,
+      "human_total": 350,
+      "human_100_score": 28.571428571428573,
+      "levels": 6,
+      "done": 3,
+      "cap_levels": 2
+    },
+    {
+      "game": "sk48-d8078629",
+      "score": 8.333333333333332,
+      "weighted_completion": 8.333333333333332,
+      "human_total": 1070,
+      "human_100_score": 2.7777777777777777,
+      "levels": 8,
+      "done": 2,
+      "cap_levels": 2
+    },
+    {
+      "game": "sp80-589a99af",
+      "score": 47.61904761904761,
+      "weighted_completion": 47.61904761904761,
+      "human_total": 518,
+      "human_100_score": 14.285714285714286,
+      "levels": 6,
+      "done": 4,
+      "cap_levels": 4
+    },
+    {
+      "game": "su15-1944f8ab",
+      "score": 6.666666666666667,
+      "weighted_completion": 6.666666666666667,
+      "human_total": 361,
+      "human_100_score": 13.333333333333334,
+      "levels": 9,
+      "done": 2,
+      "cap_levels": 2
+    },
+    {
+      "game": "tn36-ef4dde99",
+      "score": 0.0,
+      "weighted_completion": 0.0,
+      "human_total": 317,
+      "human_100_score": 3.5714285714285716,
+      "levels": 7,
+      "done": 0,
+      "cap_levels": 0
+    },
+    {
+      "game": "tr87-cd924810",
+      "score": 3.7317157446155025,
+      "weighted_completion": 4.761904761904762,
+      "human_total": 414,
+      "human_100_score": 4.761904761904762,
+      "levels": 6,
+      "done": 1,
+      "cap_levels": 0
+    },
+    {
+      "game": "tu93-0768757b",
+      "score": 33.33333333333333,
+      "weighted_completion": 33.33333333333333,
+      "human_total": 462,
+      "human_100_score": 13.333333333333334,
+      "levels": 9,
+      "done": 5,
+      "cap_levels": 3
+    },
+    {
+      "game": "vc33-5430563c",
+      "score": 35.714285714285715,
+      "weighted_completion": 35.714285714285715,
+      "human_total": 447,
+      "human_100_score": 21.428571428571427,
+      "levels": 7,
+      "done": 4,
+      "cap_levels": 3
+    },
+    {
+      "game": "wa30-ee6fef47",
+      "score": 6.666666666666667,
+      "weighted_completion": 6.666666666666667,
+      "human_total": 1843,
+      "human_100_score": 2.2222222222222223,
+      "levels": 9,
+      "done": 2,
+      "cap_levels": 2
+    }
+  ],
+  "rhae": 23.164340099991225,
+  "weighted_completion": 23.282251082251083,
+  "efficiency_penalty": 0.11791098225985681,
+  "human_100_rhae": 10.733044733044734,
+  "min_human_total": 171,
+  "max_human_total": 1843,
+  "capped_solved": 60,
+  "mean_per_game_completion": 37.74920634920635,
+  "without_ft09": 19.96285427082419,
+  "without_ft09_ls20": 20.36496594719543
+}

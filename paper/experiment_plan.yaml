@@ -1,0 +1,192 @@
+document_type: completed_layered_harness_working_paper
+revision_date: '2026-11-23'
+timezone: America/Los_Angeles
+public_preregistration_claim: false
+source_commit: 5284dc7f521ec14652d77adda4b70d9069587ef1
+whole_game_comparison:
+  inventory: all_25_public_versioned_games
+  runs_per_game_per_condition: 1
+  played_on_different_days: true
+  model: claude-opus-5-5
+  effort: high
+  cli_version: 2.1.318
+  same_per_game_action_caps: true
+  cap_total: 17500
+  whole_game_component_ablations: false
+  layered_switches:
+    no_effect_lessons: true
+    no_effect_wait: 4
+    lesson_check: true
+    game_over_lessons: true
+    object_ledger: true
+    level_brief: true
+  pattern_relations: false
+  no_effect_definition: Equal final-board keys after learned counter-cell masking;
+    not full-observation identity
+  reset_allowances:
+    baseline_initial_portions: 10
+    baseline_continuation: 50
+    tu93_continued_after_stopping_at_10: true
+    layered_whole_game: 50
+    shown_to_model: false
+    resets_count_as_environment_actions: true
+  normal_timeout_seconds: 240
+  normal_retries: 2
+  tr87_exception:
+    actions: 43
+    seconds: 400
+    new_levels: 0
+    retries: 1
+  wa30_precautionary_restart:
+    discarded_prefix_actions: 17
+    reason: Precaution after an apparent lf52 replay mismatch and discovery of older
+      local file copies; later attributed to animation frames, with file differences
+      limited to comments and unused helpers
+    source: research/level_brief_v1/whole_games_official.py at 5284dc7f521ec14652d77adda4b70d9069587ef1
+confirmed_official_scores:
+  baseline: 46.19821646694091
+  layered_final: 85.36898706491712
+controlled_level_brief_tests:
+  other_layers_fixed: true
+  runs_per_condition_per_game: 2
+  first_set_games: 7
+  second_set_games: 9
+  decision_rules_fixed_before_each_test: true
+  verdicts:
+  - no detectable difference
+  - helps
+  treatment: level-brief package, not an isolated brief-text component
+  maximum_new_actions_per_run: 100
+  stop_early_on_win: true
+  tn36_starts_at_first_action: true
+  other_games_use_specified_restored_positions: true
+  second_set_games_won_by_every_run_in_both_conditions:
+  - lp85
+  - r11l
+  - sb26
+  ceiling_games_cannot_distinguish_conditions_by_completed_levels: true
+reported_usage_scope:
+  ended_or_halted_games: 25
+  excludes_wa30: false
+  timed_out_call_usage_unavailable: true
+  input_plus_output_reduction_percent: 11.0
+current_verification: verify_layered.py
+historical_baseline_and_tycho_record:
+  document_type: exploratory_baseline_and_selected_followup_record
+  revision_date_utc: '2026-11-09'
+  prospective_preregistration: false
+  baseline:
+    run_date_utc: '2026-11-06'
+    scorecard_id: 09cc9d25-ec26-4f26-98f8-9cbd60ec69d7
+    source_commit: 38f41e9d2e9937fd5bcbfbb6fe2c6e126f597039
+    source_archived_after_run: true
+    configuration: data/evaluated_config.json
+    exposure_ledger: data/holdout_ledger.yaml
+    inventory: all_25_public_versioned_games
+    runs_per_game: 1
+    maximum_actions_including_resets_per_game: 100
+    maximum_resets_per_game: 10
+    analysis: analyze_results.py
+  followup:
+    run_date_utc: '2026-11-09'
+    source_commit: 5fd62ecc727963e89c78bf036b97bd03184e4b1f
+    upstream_tycho_commit: f68912a764372ead0a610db2e1c011d41ce5197e
+    games:
+    - lf52-271a04aa
+    - bp35-0a0ad940
+    selection: post_hoc_low_baseline_outcomes
+    runs_per_game: 1
+    matched_settings:
+    - model_identifier
+    - effort_setting
+    - game_versions
+    - 100_action_cap_including_resets
+    inference_matched: false
+    component_ablations_executed: false
+    bp35_continuation: exact_100_action_checkpoint_then_budget_changes_only
+    independent_continuation_trials: 0
+    continuation_checkpoints_actions:
+    - 100
+    - 427
+    - 474
+    data: data/tycho/results.json
+    verification: verify_followup.py
+development_exposure:
+  other_games: 17
+  other_games_with_frozen_code_midgame_tests: 16
+  all_25_baseline_aggregate_failures_informed_design: true
+  human_play_informed_brief:
+  - tr87
+  - cd82
+  hidden_test_set: false
+  used_or_studied_in_development:
+  - bp35
+  - cd82
+  - g50t
+  - ls20
+  - s5i5
+  - su15
+  - tr87
+  - vc33
+  group_definition: Used to design or tune a layer, or studied during development
+  g50t_exposure: Object-ledger tests and replay study; no layer designed on it
+earlier_log_verification_snapshot:
+  script: research/level_brief_v1/whole_verify.py
+  source_commit: 9cc2f4afda87c9f065fea2f92fb6283ef7e990b2
+  method: Committed script applied to local raw run logs
+  still_running_games:
+  - dc22
+  - re86
+  - wa30
+  replies: 8675
+  replies_rejected_due_to_full_12_rule_list: 605
+  rejection_share: 0.06974063400576369
+  layered_calls_past_time_limit_at_least: 90
+  same_cutoff_as_24_game_reported_usage: false
+  raw_logs_bundled: false
+  private_log_counts_reexecuted_during_editing: false
+source_repository: https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness
+historical_partial_snapshot:
+  official_replay_status: pending_at_cutoff
+  levels: 165
+  games_won: 17
+  wa30_actions: 813
+  wa30_levels: 6
+  status_source: data/layered_revision_status.json
+  status: historical_snapshot_superseded_by_final_reported_cutoff
+historical_reported_cutoff:
+  data: data/layered_reported_cutoff_20261123.json
+  score_rounded: 85.37
+  levels: 166
+  games_won: 17
+  actions: 10396
+  wa30_actions: 1560
+  wa30_levels: 7
+  official_replay_confirmation: pending
+final_evaluation:
+  data: data/layered_final_result.json
+  score: 85.36898706491712
+  levels: 166
+  games_won: 17
+  actions: 10686
+  wa30_actions: 1850
+  wa30_levels: 7
+  all_25_ended_or_halted: true
+  closing_replay_confirmation: complete
+confirmatory_replication_priority:
+  status: proposed_not_run
+  fresh_runs_of_both_configurations: true
+  interleaved_with_randomized_or_balanced_order: true
+  freeze_before_collection:
+  - harness
+  - prompts
+  - game versions
+  - action caps
+  - inference settings
+  - timeout retry and reset policies
+  - repeat count
+  - primary metric and analysis
+  model_revision: pin where available; otherwise disclose provider-side drift
+  prefer_games_not_used_during_development_where_available: true
+  current_17_game_complement_is_untouched: false
+  record_all_scheduled_outcomes_including_halts: true

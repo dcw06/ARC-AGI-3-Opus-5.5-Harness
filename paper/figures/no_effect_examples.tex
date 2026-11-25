@@ -1,0 +1,15 @@
+\begin{figure}[htbp]
+\centering
+\begin{tabular}{@{}c@{\hspace{8pt}}c@{}}
+\board[0.235\linewidth]{lessons-no-effect-a.png} & \board[0.235\linewidth]{lessons-no-effect-b.png}\\[1pt]
+\footnotesize Before action 11, click ringed & \footnotesize After it
+\end{tabular}\\[2pt]
+{\small (a) \texttt{ka59}, level 1. A click with no final change outside the step counter}\\[8pt]
+\begin{tabular}{@{}c@{\hspace{8pt}}c@{\hspace{8pt}}c@{\hspace{8pt}}c@{}}
+\board[0.235\linewidth]{frames-between-a.png} & \board[0.235\linewidth]{frames-between-b.png} &
+\board[0.235\linewidth]{frames-between-c.png} & \board[0.235\linewidth]{frames-between-d.png}\\[1pt]
+\footnotesize Before action 343, click ringed & \footnotesize Frame 5 of 15 & \footnotesize Frame 10 of 15 & \footnotesize Last frame
+\end{tabular}\\[2pt]
+{\small (b) \texttt{dc22}, level 5. The board changed and changed back}
+\caption{\textbf{An action can change the board and then return it to its earlier appearance.} (a) In \texttt{ka59}, level 1, the boards before and after the click differed only in the step counter. (b) In \texttt{dc22}, level 5, the animation changed the board before the final frame returned to its earlier appearance, apart from the counter. The harness classified both actions as no-effect actions because it ignored counter cells in this comparison. Sections~\ref{app:ka59-click} and~\ref{app:dc22-animation} give the frame counts and the model's lessons \citep{dai2026runfigures}.}\label{fig:no-effect-examples}
+\end{figure}

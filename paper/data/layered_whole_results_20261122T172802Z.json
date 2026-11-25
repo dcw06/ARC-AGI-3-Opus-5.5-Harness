@@ -1,0 +1,892 @@
+{
+ "stamp": "20261122T172802Z",
+ "rule": "The last three games, one run each with the layers on, beside the baseline run of the same game at the same cap. Per game: levels completed, and the game score by the scorecard rule (replay_scorecard.game_score with the human counts of the official scorecard). Overall \"better\": more levels completed in total and a higher mean game score than the baseline. \"worse\": fewer levels in total and a lower mean game score. Anything else: \"mixed\". One run a game on each side, played on different days: a difference in a single game may be chance. No game is played again because of its result. A game that stops early is continued from its own saved replies; one that halts because a reply keeps running past the time limit is counted where it stands.",
+ "runs": [
+  {
+   "game": "dc22",
+   "group": "one",
+   "account": "the second subscription",
+   "state": "done",
+   "cap": 1250,
+   "parts": [
+    {
+     "run": "whole-dc22-20261122T172802Z",
+     "actions": 619,
+     "state": "done",
+     "seconds_a_call": 240
+    }
+   ],
+   "used_in_design": false,
+   "baseline": {
+    "actions": 1250,
+    "levels_completed": 4,
+    "level_actions": [
+     32,
+     125,
+     59,
+     123,
+     911,
+     0
+    ],
+    "score": 40.337815689199864
+   },
+   "levels_in_the_game": 6,
+   "actions": 619,
+   "levels_completed": 6,
+   "level_actions": [
+    26,
+    44,
+    46,
+    63,
+    177,
+    263
+   ],
+   "score": 100.0,
+   "model_replies": 642,
+   "detail": {
+    "run": "whole-dc22-20261122T172802Z",
+    "game": "dc22",
+    "set_up": "memory layers, object ledger and level brief",
+    "started_after_action": 0,
+    "level_at_start": 1,
+    "new_actions": 619,
+    "levels_completed_in_new_actions": 6,
+    "actions_per_completed_level": [
+     26,
+     44,
+     46,
+     63,
+     177,
+     263
+    ],
+    "actions_on_the_open_level": 0,
+    "changed_nothing": 32,
+    "changed_nothing_at": [
+     3,
+     5,
+     126,
+     180,
+     185,
+     190,
+     195,
+     241,
+     343,
+     368,
+     369,
+     370,
+     371,
+     372,
+     373,
+     378,
+     379,
+     380,
+     395,
+     412,
+     423,
+     424,
+     444,
+     525,
+     532,
+     537,
+     539,
+     547,
+     548,
+     556,
+     557,
+     562
+    ],
+    "repeats_of_a_known_no_effect_action": 1,
+    "in_a_loop": 172,
+    "game_overs": 0,
+    "turns": 619,
+    "turns_announcing_a_test": 12,
+    "cases_opened": 23,
+    "lessons_kept": 23,
+    "further_actions_combined": [
+     1,
+     1,
+     1,
+     2,
+     1,
+     1,
+     1,
+     1,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     2,
+     2,
+     2,
+     1
+    ],
+    "lessons_offered_too_early_and_dropped": 2,
+    "lessons": [
+     {
+      "at_action": 7,
+      "explains": "t5",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "The e marker can only move onto solid path cells (2, solid bridge colours); a bridge piece shown as a checker pattern of its colour with 4 is inactive and blocks movement, so moving into it does nothing.",
+      "applies_when": "The cell 2 steps in the movement direction from e is background 4 or a checkered (colour/4 alternating) block rather than a solid block.",
+      "replaces": 0
+     },
+     {
+      "at_action": 182,
+      "explains": "t180",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "Clicking a control rotates its matching left-panel bridge 90 degrees. If that bridge or ring looks the same after a 90-degree turn, the rotation plays out in the intermediate frames but the final board is identical, so the click achieves nothing by itself.",
+      "applies_when": "The left-panel piece of the clicked control's colour has 4-fold rotational symmetry about its centre, as the 8 ring at x2-9 y24-31 does, and nothing else of that colour (rope, linked part) would change.",
+      "replaces": 0
+     },
+     {
+      "at_action": 187,
+      "explains": "t185",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "Controls that only rotate a piece in place (the 8 bar and the a squares both rotate the 8 ring 90 degrees) play the rotation out in the intermediate frames. If the piece looks the same after a 90-degree turn, the final board is identical, so the click achieves nothing by itself.",
+      "applies_when": "The clicked control (the 8 bar or an a square) rotates a left-panel piece that has 4-fold rotational symmetry, such as the 8 ring, and nothing else of that colour would change. Controls that translate the piece (the 9 square) do change the board.",
+      "replaces": 2
+     },
+     {
+      "at_action": 193,
+      "explains": "t190",
+      "also_covers": [],
+      "further_actions_combined": 2,
+      "rule": "The a squares slide the 8 claw sideways along a horizontal 0 rail. If the claw's arms are not lined up with the rail rows, the slide starts in the intermediate frames and then snaps back, so the final board is unchanged.",
+      "applies_when": "An a square is clicked while the claw's 0-gap arm rows do not line up with the horizontal 0 rail rows, or the claw is already at the end of the rail in that direction. Use the 9 squares first to line it up (they move it in 4-cell steps).",
+      "replaces": 0
+     },
+     {
+      "at_action": 197,
+      "explains": "t195",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "A 9 square only moves the 8 claw along a vertical 0 track. If the claw is already at the end of that track in the chosen direction (here the top, where the horizontal rail starts), the move starts in the intermediate frames and then snaps back, so the final board is unchanged.",
+      "applies_when": "A 9 square is clicked while the claw sits at the end of the vertical track in that direction, or is on a horizontal rail and not on the vertical track. Look at where the claw is against the 0 track's extent before you click.",
+      "replaces": 0
+     },
+     {
+      "at_action": 243,
+      "explains": "t241",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "Cells coloured 5 in a bridge block e. A move toward a bridge whose next cell in that direction is 5 does nothing (the step-counter cell aside). The bridge first has to be changed, for example with the 2 control, which turns its ends into 1 and shrinks the 5 segment.",
+      "applies_when": "The 2x2 cell block next to e in the movement direction is 5 (part of a lone 5 bridge or a 5 middle segment).",
+      "replaces": 0
+     },
+     {
+      "at_action": 345,
+      "explains": "t343",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "A control that toggles same-colour bridges between solid and checkered will not run while the e marker stands on a bridge that would become checkered. The toggle plays out in the intermediate frames and then reverts, so the final board is unchanged.",
+      "applies_when": "e's 2x2 cell block is part of a solid bridge whose colour matches the clicked toggle control, and that toggle would make the bridge checkered. Move e off the bridge onto 2 or another colour first.",
+      "replaces": 0
+     },
+     {
+      "at_action": 370,
+      "explains": "t368",
+      "also_covers": [
+       "t369"
+      ],
+      "further_actions_combined": 1,
+      "rule": "Clicking a cell of the background colour 4 inside a right-panel control does nothing, even when the click lands within the control's bounding box. Only the control's own coloured cells respond.",
+      "applies_when": "The clicked cell in the right panel is 4 or 5 (ground or hole) and not a coloured cell of a control shape, for example the 4 interior of the D-pad PC.",
+      "replaces": 0
+     },
+     {
+      "at_action": 373,
+      "explains": "t370",
+      "also_covers": [
+       "t371",
+       "t372"
+      ],
+      "further_actions_combined": 2,
+      "rule": "Not every right-panel shape is a control. The D-pad PC (4 arms with single f, c, e, a tip cells) ignored clicks on its 4 cells, on its 4 interior and on its f, c and e tips. No frames in between differed from the board, so nothing started and reverted: the clicks simply did nothing. Its tips copy the PR hub's arm tips, so it is probably a display, or it is inactive in this state.",
+      "applies_when": "Clicking 4/5 ground cells in the right panel, or the 4 cells and f/c/e tip cells of a 4-armed D-pad shape whose tips copy a left-panel hub, while e is not on that hub. Only the a tip is untested.",
+      "replaces": 6
+     },
+     {
+      "at_action": 375,
+      "explains": "t373",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "Not every right-panel shape is a control. The D-pad PC (4 arms with single f, c, e, a tip cells) ignored clicks on its 4 cells, its interior and all four tips (f, c, e, a). No frames in between differed, so nothing started and reverted: the clicks simply did nothing apart from a bottom-row counter cell. Its tips copy the PR hub's arm tips, so it is probably a display, or it only works when e is on that hub.",
+      "applies_when": "Clicking 4/5 ground cells in the right panel, or any cell of a 4-armed D-pad shape whose tips copy a left-panel hub, while e is not on that hub.",
+      "replaces": 6
+     },
+     {
+      "at_action": 380,
+      "explains": "t378",
+      "also_covers": [
+       "t379"
+      ],
+      "further_actions_combined": 1,
+      "rule": "Controls that only rotate a piece in place (the 8 bar or the a squares turning the 8 ring) play the 90-degree turn out in the in-between frames. If the piece has 4-fold symmetry, as the closed square 8 ring does, the final board looks the same, so the click achieves nothing by itself. Clicking non-control cells in the left panel (such as a hub's 9/a centre) does nothing either.",
+      "applies_when": "Clicking the 8 bar while the 8 ring is closed and square and nothing c is held, or clicking any left-panel cell instead of a right-panel control shape.",
+      "replaces": 1
+     },
+     {
+      "at_action": 382,
+      "explains": "t380",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "Not every right-panel shape is a control. Some are displays or targets: the D-pad PC that copies a hub's tips, and the b 2x2 sitting inside the 2 band where the band crosses into the right panel. Clicking them, or 4/5 ground cells, does nothing, and no frame in between differs. Real controls are the large single-colour shapes on the 5 ground (the b L, the 8 bar, the 6 shape, and so on).",
+      "applies_when": "The cell you would click is ground (4/5), part of a walkable 2 band or block (even one that reaches into the right panel), a small target-coloured square inside such a band, or a D-pad whose tips copy a left-panel hub.",
+      "replaces": 6
+     },
+     {
+      "at_action": 397,
+      "explains": "t395",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "A right-panel control that would move, rotate or toggle a left-panel bridge will not run while the e marker stands on that bridge. The change plays out in the in-between frames and then reverts, so the final board is unchanged. This covers the staircase conveyor (b L) as well as same-colour toggles.",
+      "applies_when": "e's 2x2 block lies on a bridge that the clicked control would move or toggle (for example e on a staircase 1 row when clicking the b L conveyor, or e on a solid bridge when clicking its toggle). Move e onto a 2 block or an unaffected piece first.",
+      "replaces": 5
+     },
+     {
+      "at_action": 414,
+      "explains": "t412",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "The staircase conveyor (b L) will not run while e stands on a staircase segment, at least when that segment is c-coloured, as at the wrap position x16-21. The shift plays out in the in-between frames and then reverts. A conveyor that is blocked this way still advances the bottom 3 counter.",
+      "applies_when": "e's 2x2 block is on a staircase row segment (y54/y56/y58), especially a c segment at x16-21, and the b L is clicked. Get e off the staircase, or onto a 1 segment if H143 holds, first.",
+      "replaces": 5
+     },
+     {
+      "at_action": 425,
+      "explains": "t423",
+      "also_covers": [
+       "t424"
+      ],
+      "further_actions_combined": 1,
+      "rule": "Not every right-panel shape is a control. The D-pad PC, including its tip cells (f, c, e, a), only copies a left-panel hub's tips. Clicking any part of it does nothing, with no in-between frames. The 8 bar only turns the 8 ring/claw on the 0 track. A closed square ring looks the same after the turn, and other 8-centred pieces such as the PA c bar do not turn. The same goes for the b 2x2 inside a 2 band and for 4/5 ground.",
+      "applies_when": "You would click the D-pad or one of its tips, the b square inside the 2 band, or ground; or the 8 bar while the 8 ring is closed and square and not gripping c (expecting another 8-centred piece to turn).",
+      "replaces": 6
+     },
+     {
+      "at_action": 446,
+      "explains": "t444",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "e moves only onto walkable cells: 2 blocks, solid bridge cells and pivots. A move whose next 2x2 block in that direction is 4/5 ground or the edge of a closed region leaves the board unchanged, with nothing happening in the in-between frames.",
+      "applies_when": "The 2x2 block right next to e in the move direction is 4 or 5 ground, for example moving down from the bottom row of an enclosed 2 region such as PX, which has 4 at y54-55.",
+      "replaces": 0
+     },
+     {
+      "at_action": 527,
+      "explains": "t525",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "The 8 ring moves along 0 track cells only. A D-pad move that would put the ring's frame or centre on 4/5 ground plays out in the in-between frames and then snaps back, so the board ends unchanged.",
+      "applies_when": "Before you click a filled D-pad arm, look at the 4 cells past the ring in that direction. If they are 4 ground rather than 0 track (for example above the ring at y26-33, where x22-27 y24-25 is 4), the move will snap back.",
+      "replaces": 0
+     },
+     {
+      "at_action": 534,
+      "explains": "t532",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "The 8 bar turns or closes the 8 ring/claw. When the ring is already a closed square around a c tip, the click tries to shrink it to grip the tip. If the shrunk frame would land on 4/5 ground instead of 0 track or the gripped piece, the turn plays out in the in-between frames and reverts, leaving the board unchanged.",
+      "applies_when": "You would click the 8 bar while the 8 ring is a closed square and any cell of its frame, shrunk by one on each side, would be 4/5 ground (for example x19 y31/y36 next to the c tip). Look at the cells one step inside the ring's frame.",
+      "replaces": 0
+     },
+     {
+      "at_action": 539,
+      "explains": "t537",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "When the 8 ring is a closed square, clicking the 8 bar tries to shrink it by one on each side to grip something. The shrink only stays if the ring has a c piece inside it to grip and no cell of the shrunk frame is 4/5 ground. An empty ring that encloses only 0 track shrinks in the in-between frames and then reverts, so the board ends unchanged.",
+      "applies_when": "Before clicking the 8 bar while the 8 ring is a closed square, look at what is inside it. If the interior is only 0 track with no c piece, or the frame one step inward hits 4/5 ground, the click will change nothing.",
+      "replaces": 6
+     },
+     {
+      "at_action": 542,
+      "explains": "t539",
+      "also_covers": [],
+      "further_actions_combined": 2,
+      "rule": "A pad-recolouring control (the SY quadrants) can't change a checker pad while the e marker covers it. The click does nothing and there are no in-between frames. Once e steps off, the same click recolours the pad.",
+      "applies_when": "e's 2x2 block sits on the checker pad (TA at x18-19 y48-49, or any pad the control recolours) and you would click an SY quadrant. Move e off the pad first.",
+      "replaces": 0
+     },
+     {
+      "at_action": 550,
+      "explains": "t547",
+      "also_covers": [
+       "t548"
+      ],
+      "further_actions_combined": 2,
+      "rule": "The D-pad PC drives the 8 ring only while e stands on the PG hub (it copies that hub's tips). When e is anywhere else, such as a region cut off from the hub, clicking a D-pad arm does nothing and there are no in-between frames.",
+      "applies_when": "e's 2x2 block is not on the PG hub (x32-37 y56-61) or its centre, and you would click a D-pad arm or tip. Bring e back to the hub first, for example by teleporting through a matching checker pad.",
+      "replaces": 2
+     },
+     {
+      "at_action": 559,
+      "explains": "t556",
+      "also_covers": [
+       "t557"
+      ],
+      "further_actions_combined": 2,
+      "rule": "A D-pad arm only does something when it is filled with a tip colour. An arm fills only while e stands in the matching arm of the PG hub (up arm=f, left=c, right=e, down=a). With e on the hub centre or off the hub, every D-pad arm is 4 ground. Clicking an arm or its tip then does nothing and gives no in-between frames.",
+      "applies_when": "Before clicking a D-pad arm or tip (x45-56 y31-42), check that the arm is coloured, not 4 like the surrounding ground. If it is 4, first step e from the hub centre into the matching hub arm.",
+      "replaces": 2
+     },
+     {
+      "at_action": 564,
+      "explains": "t562",
+      "also_covers": [],
+      "further_actions_combined": 1,
+      "rule": "Shrinking the 8 ring only stays when the shrunk frame lands where it can grip something, such as around a c bar's pivot block. When the shrunk frame would cut across the middle of a c bar or sit on 4 ground, the shrink plays out in the in-between frames and then reverts.",
+      "applies_when": "The 8 ring is a closed square and the 8 bar is clicked. Check the frame one cell inward: if it crosses c bar body or 4 ground instead of fitting around a pivot block, expect the board to end unchanged.",
+      "replaces": 5
+     }
+    ],
+    "game_over_lessons": [],
+    "checks_written": 612,
+    "model_calls": 642,
+    "replies_sent_back": 23,
+    "output_tokens": 1042905,
+    "output_per_call_median": 1082,
+    "stop_reason": "win",
+    "problems": [],
+    "audit": "passes",
+    "arm": "brief",
+    "state": "clean",
+    "briefs": [
+     {
+      "at_action": 27,
+      "level": 2,
+      "asked_for": true,
+      "won_by": "On t26, action 4 moved e from x22-23 onto the b cells (x24-25 y20-21), and the level completed on that move. The least this shows is that the level completes when e moves onto the b target.",
+      "different": "There is a new right-panel 6 shape. On the left there is a 6 piece inside the 7 bridge, a d piece inside the 8 bridge, and a 2/8 patterned block (BA) at the bottom. The b target is near the top with a 2 below it, but no vertical path leads to it. The 9 pair is set up again: solid next to e, checkered below it.",
+      "why": "The 6 control most likely toggles or moves the 6 piece, and maybe d or other pieces, to build the missing vertical path up to b. My rules can't yet produce a route that reaches b.",
+      "first": "Click the right-panel 6 shape once and see which left-panel cells change."
+     },
+     {
+      "at_action": 71,
+      "level": 3,
+      "asked_for": true,
+      "won_by": "Action 4 moved e from x20-21 to x22-23 at y12-13, onto the b cells, and that completed the level. This is exactly rule 5: e reaching b completes the level.",
+      "different": "New this level: a 2 block with 6/7 checker cells (x4-7 y16-19 and x12-15 y44-47), a 2 block with an f pattern (x16-19 y40-43), and f checker bridges with no f control on the right panel. The right panel has 8, 9 and 6 controls, but there is no 7 bridge with a 6 pivot. There are three 9 checker pieces plus one solid 9. e starts at x30-31 y18-19 and b is at x32-33 y38-39.",
+      "why": "The f bridges seem needed to reach b along y32-35. The f-patterned 2 block is probably a switch that adds an f control, as the 2/8 switch did in level 2. The 6/7 cells probably connect to the 6 control in some way that is not known yet. The 8 rotation and the 9 toggles are probably needed to get e down from its start.",
+      "first": "Click the right-panel 6 control and see what changes on the left, since no 6-pivot bridge exists on this level."
+     },
+     {
+      "at_action": 117,
+      "level": 4,
+      "asked_for": true,
+      "won_by": "e moved down from the 2 cell at x32-33 y36-37 onto the b cells at x32-33 y38-39, and the level completed. The least this shows is that e entering the b target cells completes the level, which matches rule 5.",
+      "different": "New controls appear in the right panel: a solid 6x6 square of 2 and an L-shaped b control. Neither has the usual T shape. The 6 control returns. There are two solid 1 bridges and solid 5 and c bridges, but no 1, 5 or c controls. Two 6/7-marked 2-blocks are present. The target b sits at the end of the c bridge, and no reachable path leads to it.",
+      "why": "The walkable paths are split into parts that do not connect, so something has to join them. The 6/7 teleport could link two of the parts. The new 2 and b controls probably move or reshape 2-blocks or the target so that a path to b exists.",
+      "first": "Click the 2 square control once and see what changes, then try the b control."
+     },
+     {
+      "at_action": 180,
+      "level": 5,
+      "asked_for": true,
+      "won_by": "ACTION4 moved e from the 2 at x28-29 y44-45 onto the b target cells at x30-31 y44-45, and the level completed straight away. Rule 5 already says this: e moving onto b completes the level.",
+      "different": "New this level: an 8 ring outline (x2-9 y24-31) with 0 rope lines running from it to a c hook at x20-21 y14-17 beside a tall c column x22-25 y10-25. A new 8 bar control on the right. Alternating a and 9 squares at y28-31. A 2/f block that will give an f control, a pair of f bridges (one solid, one checkered), and a lone 5 bridge with no 1 ends. Row 63 has no 3 counter.",
+      "why": "The ring, rope and c column probably make a lift. If it moves c, it would link the isolated 2 blocks (x26-29 y30-33, y20-23 and y6-9 with its 6/7 teleport marker). That would be the path from e's area to the teleport and on to b. The a/9 squares may show states or a sequence.",
+      "first": "Click the new 8 bar control once and look at which left-panel cells change."
+     },
+     {
+      "at_action": 357,
+      "level": 6,
+      "asked_for": true,
+      "won_by": "Action 3 moved e from x12-13 onto the b target at x10-11 y50-51, and the level completed. This matches rule 5: e has to reach the b target cells.",
+      "different": "New: a 2 band (x32-49 y4-11) that crosses the divider into the right panel, with a b 2x2 at x46-47 y6-7. A c/b checker target-like block at x4-5 y4-5. A mixed-pattern 2 block (OZ). A pattern hub PG with 1/0 arms carrying f, c, e, a around a 9/a centre. A right-panel D-pad control (PC) with f, c, e, a tips. Also a staircase-shaped 1 bridge with a c segment, plus the 8 ring on 0 tracks and the 6/7 teleport pair from before.",
+      "why": "The D-pad likely steers or opens the arms of the PG hub, connecting e's area to other blocks. The b target is probably in the 2 band near the top or at the c/b checker, and getting there needs the hub, the teleport and the bridges. The c/b checker may need the c control to turn it solid b.",
+      "first": "Walk e left in PE to the 7/6 checker at x18-19 y48-49 and click the 6 control to test the teleport into PF. Then step on PF's 8 pattern and try the D-pad."
+     }
+    ],
+    "rule_notes": [
+     {
+      "at_action": 2,
+      "rule": "Action 1 moved the e 2x2 marker in G up by 2 cells within its 2-block; bottom row gains one 3 per action (likely step counter).",
+      "replaces": 0
+     },
+     {
+      "at_action": 3,
+      "rule": "Actions 1 (up) and 3 (left) move the e 2x2 marker by one 2x2 cell within its 6x6 2-block.",
+      "replaces": 1
+     },
+     {
+      "at_action": 8,
+      "rule": "Actions 1-4 move the e marker 2 cells (1 = up, 3 = left). It can move only onto solid path cells (2 or solid bridge colours), including from a 2-block onto an adjacent solid bridge.",
+      "replaces": 1
+     },
+     {
+      "at_action": 12,
+      "rule": "Action 4 moves the e marker 2 cells right, with the same rule about solid cells as the other moves.",
+      "replaces": 0
+     },
+     {
+      "at_action": 18,
+      "rule": "Clicking a right-panel shape toggles the left-panel pieces of the same colour between two states. For a pair of same-colour pieces, it swaps which one is solid (walkable) and which is checkered (blocking).",
+      "replaces": 0
+     },
+     {
+      "at_action": 26,
+      "rule": "The e marker can move from a 2-block onto an adjacent solid bridge block and keep moving along it, and from the bridge back onto 2.",
+      "replaces": 0
+     },
+     {
+      "at_action": 27,
+      "rule": "A level completes when the e marker moves onto the b target cells.",
+      "replaces": 0
+     },
+     {
+      "at_action": 28,
+      "rule": "Clicking a right-panel shape whose colour matches a pivot block inside a left-panel bridge rotates that bridge 90 degrees around the pivot.",
+      "replaces": 0
+     },
+     {
+      "at_action": 33,
+      "rule": "Action 2 moves the e marker 2 cells down, under the same solid-cell rule as the other moves.",
+      "replaces": 0
+     },
+     {
+      "at_action": 47,
+      "rule": "Moving e onto a 2/8 patterned switch block turns it into a plain 2 block and makes a new right-panel control appear.",
+      "replaces": 0
+     },
+     {
+      "at_action": 63,
+      "rule": "A pivot block inside a bridge (such as 6 or d) is walkable like solid bridge cells.",
+      "replaces": 0
+     },
+     {
+      "at_action": 78,
+      "rule": "Action 3 moves the e marker 2 cells left. It can step from a solid bridge onto an adjacent solid bridge of another colour, such as from 9 onto 8.",
+      "replaces": 0
+     },
+     {
+      "at_action": 82,
+      "rule": "Clicking the 8 control again rotates the 8 bridge back. A marker standing on the pivot stays where it is during the rotation.",
+      "replaces": 0
+     },
+     {
+      "at_action": 97,
+      "rule": "When there is no 6-pivot bridge and e stands on a 2-block marked with a 6/7 checker, clicking the 6 control teleports e to the matching 6/7 block elsewhere.",
+      "replaces": 0
+     },
+     {
+      "at_action": 101,
+      "rule": "Stepping e onto any 2-block that carries a pattern of colour C (such as 2/8 or 2/f) turns it into plain 2 and adds a right-panel control of colour C.",
+      "replaces": 8
+     },
+     {
+      "at_action": 127,
+      "rule": "A 5-coloured segment in the middle of a 1-5-1 bridge blocks movement: e cannot step onto it from the 1 end.",
+      "replaces": 1
+     },
+     {
+      "at_action": 234,
+      "rule": "Clicking the 6 control while e stands on a 6/7-marked 2-block moves e to the other 6/7-marked block. If e is not on such a block, the click only swaps the 6/7 checker phase on both blocks.",
+      "replaces": 12
+     },
+     {
+      "at_action": 242,
+      "rule": "Any 5-coloured bridge cells block e's movement, both a 5 middle segment of a 1-5-1 bridge and a lone all-5 bridge.",
+      "replaces": 1
+     },
+     {
+      "at_action": 261,
+      "rule": "For the 6/7 teleport to work, e must stand exactly on the 6/7 checker cells. Clicking 6 then puts e on the other 6/7 block. Being on the 2-block next to the checker is not enough.",
+      "replaces": 12
+     },
+     {
+      "at_action": 290,
+      "rule": "When e stands exactly on a 6/7 checker block, clicking the 6 control teleports e to the other 6/7 checker block.",
+      "replaces": 12
+     },
+     {
+      "at_action": 365,
+      "rule": "The 6 teleport works in both directions between the two 6/7 checker pads. After each teleport the two pads swap their checker phase.",
+      "replaces": 12
+     },
+     {
+      "at_action": 521,
+      "rule": "Clicking the 6 control while e stands on a checker pad teleports e to the other pad with the same checker colours, including a 9/a pad into a hub centre with a 9/a checker.",
+      "replaces": 12
+     },
+     {
+      "at_action": 545,
+      "rule": "A checker pad's colours set where the 6 control sends e: once a pad is recoloured to match another checker (such as c/b), clicking 6 with e on it teleports e to that checker, and the pad takes the colours that checker had.",
+      "replaces": 12
+     }
+    ]
+   },
+   "halted": false
+  },
+  {
+   "game": "re86",
+   "group": "one",
+   "account": "the second subscription",
+   "state": "done",
+   "cap": 1300,
+   "parts": [
+    {
+     "run": "whole-re86-20261122T172802Z",
+     "actions": 655,
+     "state": "done",
+     "seconds_a_call": 240
+    }
+   ],
+   "used_in_design": false,
+   "baseline": {
+    "actions": 1300,
+    "levels_completed": 6,
+    "level_actions": [
+     20,
+     36,
+     47,
+     42,
+     151,
+     77,
+     927,
+     0
+    ],
+    "score": 58.333333333333336
+   },
+   "levels_in_the_game": 8,
+   "actions": 655,
+   "levels_completed": 8,
+   "level_actions": [
+    20,
+    36,
+    47,
+    44,
+    127,
+    72,
+    121,
+    188
+   ],
+   "score": 100.0,
+   "model_replies": 670,
+   "detail": {
+    "run": "whole-re86-20261122T172802Z",
+    "game": "re86",
+    "set_up": "memory layers, object ledger and level brief",
+    "started_after_action": 0,
+    "level_at_start": 1,
+    "new_actions": 655,
+    "levels_completed_in_new_actions": 8,
+    "actions_per_completed_level": [
+     20,
+     36,
+     47,
+     44,
+     127,
+     72,
+     121,
+     188
+    ],
+    "actions_on_the_open_level": 0,
+    "changed_nothing": 0,
+    "changed_nothing_at": [],
+    "repeats_of_a_known_no_effect_action": 0,
+    "in_a_loop": 4,
+    "game_overs": 0,
+    "turns": 655,
+    "turns_announcing_a_test": 19,
+    "cases_opened": 0,
+    "lessons_kept": 0,
+    "further_actions_combined": [],
+    "lessons_offered_too_early_and_dropped": 0,
+    "lessons": [],
+    "game_over_lessons": [],
+    "checks_written": 0,
+    "model_calls": 670,
+    "replies_sent_back": 15,
+    "output_tokens": 1099180,
+    "output_per_call_median": 1100,
+    "stop_reason": "win",
+    "problems": [],
+    "audit": "passes",
+    "arm": "brief",
+    "state": "clean",
+    "briefs": [
+     {
+      "at_action": 21,
+      "level": 2,
+      "asked_for": true,
+      "won_by": "Level 1 completed once the b cross was centred at (15,9), where its arms covered the centres of all four targets with a b centre. The 9 cross already covered all of its 9-centred targets. The least this shows: the level completes when every target's centre lies on the shape whose colour matches that centre.",
+      "different": "The shapes are no longer all plus crosses. c is a diagonal X with radius 11, centred at (27,18) and selected. d is a diamond outline with radius 9, centred at (39,30). 9 is a plus with radius 13, centred at (48,42). The targets are 4-bordered boxes with centres d (3), c (3) and 9 (4).",
+      "why": "The new shapes change which target layouts each shape can cover. Each target set fits its shape exactly: the d targets lie on a diamond centred at (21,12), the c targets on an X centred at (18,48), and the 9 targets on a plus centred at (27,48). All of those offsets are multiples of 3.",
+      "first": "Press action 2 to check that it moves the selected c X down 3. Then move each shape to its computed centre."
+     },
+     {
+      "at_action": 57,
+      "level": 3,
+      "asked_for": true,
+      "won_by": "Level 2 was completed by moving the 9 plus down to centre (27,48). Its arms then lay over the 9 target centres at (15,48), (33,48), (27,36) and (27,60), while the c X and d diamond were already covering theirs. This fits rule 6: every target lies on an outline of its colour.",
+      "different": "There is only one colour (8), shared by all three shapes and all eight targets. The bar is a new shape type: a horizontal line with no vertical arm. Shapes have different radii (bar 21, X 11, diamond 12). There is no fixed pairing between a shape and its targets, so I have to choose which shape covers which target.",
+      "why": "Since every shape has the same colour, any shape can cover any target, which turns the level into an assignment puzzle. The bar's single row lets it cover two targets that are far apart on the same row. Nothing on the board looks able to change shape types or colours, so I treat them as fixed.",
+      "first": "Press action 1 with the bar selected to check that the new bar shape moves up 3 cells like the others did."
+     },
+     {
+      "at_action": 104,
+      "level": 4,
+      "asked_for": true,
+      "won_by": "The last up move put the diamond's centre at (18,30). Its radius-12 outline then covered the remaining colour-8 targets, while the X and the bar already covered theirs, so every target lay on a shape outline.",
+      "different": "There are six new 2-bordered boxes with inner colours a, c, d, b, 6 and e. The shapes are an a-coloured X and a 6-coloured plus, but the targets have centre colours c and e, which match neither shape. No shape-coloured targets exist.",
+      "why": "A shape can only satisfy targets of its own colour, so the shapes must be recoloured. The boxes likely recolour a shape that enters them. The plus can only fit the c targets (centre (15,30)) and the X can only fit the e targets (centre (39,30)).",
+      "first": "Move the plus left to x=30, then up into the c box, and check whether it turns c. That move is needed anyway."
+     },
+     {
+      "at_action": 148,
+      "level": 5,
+      "asked_for": true,
+      "won_by": "The last left move put the e X's diagonals on the remaining e targets. The c plus already covered the c targets, so every target was on the outline of a shape of its own centre colour. This fits rule 6, and nothing stricter was required.",
+      "different": "There are three shapes now: an e diamond, a b X and a c plus. Two of them are larger than before. There are 5 paint boxes, coloured b, a, e, 9 and 8. The targets have centre colours 9 (six of them) and 8 (two). No target matches any shape's current colour. Two targets are partly hidden under the c plus.",
+      "why": "No shape starts with a target colour, so each shape has to be recoloured in the 9 or 8 box before it covers its targets. The sizes decide which shape fits which target group: the plus fits the four bottom 9s, the diamond fits the two top 9s, and the X fits the 8 diagonal.",
+      "first": "Move the X right toward the 8 box, since that is useful anyway. Later, moving the plus will show the centre colours of the hidden targets."
+     },
+     {
+      "at_action": 275,
+      "level": 6,
+      "asked_for": true,
+      "won_by": "Level 5 completed when the last up move put the 8 diamond at centre (51,36). Its outline then passed through every 8 target, while the other targets already lay on the outlines of shapes of their own colour. The least this shows: every target sits on the outline of a shape of matching colour (rule 6).",
+      "different": "Two new things. The b square outline (selected) and the 9 plus each have four targets of their own colour. Neither can cover all four in its current form: the b targets form a 9x27 rectangle, and the 9 targets need the plus centred on both row 9 and column 12, which is impossible. There is also a new 1-coloured block, a square with a diamond hole, at (28..35,28..35). It has no 2 border, so it is not like the earlier paint boxes.",
+      "why": "My rules cannot cover these targets, so the 1 block most likely changes a shape's form, size or orientation (for example square to diamond, or plus to X) when the outline enters it. A level is made to be completed, so the new block is what makes it solvable.",
+      "first": "Move the selected b square up twice and right twice, so its outline enters the 1 block, and see what changes."
+     },
+     {
+      "at_action": 347,
+      "level": 7,
+      "asked_for": true,
+      "won_by": "Level 6 completed when the last left move put the 9 shape's vertical bar on col 12 (rows 3..27) and its horizontal bar on row 9 (cols 6..31), so every 9 target lay on a 9 shape. The horizontal bar was not on the centre row of the vertical bar. The least this shows: each target must lie on a shape cell of matching colour, and a plus's bars may be offset.",
+      "different": "There are 5 paint boxes (9, b, 8, e, 6) along the top. There are 3 shapes at the bottom: a selected a plus, a c 13x13 rectangle, and a 7 plus with a long horizontal arm. There are 3 target colours (8, 9, b), and the 1 block is in the middle. The e and 6 boxes have no matching targets.",
+      "why": "The paint boxes give each shape its target colour. The rectangle's sizes (13+13=26) can be reshaped on the block to 19x7, which fits the 9 targets. The 7 plus's arm lengths match the 8 targets' spans (37 and 19). The a plus's arm lengths fit the b targets once its bars are offset. The e and 6 boxes are probably distractors and should be avoided.",
+      "first": "Nothing new in kind. Move the a plus up to row 18, then right to x=27, then up into the b box, so its vertical arm tip paints it b without crossing the 9 box."
+     },
+     {
+      "at_action": 468,
+      "level": 8,
+      "asked_for": true,
+      "won_by": "One more left move of the 8 plus put its vertical bar on col 9 and its horizontal bar on row 15. That covered the last 8 targets. Every target then lay on the outline of a shape matching its centre colour, which is what rule 6 already says.",
+      "different": "The shapes are two 13x13 hollow rectangles (a and c), and neither colour matches a target. There are two sets of targets, four b and four 6, and each set needs a rectangle of a different size. A strip of nine paint boxes in other colours (a, 8, e, c, 9) runs across rows 28-32, between the shapes/targets and the b and 6 paint boxes at the top left. There are 1 blocks above and below the strip.",
+      "why": "The strip seems meant to repaint any shape that crosses it, so the narrow gap at cols 44-49 is probably the only clean way down. The 1 blocks let a shape be narrowed to fit through the gap and then reshaped to the target sizes: 7x19 for b and 16x10 for 6.",
+      "first": "Move the selected c rectangle once to check that a rectangle moves as one unit and to see how it interacts with the other rectangle."
+     }
+    ],
+    "rule_notes": [
+     {
+      "at_action": 2,
+      "rule": "Action 1 moves the currently selected cross up 3 cells. Each action also turns one cell of the bottom row from f to 1, starting at the right end.",
+      "replaces": 0
+     },
+     {
+      "at_action": 4,
+      "rule": "Action 4 moves the currently selected cross right 3 cells. Action 1 moves it up 3 cells.",
+      "replaces": 0
+     },
+     {
+      "at_action": 7,
+      "rule": "Action 4 moves the selected cross right 3 cells and action 1 moves it up 3 cells. The cross's arms can pass over target markers, painting their cells in the cross colour.",
+      "replaces": 2
+     },
+     {
+      "at_action": 12,
+      "rule": "A cross is moved in steps of 3 cells. Its arms cover any target lying on its centre row or centre column within reach of the arms.",
+      "replaces": 0
+     },
+     {
+      "at_action": 13,
+      "rule": "Action 5 switches which cross is selected. The selected cross shows colour 0 at its centre cell.",
+      "replaces": 0
+     },
+     {
+      "at_action": 14,
+      "rule": "Action 3 moves the currently selected cross left 3 cells.",
+      "replaces": 0
+     },
+     {
+      "at_action": 21,
+      "rule": "A level completes when, for every shape, every target whose centre has that shape's colour lies on the shape's outline. A shape can be a plus, a diagonal X or a diamond.",
+      "replaces": 0
+     },
+     {
+      "at_action": 22,
+      "rule": "Action 2 moves the currently selected shape down 3 cells.",
+      "replaces": 0
+     },
+     {
+      "at_action": 35,
+      "rule": "Action 5 cycles the selection to the next shape. The selected shape's centre cell turns 0 and the previous shape's centre goes back to background.",
+      "replaces": 4
+     },
+     {
+      "at_action": 47,
+      "rule": "The bottom-row counter turns one cell from f to 1 per action, starting at the right end. It probably works as a budget of moves.",
+      "replaces": 0
+     },
+     {
+      "at_action": 48,
+      "rule": "Action 5 cycles the selection through the shapes in turn. The selected shape's centre cell shows 0, and the previously selected shape's centre goes back to background.",
+      "replaces": 4
+     },
+     {
+      "at_action": 49,
+      "rule": "Action 3 moves the selected shape left 3 cells, whatever kind of shape it is (plus, X or diamond).",
+      "replaces": 5
+     },
+     {
+      "at_action": 58,
+      "rule": "Action 1 moves the selected shape up 3 cells, whatever its type (plus, X, diamond or horizontal bar).",
+      "replaces": 1
+     },
+     {
+      "at_action": 70,
+      "rule": "A horizontal bar shape covers only the cells of its own row, from centre-radius to centre+radius. It moves 3 cells per step, like the other shapes.",
+      "replaces": 0
+     },
+     {
+      "at_action": 71,
+      "rule": "Action 3 moves the selected shape left 3 cells, whatever its type, including the horizontal bar.",
+      "replaces": 5
+     },
+     {
+      "at_action": 73,
+      "rule": "Action 4 moves the selected shape right 3 cells, whatever its type (cross, X and so on).",
+      "replaces": 2
+     },
+     {
+      "at_action": 104,
+      "rule": "A level completes when every target lies on the outline of a shape whose colour matches the target's centre colour. That is the least shown: on level 3 the diamond, X and bar each covered their own targets once the last move put the final targets on the diamond's outline.",
+      "replaces": 6
+     },
+     {
+      "at_action": 117,
+      "rule": "A 2-bordered box is a paint station. When part of a shape (for example an arm tip) enters the box's inner area, the whole shape is recoloured to the box's inner colour.",
+      "replaces": 0
+     },
+     {
+      "at_action": 121,
+      "rule": "A shape keeps its new colour after it leaves a paint box: the plus stayed c after moving down and left out of the c box.",
+      "replaces": 0
+     },
+     {
+      "at_action": 141,
+      "rule": "Paint boxes recolour a shape whatever its type: both the plus and the X changed colour when an arm tip entered a box's inner area.",
+      "replaces": 10
+     },
+     {
+      "at_action": 155,
+      "rule": "A paint box with inner colour 8 recoloured the X to 8 when its diagonal tip entered the box's inner area. That is the same behaviour as the other paint box colours.",
+      "replaces": 0
+     },
+     {
+      "at_action": 221,
+      "rule": "The bottom-row counter does not advance on every action; several actions can pass without a cell changing from f to 1.",
+      "replaces": 8
+     },
+     {
+      "at_action": 235,
+      "rule": "Any shape turns the inner colour of a paint box when one of its arm tips enters that box's inner area. This holds for a plus, an X and a diamond, whatever the box colour (b, c, e, 8 or 9).",
+      "replaces": 10
+     },
+     {
+      "at_action": 271,
+      "rule": "A shape turns a paint box's inner colour when any cell of its outline enters that box's inner area, not only an arm tip. The diamond's edge entering the 8 box was enough.",
+      "replaces": 10
+     },
+     {
+      "at_action": 281,
+      "rule": "Pushing a shape right into a 1-coloured block keeps the shape's touching edge in place, makes it 3 cells narrower and makes it 3 cells taller with each push.",
+      "replaces": 8
+     },
+     {
+      "at_action": 300,
+      "rule": "Action 2 moves the currently selected shape down 3 cells, whatever its type, including a reshaped rectangle.",
+      "replaces": 7
+     },
+     {
+      "at_action": 347,
+      "rule": "A plus can be split into two separate bars. Moving it while one bar is blocked by a 1 block moves only the free bar, so the horizontal bar no longer has to sit on the vertical bar's centre row. Level 6 was won with the bars offset by 6 rows.",
+      "replaces": 9
+     },
+     {
+      "at_action": 395,
+      "rule": "A shape is recoloured as soon as its outline overlaps a paint box's border row, not only its inner area: the rectangle's top edge on the 9 box's bottom border made it 9.",
+      "replaces": 10
+     },
+     {
+      "at_action": 396,
+      "rule": "A shape is recoloured as soon as its outline overlaps a paint box's border row, not only its inner area.",
+      "replaces": 10
+     },
+     {
+      "at_action": 401,
+      "rule": "Pushing a shape into a 1-coloured block in any direction keeps its touching edge in place. Each push shortens the shape by 3 along the push direction and lengthens it by 3 across it.",
+      "replaces": 8
+     },
+     {
+      "at_action": 402,
+      "rule": "Pushing a shape into a 1-coloured block keeps its touching edge in place. Each push shortens it by 3 along the push direction and lengthens it by 3 across it. Which side the extra length grows on can vary between pushes.",
+      "replaces": 8
+     },
+     {
+      "at_action": 545,
+      "rule": "A shape pushed into a 1 block narrows by 3 along the push direction and widens by 3 across it each push. Its touching edge stays in place, and it can be pushed repeatedly to reach the size needed.",
+      "replaces": 8
+     },
+     {
+      "at_action": 560,
+      "rule": "Pushing a shape into a 1 block shortens it by 3 along the push and lengthens it by 3 across it. Seen when pushing left: the touching (left) edge and the bottom edge stayed put, the right edge moved in and the top rose. It can be repeated.",
+      "replaces": 8
+     },
+     {
+      "at_action": 561,
+      "rule": "Pushing a shape into a 1 block shortens it by 3 along the push and lengthens it by 3 across it. The touching edge stays put, but the cross-axis growth can go to either end (on one push the top rose, on the next the bottom extended).",
+      "replaces": 8
+     },
+     {
+      "at_action": 562,
+      "rule": "Pushing a shape into a 1 block shortens it by 3 along the push and lengthens it by 3 across it. The touching edge stays put. The cross-axis growth can go to either end, and the shape can grow 3 at both ends.",
+      "replaces": 8
+     },
+     {
+      "at_action": 604,
+      "rule": "A paint box recolours a shape when the shape's outline overlaps the box's border row from any side, including from below: an upward move putting the shape's top edge on the box's bottom border row recoloured it.",
+      "replaces": 10
+     },
+     {
+      "at_action": 646,
+      "rule": "Pushing a shape into a 1 block shortens it by 3 along the push and lengthens it by 3 across it, keeping the touching edge in place. A down push turned a 4x22 rectangle into 7x19 with its bottom edge unchanged.",
+      "replaces": 8
+     }
+    ]
+   },
+   "halted": false
+  }
+ ],
+ "games_not_ended": [],
+ "all_games_of_this_set": {
+  "games": 2,
+  "levels_completed": {
+   "layers": 14,
+   "baseline": 10
+  },
+  "mean_game_score": {
+   "layers": 100.0,
+   "baseline": 49.34
+  },
+  "reading": "better",
+  "actions": {
+   "layers": 1274,
+   "baseline": 2550
+  }
+ },
+ "halted_games": []
+}

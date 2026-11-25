@@ -1,0 +1,139 @@
+\section{Layered Per-Game Results and Evidence Status}\label{app:layered}
+Table~\ref{tab:layered-games} compares the final baseline and layered runs, using results from their closing scorecards. All 25 layered runs had ended or halted. The End column describes the layered run. W denotes a win, C an action-cap ending, and H a timeout halt. These were local stopping reasons. A replay state of \texttt{NOT\_FINISHED} could still describe a run that reached its action cap.
+
+A dagger marks a game used to design or tune a layer, or studied during development. This includes \texttt{g50t}, which I used for ledger tests and replay study, although I designed no layer on it. The games without a dagger were not a held-out test set.
+\begin{longtable}{@{}lrrr rrr c@{}}
+\caption{The table gives the final baseline and layered results, which competition-mode replay confirmed. Levels are completed levels divided by available levels. Actions include resets. Scores are RHAE percentages. In the All games row, levels and actions are totals, and scores are equal-game means. End describes the layered run, with W denoting a win, C an action-cap ending, and H a timeout. A dagger marks development exposure, as described above.}\label{tab:layered-games}\\
+\toprule
+Game & \multicolumn{3}{c}{Baseline} & \multicolumn{3}{c}{Final layered runs} & End\\
+ & Levels & Actions & Score & Levels & Actions & Score & \\\midrule
+\endfirsthead
+\toprule Game & \multicolumn{3}{c}{Baseline} & \multicolumn{3}{c}{Final layered runs} & End\\
+ & Levels & Actions & Score & Levels & Actions & Score & \\\midrule
+\endhead
+\texttt{ar25} & 8/8 & 393 & 100.00 & 8/8 & 263 & 100.00 & W\\
+\texttt{bp35}$^{\dagger}$ & 4/9 & 700 & 3.63 & 8/9 & 397 & 80.00 & H\\
+\texttt{cd82}$^{\dagger}$ & 2/6 & 200 & 14.29 & 6/6 & 112 & 100.00 & W\\
+\texttt{cn04} & 4/6 & 800 & 47.62 & 6/6 & 303 & 100.00 & W\\
+\texttt{dc22} & 4/6 & 1,250 & 40.34 & 6/6 & 619 & 100.00 & W\\
+\texttt{ft09} & 6/6 & 75 & 100.00 & 6/6 & 75 & 100.00 & W\\
+\texttt{g50t}$^{\dagger}$ & 2/7 & 900 & 10.71 & 7/7 & 359 & 100.00 & W\\
+\texttt{ka59} & 3/7 & 750 & 10.16 & 7/7 & 508 & 100.00 & W\\
+\texttt{lf52} & 4/10 & 1,350 & 8.54 & 5/10 & 1,350 & 27.27 & C\\
+\texttt{lp85} & 8/8 & 124 & 100.00 & 8/8 & 107 & 100.00 & W\\
+\texttt{ls20}$^{\dagger}$ & 2/7 & 800 & 10.71 & 6/7 & 800 & 70.85 & C\\
+\texttt{m0r0} & 2/6 & 1,150 & 14.29 & 6/6 & 260 & 100.00 & W\\
+\texttt{r11l} & 6/6 & 159 & 92.35 & 6/6 & 92 & 100.00 & W\\
+\texttt{re86} & 6/8 & 1,300 & 58.33 & 8/8 & 655 & 100.00 & W\\
+\texttt{s5i5}$^{\dagger}$ & 8/8 & 486 & 85.34 & 6/8 & 201 & 58.33 & H\\
+\texttt{sb26} & 8/8 & 127 & 100.00 & 8/8 & 125 & 100.00 & W\\
+\texttt{sc25} & 3/6 & 350 & 27.11 & 3/6 & 350 & 28.57 & C\\
+\texttt{sk48} & 4/8 & 1,100 & 15.93 & 8/8 & 494 & 100.00 & W\\
+\texttt{sp80} & 4/6 & 550 & 47.62 & 6/6 & 447 & 99.17 & W\\
+\texttt{su15}$^{\dagger}$ & 7/9 & 400 & 45.89 & 9/9 & 291 & 94.73 & W\\
+\texttt{tn36} & 4/7 & 350 & 19.11 & 6/7 & 350 & 75.00 & C\\
+\texttt{tr87}$^{\dagger}$ & 4/6 & 450 & 27.09 & 4/6 & 259 & 47.62 & H\\
+\texttt{tu93} & 8/9 & 500 & 62.20 & 9/9 & 200 & 100.00 & W\\
+\texttt{vc33}$^{\dagger}$ & 7/7 & 446 & 72.27 & 7/7 & 219 & 100.00 & W\\
+\texttt{wa30} & 7/9 & 1,850 & 41.44 & 7/9 & 1,850 & 52.68 & C\\
+\midrule
+All games & 125/183 & 16,560 & 46.20 & 166/183 & 10,686 & 85.37 & \\
+\bottomrule
+\end{longtable}
+
+The layered runs finished with 17 wins, five action-cap endings, and three timeout halts. They completed 166 levels in 10,686 actions, compared with 125 levels in 16,560 actions for the baseline.
+
+In the layered \texttt{wa30} run, the agent completed level 7 at action 1,560 and reached the cap at action 1,850 without completing level 8. The final manifest recorded its 52.67853748\% game score and all per-level action counts. I stopped an initial attempt after 17 actions as a precaution and restarted the game. Those 17 actions were additional execution work excluded from the reported run. I retained earlier partial cutoffs as historical records.
+
+\textbf{Layered configuration record.} The evaluated layered runs disabled the optional \texttt{pattern\_relations} setting.
+
+\section{Historical Baseline Prompts, Inputs, and Configuration}\label{app:prompts}
+This appendix documents the original November 6 baseline, which used a 100-action cap per game. Its prompts, configuration, and exposure ledger were historical records. They did not describe the layered prompts or the eight-game development-exposure grouping used in the main study.
+
+\subsection{Exact system prompt}
+The original baseline system prompt concatenated \texttt{SYSTEM}, \texttt{HEX\_NOTE}, and \texttt{RESET\_NOTE} from the archived policy. The text below is exact apart from display wrapping. The machine-readable file preserved it as a single string.
+\lstinputlisting{data/system_prompt.txt}
+
+\subsection{User request and response contract}
+Each user message was compact JSON with the three fields \texttt{evidence}, \texttt{output\_contract}, and \texttt{procedure}. The evidence included the current observation, recent transitions, the number of omitted transitions, and the model's current hypotheses.
+
+Each current observation contained its observation ID, game ID, game state, completed and target level counts, legal actions, reset flag, omitted-frame count, and final board. Each transition recorded its ID, the chosen action, observed changes, cell changes, and resulting observation. The prediction-check field was empty because prospective prediction output was inactive in this baseline.
+
+The following template illustrates the required response structure; the descriptive strings are placeholders for the values the model had to supply.
+\begin{lstlisting}
+{"action":{"action_id":"one legal integer from 1 to 7",
+           "action_data":"x,y for ACTION6; otherwise {}"},
+ "hypotheses":[{"id":"short ID","statement":"testable claim",
+   "status":"tentative|supported_locally|contradicted",
+   "evidence_ids":["supplied transition or observation ID"]}]}
+\end{lstlisting}
+The first procedure string was exactly \texttt{Keep competing hypotheses; tie each claim to available evidence. An empty list is allowed.} The harness generated the second string by substituting the number of recorded transitions $n$ in its two numeric positions.
+\begin{lstlisting}
+evidence_ids may cite any transition so far (t1..t<n>) or observed board (o0 is the initial board, oN the board after tN; o<n> is the current board), including ones no longer shown. A status other than tentative needs at least one such ID.
+\end{lstlisting}
+Here \texttt{<n>} denotes substitution, not literal prompt text. A retry would add a fourth payload field, \code{previous_reply_rejected}, containing up to 500 characters of rejection feedback. No retry occurred in this run.
+
+The full JSON schema was in \code{schemas/response.schema.json}. It limited action IDs to 1--7, coordinates to integers 0--63, and hypotheses to eight entries. Hypothesis IDs had to contain 1--64 characters, and statements had to contain 1--1,000 characters. The policy parser also checked that the action was currently legal, click actions had exactly the required fields, non-click actions had empty data, references were valid, and non-tentative statuses cited evidence.
+
+\subsection{Model and execution manifest}
+Table~\ref{tab:manifest} records the source and runtime used for the original baseline. The evaluated configuration, \code{data/evaluated_config.json}, was an unchanged copy of the archived competition configuration. It included settings shared with other backends. The CLI ignored the API-specific thinking field in this run. The archived source recorded the CLI effort argument, output environment variable, and custom prompt.
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{3.0cm}Y@{}}\toprule
+Record & Value or binding\\\midrule
+Source archive & \code{38f41e9d2e9937fd5bcbfbb6fe2c6e126f597039} (committed November 6 at 20:50 UTC, after evaluation)\\
+Evaluated package & \code{research/claude_arc_v1} (custom CLI backend)\\
+Configuration & \code{config/claude_arc_v1.opus55_competition.json}\\
+CLI / model & 2.1.318 / \code{claude-opus-5-5} on every returned call\\
+ARC SDK requirement & \code{arc-agi==0.9.9} (checked at startup)\\
+Run interval & November 6, 2026, 05:41--19:37 UTC\\
+Source integrity record & Startup SHA-256 hashes of evaluated Python files and configuration, plus backend version and executable hash\\
+Artifact scope & Public scorecard and replays, paper data, and scoring script. Full local inference and event archive not included\\\bottomrule
+\end{tabularx}
+\caption{The table lists the source and runtime records for the November 6, 100-action baseline. The archived source, the run-start hash records, and the full local event archive are distinct artifacts.}\label{tab:manifest}
+\end{table}
+
+\subsection{Completed-game action accounting}
+The original 100-action baseline won one game, \texttt{ft09}. Table~\ref{tab:ft09} gives its per-level action counts, human baselines, and efficiencies. Because I had already used \texttt{ft09} for a brief trial run, this win did not show performance on an unseen game.
+\begin{table}[H]
+\centering\small
+\begin{tabular}{@{}rrrrr@{}}\toprule
+Level & Agent actions & Human baseline & Level efficiency & Cumulative actions\\\midrule
+1 & 4 & 43 & 1.15 & 4\\
+2 & 7 & 12 & 1.15 & 11\\
+3 & 14 & 23 & 1.15 & 25\\
+4 & 16 & 28 & 1.15 & 41\\
+5 & 21 & 65 & 1.15 & 62\\
+6 & 13 & 37 & 1.15 & 75\\\bottomrule
+\end{tabular}
+\caption{The table gives the per-level records for \texttt{ft09-0d8bbf25} in the original 100-action baseline. The agent completed all six levels in 75 actions, with no reset. Human baselines were action counts. Level efficiencies followed Equation~\eqref{eq:level}.}\label{tab:ft09}
+\end{table}
+
+\section{Baseline Run Records and Reproduction}\label{app:records}
+The archived launcher for a new evaluation with the original 100-action baseline code was \code{scripts/run_claude_arc_opus55.sh} \texttt{competition} from the parent-project archive at \code{38f41e9d2e9937fd5bcbfbb6fe2c6e126f597039}. The launcher ran \texttt{python -m research.claude\_arc\_v1.cli} with the competition configuration and confirmations for online ARC evaluation, subscription usage, and competition mode.
+
+Execution required the pinned Python environment, an ARC API key, and Claude CLI access authenticated under the intended account. The paper source contained no credentials. A rerun would consume account allowance and create a new online evaluation. Stochastic model output could produce a different result.
+
+The launcher created a new private directory under \code{.cache/claude_arc_runs}. The CLI recorded the source and backend bindings, created a scorecard, evaluated the current game list in order, closed the scorecard, and ran its record auditor. It used the game versions provided at execution time by the ARC service rather than fixing them to the 25 versions in the archived evaluation.
+
+The paper source provides the following command, which reproduces the archived calculations without making a model call. Table~\ref{tab:artifacts} lists the supporting files.
+\begin{lstlisting}
+python3 analyze_results.py
+\end{lstlisting}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{5.9cm}Y@{}}\toprule
+Shared paper artifact & Contents\\\midrule
+\code{data/scorecard_snapshot.json} & Transcribed scorecard, 25 games and 183 levels, with public replay links\\
+\code{data/per_game_results.csv} & Versioned outcomes, exposure groups, counted actions, resets, and scorecard states\\
+\code{data/level_results.csv} & Integer action totals, human baselines, completion flags, and displayed level efficiencies\\
+\code{data/run_summary.csv} & Aggregate run accounting, with measurement source stated for each field\\
+\code{data/scoring_audit.json} & Recomputed RHAE, weighted completion, and budget counterfactual\\
+\code{data/system_prompt.txt} & Exact evaluated system prompt\\
+\code{data/evaluated_config.json} & Unchanged competition configuration\\
+\code{data/holdout_ledger.yaml} & Existing development and reduced-exposure partition\\\bottomrule
+\end{tabularx}
+\caption{The table lists the shared artifacts for the original 100-action baseline. The configuration and ledger are source records. The scorecard tables are transcriptions. Inference totals are run-accounting summaries. The paper source does not include the full local event archive.}\label{tab:artifacts}
+\end{table}

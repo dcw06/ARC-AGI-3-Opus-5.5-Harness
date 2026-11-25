@@ -1,0 +1,28 @@
+\section{Introduction}\label{sec:introduction}
+ARC-AGI-3 asks an agent to discover the rules and objectives of unfamiliar interactive games and scores it by how efficiently it acts compared with a human baseline \citep{arc2026technical}. The agent studied here used Claude Opus 5.5 as its language model. Its harness gathered relevant evidence from the game, managed memory, and executed the model's chosen actions. The harness determined what information was available to the model. In the baseline, this included the current game board, up to two earlier board positions, the eight most recent actions, and up to eight hypotheses about the game rules and objectives that the model wrote.
+
+In level 2 of the baseline run of \texttt{bp35}, an ARC-AGI-3 game, the model's piece rose into a purple tile at action 23 and the game ended. The model then recorded that rising into tiles of that kind was fatal. By action 32, this fatal move was no longer among the eight most recent actions shown to the model. At action 33, the model marked the rule as tentative, meaning it treated the rule as uncertain. By action 36, the model's notes no longer contained the rule. Later, the model described the same purple tiles as ``hazards or goals'' with an unknown role. At action 48, the piece rose into another purple tile and the game ended again (Figure~\ref{fig:bp35-example}) \citep{dai2026memoryfix}.
+
+\input{figures/bp35_example}
+
+To see whether evidence from an earlier mistake would help the agent avoid repeating it, I returned to the saved model input just before action 48. I generated eight replies using the original input and eight using the same input with two earlier boards added. These boards showed the game immediately before and after the fatal move at action 23. All eight replies to the original input chose the fatal move. With the earlier boards added, four of eight replies chose it \citep{dai2026positiontest}.
+
+The board test restored the earlier boards, while the evaluated harness kept a written lesson and asked the model to check its proposed action against that lesson. In the same test, five of eight replies given the model-written lesson and this check chose the fatal move, compared with all eight replies to the original input \citep{dai2026memoryfix}. These small tests examined the next decision at one saved position; they did not show whether the agent later completed the level.
+
+I hypothesized that an agent with the model's lessons, rules, and notes about the board available at every decision would complete more levels and reach a higher Relative Human Action Efficiency (RHAE) than the baseline under the same action caps. The main study tested this hypothesis. The layered harness added four memory layers to the baseline. The model wrote lessons after a game over or an action that had no effect. An object ledger grouped board regions by appearance and kept the model's notes about them. A separate list preserved rules the model recorded during play. A level brief summarized how the previous level ended and what to investigate next.
+
+All four layers used only the agent's own actions and observations. The model received no game-specific hints, could not use tools or access the game's source code, and had no memory from other games.
+
+The difference showed in most games, not only in the average. The layered run scored higher than the baseline run in 20 of the 25 games, the same in four, and lower in one (Figure~\ref{fig:per-game-scores}).
+
+\input{figures/per_game_scores}
+
+\Needspace{6\baselineskip}
+This paper makes three contributions.
+\begin{itemize}
+\item \textbf{A layered harness} (Section~\ref{sec:layers}). I added four memory layers to the baseline harness, which had none of them. Figures~\ref{fig:lesson-game-over}--\ref{fig:level-brief} illustrate the layers with examples from the evaluated runs.
+\item \textbf{A whole-game comparison on all 25 public games} (Sections~\ref{sec:result-score}--\ref{sec:result-budget}). I ran each harness once per game under the same per-game action caps. The layered harness scored 85.37\% RHAE, compared with 46.20\% for the baseline, completed 166 of 183 levels, compared with 125, and used 35.5\% fewer actions. Replaying the recorded actions through the ARC service confirmed both scores.
+\item \textbf{Controlled tests of the level-brief package} (Section~\ref{sec:result-brief}). This package holds the level brief, the rule list, and two supporting features. Under a decision rule fixed before testing, it completed more levels in both test sets and met the benefit criterion in the second.
+\end{itemize}
+
+The thesis of this paper is that a language-model agent acts more efficiently on ARC-AGI-3 when its harness keeps the model's own lessons, rules, and notes about the board available at every decision. On these public games, the harness with all four layers performed better than the baseline. Because the whole-game comparison enabled all four layers together, it cannot determine how much each layer contributed. I used or studied eight of the tested games during development, and baseline summaries from all 25 informed it, so the results do not establish performance on unseen games. Section~\ref{sec:discussion} discusses these limits and the replication needed to address them. Appendix~\ref{app:analysis} presents the earlier 100-action baseline analysis and a two-game study of another system as context.

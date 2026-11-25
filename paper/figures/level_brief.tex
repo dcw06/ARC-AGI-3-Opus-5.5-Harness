@@ -1,0 +1,29 @@
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[c]{0.47\linewidth}
+\centering
+\begin{tabular}{@{}c@{\hspace{6pt}}c@{}}
+\begin{markedboard}[0.48\linewidth]{level-brief-a.png}
+\node[note,anchor=south west] (won) at (0.04,0.74) {player on the\\last target tile};
+\draw[pointer] (0.156,0.74) -- (0.156,0.632);
+\end{markedboard} &
+\begin{markedboard}[0.48\linewidth]{level-brief-b.png}
+\node[note,anchor=north west] (new) at (0.04,0.60) {new block,\\color f};
+\draw[pointer] (0.281,0.60) -- (0.281,0.682);
+\end{markedboard}\\[1pt]
+\footnotesize (a) Completion feedback & \footnotesize (b) First board of level 6
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.50\linewidth}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}lY@{}}\toprule
+Field & What the model wrote (shortened)\\\midrule
+\texttt{won\_by} & ``Level 5 completed when the player stepped right onto the last uncovered target tile (8,24). [\ldots] So target tiles covered by the player or by c counted, not only those covered by boxes.''\\
+\texttt{different} & ``New things: an f 4x4 block at (16,16). [\ldots] There is no c helper. A wall of 5s, 8 wide, at x44-51, with a gap at rows 24-27.''\\
+\texttt{why} & ``Without c, the player has to cover the targets with boxes and/or its own body. The f block is the unknown: maybe a box source, a switch, or a stand-in for a helper.''\\
+\texttt{first} & ``Move up toward the f block at (16,16), the new thing, and step next to it to see whether it can be grabbed or reacts.''\\\midrule
+Rule added & ``A level completes once every 9-bordered target tile is covered by something: a box, the player, or helper c all count [\ldots].''\\\bottomrule
+\end{tabularx}
+\end{minipage}
+\caption{\textbf{At the start of a new level, the model summarized how the previous level ended and decided what to investigate next.} In the layered run of \texttt{wa30}, action 591 completed level 5. Panel (a) shows the frame the harness selected from that action's animation as completion feedback. Panel (b) shows the first board of level 6. The table quotes the brief the model wrote before its first action in level 6, and the rule it added to its rule list in the same reply. I shortened the quoted text: [\ldots] marks cuts within excerpts, and I also omitted some endings. In the model's text, 5, 9, c, and f are color codes. The brief and the rule are the model's interpretation, which the harness did not check \citep{dai2026runfigures}.}\label{fig:level-brief}
+\end{figure}

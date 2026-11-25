@@ -1,0 +1,276 @@
+{
+  "repository": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness",
+  "reviewed_commit": "17d00cfdef7944dda9fd9388efa49fccce4877aa",
+  "review_date": "2026-11-24",
+  "files": [
+    {
+      "path": "reports/baseline_continue_v1/data/scorecard_replay_manifest_3.json",
+      "git_blob_sha": "069f22a8ddaf26a6090ce706251d7ed92aa5c115",
+      "sha256": "00ae0a93ddab9f504e12c8a93ddb3ed27170faf87f22306f18ba641828c2c58b",
+      "size_bytes": 32785
+    },
+    {
+      "path": "reports/level_brief_v1/data/scorecard_replay_manifest.json",
+      "git_blob_sha": "dd3eee29aa71461d64567a6704fc701ad6d4b47b",
+      "sha256": "d89b9bb38232f30130d8b584edabbc4f0442b385e82c4156295d40c3165197c1",
+      "size_bytes": 32907
+    },
+    {
+      "path": "reports/level_brief_v1/token_usage.json",
+      "git_blob_sha": "04898f46437e4d5be792e45b9adf42aeaf4b46ac",
+      "sha256": "be7b05b56f4ee2e70b9c743ee3e36658eb19cdc94e1c7d8c0c02f7cdaef51fa9",
+      "size_bytes": 13750
+    },
+    {
+      "path": "reports/level_brief_v1/whole-results-20261121T235533Z.json",
+      "git_blob_sha": "eb6a242072820530bb27355d8b843f4cf2bc3968",
+      "sha256": "f425956a5b51b58af92bf3456351b78b03cae367e9426d39be4e7cc17926bcb3",
+      "size_bytes": 262912
+    },
+    {
+      "path": "reports/level_brief_v1/whole-results-20261122T071626Z.json",
+      "git_blob_sha": "c92861b8db3558a6c2d0a5dc95fd293874741b6f",
+      "sha256": "19230ec51fcccd8fa81442ac6477f84b02dcc53b5b3f4de069bfb13be0015cc1",
+      "size_bytes": 187958
+    },
+    {
+      "path": "reports/level_brief_v1/whole-results-20261122T172802Z.json",
+      "git_blob_sha": "bc258e41c81132ef025720c4006be8986e2aa333",
+      "sha256": "e7ab5c7acf9d5e1062aa296bd55be2722acb62df4abb0fb676771033f7957df0",
+      "size_bytes": 47660
+    },
+    {
+      "path": "reports/level_brief_v1/whole-results-20261122T173235Z.json",
+      "git_blob_sha": "c6ea2a337ab586c7758bcddb9b49ea369618041e",
+      "sha256": "14b2732dd80874b31f5ae9e4b598c8ba147d5effd2947fe142ad304117408f0e",
+      "size_bytes": 29597
+    },
+    {
+      "path": "research/level_brief_v1/replay_scorecard.py",
+      "git_blob_sha": "e8f1699c94f184108063f4d3f257c71fac386a8b",
+      "sha256": "63dd0f87dd6efe81adb8c1d041a189fb4d484c26e4ca4d17865552956ddc530d",
+      "size_bytes": 13833
+    },
+    {
+      "path": "research/level_brief_v1/whole_games_official.py",
+      "git_blob_sha": "b575e1b2ae33ea2326ffa813aacdaf45bc32bc80",
+      "sha256": "2b2be24eeed44520ac1a6aa3c48967ba93edd7559702b8eff7dfc4b9c75de437",
+      "size_bytes": 4493
+    },
+    {
+      "path": "research/level_brief_v1/whole_verify.py",
+      "git_blob_sha": "86ebe0fd7dd14492a37aa88e2bcb318763361d28",
+      "sha256": "0c126b0e31d74db6c10816d94995e9d416c3810d554e907654e27441cdb0f8c0",
+      "size_bytes": 14289
+    },
+    {
+      "path": "reports/level_brief_v1/whole-log-counts.json",
+      "git_blob_sha": "21dd354fbca1fb668a70d5a68f890d38fd7c38ee",
+      "sha256": "843b94ff97a4ac23adf903880385f0f2035bb48353dfe63ca7c622f0107460ea",
+      "size_bytes": 16634
+    },
+    {
+      "path": "reports/level_brief_v1/figures/README.md",
+      "git_blob_sha": "c9eed21401c52d1c34aaeadf2b620e4f1e93e1f9",
+      "sha256": "178a93df572c0a0b792bec66b6dcbcdca641aef9c9d3596254426d2506612abf",
+      "size_bytes": 10576
+    },
+    {
+      "path": "research/level_brief_v1/paper_figures.py",
+      "git_blob_sha": "39a3cdc7989291963532db31774bbfed6e8eb323",
+      "sha256": "39f325d22a06dc97a9fb41c1dffa83818b2a76f9839239a97729772273c7d592",
+      "size_bytes": 25917
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/frames-between-a.png",
+      "git_blob_sha": "629db110613edd6fd68bdc9b624f390ec3fe18e0",
+      "sha256": "06919dfe8fd1fb232eb9a6ce62dce8d473073e1c4cf018fb9e3a2ddd9dcef548",
+      "size_bytes": 4590
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/frames-between-b.png",
+      "git_blob_sha": "ebb4224bc00ab7ee7802578fa6f4943c283086b9",
+      "sha256": "928ac977750872cfb9e1e5baf452613fdb4d159a384fb7440a2e5926c5d7fc08",
+      "size_bytes": 3934
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/frames-between-c.png",
+      "git_blob_sha": "f572ae5aa51e364341186cd2fcda4aa45d79a710",
+      "sha256": "e4c6a9ad9c03c06ed6418f6b8596cbe548188491bdf1ae232d350f936dafd8a4",
+      "size_bytes": 3051
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/frames-between-d.png",
+      "git_blob_sha": "4c331ac309bf03335f37640ac72efa0200ecdf52",
+      "sha256": "6da6bc5a3abc9cacd08f41c8d82339f8374c2b0b7e66405b1a3a6ffa444b28cd",
+      "size_bytes": 3915
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/lessons-game-over-a.png",
+      "git_blob_sha": "483aa66500168d9d71dec701b5af10c9e141df1d",
+      "sha256": "6b19b529a4c8dc3705c2fcfbf08a6f59be318064c254a976449607ee07526286",
+      "size_bytes": 3147
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/lessons-game-over-b.png",
+      "git_blob_sha": "397b489a21bee85cbbe8c02d88ce7a33cc6f4a89",
+      "sha256": "f8fb14f3a36c01578d84ef9b4f6f2eaabd810bf0aa150b895353a8c73273fe37",
+      "size_bytes": 3142
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/lessons-no-effect-a.png",
+      "git_blob_sha": "32974aaa71481d1d5b6947ad5f042851eefd71ac",
+      "sha256": "61767a12a1f531d0be05b5a72821c5c26678ce0258ccb50375d81ee26abe2bcd",
+      "size_bytes": 3704
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/lessons-no-effect-b.png",
+      "git_blob_sha": "c56fdf30f5d287c5c9d7869ea9f321de5b3aa84e",
+      "sha256": "cfd3bfd830d927b6b869c4d1163bc5ba1bde5ea54665cae3c12351e81727be28",
+      "size_bytes": 3071
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/level-brief-a.png",
+      "git_blob_sha": "0f6a213b67c562078069c480a18c458ba16bf7ac",
+      "sha256": "108e91448bd4e4e4d1bb7ef6dea04e6165f6371c4dea6331d73eb738e66a34ab",
+      "size_bytes": 3088
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/level-brief-b.png",
+      "git_blob_sha": "e1db192bda3a394b78903c1bba13e0e51569474f",
+      "sha256": "606c255e9fa6afe054ac580a19e17f4a54b2f6d82fe75e2bf0780eb40194d944",
+      "size_bytes": 3094
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/object-ledger-a.png",
+      "git_blob_sha": "8b167e5fc31e105a7c429eb6ba8583154722b86e",
+      "sha256": "d77643e34d377fb50b57463022e1b8433cb19cf526358c6f37e49e81c6ad8bce",
+      "size_bytes": 7922
+    },
+    {
+      "path": "reports/memory_fix_v1/README.md",
+      "git_blob_sha": "e10995676682cad815e23f413fb36a4a895a8123",
+      "sha256": "976c0817895540eee8e37e98c5d57961085935e31ba77421ae921799b9d37c2b",
+      "size_bytes": 19327
+    },
+    {
+      "path": "reports/memory_fix_v1/death_test/scores.json",
+      "git_blob_sha": "af3161f259fd7ba360af4d3aeb0471d330e5c1da",
+      "sha256": "5025ab9e7e7393c393f69e7dc6a49f3585393c32cb2cd895c713d8a7041c5b19",
+      "size_bytes": 4563
+    },
+    {
+      "path": "reports/baseline_continue_v1/data/recorded_actions_3.json",
+      "git_blob_sha": "5c3b6f1f7d1c03f4554964fd0c5972858c66164c",
+      "sha256": "90f6b34a61960fd5e742beeef3421433ce9a0bd4aedb4bc0592cf55dcc65bc07",
+      "size_bytes": 133076
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/baseline-forgetting-a.png",
+      "git_blob_sha": "fa94021209a4203c0b675f2182e36b327afd4a9e",
+      "sha256": "df7d87933b10916676d283e5eacd438bd812445d52de8cdbd14490be73443eaa",
+      "size_bytes": 4755
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/baseline-forgetting-b.png",
+      "git_blob_sha": "bb890185e03afd4701ad522023976907dab67e2c",
+      "sha256": "8b20565ac17fcf339f87c6640c03dca3348756d779679e98162e8d2a3c6d95f3",
+      "size_bytes": 4073
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/baseline-forgetting-c.png",
+      "git_blob_sha": "eaa30a42f72f4b605bac4be5ec83da7d76867f08",
+      "sha256": "408ddda6a4484284fdf2611a91234c0b258aea319b2358934803dad6f7deac8d",
+      "size_bytes": 4009
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/baseline-forgetting-d.png",
+      "git_blob_sha": "60560483be9e66b6d200714f98d109175f87c8fc",
+      "sha256": "28eeaaf88c80a3b9ca2521c958b8bc13223e093b0c4934e0c83d0cc52dd5a130",
+      "size_bytes": 3982
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/step-counter-a.png",
+      "git_blob_sha": "d2b64af58c0aa96450ebe5972a5047e1bf968b83",
+      "sha256": "1d77fb2f62655d395f84a30df7413799a08ae181f85b71a0acff549bc4f30ed6",
+      "size_bytes": 3475
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/step-counter-b.png",
+      "git_blob_sha": "e22071af72f06abb48ff1b5f731d5912fe2a1566",
+      "sha256": "a75f3b8c010103d8192b4e1613211b968361554c3cb19dd29ae217bac1f0ca05",
+      "size_bytes": 3483
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/step-counter-c.png",
+      "git_blob_sha": "a2a3b247ab9690cfb0671450600e323c240b53b8",
+      "sha256": "e1679ff426f1f378faa2a31d51a1b624729aa14676543c631307f9119a4bfeb1",
+      "size_bytes": 3501
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/step-counter-d.png",
+      "git_blob_sha": "7182b4c8af1cfe363e7cfacb69775fb1b4b238bd",
+      "sha256": "bec6b1fd4aef27d1b9ff4710184201ed81931b04d346b303f647754351cdb353",
+      "size_bytes": 720
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/step-counter-e.png",
+      "git_blob_sha": "4016edcff9b6ef1da25e4c0e55e1395376321c58",
+      "sha256": "3bb1dc1307fd827ee0f75cb91ad56f61002f89b02e8e491e0fd5a15f73082145",
+      "size_bytes": 721
+    },
+    {
+      "path": "reports/level_brief_v1/figures/panels/step-counter-f.png",
+      "git_blob_sha": "43290b9b1ea7373afc6485b1a2720c6bd1f12842",
+      "sha256": "54f0131f2b173cb75210e3b1e77282a552024a9218e9f6ac249ae6797e8db056",
+      "size_bytes": 721
+    },
+    {
+      "path": "reports/level_brief_v1/figures/worked_example_wa30.json",
+      "git_blob_sha": "bcd19c6d3404baad326fa94961516474a0a08aad",
+      "sha256": "0eec6acf82104619af6ee2d94b5fff9b472ed230ab07658294c3cb29b1c5cfaa",
+      "size_bytes": 2689
+    },
+    {
+      "path": "reports/level_brief_v1/game_over_counts.json",
+      "git_blob_sha": "ae5936b39544de6dd90acffc307e77600ced76b9",
+      "sha256": "7f9eb028b7e40c707d3d244a02e23632b3292f2d158c2c62648ab52871f65873",
+      "size_bytes": 5629
+    },
+    {
+      "path": "reports/memory_fix_v1/bp35_rule_trace.json",
+      "git_blob_sha": "bb60b93f8ba5385d49c96e839bf8f0ead4d03971",
+      "sha256": "450c507ca5840a6ff2945278b9a442c60a6cee4a4c5d42a88f5430b46f67ba83",
+      "size_bytes": 11683
+    },
+    {
+      "path": "research/memory_fix_v1/rule_trace.py",
+      "git_blob_sha": "578efb9ceca5964baf25a6f1bf796c055c73dccd",
+      "sha256": "362b1a01e24795ec2ad5b925b6073c4b0e24bd6f2c07cd0762e38e0b7c999668",
+      "size_bytes": 4033
+    }
+  ],
+  "baseline_manifest_unchanged_from_parent_archive": true,
+  "no_model_calls_or_live_replay_performed_during_manuscript_revision": true,
+  "result_files_unchanged_since_final_results_commit": "5284dc7f521ec14652d77adda4b70d9069587ef1",
+  "files_changed_since_that_commit": [
+    "reports/memory_fix_v1/README.md",
+    "research/level_brief_v1/whole_verify.py"
+  ],
+  "files_added_at_17d00cf": [
+    "reports/level_brief_v1/figures/panels/baseline-forgetting-a.png",
+    "reports/level_brief_v1/figures/panels/baseline-forgetting-b.png",
+    "reports/level_brief_v1/figures/panels/baseline-forgetting-c.png",
+    "reports/level_brief_v1/figures/panels/baseline-forgetting-d.png",
+    "reports/level_brief_v1/figures/panels/step-counter-a.png",
+    "reports/level_brief_v1/figures/panels/step-counter-b.png",
+    "reports/level_brief_v1/figures/panels/step-counter-c.png",
+    "reports/level_brief_v1/figures/panels/step-counter-d.png",
+    "reports/level_brief_v1/figures/panels/step-counter-e.png",
+    "reports/level_brief_v1/figures/panels/step-counter-f.png",
+    "reports/level_brief_v1/figures/worked_example_wa30.json",
+    "reports/level_brief_v1/game_over_counts.json",
+    "reports/memory_fix_v1/bp35_rule_trace.json",
+    "research/memory_fix_v1/rule_trace.py"
+  ]
+}

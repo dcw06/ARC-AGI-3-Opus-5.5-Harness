@@ -1,0 +1,192 @@
+{
+  "cutoff_date": "2026-11-23",
+  "timezone": "America/Los_Angeles",
+  "source_commit": "17d00cfdef7944dda9fd9388efa49fccce4877aa",
+  "baseline_official": {
+    "score": 46.19821646694091,
+    "levels": 125,
+    "games_won": 7,
+    "actions": 16560,
+    "scorecard": "https://arcprize.org/scorecards/0f882c2e-0451-41bd-86c5-211a54785c56"
+  },
+  "layered_second_snapshot": {
+    "status": "HISTORICAL_EXPECTED_SNAPSHOT_SUPERSEDED",
+    "expected_score_rounded": 85.13,
+    "official_score": null,
+    "levels": 165,
+    "games_won": 17,
+    "actions_derived_from_cutoff": 9649,
+    "wa30_actions": 813,
+    "wa30_cap": 1850,
+    "wa30_levels": 6,
+    "wa30_total_levels": 9
+  },
+  "development_exposure": {
+    "other_games": 17,
+    "other_games_with_frozen_code_midgame_tests": 16,
+    "all_25_baseline_aggregate_failures_informed_design": true,
+    "human_play_informed_brief": [
+      "tr87",
+      "cd82"
+    ],
+    "hidden_test_set": false,
+    "used_or_studied_in_development": [
+      "bp35",
+      "cd82",
+      "g50t",
+      "ls20",
+      "s5i5",
+      "su15",
+      "tr87",
+      "vc33"
+    ],
+    "group_definition": "Used to design or tune a layer, or studied during development",
+    "g50t_exposure": "Object-ledger tests and replay study; no layer designed on it"
+  },
+  "manual_interventions": {
+    "continuation": "Own saved replies; reconstructed requests checked identical",
+    "wa30_restart": {
+      "discarded_prefix_actions": 17,
+      "reason": "Precaution after an apparent lf52 replay mismatch and discovery of older local file copies; later attributed to animation frames, with file differences limited to comments and unused helpers",
+      "source": "research/level_brief_v1/whole_games_official.py at 17d00cfdef7944dda9fd9388efa49fccce4877aa"
+    },
+    "result_conditioned_reruns": false,
+    "tr87_timeout_exception": {
+      "actions": 43,
+      "seconds": 400,
+      "new_levels": 0,
+      "retries": 1
+    },
+    "wa30_connection_loss_stopped_first_segment_at_action": 1169
+  },
+  "token_caveat": {
+    "reported_reduction_percent": 11.0,
+    "games": 25,
+    "timed_out_call_usage_excluded_on_both_sides": true,
+    "total_compute_saving_not_identified": true,
+    "timeout_count_reference": "data/layered_final_log_counts.json: 97 layered calls past the time limit, with no usage"
+  },
+  "pending_updates": [],
+  "reset_allowances": {
+    "baseline_initial_portions": 10,
+    "baseline_continuation": 50,
+    "tu93_continued_after_stopping_at_10": true,
+    "layered_whole_game": 50,
+    "shown_to_model": false,
+    "resets_count_as_environment_actions": true
+  },
+  "earlier_log_verification_snapshot": {
+    "script": "research/level_brief_v1/whole_verify.py",
+    "source_commit": "9cc2f4afda87c9f065fea2f92fb6283ef7e990b2",
+    "method": "Committed script applied to local raw run logs",
+    "still_running_games": [
+      "dc22",
+      "re86",
+      "wa30"
+    ],
+    "replies": 8675,
+    "replies_rejected_due_to_full_12_rule_list": 605,
+    "rejection_share": 0.06974063400576369,
+    "layered_calls_past_time_limit_at_least": 90,
+    "same_cutoff_as_24_game_reported_usage": false,
+    "raw_logs_bundled": false,
+    "private_log_counts_reexecuted_during_editing": false,
+    "status": "WITHDRAWN",
+    "why_withdrawn": "The script counted a reply that was sent back once for every segment of a continued run that repeated it. The 605 of 8,675 count is too high for that reason. The at-least-90 count of timed-out calls was a correct lower bound at that cutoff and is superseded by the final count of 97."
+  },
+  "controlled_level_brief_tests": {
+    "runs_per_condition_per_game": 2,
+    "maximum_new_actions_per_run": 100,
+    "stop_early_on_win": true,
+    "tn36_starts_at_first_action": true,
+    "other_games_use_specified_restored_positions": true,
+    "second_set_games_won_by_every_run_in_both_conditions": [
+      "lp85",
+      "r11l",
+      "sb26"
+    ],
+    "ceiling_games_cannot_distinguish_conditions_by_completed_levels": true
+  },
+  "final_reported_result": "data/layered_final_result.json",
+  "manuscript_authorship": {
+    "sole_author": "Chongwei (Alan) Dai",
+    "author_count": 1,
+    "narrative_voice": "first_person_singular",
+    "confirmed_by_author_on": "2026-11-23"
+  },
+  "source_repository": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness",
+  "previous_parent_source_commit": "9cc2f4afda87c9f065fea2f92fb6283ef7e990b2",
+  "earlier_layered_confirmed_snapshot": {
+    "score": 82.56343286746824,
+    "levels": 162,
+    "games_won": 15,
+    "actions": 9348,
+    "scorecard": "https://arcprize.org/scorecards/2eca3d2f-3e6a-4a7a-b122-ed0e2a54c12f"
+  },
+  "layered_final_confirmed": {
+    "score": 85.36898706491712,
+    "levels": 166,
+    "games_won": 17,
+    "actions": 10686,
+    "scorecard": "https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14"
+  },
+  "final_evidence_status": "All final game outcomes, per-level actions, token totals and closing replay are committed",
+  "remaining_evidence_limits": [
+    "Raw inference logs remain local",
+    "Timed-out calls have no token usage",
+    "No repeated whole-game trials or whole-game component ablation",
+    "No hidden test set"
+  ],
+  "resolved_updates": [
+    "Final 96932ddf closing replay",
+    "wa30 at action cap 1850 with 7/9 levels and score 52.67853748",
+    "Full 25-game token totals",
+    "Corrected lf52 animation and wa30 restart explanation",
+    "Final log counts with the count of replies sent back corrected (461 of 11,111)",
+    "Run figures from the evaluated runs in place of the historical inspection strips"
+  ],
+  "submission_preparation": {
+    "format": "general_research_paper",
+    "author_identified": true,
+    "venue_selected": false,
+    "headline_scope": "25 public games, one whole-game run per condition per game",
+    "fresh_interleaved_replication": "recommended_future_work_not_conducted",
+    "artifact_access_record": "data/public_artifact_access.json",
+    "actual_submission_performed": false
+  },
+  "result_files_commit": "5284dc7f521ec14652d77adda4b70d9069587ef1",
+  "final_log_counts": {
+    "file": "data/layered_final_log_counts.json",
+    "source": "reports/level_brief_v1/whole-log-counts.json at 17d00cfdef7944dda9fd9388efa49fccce4877aa",
+    "script": "research/level_brief_v1/whole_verify.py at 17d00cfdef7944dda9fd9388efa49fccce4877aa",
+    "replies": 11111,
+    "replies_sent_back_for_full_12_rule_list": 461,
+    "share": 0.041490414904149044,
+    "replies_in_turns_cut_short_all_sent_back": 5,
+    "calls_past_time_limit": 97,
+    "of_which_followed_by_a_retry": 77,
+    "of_which_ended_a_segment": 20,
+    "calls_at_usage_limit": 8,
+    "calls_without_connection": 2,
+    "raw_logs_bundled": false,
+    "counted_from_local_logs_on": "2026-11-23"
+  },
+  "per_level_budget_sensitivity": {
+    "rule": "A game ends when a level has used more than five times its human count; applied as a cut of each recorded trajectory, no new play",
+    "source_for_the_official_budget": "ARC-AGI-3 technical report, arXiv:2603.24621v2, Section 4.3",
+    "baseline_score": 45.92390057,
+    "baseline_levels": 121,
+    "layered_score": 85.12851223,
+    "layered_levels": 165,
+    "difference_points": 39.20461166,
+    "note": "The layered value equals the earlier expected 85.13 because that expectation counted wa30 at six levels; here it is a sensitivity value, not a result"
+  },
+  "earlier_layered_second_snapshot_card": {
+    "score": 84.14,
+    "levels": 164,
+    "games_won": 17,
+    "actions": 9253,
+    "scorecard": "https://arcprize.org/scorecards/eafcc4b7-afb3-4fb5-bffa-7d7a47e4f040",
+    "why_superseded": "wa30 was still playing; the replay of ls20 stopped at action 404 of 800 after a connection error"
+  }
+}

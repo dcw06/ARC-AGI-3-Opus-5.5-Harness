@@ -1,0 +1,72 @@
+{
+  "report_date": "2026-11-23",
+  "timezone": "America/Los_Angeles",
+  "repository": "https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness",
+  "source_commit": "17d00cfdef7944dda9fd9388efa49fccce4877aa",
+  "status": "CONFIRMED_COMPETITION_MODE_REPLAY",
+  "score_rounded": 85.37,
+  "unrounded_score": 85.36898706491712,
+  "score_source": "Committed ARC service closing response and per-level action record",
+  "reconstructed_from_archived_per_level_actions": true,
+  "levels": 166,
+  "total_levels": 183,
+  "games_won": 17,
+  "games": 25,
+  "actions": 10686,
+  "wa30": {
+    "actions": 1850,
+    "levels": 7,
+    "total_levels": 9,
+    "action_cap": 1850,
+    "score": 52.678537475904804,
+    "level_actions": [
+      27,
+      57,
+      80,
+      68,
+      359,
+      48,
+      921,
+      290,
+      0
+    ],
+    "last_completed_level_ended_at_action": 1560,
+    "end_reason": "action_cap"
+  },
+  "more_same_fewer_levels_vs_baseline": [
+    15,
+    9,
+    1
+  ],
+  "full_inventory_action_reduction_percent": 35.5,
+  "score_gain_percentage_points": 39.17077059797621,
+  "official_scorecard": "https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14",
+  "closing_manifest": "data/layered_final_replay.json",
+  "all_games_ended_or_halted": true,
+  "halted_games": [
+    "bp35",
+    "s5i5",
+    "tr87"
+  ],
+  "replay": {
+    "full_observation_hash_matches": 10661,
+    "equal_final_board_state_level_only": 25,
+    "all_recorded_actions_accepted": true,
+    "games_still_playing": []
+  },
+  "reported_token_usage": {
+    "games": 25,
+    "baseline_input": 219307219,
+    "baseline_output": 37194101,
+    "layered_input": 201029785,
+    "layered_output": 27316461,
+    "baseline_total": 256501320,
+    "layered_total": 228346246,
+    "input_plus_output_reduction_percent": 11.0,
+    "thinking_already_in_output": true,
+    "timed_out_calls_without_usage_excluded_on_both_sides": true
+  },
+  "per_game_data": "data/layered_final_per_game.csv",
+  "supersedes_reported_cutoff": "data/layered_reported_cutoff_20261123.json",
+  "result_files_commit": "5284dc7f521ec14652d77adda4b70d9069587ef1"
+}

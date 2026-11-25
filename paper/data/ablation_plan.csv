@@ -1,0 +1,4 @@
+study,status,scope
+whole_game_component_ablation,not_executed,No whole-game component-removal ablation; all evaluated layers change together.
+level_brief_midgame_tests,executed,"Controlled comparison of the bundled level-brief package against the other layers on seven and nine games; two runs per condition per game, up to 100 new actions, early stopping on a win; tn36 from first action; lp85/r11l/sb26 have ceiling completion in both tested harness configurations of the second set."
+historical_baseline_and_tycho_component_ablations,not_executed,Historical records contain no component ablation.

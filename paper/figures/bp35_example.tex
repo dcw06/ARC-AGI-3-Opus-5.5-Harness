@@ -1,0 +1,19 @@
+\begin{figure}[htbp]
+\centering
+\begin{tabular}{@{}c@{\hspace{8pt}}c@{\hspace{8pt}}c@{\hspace{8pt}}c@{}}
+\board[0.235\linewidth]{baseline-forgetting-a.png} & \board[0.235\linewidth]{baseline-forgetting-b.png} &
+\board[0.235\linewidth]{baseline-forgetting-c.png} & \board[0.235\linewidth]{baseline-forgetting-d.png}\\[1pt]
+\footnotesize (a) Before action 23, click ringed & \footnotesize (b) Action 23, frame 15 of 28 &
+\footnotesize (c) Before action 48 & \footnotesize (d) Action 48, frame 17 of 32
+\end{tabular}\\[7pt]
+{\footnotesize
+\begin{tabularx}{\linewidth}{@{}rlY@{}}\toprule
+Action & Status & The model's note about the purple tiles, in the reply that chose the action\\\midrule
+25 & Supported & ``The f objects with b0b at the bottom are hazards: rising into them causes GAME\_OVER. [\ldots]''\\
+33 & Tentative & ``The f/b0b objects are hazards, and they sit above every column from x37 to x53. [\ldots]''\\
+36 & & No note about the tiles, in this reply or the next five\\
+42 & Tentative & ``The f tiles with b0b bottoms are hazards or goals. Their role is unknown, so avoid them for now.''\\
+48 & Tentative & ``The f tiles with b0b bottoms are hazards or goals; their role is unknown.''\\
+50 & Supported & ``The f tiles with b0b bottoms are downward spikes. If the piece rises to directly beneath one, it dies and the game ends. [\ldots]''\\\bottomrule
+\end{tabularx}}\caption{\textbf{The baseline repeated a fatal interaction after removing a learned hazard rule from its notes.} These observations come from \texttt{bp35}, level 2, with all four memory layers disabled. The piece is the small blue and yellow marker. The hazards are purple tiles with a yellow--white--yellow underside. In the notes, \texttt{f} denotes purple and \texttt{b0b} denotes the underside pattern. (a, b) At action 23, the model clicked the circled green tile above the piece, removing it. The piece rose beneath a purple tile, and the game ended. (c, d) At action 48, the model moved the piece one step left. It rose beneath another purple tile, and the game ended again. Panels (b) and (d) show intermediate animation frames for the reader. The model received only the final frame of each action, encoded as text. The table reproduces the model's notes and its own status labels from replies selecting the listed actions. Ellipses mark omissions. By action 32, action 23 had left the eight-action history shown to the model \citep{dai2026memoryfix}.}\label{fig:bp35-example}
+\end{figure}

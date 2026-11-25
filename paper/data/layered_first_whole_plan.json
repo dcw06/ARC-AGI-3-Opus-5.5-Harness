@@ -1,0 +1,344 @@
+{
+ "written": "2026-11-21T23:55:33Z",
+ "stamp": "20261121T235533Z",
+ "rule": "Eleven games, one run each with the layers on, beside the baseline run of the same game at the same cap. Per game: levels completed, and the game score by the scorecard rule (replay_scorecard.game_score with the human counts of the official scorecard). Overall \"better\": more levels completed in total and a higher mean game score than the baseline. \"worse\": fewer levels in total and a lower mean game score. Anything else: \"mixed\". The same three numbers are given apart for the six games no layer was designed on and whose replays were not studied (ka59, lf52, m0r0, sc25, sk48, tn36) and for the five that were (bp35, cd82, g50t, ls20, tr87); what the layers do in general is read from the six. One run a game on each side, played on different days: a difference in a single game may be chance. No game is played again because of its result. A game that stops early is continued from its own saved replies, not restarted.",
+ "set_up": {
+  "no_effect_lessons": true,
+  "no_effect_wait": 4,
+  "lesson_check": true,
+  "game_over_lessons": true,
+  "object_ledger": true,
+  "level_brief": true
+ },
+ "level_resets_allowed": 50,
+ "groups": {
+  "second": {
+   "account": "the second subscription",
+   "most_actions": 3000,
+   "games": {
+    "lf52-271a04aa": 1350,
+    "m0r0-492f87ba": 1150,
+    "tr87-cd924810": 450
+   },
+   "cap_total": 2950
+  },
+  "first-1": {
+   "account": "the signed-in account",
+   "most_actions": 3000,
+   "games": {
+    "sk48-d8078629": 1100,
+    "ka59-38d34dbb": 750,
+    "sc25-635fd71a": 350,
+    "tn36-ef4dde99": 350
+   },
+   "cap_total": 2550
+  },
+  "first-2": {
+   "account": "the signed-in account",
+   "most_actions": 3000,
+   "games": {
+    "g50t-5849a774": 900,
+    "ls20-9607627b": 800,
+    "bp35-0a0ad940": 700,
+    "cd82-fb555c5d": 200
+   },
+   "cap_total": 2600
+  }
+ },
+ "used_in_design": [
+  "bp35",
+  "cd82",
+  "g50t",
+  "ls20",
+  "tr87"
+ ],
+ "baseline": {
+  "sk48-d8078629": {
+   "actions": 1100,
+   "levels_completed": 4,
+   "levels": 8,
+   "level_actions": [
+    22,
+    43,
+    125,
+    361,
+    549,
+    0,
+    0,
+    0
+   ],
+   "score": 15.928385338083997,
+   "human_level_actions": [
+    61,
+    177,
+    101,
+    103,
+    230,
+    181,
+    125,
+    92
+   ]
+  },
+  "g50t-5849a774": {
+   "actions": 900,
+   "levels_completed": 2,
+   "levels": 7,
+   "level_actions": [
+    39,
+    122,
+    739,
+    0,
+    0,
+    0,
+    0
+   ],
+   "score": 10.714285714285714,
+   "human_level_actions": [
+    78,
+    175,
+    179,
+    230,
+    96,
+    54,
+    67
+   ]
+  },
+  "m0r0-492f87ba": {
+   "actions": 1150,
+   "levels_completed": 2,
+   "levels": 6,
+   "level_actions": [
+    15,
+    56,
+    1079,
+    0,
+    0,
+    0
+   ],
+   "score": 14.285714285714286,
+   "human_level_actions": [
+    30,
+    111,
+    203,
+    26,
+    500,
+    237
+   ]
+  },
+  "cd82-fb555c5d": {
+   "actions": 200,
+   "levels_completed": 2,
+   "levels": 6,
+   "level_actions": [
+    28,
+    7,
+    165,
+    0,
+    0,
+    0
+   ],
+   "score": 14.285714285714286,
+   "human_level_actions": [
+    55,
+    8,
+    41,
+    21,
+    23,
+    23
+   ]
+  },
+  "lf52-271a04aa": {
+   "actions": 1350,
+   "levels_completed": 4,
+   "levels": 10,
+   "level_actions": [
+    8,
+    710,
+    49,
+    537,
+    46,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "score": 8.538099723410427,
+   "human_level_actions": [
+    32,
+    81,
+    60,
+    71,
+    205,
+    148,
+    244,
+    109,
+    164,
+    225
+   ]
+  },
+  "tn36-ef4dde99": {
+   "actions": 350,
+   "levels_completed": 4,
+   "levels": 7,
+   "level_actions": [
+    122,
+    44,
+    29,
+    106,
+    49,
+    0,
+    0
+   ],
+   "score": 19.106469334990685,
+   "human_level_actions": [
+    32,
+    72,
+    26,
+    40,
+    30,
+    55,
+    62
+   ]
+  },
+  "ls20-9607627b": {
+   "actions": 800,
+   "levels_completed": 2,
+   "levels": 7,
+   "level_actions": [
+    15,
+    45,
+    740,
+    0,
+    0,
+    0,
+    0
+   ],
+   "score": 10.714285714285714,
+   "human_level_actions": [
+    22,
+    123,
+    73,
+    84,
+    96,
+    192,
+    186
+   ]
+  },
+  "bp35-0a0ad940": {
+   "actions": 700,
+   "levels_completed": 4,
+   "levels": 9,
+   "level_actions": [
+    17,
+    203,
+    137,
+    305,
+    38,
+    0,
+    0,
+    0,
+    0
+   ],
+   "score": 3.629683326357758,
+   "human_level_actions": [
+    21,
+    48,
+    44,
+    38,
+    33,
+    87,
+    86,
+    131,
+    163
+   ]
+  },
+  "ka59-38d34dbb": {
+   "actions": 750,
+   "levels_completed": 3,
+   "levels": 7,
+   "level_actions": [
+    30,
+    190,
+    77,
+    453,
+    0,
+    0,
+    0
+   ],
+   "score": 10.162184981350975,
+   "human_level_actions": [
+    28,
+    109,
+    51,
+    51,
+    33,
+    132,
+    326
+   ]
+  },
+  "sc25-635fd71a": {
+   "actions": 350,
+   "levels_completed": 3,
+   "levels": 6,
+   "level_actions": [
+    22,
+    5,
+    37,
+    286,
+    0,
+    0
+   ],
+   "score": 27.114160492538872,
+   "human_level_actions": [
+    36,
+    6,
+    32,
+    83,
+    143,
+    50
+   ]
+  },
+  "tr87-cd924810": {
+   "actions": 450,
+   "levels_completed": 4,
+   "levels": 6,
+   "level_actions": [
+    61,
+    224,
+    52,
+    52,
+    61,
+    0
+   ],
+   "score": 27.087897027356835,
+   "human_level_actions": [
+    54,
+    58,
+    40,
+    45,
+    71,
+    146
+   ]
+  }
+ },
+ "wording": {
+  "RULES_NOTE": "evidence.rules are the rules of this game that you have recorded as confirmed, each with its number. The controller keeps them for the whole game, on later levels too; they are not part of your hypotheses list and are never dropped. rule_notes is optional unless asked for: add an item when an observation has just confirmed how something works (what an action does, what a kind of thing does, what completes a level) and evidence.rules does not say it yet, or says it wrongly. rule: the rule, said generally so that it holds on other boards and other levels, at most 300 characters. replaces: the number of the rule this one corrects or covers, or 0 to add it. A rule is confirmed only as far as what you have seen requires: when a looser rule fits everything seen as well as a stricter one, record the looser one. At most 12 rules are kept; once the list is full a new rule has to replace one.",
+  "brief_ask_with_the_completed_board": "This is your first turn on level 2. Before you choose an action, write level_brief and rule_notes. won_by: what made level 1 complete. evidence.completed_level shows its last board, the last frame the game returned before it showed this level, which you were not shown at the time, and how it differs from the board you took your last action on. Read the rule you were working with against it. State the least that is shown to be required. If a looser rule, one that more boards would satisfy, fits everything you have seen as well as the rule you were working with, the looser one is what the level confirmed, and the stricter one is still only a hypothesis. rule_notes: record what the levels so far have confirmed and evidence.rules does not yet say, or says more strictly than was shown (an empty list if nothing is missing). different: what differs here from the levels you have completed: things that were not there before, things that are as before except in some respect (such as colour, size, number or the way they are turned), and any part of what this level asks for that your rules cannot yet produce. why: what each difference is for. A level is made to be completed, and what it adds to the earlier ones is there because completing it depends on it. Tell two cases apart. A difference that nothing you can do would change cannot be one you are required to remove: take the two things as equal in that respect and go on. A new thing, or a difference that something on the board can change, is most likely what the part your rules cannot yet produce depends on, and what it does may change how the rest has to be done. first: the cheapest way to find out what such a thing does, which you will take before you spend actions on what the earlier levels already taught you; \"nothing new\" if the level differs in no such way.",
+  "brief_ask_without_it": "This is your first turn on level 2. Before you choose an action, write level_brief and rule_notes. won_by: what made level 1 complete. The game returned no frame of that level after your last action, so go by the boards you saw. State the least that is shown to be required. If a looser rule, one that more boards would satisfy, fits everything you have seen as well as the rule you were working with, the looser one is what the level confirmed, and the stricter one is still only a hypothesis. rule_notes: record what the levels so far have confirmed and evidence.rules does not yet say, or says more strictly than was shown (an empty list if nothing is missing). different: what differs here from the levels you have completed: things that were not there before, things that are as before except in some respect (such as colour, size, number or the way they are turned), and any part of what this level asks for that your rules cannot yet produce. why: what each difference is for. A level is made to be completed, and what it adds to the earlier ones is there because completing it depends on it. Tell two cases apart. A difference that nothing you can do would change cannot be one you are required to remove: take the two things as equal in that respect and go on. A new thing, or a difference that something on the board can change, is most likely what the part your rules cannot yet produce depends on, and what it does may change how the rest has to be done. first: the cheapest way to find out what such a thing does, which you will take before you spend actions on what the earlier levels already taught you; \"nothing new\" if the level differs in no such way.",
+  "BRIEF_NOTE": "evidence.level_brief is what you wrote on your first turn of this level; the controller keeps it for you. What it names under first comes before the routine of earlier levels. Act on the least that your rules and your brief require: do not pass up something that satisfies them for the sake of a stricter reading that nothing you have seen requires. If acting on the looser reading fails, that failure is the observation that requires more: tighten the rule then. When an observation settles what a difference is for, record it in rule_notes; when it shows the brief wrong, write level_brief again (won_by, different, why, first) to replace it. Otherwise leave level_brief out.",
+  "NEW_NOTE": "In evidence.things a look marked new was on no earlier level of this game. The controller compares looks from the cells alone: a known thing in another colour or shape is marked new as well, so the mark is a pointer, not a finding."
+ },
+ "rule_limit": 12,
+ "code_sha256": {
+  "research/claude_arc_v1/policy.py": "71b8083109581ea9efc851d0329cf9a82a1838efa32c4798e02815669758d5c3",
+  "research/claude_arc_v1/things.py": "dd259f05072b8bd9907420300ec74c1003f90785bac5ad629cb2cc3542b62fac",
+  "research/claude_arc_v1/config.py": "d1469671d674091447670bcd62249e8232c837e5b241fba643f31a99ae7120d6",
+  "research/claude_arc_v1/run.py": "993cbbff7504ef939a3e0565c43e3a337d9e72bc4c9d1c62060a16587d214b36",
+  "research/level_brief_v1/runs.py": "f6d3297aa17a77606bfa31e3c3a2241948ed91464979068d4df43809ac1050ae",
+  "research/level_brief_v1/whole_games.py": "e5b84685404aa647470cd283bbd08c84a464dee3e314b12e50b6c4f9e3040f65",
+  "research/action_waste_v1/level_runs.py": "ac3d0747235873b701dade14eb6d0202f56d85b6d9d8986be20fce0fc137a96a",
+  "research/action_waste_v1/local_game.py": "5ac244e6eaf0c5aaf5b1a1de0dec3d9d6f3a548e8106d64340d047e6339b022f"
+ }
+}
+

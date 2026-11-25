@@ -1,0 +1,35 @@
+\begin{table}[H]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{@{}lcrrrrY@{}}\toprule
+Versioned game & Group & RHAE (\%) & Levels & Actions & Resets & Scorecard state\\\midrule
+\texttt{ar25-0c556536} & D & 16.67 & 3/8 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{bp35-0a0ad940} & R & 2.22 & 1/9 & 100 & 3 & \texttt{GAME\_OVER}\\
+\texttt{cd82-fb555c5d} & D & 14.29 & 2/6 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{cn04-2fe56bfb} & R & 14.29 & 2/6 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{dc22-fdcac232} & R & 4.76 & 1/6 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{ft09-0d8bbf25} & D & 100.00 & 6/6 & 75 & 0 & \texttt{WIN}\\
+\texttt{g50t-5849a774} & D & 3.57 & 1/7 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{ka59-38d34dbb} & D & 3.11 & 1/7 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{lf52-271a04aa} & D & 1.82 & 1/10 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{lp85-305b61c3} & R & 77.78 & 7/8 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{ls20-9607627b} & D & 10.71 & 2/7 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{m0r0-492f87ba} & R & 14.29 & 2/6 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{r11l-495a7899} & R & 71.43 & 5/6 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{re86-8af5384d} & R & 8.33 & 2/8 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{s5i5-18d95033} & D & 8.33 & 2/8 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{sb26-7fbdac44} & R & 58.33 & 6/8 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{sc25-635fd71a} & D & 27.11 & 3/6 & 100 & 0 & \texttt{GAME\_OVER}\\
+\texttt{sk48-d8078629} & D & 8.33 & 2/8 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{sp80-589a99af} & D & 47.62 & 4/6 & 100 & 1 & \texttt{GAME\_OVER}\\
+\texttt{su15-1944f8ab} & D & 6.67 & 2/9 & 100 & 2 & \texttt{GAME\_OVER}\\
+\texttt{tn36-ef4dde99} & R & 0.00 & 0/7 & 100 & 1 & \texttt{GAME\_OVER}\\
+\texttt{tr87-cd924810} & D & 3.73 & 1/6 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{tu93-0768757b} & R & 33.33 & 5/9 & 100 & 1 & \texttt{GAME\_OVER}\\
+\texttt{vc33-5430563c} & D & 35.71 & 4/7 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\texttt{wa30-ee6fef47} & D & 6.67 & 2/9 & 100 & 0 & \texttt{NOT\_FINISHED}\\
+\midrule
+All games & & 23.16 & 67/183 & 2,475 & 8 & 1 WIN, 6 GAME\_OVER, 18 NOT\_FINISHED\\\bottomrule
+\end{tabularx}
+\caption{The table lists all 25 games in the original November 6 baseline, with a 100-action cap per game. It shows scores at scorecard display precision. The final row gives the equal-game mean. Levels are completed levels divided by available levels. D denotes the original development partition. R denotes reduced exposure. Actions include resets. For \texttt{bp35}, \texttt{sp80}, \texttt{su15}, \texttt{tn36}, and \texttt{tu93}, the scorecard showed \texttt{GAME\_OVER}, although the controller reset and continued to the action cap. Only \texttt{sc25} ended in game-over.}\label{tab:games}
+\end{table}

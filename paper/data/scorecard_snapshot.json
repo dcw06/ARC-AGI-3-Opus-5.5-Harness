@@ -1,0 +1,1875 @@
+{
+  "source_url": "https://arcprize.org/scorecards/09cc9d25-ec26-4f26-98f8-9cbd60ec69d7",
+  "retrieved_at_utc": "2026-11-06T19:54:55.640Z",
+  "summary": {
+    "score_pct": 23.16,
+    "levels_completed": 67,
+    "levels_total": 183,
+    "environments_completed": 1,
+    "environments_total": 25,
+    "total_actions": 2475,
+    "tags": [
+      "claude-arc-v1",
+      "hypotheses",
+      "competition",
+      "agent"
+    ],
+    "publication_timestamp_displayed": "11/7/2026, 3:37:24 AM",
+    "publication_timezone": "not specified on page"
+  },
+  "games": [
+    {
+      "cells": [
+        "ar25-0c556536",
+        "16.67",
+        "3 / 8",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "17",
+          "32"
+        ],
+        [
+          "2",
+          "115.00",
+          "14",
+          "50"
+        ],
+        [
+          "3",
+          "115.00",
+          "41",
+          "75"
+        ],
+        [
+          "4",
+          "0.00",
+          "28",
+          "37"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "89"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "159"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "233"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "73"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/14a5de80-4819-41fa-8b8e-5d3335047c0a"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/ar25-0c556536/14a5de80-4819-41fa-8b8e-5d3335047c0a"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "bp35-0a0ad940",
+        "2.22",
+        "1 / 9",
+        "GAME_OVER",
+        "100",
+        "3",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "17",
+          "21"
+        ],
+        [
+          "2",
+          "0.00",
+          "83",
+          "48"
+        ],
+        [
+          "3",
+          "0.00",
+          "0",
+          "44"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "38"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "33"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "87"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "86"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "131"
+        ],
+        [
+          "9",
+          "0.00",
+          "0",
+          "163"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/32ee9606-b8b2-4670-8d98-2bb1796d785b"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/bp35-0a0ad940/32ee9606-b8b2-4670-8d98-2bb1796d785b"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "cd82-fb555c5d",
+        "14.29",
+        "2 / 6",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "28",
+          "55"
+        ],
+        [
+          "2",
+          "115.00",
+          "7",
+          "8"
+        ],
+        [
+          "3",
+          "0.00",
+          "65",
+          "41"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "21"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "23"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "23"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/c71fc405-2dd9-4a4f-b59f-f06bb03a0183"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/cd82-fb555c5d/c71fc405-2dd9-4a4f-b59f-f06bb03a0183"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "cn04-2fe56bfb",
+        "14.29",
+        "2 / 6",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "19",
+          "29"
+        ],
+        [
+          "2",
+          "115.00",
+          "33",
+          "54"
+        ],
+        [
+          "3",
+          "0.00",
+          "48",
+          "85"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "300"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "208"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "113"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/8a8280d0-1661-4826-b302-28f9619b07bd"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/cn04-2fe56bfb/8a8280d0-1661-4826-b302-28f9619b07bd"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "dc22-fdcac232",
+        "4.76",
+        "1 / 6",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "32",
+          "59"
+        ],
+        [
+          "2",
+          "0.00",
+          "68",
+          "102"
+        ],
+        [
+          "3",
+          "0.00",
+          "0",
+          "67"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "98"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "324"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "578"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/3bb65a19-f065-4f14-b8d6-4daf06abb757"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/dc22-fdcac232/3bb65a19-f065-4f14-b8d6-4daf06abb757"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "ft09-0d8bbf25",
+        "100.00",
+        "6 / 6",
+        "WIN",
+        "75",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "4",
+          "43"
+        ],
+        [
+          "2",
+          "115.00",
+          "7",
+          "12"
+        ],
+        [
+          "3",
+          "115.00",
+          "14",
+          "23"
+        ],
+        [
+          "4",
+          "115.00",
+          "16",
+          "28"
+        ],
+        [
+          "5",
+          "115.00",
+          "21",
+          "65"
+        ],
+        [
+          "6",
+          "115.00",
+          "13",
+          "37"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/65d71c86-c60e-4648-8f6f-f0342f7764dd"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/ft09-0d8bbf25/65d71c86-c60e-4648-8f6f-f0342f7764dd"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "g50t-5849a774",
+        "3.57",
+        "1 / 7",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "39",
+          "78"
+        ],
+        [
+          "2",
+          "0.00",
+          "61",
+          "175"
+        ],
+        [
+          "3",
+          "0.00",
+          "0",
+          "179"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "230"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "96"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "54"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "67"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/995ba9ad-43b5-43c4-9a92-ca45c4ecc9b1"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/g50t-5849a774/995ba9ad-43b5-43c4-9a92-ca45c4ecc9b1"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "ka59-38d34dbb",
+        "3.11",
+        "1 / 7",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "87.11",
+          "30",
+          "28"
+        ],
+        [
+          "2",
+          "0.00",
+          "70",
+          "109"
+        ],
+        [
+          "3",
+          "0.00",
+          "0",
+          "51"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "51"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "33"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "132"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "326"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/038b3f6f-8d76-41d3-8d72-66e2310991c4"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/ka59-38d34dbb/038b3f6f-8d76-41d3-8d72-66e2310991c4"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "lf52-271a04aa",
+        "1.82",
+        "1 / 10",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "8",
+          "32"
+        ],
+        [
+          "2",
+          "0.00",
+          "92",
+          "81"
+        ],
+        [
+          "3",
+          "0.00",
+          "0",
+          "60"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "71"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "205"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "148"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "244"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "109"
+        ],
+        [
+          "9",
+          "0.00",
+          "0",
+          "164"
+        ],
+        [
+          "10",
+          "0.00",
+          "0",
+          "225"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/45a376b9-4f81-4b86-a203-56989ed42b18"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/lf52-271a04aa/45a376b9-4f81-4b86-a203-56989ed42b18"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "lp85-305b61c3",
+        "77.78",
+        "7 / 8",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "7",
+          "17"
+        ],
+        [
+          "2",
+          "115.00",
+          "10",
+          "38"
+        ],
+        [
+          "3",
+          "115.00",
+          "16",
+          "31"
+        ],
+        [
+          "4",
+          "88.58",
+          "17",
+          "16"
+        ],
+        [
+          "5",
+          "115.00",
+          "18",
+          "41"
+        ],
+        [
+          "6",
+          "115.00",
+          "24",
+          "60"
+        ],
+        [
+          "7",
+          "115.00",
+          "8",
+          "26"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "159"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/1394f17f-4976-4be4-a670-a0797f0eee4d"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/lp85-305b61c3/1394f17f-4976-4be4-a670-a0797f0eee4d"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "ls20-9607627b",
+        "10.71",
+        "2 / 7",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "15",
+          "22"
+        ],
+        [
+          "2",
+          "115.00",
+          "45",
+          "123"
+        ],
+        [
+          "3",
+          "0.00",
+          "40",
+          "73"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "84"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "96"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "192"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "186"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/c3877e5e-05f0-4def-9c89-b3a8f6520f00"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/ls20-9607627b/c3877e5e-05f0-4def-9c89-b3a8f6520f00"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "m0r0-492f87ba",
+        "14.29",
+        "2 / 6",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "15",
+          "30"
+        ],
+        [
+          "2",
+          "115.00",
+          "56",
+          "111"
+        ],
+        [
+          "3",
+          "0.00",
+          "29",
+          "203"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "26"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "500"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "237"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/57cc6f19-6888-401e-8bb9-e471dd4a7939"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/m0r0-492f87ba/57cc6f19-6888-401e-8bb9-e471dd4a7939"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "r11l-495a7899",
+        "71.43",
+        "5 / 6",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "4",
+          "22"
+        ],
+        [
+          "2",
+          "115.00",
+          "11",
+          "33"
+        ],
+        [
+          "3",
+          "115.00",
+          "17",
+          "51"
+        ],
+        [
+          "4",
+          "115.00",
+          "15",
+          "26"
+        ],
+        [
+          "5",
+          "115.00",
+          "30",
+          "52"
+        ],
+        [
+          "6",
+          "0.00",
+          "23",
+          "49"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/41aaddac-b6a5-46ee-a7d7-d0f8c52c7cbc"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/r11l-495a7899/41aaddac-b6a5-46ee-a7d7-d0f8c52c7cbc"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "re86-8af5384d",
+        "8.33",
+        "2 / 8",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "20",
+          "26"
+        ],
+        [
+          "2",
+          "115.00",
+          "36",
+          "42"
+        ],
+        [
+          "3",
+          "0.00",
+          "44",
+          "86"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "108"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "189"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "139"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "424"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "241"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/c8f358dd-4641-4cda-aa15-c042e3c165cf"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/re86-8af5384d/c8f358dd-4641-4cda-aa15-c042e3c165cf"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "s5i5-18d95033",
+        "8.33",
+        "2 / 8",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "13",
+          "20"
+        ],
+        [
+          "2",
+          "115.00",
+          "28",
+          "89"
+        ],
+        [
+          "3",
+          "0.00",
+          "59",
+          "106"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "54"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "162"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "38"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "86"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "83"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/a1f3ec7c-d735-4857-8d97-b5c3dc8bf331"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/s5i5-18d95033/a1f3ec7c-d735-4857-8d97-b5c3dc8bf331"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "sb26-7fbdac44",
+        "58.33",
+        "6 / 8",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "9",
+          "18"
+        ],
+        [
+          "2",
+          "115.00",
+          "15",
+          "28"
+        ],
+        [
+          "3",
+          "115.00",
+          "16",
+          "18"
+        ],
+        [
+          "4",
+          "115.00",
+          "15",
+          "19"
+        ],
+        [
+          "5",
+          "115.00",
+          "17",
+          "31"
+        ],
+        [
+          "6",
+          "115.00",
+          "19",
+          "23"
+        ],
+        [
+          "7",
+          "0.00",
+          "9",
+          "58"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "18"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/f60755f9-ff76-4e78-acd1-91bd7449ec72"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/sb26-7fbdac44/f60755f9-ff76-4e78-acd1-91bd7449ec72"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "sc25-635fd71a",
+        "27.11",
+        "3 / 6",
+        "GAME_OVER",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "22",
+          "36"
+        ],
+        [
+          "2",
+          "115.00",
+          "5",
+          "6"
+        ],
+        [
+          "3",
+          "74.80",
+          "37",
+          "32"
+        ],
+        [
+          "4",
+          "0.00",
+          "36",
+          "83"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "143"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "50"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/6869c90c-f2f0-45c2-9a18-9182055cd361"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/sc25-635fd71a/6869c90c-f2f0-45c2-9a18-9182055cd361"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "sk48-d8078629",
+        "8.33",
+        "2 / 8",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "22",
+          "61"
+        ],
+        [
+          "2",
+          "115.00",
+          "43",
+          "177"
+        ],
+        [
+          "3",
+          "0.00",
+          "35",
+          "101"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "103"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "230"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "181"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "125"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "92"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/1a4780dd-bfe4-4e7e-83b5-85cd153febf3"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/sk48-d8078629/1a4780dd-bfe4-4e7e-83b5-85cd153febf3"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "sp80-589a99af",
+        "47.62",
+        "4 / 6",
+        "GAME_OVER",
+        "100",
+        "1",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "6",
+          "39"
+        ],
+        [
+          "2",
+          "115.00",
+          "8",
+          "58"
+        ],
+        [
+          "3",
+          "115.00",
+          "10",
+          "25"
+        ],
+        [
+          "4",
+          "115.00",
+          "45",
+          "148"
+        ],
+        [
+          "5",
+          "0.00",
+          "31",
+          "96"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "152"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/6014a3b2-7a3a-4e6c-a259-be6a0bd3b8db"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/sp80-589a99af/6014a3b2-7a3a-4e6c-a259-be6a0bd3b8db"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "su15-1944f8ab",
+        "6.67",
+        "2 / 9",
+        "GAME_OVER",
+        "100",
+        "2",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "9",
+          "22"
+        ],
+        [
+          "2",
+          "115.00",
+          "21",
+          "42"
+        ],
+        [
+          "3",
+          "0.00",
+          "70",
+          "26"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "115"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "36"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "31"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "8"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "40"
+        ],
+        [
+          "9",
+          "0.00",
+          "0",
+          "41"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/8672ab02-beeb-4dac-90a2-eb86033ad292"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/su15-1944f8ab/8672ab02-beeb-4dac-90a2-eb86033ad292"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "tn36-ef4dde99",
+        "0.00",
+        "0 / 7",
+        "GAME_OVER",
+        "100",
+        "1",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "0.00",
+          "100",
+          "32"
+        ],
+        [
+          "2",
+          "0.00",
+          "0",
+          "72"
+        ],
+        [
+          "3",
+          "0.00",
+          "0",
+          "26"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "40"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "30"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "55"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "62"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/ea7cce7c-adc5-4115-841c-c5fd069e4d79"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/tn36-ef4dde99/ea7cce7c-adc5-4115-841c-c5fd069e4d79"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "tr87-cd924810",
+        "3.73",
+        "1 / 6",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "78.37",
+          "61",
+          "54"
+        ],
+        [
+          "2",
+          "0.00",
+          "39",
+          "58"
+        ],
+        [
+          "3",
+          "0.00",
+          "0",
+          "40"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "45"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "71"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "146"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/8070024e-e05a-40ed-aa30-a43ae3d4eff6"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/tr87-cd924810/8070024e-e05a-40ed-aa30-a43ae3d4eff6"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "tu93-0768757b",
+        "33.33",
+        "5 / 9",
+        "GAME_OVER",
+        "100",
+        "1",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "111.42",
+          "18",
+          "19"
+        ],
+        [
+          "2",
+          "113.78",
+          "15",
+          "16"
+        ],
+        [
+          "3",
+          "115.00",
+          "19",
+          "34"
+        ],
+        [
+          "4",
+          "115.00",
+          "17",
+          "42"
+        ],
+        [
+          "5",
+          "115.00",
+          "29",
+          "123"
+        ],
+        [
+          "6",
+          "0.00",
+          "2",
+          "80"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "14"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "23"
+        ],
+        [
+          "9",
+          "0.00",
+          "0",
+          "111"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/62ca529c-6f61-454b-a4ee-a00cdeccedb9"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/tu93-0768757b/62ca529c-6f61-454b-a4ee-a00cdeccedb9"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "vc33-5430563c",
+        "35.71",
+        "4 / 7",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "28.99",
+          "13",
+          "7"
+        ],
+        [
+          "2",
+          "115.00",
+          "8",
+          "18"
+        ],
+        [
+          "3",
+          "115.00",
+          "24",
+          "44"
+        ],
+        [
+          "4",
+          "115.00",
+          "28",
+          "61"
+        ],
+        [
+          "5",
+          "0.00",
+          "27",
+          "131"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "34"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "152"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/d795d4bb-3e9a-4022-908c-010e05ca7257"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/vc33-5430563c/d795d4bb-3e9a-4022-908c-010e05ca7257"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "wa30-ee6fef47",
+        "6.67",
+        "2 / 9",
+        "NOT_FINISHED",
+        "100",
+        "0",
+        ""
+      ],
+      "levels": [
+        [
+          "LEVEL",
+          "SCORE",
+          "ACTIONS",
+          "BASELINE"
+        ],
+        [
+          "1",
+          "115.00",
+          "36",
+          "71"
+        ],
+        [
+          "2",
+          "115.00",
+          "59",
+          "119"
+        ],
+        [
+          "3",
+          "0.00",
+          "5",
+          "183"
+        ],
+        [
+          "4",
+          "0.00",
+          "0",
+          "98"
+        ],
+        [
+          "5",
+          "0.00",
+          "0",
+          "368"
+        ],
+        [
+          "6",
+          "0.00",
+          "0",
+          "68"
+        ],
+        [
+          "7",
+          "0.00",
+          "0",
+          "79"
+        ],
+        [
+          "8",
+          "0.00",
+          "0",
+          "442"
+        ],
+        [
+          "9",
+          "0.00",
+          "0",
+          "415"
+        ]
+      ],
+      "links": [
+        {
+          "label": "Watch replay",
+          "url": "https://arcprize.org/replay/5535b1b0-e461-498d-a1ba-eb5baa8b69ea"
+        },
+        {
+          "label": "Download recording",
+          "url": "https://arcprize.org/api/recordings/wa30-ee6fef47/5535b1b0-e461-498d-a1ba-eb5baa8b69ea"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    [
+      "TAG",
+      "SCORE",
+      "LEVELS COMPLETED",
+      "ACTIONS",
+      "ENVIRONMENTS"
+    ],
+    [
+      "click",
+      "24.10",
+      "21",
+      "700",
+      "7"
+    ],
+    [
+      "keyboard",
+      "6.56",
+      "6",
+      "400",
+      "4"
+    ],
+    [
+      "keyboard_click",
+      "19.59",
+      "34",
+      "1300",
+      "13"
+    ]
+  ]
+}

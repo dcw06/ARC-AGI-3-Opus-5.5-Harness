@@ -1,0 +1,11 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}Yrr@{}}\toprule
+Score decomposition & Value (\%) & Change (pp)\\\midrule
+Pooled completion $100\sum_g\sum_\ell d_{g\ell}/183$ & 36.61202 & ---\\
+Equal-game mean of unweighted completion & 37.74921 & $+1.13718$\\
+Equal-game mean of weighted completion & 23.28225 & $-14.46696$\\
+RHAE after action efficiency and completion cap & 23.16434 & $-0.11791$\\\bottomrule
+\end{tabularx}
+\caption{The table decomposes the original 100-action baseline score arithmetically. Each change is the current row minus the preceding row, in percentage points (pp). The changes show the effects of aggregation, level weights, and action efficiency after the game completion cap, respectively. All rows recalculate the same run. I removed and reran no component.}\label{tab:decomposition}
+\end{table}

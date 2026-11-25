@@ -1,0 +1,12 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}Yrrrr@{}}\toprule
+Competition-mode replay & RHAE (\%) & Levels & Games won & Actions\\\midrule
+\multicolumn{5}{@{}l}{\emph{The comparison: same model and same per-game action caps}}\\
+\quad\textbf{Baseline} & \textbf{46.20} & \textbf{125/183} & \textbf{7/25} & \textbf{16,560}\\
+\quad\textbf{Layered harness} & \textbf{85.37} & \textbf{166/183} & \textbf{17/25} & \textbf{10,686}\\\midrule
+\multicolumn{5}{@{}l}{\color{black!60}\emph{For reference: the same baseline runs after their first 100 actions per game}}\\
+\quad\color{black!60}Baseline, first 100 actions & \color{black!60}23.16 & \color{black!60}67/183 & \color{black!60}1/25 & \color{black!60}2,475\\\bottomrule
+\end{tabularx}
+\caption{The evaluation covered 25 public games, with one recorded run from each harness per game, including halted runs. The two rows in bold are the comparison this paper reports. Both include every recorded action from all 25 ended or halted runs, and the layered runs started from the first action under the extended baseline's cap table. The gray row is not a third condition: it shows the same baseline runs after their first 100 actions per game, before the continuations. ARC-service action replay confirmed all three scores. Resets count as actions. These self-run records do not imply independent leaderboard verification.}\label{tab:main}\label{tab:full-comparison}
+\end{table}

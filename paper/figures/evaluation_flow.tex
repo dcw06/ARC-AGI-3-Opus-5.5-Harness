@@ -1,0 +1,21 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  node distance=7mm and 9mm,
+  run/.style={draw=black!65,fill=black!2,align=center,text width=3.8cm,minimum height=17mm,font=\small,inner sep=5pt},
+  arr/.style={-{Stealth[length=2mm]},draw=black!70,thick}]
+\node[run] (baseline) {\textbf{Baseline harness}\\One run per public game\\Layers disabled};
+\node[run,right=of baseline] (base-record) {\textbf{Recorded actions}\\16,560 actions\\125/183 levels, 7 wins};
+\node[run,right=of base-record] (base-replay) {\textbf{Competition-mode replay}\\No model calls\\46.20\% RHAE};
+\node[run,below=of baseline] (layered) {\textbf{Layered harness}\\One run per public game\\All evaluated layers enabled};
+\node[run,right=of layered] (layer-record) {\textbf{Recorded actions}\\10,686 actions\\166/183 levels, 17 wins};
+\node[run,right=of layer-record] (layer-replay) {\textbf{Competition-mode replay}\\No model calls\\85.37\% RHAE};
+\draw[arr] (baseline)--(base-record);
+\draw[arr] (base-record)--(base-replay);
+\draw[arr] (layered)--(layer-record);
+\draw[arr] (layer-record)--(layer-replay);
+\node[above=3mm of base-record,font=\small,align=center] {25 public games with the same model identifier and per-game action caps};
+\node[below=3mm of layer-record,font=\small,align=center] {Conditions played on different days. Replay was a check of the recorded runs};
+\end{tikzpicture}
+\caption{\textbf{The model first played each game, then I replayed its saved actions to check the recorded results.} During play, the model chose actions using local game files. I then sent the saved actions to the ARC service without asking the model to make new decisions. For every baseline action, the returned observation matched the saved observation in full, including all animation frames. In the layered runs, 10,661 actions matched in full. The remaining 25 actions, all in \texttt{lf52}, matched the final board, game state, and completed-level count, but differed in intermediate animation frames. Replay checked these recorded runs; it did not provide a new model trial or an independent evaluation.}\label{fig:evaluation-flow}
+\end{figure}

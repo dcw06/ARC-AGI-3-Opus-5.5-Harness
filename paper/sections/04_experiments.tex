@@ -1,0 +1,58 @@
+\subsection{Evaluation design and prior exposure}\label{sec:design}
+I compared one recorded baseline run and one recorded layered run per game, played on different days. Here, a run included the model's decisions and game actions, including level resets and any later continuations from saved play. Both the baseline and layered harnesses used the same model identifier, per-game action caps, and shared execution code. They differed in the evidence and memory features enabled.
+
+The baseline combined the original November 6 run, which allowed 100 actions per game, with continuations under larger action caps: first under earlier caps, then under the final cap table (Section~\ref{sec:continuation-design}). Each continuation resumed saved play rather than starting the game again. Each larger cap counted the original and additional actions together. These continuations raised its replay score from 23.16\% to 46.20\% (Table~\ref{tab:main}).
+
+Each layered run began at the first action with all evaluated layers enabled. I ran the layered harness in three batches: first the 11 games on which the baseline scored below 40\%, then 11 more, and then the last three (\texttt{dc22}, \texttt{re86}, and \texttt{wa30}). I wrote the public plan for each batch before its runs began \citep{dai2026layered}.
+
+I did not run repeated whole-game trials to measure variation between runs or test the effects of removing individual layers. The comparison therefore describes these recorded runs and does not estimate variation across repeated trials.
+
+\subsubsection{Development exposure}
+The eight games I used to design or tune layers, test their behavior, or study replays were \texttt{bp35}, \texttt{cd82}, \texttt{g50t}, \texttt{ls20}, \texttt{tr87}, \texttt{s5i5}, \texttt{su15}, and \texttt{vc33}. I played levels of \texttt{tr87} and \texttt{cd82} myself, and those observations informed the level brief.
+
+The remaining 17 games were not a held-out test set. I had reviewed baseline summaries across all 25 games, including actions used on unfinished levels, game overs, and repeated boards. These summaries informed harness development.
+
+The controlled level-brief tests described in Section~\ref{sec:brief-design} included sixteen of those 17 games, after I had stopped changing the relevant layer code. These tests began at saved positions from baseline play, except for \texttt{tn36}, which began at the first action. They did not include the remaining game, \texttt{ft09}. Both test sets used the same prompt wording. I made no layer-code changes in response to these tests or the whole-game results.
+
+Throughout the paper, \emph{used or studied during development} refers to the eight games listed above. The appendix retains the original baseline's separate exposure categories. Clearing the agent's memory and omitting hints from its prompts did not remove the researcher's prior exposure to the games.
+
+\subsubsection{Operational interventions and stopping}
+Each continuation restored the run’s saved observations, model replies, and accumulated notes. I added no human answers or hints. While preparing to replay the recorded actions, I found an apparent observation mismatch in \texttt{lf52} and discovered that the runner looked for game files in an older folder first. As a precaution, I stopped \texttt{wa30} after 17 actions and restarted it with the toolkit’s files. The reported run used those files from the start. The discarded 17 actions were additional execution work excluded from the results.
+
+Later checks showed that the older files differed only in license comments and unused helper functions. The \texttt{lf52} mismatch affected intermediate animation frames, while the final board matched. The restart therefore proved unnecessary. 
+
+After \texttt{wa30} ended, I corrected a comment in the runner script describing the restart. This correction changed only documentation and did not affect the model’s prompts or the evaluated layer code. No game was rerun because of its score or completion outcome \citep{dai2026replaycorrection}.
+
+Three games---\texttt{tr87}, \texttt{bp35}, and \texttt{s5i5}---stopped after repeated model calls exceeded the time limit. I reported their action and completion counts at the point they stopped. Section~\ref{sec:continuation-design} explains the different time limit and retry allowance used for \texttt{tr87}.
+
+\subsubsection{Local play and action replay}
+The comparison used local copies of the public game files. The baseline archive also included the original portion played online. To check the results, I replayed the recorded actions through the ARC service in competition mode, without asking the model to make new decisions (Figure~\ref{fig:evaluation-flow}). The resulting scorecards matched the scores calculated locally \citep{dai2026baselinefinalcard,dai2026finalmanifest}. This replay checked the saved actions and scores; it was not another model trial or an independent Verified Leaderboard evaluation.
+
+All 16,560 baseline actions produced observations that matched the saved records. I checked these matches using hashes, which are short values calculated from every returned image---including animation frames---and the game identifier, game state, level counts, and available actions.
+
+The ARC service accepted all 10,686 layered actions. For 10,661 actions, the observation hashes matched the saved records. The remaining 25 actions, all in \texttt{lf52}, produced matching final boards, game states, and completed-level counts, but different intermediate animation frames. I reported these 25 checks separately because the observations did not match in full \citep{dai2026finalmanifest,dai2026replaycorrection}. Every replay reached the last recorded action, including runs that had stopped before winning.
+
+The three layered scorecards showed updates to the same collection of runs, rather than separate trials. The first reported 82.56\%, with \texttt{dc22}, \texttt{re86}, and \texttt{wa30} still in progress. The second reported 84.14\%, with \texttt{wa30} still in progress and a connection error stopping the \texttt{ls20} replay at action 404 of 800. The final scorecard included every recorded action from all 25 games and reported 85.37\% \citep{scorecard2026layers,scorecard2026layerssecond,scorecard2026finalreplay}.
+
+\input{figures/evaluation_flow}
+\FloatBarrier
+
+\subsection{Controlled tests of the level-brief package}\label{sec:brief-design}
+I compared two harness configurations that differed only in whether the level-brief package was enabled. Both configurations used lessons written after game overs or actions that had no effect, required the model to check its proposed actions against those lessons, and included the object ledger. I ran each configuration twice on each game, giving four runs per game. Each run allowed up to 100 actions after its starting position and stopped early if the agent won the game. All four runs for a game began at the same saved position from baseline play, except for \texttt{tn36}, where all four began at the first action because its saved baseline run had completed no level.
+
+Before each test, I fixed a decision rule based on levels completed during the new actions. For each game and configuration, I added the completed-level counts from the two runs; levels completed before the starting position did not count. I then compared these per-game counts and their totals across the test set. The package met the benefit criterion, and received the label \emph{helps}, if it completed more levels overall, completed more levels in at least two games, and completed at least as many levels in every game. It received the label \emph{hurts} if it completed fewer levels overall. All other outcomes received the label \emph{no detectable difference}, including mixed outcomes in which the package improved the overall total but performed worse on one game. I applied this rule separately to each test set. These labels describe whether the results met the rule; they are not statistical significance tests and do not establish that the configurations performed equally \citep{dai2026brieftests}.
+
+The seven games in the first test set were \texttt{ar25}, \texttt{ka59}, \texttt{lf52}, \texttt{sc25}, \texttt{sk48}, \texttt{sp80}, and \texttt{wa30}. The nine additional games in the second test set were \texttt{cn04}, \texttt{dc22}, \texttt{lp85}, \texttt{m0r0}, \texttt{r11l}, \texttt{re86}, \texttt{sb26}, \texttt{tn36}, and \texttt{tu93}. The code and prompt wording remained fixed across the two sets.
+
+In the second set, all four runs on each of \texttt{lp85}, \texttt{r11l}, and \texttt{sb26} won the game. Completed-level counts therefore could not distinguish the configurations on those games. I reported the verdict for each test set separately. I disclosed and repeated once any run that ended with an error while calling the model, or whose saved logs failed checks for missing or inconsistent records. The repeat replaced the affected attempt in the verdict, and I interpreted the results only after this procedure. Separate exploratory runs on development games did not contribute to either verdict.
+
+\subsection{Data and resource accounting}\label{sec:analysis-method}
+The analysis used the records archived at commit \code{17d00cfdef7944dda9fd9388efa49fccce4877aa} \citep{dai2026harnessexport,dai2026finalmanifest}. This archive contained the final result files from commit \code{5284dc7}, made after all 25 layered runs ended or halted. It also included the log counts reported in Section~\ref{sec:continuation-design}, the figures illustrating the runs, the records behind Figures~\ref{fig:bp35-example}, \ref{fig:lesson-game-over}, and~\ref{fig:step-counter}, and the game-over counts, all of which I added later.
+
+I compared action counts, token usage, and performance, including separate results for games used or studied during development and for the remaining games. These comparisons included one baseline run and one layered run for each of the 25 games. The paper’s supporting files keep earlier scorecards and summaries of unfinished runs as records of results reported before the final evaluation was complete \citep{dai2026baselinefinalcard,dai2026layered,scorecard2026finalreplay,dai2026tokens}.
+
+Reported input usage included uncached input tokens, tokens read from the cache, and tokens written to the cache for later reuse. Reported output usage already included thinking tokens, which the model used for its internal reasoning. I therefore calculated total reported usage by adding input and output once, without adding thinking tokens again.
+
+Calls stopped by the time limit reported no usage, so both the baseline and layered harnesses' token totals excluded them. The layered runs had 97 such calls (Section~\ref{sec:continuation-design}). The reported totals therefore omit an unknown amount of token usage. They do not measure total compute consumed or billing savings.
+
+The final comparison covered all 25 games. It replaced an earlier comparison that excluded \texttt{wa30}, whose layered run was still in progress. I retain the 17.1\% token reduction reported for those 24 games only as a historical result \citep{dai2026tokens}.

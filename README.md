@@ -7,6 +7,10 @@ four layers of memory and evidence that the model builds for itself while it pla
 With the layers on, the official scorecard score goes from **46.20** to **85.37**, under the same action cap
 per game.
 
+The paper that reports these results is in [`paper/`](paper/): the
+[PDF](paper/Dai_Layered_Memory_for_ARC-AGI-3_Agents.pdf), its LaTeX source and data, and a script that recomputes
+its numbers.
+
 ## Results
 
 | | Baseline | With the layers |
@@ -119,6 +123,7 @@ reports/                        plans written before each test, results, scoreca
 config/                         the configuration every run used
 tests/                          the harness tests
 agent/                          the small interface the harness imports: actions, observations, ARC adapter
+paper/                          the paper: PDF, LaTeX source, data, and scripts that recompute its numbers
 ```
 
 The replay pages under `reports/` are single HTML files. Download one and open it in a browser to step through a

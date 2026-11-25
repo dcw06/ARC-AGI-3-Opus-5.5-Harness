@@ -1,0 +1,112 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.80in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{graphicx,booktabs,tabularx,array,longtable,float}
+\usepackage[table]{xcolor}
+\usepackage{enumitem,caption,titlesec,fancyhdr,placeins,needspace}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{tikz,listings}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,breaklinks=true]{hyperref}
+\input{metadata}
+\definecolor{ink}{HTML}{000000}
+\definecolor{accent}{HTML}{235C83}
+\definecolor{muted}{HTML}{000000}
+\definecolor{wash}{HTML}{F1F5F8}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\code}[1]{\nolinkurl{#1}}
+% One board from the evaluated runs, with a thin frame: \board[width]{file in figures/runs}
+\newcommand{\board}[2][0.30\linewidth]{{\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.3pt}\fcolorbox{black!50}{white}{\includegraphics[width=#1]{figures/runs/#2}}}}
+\newlength{\zoomw}% width of one small board in the worked example (Figure of Section 3.3.1)
+% A board with labels drawn on it: \begin{markedboard}[width]{file} TikZ commands \end{markedboard}.
+% Inside, (0,0) is the board's bottom-left corner and (1,1) its top-right; a cell is 1/64 wide.
+\newenvironment{markedboard}[2][0.30\linewidth]{\begin{tikzpicture}[note/.style={font=\scriptsize,fill=white,fill opacity=0.88,text opacity=1,inner sep=1.5pt,align=left},pointer/.style={-{Stealth[length=1.6mm]},line width=0.6pt}]\node[anchor=south west,inner sep=0pt] (img) at (0,0) {\includegraphics[width=#1]{figures/runs/#2}};\draw[black!50,line width=0.3pt] (img.south west) rectangle (img.north east);\begin{scope}[x={(img.south east)},y={(img.north west)}]}{\end{scope}\end{tikzpicture}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.13}
+\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,topsep=3pt}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=2pt,topsep=3pt}
+\captionsetup{font=small,labelfont=bf,skip=5pt}
+\titleformat{\section}{\large\bfseries\color{ink}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{ink}}{\thesubsection}{0.65em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{ink}}{\thesubsubsection}{0.65em}{}
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+\titlespacing*{\subsection}{0pt}{7pt}{3pt}
+\titlespacing*{\subsubsection}{0pt}{5pt}{3pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\color{muted}\PaperShortTitle}
+\fancyhead[R]{\small\color{muted}Research paper}
+\fancyfoot[C]{\small\thepage}
+\setlength{\headheight}{14pt}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{pdftitle={\PaperTitle},pdfsubject={Layered evidence and memory on 25 public ARC-AGI-3 games, with confirmed final replay and full 25-game resource accounting},pdfauthor={\AuthorName}}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,breakatwhitespace=false,columns=fullflexible,keepspaces=true,showstringspaces=false,frame=single,rulecolor=\color{accent!30},backgroundcolor=\color{wash},aboveskip=6pt,belowskip=7pt,xleftmargin=3pt,xrightmargin=3pt}
+\title{\PaperTitleBlock}
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip-0.5em
+  \begin{center}
+    {\LARGE\bfseries\@title\par}\vskip0.9em
+    {\normalsize\@author\par}\vskip0.7em
+    {\small\@date\par}
+  \end{center}\vskip0.6em
+}
+\makeatother
+\author{\AuthorBlock}
+\date{\small \PaperDate}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{9pt plus 2pt minus 2pt}
+% Let a large figure share its page with text; on a page of figures only, start at the top.
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.85}
+\setcounter{topnumber}{3}\setcounter{bottomnumber}{2}\setcounter{totalnumber}{4}
+\makeatletter\setlength{\@fptop}{0pt}\setlength{\@fpsep}{14pt}\setlength{\@fpbot}{0pt plus 1fil}\makeatother
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\raggedbottom
+\begin{document}
+\maketitle
+\vspace{-1.2em}
+\begin{abstract}
+\noindent ARC-AGI-3 asks an agent to discover the rules of 64$\times$64 grid games and scores the agent by the number of actions it takes to solve each game level. A language model can infer a useful game rule, remove it from its notes once the supporting observations leave its context, and then repeat an earlier mistake. I tested whether a harness that kept the model's lessons, rules, and notes about the board completed more levels and scored higher than a Claude Opus 5.5 baseline under the same action caps. The baseline already showed the model the current board, up to two earlier boards, its eight most recent actions, and up to eight hypotheses it had written. The layered harness added four memory layers: lessons after game overs and after actions that changed nothing, an object ledger, a separate rule list, and a brief at each new level. Across 25 public games, the layered harness scored 85.37\% Relative Human Action Efficiency (RHAE), compared with 46.20\% for the baseline. It completed 166 of 183 levels and won 17 games, compared with 125 levels and 7 games, and it used 35.5\% fewer environment actions and 11.0\% fewer reported tokens. I evaluated the baseline and the harness with all four layers once on each game, running the two conditions on different days. Three layered runs stopped because of timeouts, and I had already used or studied eight of the games during development. These results support using the four layers together on the public games tested, but do not establish each layer’s contribution or performance on unseen games.
+\end{abstract}
+\begin{center}\footnotesize
+Artifacts: \href{https://arcprize.org/scorecards/0f882c2e-0451-41bd-86c5-211a54785c56}{Baseline replay card} \quad
+\href{https://arcprize.org/scorecards/96932ddf-ab6a-4354-94b2-9644447dae14}{Layered replay card} \quad
+\href{https://github.com/dcw06/ARC-AGI-3-Opus-5.5-Harness/tree/17d00cfdef7944dda9fd9388efa49fccce4877aa}{Code and evidence at commit 17d00cf}
+\end{center}
+\input{sections/01_introduction}
+\input{sections/02_background}
+\input{sections/03_method}
+\input{sections/04_experiments}
+\FloatBarrier
+\input{sections/05_results}
+\FloatBarrier
+\input{sections/06_discussion}
+\FloatBarrier
+\clearpage
+\section*{References}
+\begingroup
+\renewcommand{\section}[2]{}%
+\small\raggedright\interlinepenalty=10000
+\bibliographystyle{plainnat}\bibliography{references}
+\endgroup
+\FloatBarrier
+\clearpage
+\appendix
+\input{sections/appendix}
+\FloatBarrier
+\input{sections/appendix_analysis}
+
+\end{document}

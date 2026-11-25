@@ -1,0 +1,221 @@
+{
+  "updated_on": "2026-11-24",
+  "run_boards": {
+    "repository": "dcw06/ARC-AGI-3-Opus-5.5-Harness",
+    "commit": "17d00cfdef7944dda9fd9388efa49fccce4877aa",
+    "scope": "Boards from the evaluated layered whole-game runs, unmodified copies of the repository files; illustrations of what each layer records, not evidence of a layer's effect",
+    "generator_source": "research/level_brief_v1/paper_figures.py at the same commit (needs the local run logs)",
+    "model_text_source": "reports/level_brief_v1/figures/README.md at the same commit; quotations in the captions are word for word, with omissions marked",
+    "palette": "ARC's 16 colors, 12 pixels a cell; outlines, labels and click rings are drawn by the generator",
+    "images": [
+      {
+        "local_path": "figures/runs/frames-between-a.png",
+        "source_path": "reports/level_brief_v1/figures/panels/frames-between-a.png",
+        "sha256": "06919dfe8fd1fb232eb9a6ce62dce8d473073e1c4cf018fb9e3a2ddd9dcef548",
+        "bytes": 4590
+      },
+      {
+        "local_path": "figures/runs/frames-between-b.png",
+        "source_path": "reports/level_brief_v1/figures/panels/frames-between-b.png",
+        "sha256": "928ac977750872cfb9e1e5baf452613fdb4d159a384fb7440a2e5926c5d7fc08",
+        "bytes": 3934
+      },
+      {
+        "local_path": "figures/runs/frames-between-c.png",
+        "source_path": "reports/level_brief_v1/figures/panels/frames-between-c.png",
+        "sha256": "e4c6a9ad9c03c06ed6418f6b8596cbe548188491bdf1ae232d350f936dafd8a4",
+        "bytes": 3051
+      },
+      {
+        "local_path": "figures/runs/frames-between-d.png",
+        "source_path": "reports/level_brief_v1/figures/panels/frames-between-d.png",
+        "sha256": "6da6bc5a3abc9cacd08f41c8d82339f8374c2b0b7e66405b1a3a6ffa444b28cd",
+        "bytes": 3915
+      },
+      {
+        "local_path": "figures/runs/lessons-game-over-a.png",
+        "source_path": "reports/level_brief_v1/figures/panels/lessons-game-over-a.png",
+        "sha256": "6b19b529a4c8dc3705c2fcfbf08a6f59be318064c254a976449607ee07526286",
+        "bytes": 3147
+      },
+      {
+        "local_path": "figures/runs/lessons-game-over-b.png",
+        "source_path": "reports/level_brief_v1/figures/panels/lessons-game-over-b.png",
+        "sha256": "f8fb14f3a36c01578d84ef9b4f6f2eaabd810bf0aa150b895353a8c73273fe37",
+        "bytes": 3142
+      },
+      {
+        "local_path": "figures/runs/lessons-no-effect-a.png",
+        "source_path": "reports/level_brief_v1/figures/panels/lessons-no-effect-a.png",
+        "sha256": "61767a12a1f531d0be05b5a72821c5c26678ce0258ccb50375d81ee26abe2bcd",
+        "bytes": 3704
+      },
+      {
+        "local_path": "figures/runs/lessons-no-effect-b.png",
+        "source_path": "reports/level_brief_v1/figures/panels/lessons-no-effect-b.png",
+        "sha256": "cfd3bfd830d927b6b869c4d1163bc5ba1bde5ea54665cae3c12351e81727be28",
+        "bytes": 3071
+      },
+      {
+        "local_path": "figures/runs/level-brief-a.png",
+        "source_path": "reports/level_brief_v1/figures/panels/level-brief-a.png",
+        "sha256": "108e91448bd4e4e4d1bb7ef6dea04e6165f6371c4dea6331d73eb738e66a34ab",
+        "bytes": 3088
+      },
+      {
+        "local_path": "figures/runs/level-brief-b.png",
+        "source_path": "reports/level_brief_v1/figures/panels/level-brief-b.png",
+        "sha256": "606c255e9fa6afe054ac580a19e17f4a54b2f6d82fe75e2bf0780eb40194d944",
+        "bytes": 3094
+      },
+      {
+        "local_path": "figures/runs/object-ledger-a.png",
+        "source_path": "reports/level_brief_v1/figures/panels/object-ledger-a.png",
+        "sha256": "d77643e34d377fb50b57463022e1b8433cb19cf526358c6f37e49e81c6ad8bce",
+        "bytes": 7922
+      }
+    ],
+    "figures": {
+      "figures/lesson_game_over.tex": [
+        "lessons-game-over-a.png",
+        "lessons-game-over-b.png"
+      ],
+      "figures/no_effect_examples.tex": [
+        "lessons-no-effect-a.png",
+        "lessons-no-effect-b.png",
+        "frames-between-a.png",
+        "frames-between-b.png",
+        "frames-between-c.png",
+        "frames-between-d.png"
+      ],
+      "figures/object_ledger.tex": [
+        "object-ledger-a.png"
+      ],
+      "figures/level_brief.tex": [
+        "level-brief-a.png",
+        "level-brief-b.png"
+      ]
+    }
+  },
+  "result_charts": {
+    "generator": "figures/make_result_figures.py",
+    "new_experiments": false,
+    "figures/per_game_scores.pdf": "data/layered_final_per_game.csv",
+    "figures/per_game_outcomes.pdf": "data/layered_final_per_game.csv",
+    "figures/level_action_ratio.pdf": [
+      "data/baseline_final_replay.json",
+      "data/layered_final_replay.json"
+    ],
+    "figures/brief_tests.pdf": [
+      "data/brief_first_set.json",
+      "data/brief_second_set.json"
+    ]
+  },
+  "diagrams": {
+    "figures/harness.tex": "Schematic of the layered configuration described in Methods",
+    "figures/evaluation_flow.tex": "Schematic of local inference and later action replay"
+  },
+  "removed_on_2026-11-23": "The historical sc25 and ls20 inspection strips from the parent project (commit 988831c) and the completion-only chart; replaced by boards from the evaluated runs and by the three-panel per-game chart",
+  "baseline_boards": {
+    "scope": "Boards from the baseline run of bp35 level 2 (the saved run of November 6, 2026), for the example in the Introduction",
+    "status": "In the evidence repository at commit 17d00cf (reports/level_brief_v1/figures/panels/baseline-forgetting-*.png). Drawn from the local run log, which is not in the repository.",
+    "generator_source": "research/level_brief_v1/paper_figures.py at the same commit (figure baseline-forgetting; needs the local run log)",
+    "note_trace": {
+      "local_path": "data/bp35_rule_trace.json",
+      "made_by": "research/memory_fix_v1/rule_trace.py at the same commit (needs the local run log)",
+      "sha256": "450c507ca5840a6ff2945278b9a442c60a6cee4a4c5d42a88f5430b46f67ba83",
+      "source_path": "reports/memory_fix_v1/bp35_rule_trace.json"
+    },
+    "images": [
+      {
+        "local_path": "figures/runs/baseline-forgetting-a.png",
+        "sha256": "df7d87933b10916676d283e5eacd438bd812445d52de8cdbd14490be73443eaa",
+        "bytes": 4755,
+        "source_path": "reports/level_brief_v1/figures/panels/baseline-forgetting-a.png"
+      },
+      {
+        "local_path": "figures/runs/baseline-forgetting-b.png",
+        "sha256": "8b20565ac17fcf339f87c6640c03dca3348756d779679e98162e8d2a3c6d95f3",
+        "bytes": 4073,
+        "source_path": "reports/level_brief_v1/figures/panels/baseline-forgetting-b.png"
+      },
+      {
+        "local_path": "figures/runs/baseline-forgetting-c.png",
+        "sha256": "408ddda6a4484284fdf2611a91234c0b258aea319b2358934803dad6f7deac8d",
+        "bytes": 4009,
+        "source_path": "reports/level_brief_v1/figures/panels/baseline-forgetting-c.png"
+      },
+      {
+        "local_path": "figures/runs/baseline-forgetting-d.png",
+        "sha256": "28eeaaf88c80a3b9ca2521c958b8bc13223e093b0c4934e0c83d0cc52dd5a130",
+        "bytes": 3982,
+        "source_path": "reports/level_brief_v1/figures/panels/baseline-forgetting-d.png"
+      }
+    ],
+    "figure": "figures/bp35_example.tex"
+  },
+  "counter_boards": {
+    "scope": "Boards from the evaluated layered runs of ka59, vc33 and m0r0 showing a step counter, for Appendix E (moved there from Section 3.3.1 on 2026-11-24)",
+    "status": "In the evidence repository at commit 17d00cf (reports/level_brief_v1/figures/panels/step-counter-*.png). Drawn from the local run logs, which are not in the repository.",
+    "generator_source": "research/level_brief_v1/paper_figures.py at the same commit (images step-counter-a to -f; needs the local run logs)",
+    "marked_cells": "The line outside boards a to c marks the cells the harness was ignoring after that action, found by feeding the run's actions to the harness's own CounterMask in the same order",
+    "images": [
+      {
+        "local_path": "figures/runs/step-counter-a.png",
+        "shows": "ka59, level 2, after action 53; row 63 ignored",
+        "sha256": "1d77fb2f62655d395f84a30df7413799a08ae181f85b71a0acff549bc4f30ed6",
+        "source_path": "reports/level_brief_v1/figures/panels/step-counter-a.png"
+      },
+      {
+        "local_path": "figures/runs/step-counter-b.png",
+        "shows": "vc33, level 5, after action 100; row 0 ignored",
+        "sha256": "a75f3b8c010103d8192b4e1613211b968361554c3cb19dd29ae217bac1f0ca05",
+        "source_path": "reports/level_brief_v1/figures/panels/step-counter-b.png"
+      },
+      {
+        "local_path": "figures/runs/step-counter-c.png",
+        "shows": "m0r0, level 5, after action 180; rows 0 and 63 ignored",
+        "sha256": "e1679ff426f1f378faa2a31d51a1b624729aa14676543c631307f9119a4bfeb1",
+        "source_path": "reports/level_brief_v1/figures/panels/step-counter-c.png"
+      },
+      {
+        "local_path": "figures/runs/step-counter-d.png",
+        "shows": "ka59, level 2, rows 60-63 after action 30; 63 dark cells on row 63",
+        "sha256": "bec6b1fd4aef27d1b9ff4710184201ed81931b04d346b303f647754351cdb353",
+        "source_path": "reports/level_brief_v1/figures/panels/step-counter-d.png"
+      },
+      {
+        "local_path": "figures/runs/step-counter-e.png",
+        "shows": "ka59, level 2, rows 60-63 after action 53; 51 dark cells on row 63",
+        "sha256": "3bb1dc1307fd827ee0f75cb91ad56f61002f89b02e8e491e0fd5a15f73082145",
+        "source_path": "reports/level_brief_v1/figures/panels/step-counter-e.png"
+      },
+      {
+        "local_path": "figures/runs/step-counter-f.png",
+        "shows": "ka59, level 2, rows 60-63 after action 77; 39 dark cells on row 63",
+        "sha256": "54f0131f2b173cb75210e3b1e77282a552024a9218e9f6ac249ae6797e8db056",
+        "source_path": "reports/level_brief_v1/figures/panels/step-counter-f.png"
+      }
+    ],
+    "figure": "figures/step_counter.tex"
+  },
+  "worked_example": {
+    "figure": "figures/lesson_game_over.tex",
+    "scope": "One game over in the layered run of wa30, the lesson the model wrote, and the next request with the model's check",
+    "boards": [
+      "lessons-game-over-a.png",
+      "lessons-game-over-b.png"
+    ],
+    "enlarged_corner": "The bottom-left 16 by 4 cells of each board, cut out of the same two image files by the figure itself; no new image files",
+    "text": "data/worked_example_wa30.json",
+    "text_sha256": "0eec6acf82104619af6ee2d94b5fff9b472ed230ab07658294c3cb29b1c5cfaa",
+    "status": "In the evidence repository at commit 17d00cf. The lesson is also in reports/level_brief_v1/figures/README.md there. The request field and the model's check for action 360 were taken from the local run log, which is not in the repository; the file records the log's event numbers and hashes.",
+    "source_path": "reports/level_brief_v1/figures/worked_example_wa30.json"
+  },
+  "drawn_on_boards_2026-11-24": "figures/object_ledger.tex and figures/level_brief.tex draw an arrow and a short label on their boards (the chosen target; the last target tile; the new block). The image files are unchanged.",
+  "game_over_counts": {
+    "local_path": "data/game_over_counts.json",
+    "source_path": "reports/level_brief_v1/game_over_counts.json",
+    "sha256": "7f9eb028b7e40c707d3d244a02e23632b3292f2d158c2c62648ab52871f65873"
+  }
+}

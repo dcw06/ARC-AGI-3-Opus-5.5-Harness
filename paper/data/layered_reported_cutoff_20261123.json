@@ -1,0 +1,47 @@
+{
+  "report_date": "2026-11-23",
+  "timezone": "America/Los_Angeles",
+  "status": "FINAL_REPORTED_CUTOFF_OFFICIAL_REPLAY_PENDING",
+  "score_rounded": 85.37,
+  "score_source": "Author final-score instruction, November 23, 2026",
+  "unrounded_score": null,
+  "independently_reconstructed_from_per_level_actions": false,
+  "levels": 166,
+  "total_levels": 183,
+  "games_won": 17,
+  "games": 25,
+  "actions": 10396,
+  "wa30": {
+    "actions": 1560,
+    "levels": 7,
+    "total_levels": 9,
+    "action_cap": 1850,
+    "score": null,
+    "endpoint_state_not_supplied": true
+  },
+  "more_same_fewer_levels_vs_baseline": [
+    15,
+    9,
+    1
+  ],
+  "full_inventory_action_reduction_percent": 37.2,
+  "baseline_official_score_rounded": 46.2,
+  "score_gain_percentage_points_from_reported_rounded_values": 39.17,
+  "official_scorecard": "https://arcprize.org/scorecards/eafcc4b7-afb3-4fb5-bffa-7d7a47e4f040",
+  "observed_official_state": {
+    "review_date": "2026-11-23",
+    "score_rounded": 84.14,
+    "levels": 164,
+    "games_won": 17,
+    "actions": 9253,
+    "wa30_actions": 813,
+    "wa30_levels": 6,
+    "ls20_actions": 404,
+    "ls20_levels": 5,
+    "matches_final_reported_cutoff": false
+  },
+  "replay_status_source": "Author confirmed replay is still waiting for wa30 to finish",
+  "final_token_usage_supplied": false,
+  "token_comparison_scope_games": 24,
+  "per_game_data": "data/layered_final_per_game.csv"
+}
